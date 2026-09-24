@@ -1,0 +1,51 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-2e463b80"],
+  {
+    "250a": function (e, a, t) {
+      var c = t("9e3d");
+      ("string" === typeof c && (c = [[e.i, c, ""]]), c.locals && (e.exports = c.locals));
+      var n = t("499e").default;
+      n("652dd15e", c, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    "479a": function (e, a, t) {
+      "use strict";
+      var c = t("250a"),
+        n = t.n(c);
+      n.a;
+    },
+    "9e3d": function (e, a, t) {
+      ((a = e.exports = t("24fb")(!1)), a.push([e.i, ".nl-container[data-v-773cfb38]{height:calc(100vh - 60px);width:100%}", ""]));
+    },
+    bed0: function (e, a, t) {
+      "use strict";
+      t.r(a);
+      var c = function () {
+          var e = this,
+            a = e.$createElement,
+            t = e._self._c || a;
+          return t("el-container", { staticClass: "nl-container" }, [t("workspace", { ref: "workspace" })], 1);
+        },
+        n = [],
+        o = t("9f12"),
+        r = t("8b83"),
+        s = t("c65a"),
+        i = t("c03e"),
+        u = t("9ab4"),
+        l = t("60a3"),
+        f = t("535f"),
+        p = t("c33c"),
+        b = (function (e) {
+          function a() {
+            return (Object(o["a"])(this, a), Object(r["a"])(this, Object(s["a"])(a).apply(this, arguments)));
+          }
+          return (Object(i["a"])(a, e), a);
+        })(f["a"]);
+      b = Object(u["a"])([Object(l["a"])({ components: { workspace: p["default"] } })], b);
+      var d = b,
+        h = d,
+        w = (t("479a"), t("2877")),
+        v = Object(w["a"])(h, c, n, !1, null, "773cfb38", null);
+      a["default"] = v.exports;
+    },
+  },
+]);

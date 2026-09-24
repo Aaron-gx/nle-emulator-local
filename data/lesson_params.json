@@ -1,0 +1,74 @@
+{
+  "directions": [
+    {
+      "id": "fd2a261b-67d8-432e-8bfb-746185a78e60",
+      "text": "人工智能"
+    },
+    {
+      "id": "139ead6b-61b2-4a91-8441-a73908ab1576",
+      "text": "区块链"
+    },
+    {
+      "id": "063dc3a0-cead-40da-a32f-c64f54e87546",
+      "text": "大数据"
+    },
+    {
+      "id": "029776f0-44c9-4cbc-aa21-d778297c32ca",
+      "text": "物联网"
+    }
+  ],
+  "languages": [
+    {
+      "id": "bd30cdca-80a6-4c6b-ba62-0ae8b6c71506",
+      "text": "PHP"
+    },
+    {
+      "id": "cdf71389-1238-4824-920e-3d9eb0a0959b",
+      "text": ".Net"
+    },
+    {
+      "id": "9c5f34ff-c93f-4f1f-a631-65ad2f74eba1",
+      "text": "Python"
+    },
+    {
+      "id": "a153f6e7-ae8c-4cc9-bfe0-66752995c9e0",
+      "text": "Java"
+    }
+  ],
+  "levels": [
+    {
+      "id": "8b04c085-c0b5-49ed-bd4e-4430e8a1d1f3",
+      "text": "应用解析"
+    },
+    {
+      "id": "65a46bd2-31b5-4f4e-8569-6ab0b5505973",
+      "text": "专项案例"
+    },
+    {
+      "id": "28f8b4a2-4810-449b-af87-6eb8b675feed",
+      "text": "综合系统"
+    },
+    {
+      "id": "6454ea2b-23da-4568-81e8-bad71d979efe",
+      "text": "基础学习"
+    }
+  ],
+  "targets": [
+    {
+      "id": "4f8c0c16-059d-4996-966b-074b2d20bc81",
+      "text": "中职"
+    },
+    {
+      "id": "4c0ed59c-cad5-431c-b8f4-4501034315ac",
+      "text": "本科"
+    },
+    {
+      "id": "2c7e7e94-496e-411d-a80f-48b8f270ad02",
+      "text": "专科"
+    },
+    {
+      "id": "55ded03a-434f-482f-9b23-b171dd606eee",
+      "text": "高职"
+    }
+  ]
+}

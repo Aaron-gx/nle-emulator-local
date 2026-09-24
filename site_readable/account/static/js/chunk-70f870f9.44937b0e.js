@@ -1,0 +1,794 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-70f870f9"],
+  {
+    "4f57": function (e, t, s) {
+      "use strict";
+      s("f80f");
+    },
+    "8dc2": function (e, t, s) {
+      "use strict";
+      s("b0e9");
+    },
+    "99af": function (e, t, s) {
+      "use strict";
+      var a = s("23e7"),
+        i = s("d039"),
+        o = s("e8b5"),
+        n = s("861d"),
+        r = s("7b0b"),
+        l = s("07fa"),
+        c = s("3511"),
+        d = s("8418"),
+        u = s("65f0"),
+        g = s("1dde"),
+        h = s("b622"),
+        f = s("2d00"),
+        m = h("isConcatSpreadable"),
+        p =
+          f >= 51 ||
+          !i(function () {
+            var e = [];
+            return ((e[m] = !1), e.concat()[0] !== e);
+          }),
+        v = g("concat"),
+        b = function (e) {
+          if (!n(e)) return !1;
+          var t = e[m];
+          return void 0 !== t ? !!t : o(e);
+        },
+        R = !p || !v;
+      a(
+        { target: "Array", proto: !0, arity: 1, forced: R },
+        {
+          concat: function (e) {
+            var t,
+              s,
+              a,
+              i,
+              o,
+              n = r(this),
+              g = u(n, 0),
+              h = 0;
+            for (t = -1, a = arguments.length; t < a; t++)
+              if (((o = -1 === t ? n : arguments[t]), b(o))) for (i = l(o), c(h + i), s = 0; s < i; s++, h++) s in o && d(g, h, o[s]);
+              else (c(h + 1), d(g, h++, o));
+            return ((g.length = h), g);
+          },
+        },
+      );
+    },
+    b0e9: function (e, t, s) {},
+    c740: function (e, t, s) {
+      "use strict";
+      var a = s("23e7"),
+        i = s("b727").findIndex,
+        o = s("44d2"),
+        n = "findIndex",
+        r = !0;
+      (n in [] &&
+        Array(1)[n](function () {
+          r = !1;
+        }),
+        a(
+          { target: "Array", proto: !0, forced: r },
+          {
+            findIndex: function (e) {
+              return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            },
+          },
+        ),
+        o(n));
+    },
+    f80f: function (e, t, s) {},
+    f982: function (e, t, s) {
+      "use strict";
+      s.r(t);
+      (s("b0c0"), s("a4d3"), s("e01a"));
+      var a = function () {
+          var e = this,
+            t = e._self._c;
+          return t(
+            "div",
+            { staticClass: "app-cont" },
+            [
+              t("div", { staticClass: "ctrl-line clearfix" }, [
+                t(
+                  "div",
+                  { staticClass: "ctr-l" },
+                  [
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/role/save", expression: "'/role/save'" }],
+                        attrs: { type: "primary" },
+                        on: { click: e.addPermission },
+                      },
+                      [e._v("添加角色")],
+                    ),
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/role/delete", expression: "'/role/delete'" }],
+                        staticClass: "bg-danger",
+                        attrs: { type: "danger" },
+                        on: { click: e.delRole },
+                      },
+                      [e._v("删除角色")],
+                    ),
+                  ],
+                  1,
+                ),
+              ]),
+              t(
+                "div",
+                { staticClass: "tb-cont" },
+                [
+                  t(
+                    "el-table",
+                    {
+                      attrs: {
+                        data: e.tableData.list,
+                        "row-key": "id",
+                        "header-align": "center",
+                        load: e.loadChild,
+                        "default-expand-all": "",
+                        "tree-props": { children: "roleList", hasChildren: "hasChildren" },
+                        border: "",
+                        stripe: "",
+                      },
+                      on: { "selection-change": e.handleSelectionChange },
+                    },
+                    [
+                      t("el-table-column", { attrs: { type: "selection", align: "center", width: "100" } }),
+                      t("el-table-column", { attrs: { type: "index", label: "序号", align: "center", width: "100" } }),
+                      t("el-table-column", {
+                        attrs: { property: "name", align: "left", "label-class-name": "text-c", label: "角色名称", "min-width": "20%" },
+                        scopedSlots: e._u([
+                          {
+                            key: "default",
+                            fn: function (s) {
+                              return [
+                                t("span", { staticClass: "type-cont" }, [
+                                  0 == s.row.num ? t("span", { staticClass: "packup-holder" }) : e._e(),
+                                  t("span", [e._v(e._s(s.row.name))]),
+                                ]),
+                              ];
+                            },
+                          },
+                        ]),
+                      }),
+                      t("el-table-column", {
+                        attrs: { property: "status", label: "状态", align: "center", "min-width": "15%" },
+                        scopedSlots: e._u([
+                          {
+                            key: "default",
+                            fn: function (s) {
+                              return [
+                                t("nl-switch", {
+                                  directives: [{ name: "disAuth", rawName: "v-disAuth", value: "/role/update", expression: "'/role/update'" }],
+                                  attrs: { value: parseInt(s.row.status) },
+                                  on: {
+                                    change: function (t) {
+                                      return e.changeStatus(t, s.row);
+                                    },
+                                  },
+                                }),
+                              ];
+                            },
+                          },
+                        ]),
+                      }),
+                      t("el-table-column", {
+                        attrs: { label: "操作", align: "center", "min-width": "25%" },
+                        scopedSlots: e._u([
+                          {
+                            key: "default",
+                            fn: function (s) {
+                              return [
+                                t(
+                                  "span",
+                                  {
+                                    directives: [{ name: "auth", rawName: "v-auth", value: "/role/right/save", expression: "'/role/right/save'" }],
+                                    staticClass: "ctrl-btn pmy-t-btn",
+                                    on: {
+                                      click: function (t) {
+                                        return e.roleRight(s.row);
+                                      },
+                                    },
+                                  },
+                                  [t("i", { staticClass: "iconfont icon-authorize" }), t("span", [e._v("授权")])],
+                                ),
+                                t(
+                                  "span",
+                                  {
+                                    directives: [{ name: "auth", rawName: "v-auth", value: "/role/update", expression: "'/role/update'" }],
+                                    staticClass: "ctrl-btn pmy-t-btn",
+                                    on: {
+                                      click: function (t) {
+                                        return e.editRole(s.row);
+                                      },
+                                    },
+                                  },
+                                  [t("i", { staticClass: "el-icon-edit-outline" }), t("span", [e._v("编辑")])],
+                                ),
+                                t(
+                                  "span",
+                                  {
+                                    directives: [{ name: "auth", rawName: "v-auth", value: "/role/delete", expression: "'/role/delete'" }],
+                                    staticClass: "ctrl-btn dg-t-btn",
+                                    on: {
+                                      click: function (t) {
+                                        return e.delRole(s.row);
+                                      },
+                                    },
+                                  },
+                                  [t("i", { staticClass: "el-icon-delete" }), t("span", [e._v("删除")])],
+                                ),
+                              ];
+                            },
+                          },
+                        ]),
+                      }),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "div",
+                {
+                  directives: [{ name: "show", rawName: "v-show", value: e.tableData.pages > 1, expression: "tableData.pages > 1" }],
+                  staticStyle: { "text-align": "center", margin: "10px 0" },
+                },
+                [
+                  t("el-pagination", {
+                    attrs: {
+                      layout: "prev, pager, next, jumper",
+                      "hide-on-single-page": !1,
+                      background: "",
+                      "current-page": e.tableData.pageNum,
+                      "page-count": e.tableData.pages,
+                    },
+                    on: { "current-change": e.pageChange },
+                  }),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: e.formTitle, visible: e.showAddDialog, "close-on-click-modal": !1, width: "500px", center: "" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showAddDialog = t;
+                    },
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "permitForm", staticClass: "form-cont", attrs: { model: e.formData, rules: e.rules } },
+                    [
+                      t(
+                        "el-form-item",
+                        { attrs: { prop: "name" } },
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "req-tag item-name" }, [e._v("角色名称：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t("el-input", {
+                                attrs: { maxlength: "10", "show-word-limit": "" },
+                                model: {
+                                  value: e.formData.name,
+                                  callback: function (t) {
+                                    e.$set(e.formData, "name", t);
+                                  },
+                                  expression: "formData.name",
+                                },
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [
+                            t("div", { staticClass: "item-name" }, [e._v("父"), t("i", { staticStyle: { padding: "0 14px" } }), e._v("级：")]),
+                          ]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t(
+                                "el-select",
+                                {
+                                  attrs: { filterable: "", clearable: "" },
+                                  model: {
+                                    value: e.formData.pId,
+                                    callback: function (t) {
+                                      e.$set(e.formData, "pId", t);
+                                    },
+                                    expression: "formData.pId",
+                                  },
+                                },
+                                e._l(e.roleList, function (e) {
+                                  return t("el-option", { key: e.id, attrs: { value: e.id, label: e.name } });
+                                }),
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { prop: "status" } },
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "req-tag item-name" }, [e._v("启用状态：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t(
+                                "el-radio-group",
+                                {
+                                  model: {
+                                    value: e.formData.status,
+                                    callback: function (t) {
+                                      e.$set(e.formData, "status", t);
+                                    },
+                                    expression: "formData.status",
+                                  },
+                                },
+                                [t("el-radio", { attrs: { label: 1 } }, [e._v("启用")]), t("el-radio", { attrs: { label: 0 } }, [e._v("禁用")])],
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { prop: "remark" } },
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "item-name" }, [e._v("备注内容：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t("el-input", {
+                                attrs: { type: "textarea", rows: 4 },
+                                model: {
+                                  value: e.formData.description,
+                                  callback: function (t) {
+                                    e.$set(e.formData, "description", t);
+                                  },
+                                  expression: "formData.description",
+                                },
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                  t("div", { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" }, [
+                    t(
+                      "div",
+                      { staticClass: "dia-footer-cont" },
+                      [
+                        t(
+                          "el-button",
+                          {
+                            attrs: { type: "info" },
+                            on: {
+                              click: function (t) {
+                                e.showAddDialog = !1;
+                              },
+                            },
+                          },
+                          [e._v("取 消")],
+                        ),
+                        t("el-button", { attrs: { type: "primary", loading: e.loading }, on: { click: e.postRole } }, [e._v("确 定")]),
+                      ],
+                      1,
+                    ),
+                  ]),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: e.formTitle, visible: e.showRoleRightDialog, "close-on-click-modal": !1, width: "500px", center: "" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showRoleRightDialog = t;
+                    },
+                  },
+                },
+                [
+                  t("el-tree", {
+                    ref: "tree",
+                    attrs: { data: e.data, props: e.permProps, "show-checkbox": "", accordion: "", "default-expand-all": "", "node-key": "id" },
+                  }),
+                  t("div", { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" }, [
+                    t(
+                      "div",
+                      { staticClass: "dia-footer-cont" },
+                      [
+                        t(
+                          "el-button",
+                          {
+                            attrs: { type: "info" },
+                            on: {
+                              click: function (t) {
+                                e.showRoleRightDialog = !1;
+                              },
+                            },
+                          },
+                          [e._v("取 消")],
+                        ),
+                        t("el-button", { attrs: { type: "primary", loading: e.loading }, on: { click: e.postRoleRight } }, [e._v("确 定")]),
+                      ],
+                      1,
+                    ),
+                  ]),
+                ],
+                1,
+              ),
+            ],
+            1,
+          );
+        },
+        i = [],
+        o =
+          (s("fb6a"),
+          s("c740"),
+          s("a434"),
+          s("99af"),
+          s("4de4"),
+          s("d3b7"),
+          s("a15b"),
+          s("14d9"),
+          s("d81d"),
+          {
+            data: function () {
+              return {
+                tableData: { list: [] },
+                allRoleList: [],
+                choosePermitList: [],
+                appList: [],
+                showAddDialog: !1,
+                showRoleRightDialog: !1,
+                formTitle: "添加角色",
+                curRoleId: "",
+                formData: { pId: "", name: "", status: 1, description: "", sort: 1 },
+                searchForm: { appCode: "", status: "" },
+                page: 1,
+                pageSize: 10,
+                rules: { name: [{ required: !0, message: "请输入角色名称！", trigger: "blur" }] },
+                loading: !1,
+                data: [],
+                permProps: { label: "name", children: "childRightList" },
+                oldChecked: [],
+              };
+            },
+            computed: {
+              roleList: function () {
+                var e = this,
+                  t = this.getAllRoleList(this.tableData.list.slice()),
+                  s = t.findIndex(function (t) {
+                    return t.id == e.curRoleId;
+                  });
+                return (s > -1 && t.splice(s, 1), t);
+              },
+            },
+            filters: {
+              transStatus: function (e) {
+                return 1 == e ? "已启用" : "未启用";
+              },
+            },
+            created: function () {
+              (this.getRoles(), this.getAppList());
+            },
+            methods: {
+              getAllRoleList: function (e) {
+                for (var t = 0; t < e.length; t++) null != e[t].roleList && ((e = e.concat(e[t].roleList)), this.getAllRoleList(e[t].roleList));
+                return e;
+              },
+              permLoad: function (e, t) {
+                this.getPermissions(e, t);
+              },
+              getPermissions: function (e, t) {
+                var s = this,
+                  a = {};
+                (0 === e.level ? (a.pId = "") : (a.pId = e.data.id),
+                  this.$request
+                    .getPermissionList(a)
+                    .then(function (e) {
+                      t(s.childDisableCheck(e.data.list));
+                    })
+                    .catch(function (e) {
+                      (console.log(e), s.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                    }));
+              },
+              checkIsLeaf: function (e, t) {
+                if (t.level > 0) return !(e.num > 0);
+              },
+              addPermission: function () {
+                var e = this;
+                (this.initPermForm(),
+                  (this.showAddDialog = !0),
+                  this.$nextTick(function () {
+                    e.$refs.permitForm.clearValidate();
+                  }));
+              },
+              initPermForm: function () {
+                ((this.formTitle = "添加角色"), (this.curRoleId = ""), (this.formData = { pId: "", name: "", status: 1, description: "", sort: 1 }));
+              },
+              getAppList: function () {
+                var e = this;
+                this.$request
+                  .getAppList()
+                  .then(function (t) {
+                    e.appList = t.data.list || [];
+                  })
+                  .catch(function (t) {
+                    (console.log(t), e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }));
+                  });
+              },
+              getRoles: function () {
+                var e = this,
+                  t = { pId: "" };
+                ((t.page = this.page),
+                  (t.pageSize = this.pageSize),
+                  (t.status = this.searchForm.status),
+                  (t.appCode = this.searchForm.appCode),
+                  this.$request
+                    .getRoleList()
+                    .then(function (t) {
+                      ((e.tableData = { list: [], page: 1 }),
+                        e.$nextTick(function () {
+                          ((e.tableData.list = t.data || { list: [] }), (e.allRoleList = t.data));
+                        }));
+                    })
+                    .catch(function (t) {
+                      (console.log(t), e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }));
+                    }));
+              },
+              postRole: function () {
+                var e = this;
+                this.$refs.permitForm.validate(function (t) {
+                  if (t) {
+                    e.loading = !0;
+                    var s = e.$utils.clone(e.formData, {});
+                    e.curRoleId
+                      ? ((s.id = e.curRoleId),
+                        e.$request
+                          .updateRole(s)
+                          .then(function (t) {
+                            ((e.showAddDialog = !1), (e.loading = !1), e.getRoles(), e.$message({ type: "success", message: "操作成功！" }));
+                          })
+                          .catch(function (t) {
+                            (e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }), (e.loading = !1));
+                          }))
+                      : e.$request
+                          .addRole(s)
+                          .then(function (t) {
+                            ((e.showAddDialog = !1), (e.loading = !1), e.getRoles(), e.$message({ type: "success", message: "操作成功！" }));
+                          })
+                          .catch(function (t) {
+                            (e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }), (e.loading = !1));
+                          });
+                  }
+                });
+              },
+              postRoleRight: function () {
+                var e = this,
+                  t = this.$refs.tree.getCheckedKeys(),
+                  s = this.$refs.tree.getHalfCheckedKeys(),
+                  a = t.concat(
+                    s.filter(function (e) {
+                      return !(t.indexOf(e) > -1);
+                    }),
+                  ),
+                  i = this.oldChecked,
+                  o = a.concat(
+                    i.filter(function (e) {
+                      return !(a.indexOf(e) > -1);
+                    }),
+                  ),
+                  n = o.filter(function (e) {
+                    return -1 == i.indexOf(e);
+                  }),
+                  r = o.filter(function (e) {
+                    return -1 == a.indexOf(e);
+                  });
+                this.$request
+                  .addRolePermission({ roleId: this.curRoleId, addRights: n.join(","), delRights: r.join(",") })
+                  .then(function (t) {
+                    (console.log(t),
+                      (e.showRoleRightDialog = !1),
+                      (e.loading = !1),
+                      e.getRoles(),
+                      e.$message({ type: "success", message: "操作成功！通知该用户重新登录后生效！" }));
+                  })
+                  .catch(function (t) {
+                    (e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }), (e.loading = !1));
+                  });
+              },
+              delRole: function (e) {
+                var t = this,
+                  s = [],
+                  a = "",
+                  i = [];
+                (null != e.id ? i.push(e) : (i = this.choosePermitList),
+                  i.length
+                    ? ((a =
+                        1 === i.length ? "是否确定要删除角色【" + i[0].name + "】及其子角色？" : "是否确定要删除选中的（" + i.length + "）项角色及其子角色？"),
+                      i.map(function (e) {
+                        s.push(e.id);
+                      }),
+                      this.$messageBox
+                        .confirm(a, "提示", { type: "warning" })
+                        .then(function (e) {
+                          t.$request
+                            .delRoles({ ids: s.join(",") })
+                            .then(function (e) {
+                              (t.$message({ type: "success", message: "删除成功！" }), (t.choosePermitList = []), t.getRoles());
+                            })
+                            .catch(function (e) {
+                              (console.log(e), t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                            });
+                        })
+                        .catch(function (e) {
+                          console.log(e);
+                        }))
+                    : this.$message({ type: "warning", message: "请选择需要删除的角色！" }));
+              },
+              loadChild: function (e, t, s) {
+                var a = this,
+                  i = {};
+                ((i.pId = e.id),
+                  e.id
+                    ? this.$request
+                        .getPermissionList(i)
+                        .then(function (e) {
+                          s(e.data.list);
+                        })
+                        .catch(function (e) {
+                          (console.log(e), a.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                        })
+                    : setTimeout(function () {
+                        s([]);
+                      }, 500));
+              },
+              searchPerm: function () {
+                this.getRoles();
+              },
+              pageChange: function (e) {
+                ((this.page = e), this.getRoles());
+              },
+              handleSelectionChange: function (e) {
+                this.choosePermitList = e;
+              },
+              editRole: function (e) {
+                ((this.formTitle = "编辑角色"),
+                  (this.curRoleId = e.id),
+                  (e.status = parseInt(e.status)),
+                  this.$utils.cloneToTarget(e, this.formData),
+                  (this.showAddDialog = !0));
+              },
+              changeStatus: function (e, t) {
+                var s = this,
+                  a = this.$utils.cloneToTarget(t, this.formData);
+                ((a.id = t.id),
+                  (a.status = e ? 1 : 0),
+                  this.$request
+                    .updateRole(a)
+                    .then(function (e) {
+                      s.getRoles();
+                    })
+                    .catch(function (e) {
+                      (console.log(e), s.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                    }));
+              },
+              roleRight: function (e) {
+                var t = this;
+                ((this.oldChecked = []),
+                  (this.formTitle = "角色授权"),
+                  (this.showRoleRightDialog = !0),
+                  this.$request
+                    .getPermissionTree()
+                    .then(function (s) {
+                      ((t.data = s.data),
+                        t.setCheckedKey(e.id),
+                        t.$request
+                          .getRolePermission({ roleId: e.id })
+                          .then(function (e) {
+                            for (var s = 0; s < e.data.length; s++) t.oldChecked.push(e.data[s].rightId);
+                          })
+                          .catch(function (e) {
+                            (console.log(e), t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                          }));
+                    })
+                    .catch(function (e) {
+                      (console.log(e), t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" }));
+                    }));
+              },
+              childDisableCheck: function (e) {
+                for (var t = 0; t < e.length; t++) 1 == e[t].status ? (e[t].disabled = !1) : (e[t].disabled = !0);
+                return e;
+              },
+              setCheckedKey: function (e) {
+                var t = this;
+                ((this.curRoleId = e),
+                  this.$request.getRolePermissionLeaf({ roleId: e }).then(function (e) {
+                    for (var s = [], a = 0; a < e.data.length; a++) s.push(e.data[a].rightId);
+                    t.$refs.tree.setCheckedKeys(s);
+                  }));
+              },
+            },
+          }),
+        n = o,
+        r = (s("4f57"), s("8dc2"), s("2877")),
+        l = Object(r["a"])(n, a, i, !1, null, "bb4f4d0a", null);
+      t["default"] = l.exports;
+    },
+    fb6a: function (e, t, s) {
+      "use strict";
+      var a = s("23e7"),
+        i = s("e8b5"),
+        o = s("68ee"),
+        n = s("861d"),
+        r = s("23cb"),
+        l = s("07fa"),
+        c = s("fc6a"),
+        d = s("8418"),
+        u = s("b622"),
+        g = s("1dde"),
+        h = s("f36a"),
+        f = g("slice"),
+        m = u("species"),
+        p = Array,
+        v = Math.max;
+      a(
+        { target: "Array", proto: !0, forced: !f },
+        {
+          slice: function (e, t) {
+            var s,
+              a,
+              u,
+              g = c(this),
+              f = l(g),
+              b = r(e, f),
+              R = r(void 0 === t ? f : t, f);
+            if (
+              i(g) &&
+              ((s = g.constructor),
+              o(s) && (s === p || i(s.prototype)) ? (s = void 0) : n(s) && ((s = s[m]), null === s && (s = void 0)),
+              s === p || void 0 === s)
+            )
+              return h(g, b, R);
+            for (a = new (void 0 === s ? p : s)(v(R - b, 0)), u = 0; b < R; b++, u++) b in g && d(a, u, g[b]);
+            return ((a.length = u), a);
+          },
+        },
+      );
+    },
+  },
+]);

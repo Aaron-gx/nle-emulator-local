@@ -1,0 +1,726 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-7d0804ac"],
+  {
+    "057f": function (t, e, n) {
+      var r = n("fc6a"),
+        o = n("241c").f,
+        i = {}.toString,
+        a = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
+        u = function (t) {
+          try {
+            return o(t);
+          } catch (e) {
+            return a.slice();
+          }
+        };
+      t.exports.f = function (t) {
+        return a && "[object Window]" == i.call(t) ? u(t) : o(r(t));
+      };
+    },
+    "0c2e": function (t, e, n) {
+      e = t.exports = n("24fb")(!1);
+      var r = n("1de5"),
+        o = r(n("8096f"));
+      e.push([
+        t.i,
+        ".emulator[data-v-0bc57822]{width:100%;height:100%;position:relative}.emulator .save[data-v-0bc57822]{position:absolute;right:20px;bottom:20px}.emulator[data-v-0bc57822] .save.el-button{font-size:32px;padding:2px 2px 0 2px}.emulator[data-v-0bc57822] .save.el-button /deep/ .el-icon-collection:before{content:url(" +
+          o +
+          ")}",
+        "",
+      ]);
+    },
+    "0eaf": function (t, e, n) {
+      var r = n("0c2e");
+      ("string" === typeof r && (r = [[t.i, r, ""]]), r.locals && (t.exports = r.locals));
+      var o = n("499e").default;
+      o("ac912104", r, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    "535f": function (t, e, n) {
+      "use strict";
+      n.d(e, "a", function () {
+        return m;
+      });
+      (n("a4d3"), n("e01a"), n("d28b"), n("99af"), n("0d03"), n("d3b7"), n("25f0"), n("3ca3"), n("498a"), n("ddb0"));
+      var r = n("9f12"),
+        o = n("53fe"),
+        i = n("8b83"),
+        a = n("c65a"),
+        u = n("9aa6"),
+        c = n("c03e"),
+        l = n("2fa7"),
+        s = n("60a3"),
+        f = n("73ec"),
+        v = n("70b0"),
+        m = (function (t) {
+          function e() {
+            var t, n;
+            Object(r["a"])(this, e);
+            for (var o = arguments.length, c = new Array(o), s = 0; s < o; s++) c[s] = arguments[s];
+            return (
+              (n = Object(i["a"])(this, (t = Object(a["a"])(e)).call.apply(t, [this].concat(c)))),
+              Object(l["a"])(Object(u["a"])(n), "counTimerInterval", null),
+              Object(l["a"])(Object(u["a"])(n), "countTimer", 0),
+              n
+            );
+          }
+          return (
+            Object(c["a"])(e, t),
+            Object(o["a"])(e, [
+              {
+                key: "loading",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v["a"].t("lang.加载中").toString(),
+                    n = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                    r = arguments.length > 3 ? arguments[3] : void 0;
+                  Object(f["n"])(t, e, n, r);
+                },
+              },
+              {
+                key: "msg",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "success",
+                    n = arguments.length > 2 ? arguments[2] : void 0;
+                  return Object(f["o"])(t, e, n);
+                },
+              },
+              {
+                key: "alert",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 ? arguments[2] : void 0,
+                    r = arguments.length > 3 ? arguments[3] : void 0;
+                  Object(f["a"])(t, e, n, r);
+                },
+              },
+              {
+                key: "confirm",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v["a"].t("lang.确定").toString(),
+                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : v["a"].t("lang.取消").toString(),
+                    o = arguments.length > 4 ? arguments[4] : void 0,
+                    i = arguments.length > 5 ? arguments[5] : void 0,
+                    a = arguments.length > 6 ? arguments[6] : void 0;
+                  Object(f["d"])(t, e, n, r, o, i, a);
+                },
+              },
+              {
+                key: "prompt",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v["a"].t("lang.确定").toString(),
+                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : v["a"].t("lang.取消").toString(),
+                    o = arguments.length > 4 ? arguments[4] : void 0,
+                    i = arguments.length > 5 ? arguments[5] : void 0;
+                  arguments.length > 6 && arguments[6];
+                  Object(f["p"])(t, e, n, r, o, i);
+                },
+              },
+              {
+                key: "isNullOrEmpty",
+                value: function (t) {
+                  if (!t) return !0;
+                  var e = t,
+                    n = e.trim();
+                  return 0 === n.length;
+                },
+              },
+              {
+                key: "anyIsNullOrEmpty",
+                value: function (t) {
+                  if (!t) return !0;
+                  var e = !0,
+                    n = !1,
+                    r = void 0;
+                  try {
+                    for (var o, i = t[Symbol.iterator](); !(e = (o = i.next()).done); e = !0) {
+                      var a = o.value;
+                      if (this.isNullOrEmpty(a)) return !0;
+                    }
+                  } catch (u) {
+                    ((n = !0), (r = u));
+                  } finally {
+                    try {
+                      e || null == i.return || i.return();
+                    } finally {
+                      if (n) throw r;
+                    }
+                  }
+                  return !1;
+                },
+              },
+              {
+                key: "deepClone",
+                value: function (t) {
+                  var e = JSON.stringify(t),
+                    n = JSON.parse(e);
+                  return n;
+                },
+              },
+              {
+                key: "resetTimer",
+                value: function () {
+                  this.countTimer = 0;
+                },
+              },
+              {
+                key: "startTimer",
+                value: function () {
+                  var t = this;
+                  t.counTimerInterval ||
+                    (t.counTimerInterval = setInterval(function () {
+                      t.countTimer++;
+                    }, 1e3));
+                },
+              },
+              {
+                key: "stopTimer",
+                value: function () {
+                  (this.pauseTimer(), this.resetTimer());
+                },
+              },
+              {
+                key: "pauseTimer",
+                value: function () {
+                  var t = this;
+                  t.counTimerInterval && (clearInterval(t.counTimerInterval), (t.counTimerInterval = null));
+                },
+              },
+              {
+                key: "beforeDestroy",
+                value: function () {
+                  (console.log("beforeDestroy"), this.stopTimer());
+                },
+              },
+            ]),
+            e
+          );
+        })(s["c"]);
+    },
+    "746f": function (t, e, n) {
+      var r = n("428f"),
+        o = n("5135"),
+        i = n("c032"),
+        a = n("9bf2").f;
+      t.exports = function (t) {
+        var e = r.Symbol || (r.Symbol = {});
+        o(e, t) || a(e, t, { value: i.f(t) });
+      };
+    },
+    7945: function (t, e, n) {
+      "use strict";
+      var r = n("0eaf"),
+        o = n.n(r);
+      o.a;
+    },
+    "8096f": function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABWklEQVRoQ+2Y7VHDMAyGn04AI7ABdALoBmwAbCAmACbgHQUmoExA2YAR2ADOvdBrS3KJUWriO/lvLFnvh3SxZ1S+ZpXXTwD4bwVDgVDAyUBYyEmgO3yQAmZ2Bry5T8tLcCtJfSFDAVwAL33JRv7+IOm+L+dfACy2kl4DV8A7YH2H7X3vik2snwKHASBpA9rMEkN3wKukpNLg1RVrZkvgfHIAzOwJOAJuJH3UCOCrkWchaVkjgM9GgbmkVY0AToDjVHxSojoA+909NQCDp0/Lxp0JVnoKpdn/6KkeeJZ0+ZOjKIDGy1nzvwXsSlJq8PUqDsDJ/q/wANDGqJltfua2fyXGZj8s1MVoKJDhtWjiaOIMu3SQVe5C46y1NTx6IHrA6auwUFho6hZy1pcTfpiXuZwKnHvHAzDS1TEXz85Vsyt40ONu7skl9weAkmy3nRUKhAJOBsJCTgLd4d+ADmJASWntDgAAAABJRU5ErkJggg==";
+    },
+    a4d3: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        o = n("da84"),
+        i = n("c430"),
+        a = n("83ab"),
+        u = n("4930"),
+        c = n("d039"),
+        l = n("5135"),
+        s = n("e8b5"),
+        f = n("861d"),
+        v = n("825a"),
+        m = n("7b0b"),
+        b = n("fc6a"),
+        d = n("c04e"),
+        h = n("5c6c"),
+        g = n("7c73"),
+        p = n("df75"),
+        y = n("241c"),
+        O = n("057f"),
+        j = n("7418"),
+        w = n("06cf"),
+        A = n("9bf2"),
+        S = n("d1e7"),
+        k = n("9112"),
+        T = n("6eeb"),
+        E = n("5692"),
+        D = n("f772"),
+        I = n("d012"),
+        x = n("90e3"),
+        J = n("b622"),
+        C = n("c032"),
+        N = n("746f"),
+        V = n("d44e"),
+        X = n("69f3"),
+        H = n("b727").forEach,
+        P = D("hidden"),
+        B = "Symbol",
+        U = "prototype",
+        G = J("toPrimitive"),
+        L = X.set,
+        K = X.getterFor(B),
+        R = Object[U],
+        z = o.Symbol,
+        M = o.JSON,
+        Z = M && M.stringify,
+        Q = w.f,
+        _ = A.f,
+        W = O.f,
+        Y = S.f,
+        $ = E("symbols"),
+        F = E("op-symbols"),
+        q = E("string-to-symbol-registry"),
+        tt = E("symbol-to-string-registry"),
+        et = E("wks"),
+        nt = o.QObject,
+        rt = !nt || !nt[U] || !nt[U].findChild,
+        ot =
+          a &&
+          c(function () {
+            return (
+              7 !=
+              g(
+                _({}, "a", {
+                  get: function () {
+                    return _(this, "a", { value: 7 }).a;
+                  },
+                }),
+              ).a
+            );
+          })
+            ? function (t, e, n) {
+                var r = Q(R, e);
+                (r && delete R[e], _(t, e, n), r && t !== R && _(R, e, r));
+              }
+            : _,
+        it = function (t, e) {
+          var n = ($[t] = g(z[U]));
+          return (L(n, { type: B, tag: t, description: e }), a || (n.description = e), n);
+        },
+        at =
+          u && "symbol" == typeof z.iterator
+            ? function (t) {
+                return "symbol" == typeof t;
+              }
+            : function (t) {
+                return Object(t) instanceof z;
+              },
+        ut = function (t, e, n) {
+          (t === R && ut(F, e, n), v(t));
+          var r = d(e, !0);
+          return (
+            v(n),
+            l($, r)
+              ? (n.enumerable ? (l(t, P) && t[P][r] && (t[P][r] = !1), (n = g(n, { enumerable: h(0, !1) }))) : (l(t, P) || _(t, P, h(1, {})), (t[P][r] = !0)),
+                ot(t, r, n))
+              : _(t, r, n)
+          );
+        },
+        ct = function (t, e) {
+          v(t);
+          var n = b(e),
+            r = p(n).concat(mt(n));
+          return (
+            H(r, function (e) {
+              (a && !st.call(n, e)) || ut(t, e, n[e]);
+            }),
+            t
+          );
+        },
+        lt = function (t, e) {
+          return void 0 === e ? g(t) : ct(g(t), e);
+        },
+        st = function (t) {
+          var e = d(t, !0),
+            n = Y.call(this, e);
+          return !(this === R && l($, e) && !l(F, e)) && (!(n || !l(this, e) || !l($, e) || (l(this, P) && this[P][e])) || n);
+        },
+        ft = function (t, e) {
+          var n = b(t),
+            r = d(e, !0);
+          if (n !== R || !l($, r) || l(F, r)) {
+            var o = Q(n, r);
+            return (!o || !l($, r) || (l(n, P) && n[P][r]) || (o.enumerable = !0), o);
+          }
+        },
+        vt = function (t) {
+          var e = W(b(t)),
+            n = [];
+          return (
+            H(e, function (t) {
+              l($, t) || l(I, t) || n.push(t);
+            }),
+            n
+          );
+        },
+        mt = function (t) {
+          var e = t === R,
+            n = W(e ? F : b(t)),
+            r = [];
+          return (
+            H(n, function (t) {
+              !l($, t) || (e && !l(R, t)) || r.push($[t]);
+            }),
+            r
+          );
+        };
+      (u ||
+        ((z = function () {
+          if (this instanceof z) throw TypeError("Symbol is not a constructor");
+          var t = arguments.length && void 0 !== arguments[0] ? String(arguments[0]) : void 0,
+            e = x(t),
+            n = function (t) {
+              (this === R && n.call(F, t), l(this, P) && l(this[P], e) && (this[P][e] = !1), ot(this, e, h(1, t)));
+            };
+          return (a && rt && ot(R, e, { configurable: !0, set: n }), it(e, t));
+        }),
+        T(z[U], "toString", function () {
+          return K(this).tag;
+        }),
+        (S.f = st),
+        (A.f = ut),
+        (w.f = ft),
+        (y.f = O.f = vt),
+        (j.f = mt),
+        a &&
+          (_(z[U], "description", {
+            configurable: !0,
+            get: function () {
+              return K(this).description;
+            },
+          }),
+          i || T(R, "propertyIsEnumerable", st, { unsafe: !0 })),
+        (C.f = function (t) {
+          return it(J(t), t);
+        })),
+        r({ global: !0, wrap: !0, forced: !u, sham: !u }, { Symbol: z }),
+        H(p(et), function (t) {
+          N(t);
+        }),
+        r(
+          { target: B, stat: !0, forced: !u },
+          {
+            for: function (t) {
+              var e = String(t);
+              if (l(q, e)) return q[e];
+              var n = z(e);
+              return ((q[e] = n), (tt[n] = e), n);
+            },
+            keyFor: function (t) {
+              if (!at(t)) throw TypeError(t + " is not a symbol");
+              if (l(tt, t)) return tt[t];
+            },
+            useSetter: function () {
+              rt = !0;
+            },
+            useSimple: function () {
+              rt = !1;
+            },
+          },
+        ),
+        r({ target: "Object", stat: !0, forced: !u, sham: !a }, { create: lt, defineProperty: ut, defineProperties: ct, getOwnPropertyDescriptor: ft }),
+        r({ target: "Object", stat: !0, forced: !u }, { getOwnPropertyNames: vt, getOwnPropertySymbols: mt }),
+        r(
+          {
+            target: "Object",
+            stat: !0,
+            forced: c(function () {
+              j.f(1);
+            }),
+          },
+          {
+            getOwnPropertySymbols: function (t) {
+              return j.f(m(t));
+            },
+          },
+        ),
+        M &&
+          r(
+            {
+              target: "JSON",
+              stat: !0,
+              forced:
+                !u ||
+                c(function () {
+                  var t = z();
+                  return "[null]" != Z([t]) || "{}" != Z({ a: t }) || "{}" != Z(Object(t));
+                }),
+            },
+            {
+              stringify: function (t) {
+                var e,
+                  n,
+                  r = [t],
+                  o = 1;
+                while (arguments.length > o) r.push(arguments[o++]);
+                if (((n = e = r[1]), (f(e) || void 0 !== t) && !at(t)))
+                  return (
+                    s(e) ||
+                      (e = function (t, e) {
+                        if (("function" == typeof n && (e = n.call(this, t, e)), !at(e))) return e;
+                      }),
+                    (r[1] = e),
+                    Z.apply(M, r)
+                  );
+              },
+            },
+          ),
+        z[U][G] || k(z[U], G, z[U].valueOf),
+        V(z, B),
+        (I[P] = !0));
+    },
+    c032: function (t, e, n) {
+      e.f = n("b622");
+    },
+    c33c: function (t, e, n) {
+      "use strict";
+      n.r(e);
+      var r,
+        o,
+        i = function () {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n(
+            "div",
+            { staticClass: "emulator", attrs: { id: "nleEmulator" } },
+            [t.edit ? n("el-button", { staticClass: "save", attrs: { icon: "el-icon-collection" }, on: { click: t.save } }) : t._e()],
+            1,
+          );
+        },
+        a = [],
+        u = (n("99af"), n("d3b7"), n("9f12")),
+        c = n("53fe"),
+        l = n("8b83"),
+        s = n("c65a"),
+        f = n("9aa6"),
+        v = n("c03e"),
+        m = n("2fa7"),
+        b = n("9ab4"),
+        d = n("60a3"),
+        h = n("535f"),
+        g = n("482f"),
+        p = n("f2b9"),
+        y =
+          ((r = (function (t) {
+            function e() {
+              var t, n;
+              Object(u["a"])(this, e);
+              for (var r = arguments.length, o = new Array(r), i = 0; i < r; i++) o[i] = arguments[i];
+              return (
+                (n = Object(l["a"])(this, (t = Object(s["a"])(e)).call.apply(t, [this].concat(o)))),
+                Object(m["a"])(Object(f["a"])(n), "options", void 0),
+                Object(m["a"])(Object(f["a"])(n), "config", g["a"]),
+                Object(m["a"])(Object(f["a"])(n), "emulator", void 0),
+                Object(m["a"])(Object(f["a"])(n), "edit", void 0),
+                n
+              );
+            }
+            return (
+              Object(v["a"])(e, t),
+              Object(c["a"])(e, [
+                {
+                  key: "mounted",
+                  value: function () {
+                    var t = this,
+                      e = this;
+                    ((window.onresize = function () {
+                      (e.emulator || (e.emulator = new nleEmulator().Create("nleEmulator")), e.emulator.Resize());
+                    }),
+                      this.$nextTick(function () {
+                        t.Init();
+                      }));
+                  },
+                },
+                {
+                  key: "test",
+                  value: function () {
+                    var t = this,
+                      e = this;
+                    ((window.onresize = function () {
+                      (e.emulator || (e.emulator = new nleEmulator().Create("nleEmulator")), e.emulator.Resize());
+                    }),
+                      this.$nextTick(function () {
+                        t.Init();
+                      }));
+                  },
+                },
+                {
+                  key: "save",
+                  value: function () {
+                    var t = this;
+                    this.GetXml().then(function (e) {
+                      t.$parent.editSave(e);
+                    });
+                  },
+                },
+                {
+                  key: "Init",
+                  value: function () {
+                    var t = this;
+                    return (
+                      t.emulator ||
+                        ((t.emulator = new nleEmulator()), (t.emulator.url = t.config.emulator_host + "/simulation"), t.emulator.Create("nleEmulator")),
+                      new Promise(function (e, n) {
+                        (t.emulator.Init(t.options),
+                          (t.emulator.oninit = function () {
+                            e();
+                          }));
+                      })
+                    );
+                  },
+                },
+                {
+                  key: "SetXml",
+                  value: function (t) {
+                    var e = this;
+                    return (
+                      e.emulator ||
+                        ((e.emulator = new nleEmulator()), (e.emulator.url = this.config.emulator_host + "/simulation"), e.emulator.Create("nleEmulator")),
+                      new Promise(function (n, r) {
+                        (e.emulator.SetXml(t),
+                          (e.emulator.onsetxml = function () {
+                            n();
+                          }));
+                      })
+                    );
+                  },
+                },
+                {
+                  key: "GetXml",
+                  value: function () {
+                    var t = this;
+                    return (
+                      t.emulator ||
+                        ((t.emulator = new nleEmulator()), (t.emulator.url = t.config.emulator_host + "/simulation"), t.emulator.Create("nleEmulator")),
+                      new Promise(function (e, n) {
+                        (t.emulator.GetXml(),
+                          (t.emulator.ongetxml = function (t) {
+                            e(t);
+                          }));
+                      })
+                    );
+                  },
+                },
+                {
+                  key: "GetUnencryptedXml",
+                  value: function () {
+                    var t = this;
+                    return (
+                      t.emulator ||
+                        ((t.emulator = new nleEmulator()), (t.emulator.url = t.config.emulator_host + "/simulation"), t.emulator.Create("nleEmulator")),
+                      new Promise(function (e, n) {
+                        (t.emulator.GetUnencryptedXml(),
+                          (t.emulator.ongetunencryptedxml = function (t) {
+                            e(t);
+                          }));
+                      })
+                    );
+                  },
+                },
+                {
+                  key: "error",
+                  get: function () {
+                    return this.emulator.error;
+                  },
+                },
+              ]),
+              e
+            );
+          })(h["a"])),
+          r);
+      (Object(b["a"])(
+        [
+          Object(d["b"])({
+            default: function () {
+              return new p["b"]();
+            },
+          }),
+          Object(b["b"])("design:type", "function" === typeof (o = "undefined" !== typeof p["b"] && p["b"]) ? o : Object),
+        ],
+        y.prototype,
+        "options",
+        void 0,
+      ),
+        Object(b["a"])([Object(d["b"])({ default: !1 }), Object(b["b"])("design:type", Boolean)], y.prototype, "edit", void 0),
+        (y = Object(b["a"])([Object(d["a"])({ components: {} })], y)));
+      var O = y,
+        j = O,
+        w = (n("7945"), n("2877")),
+        A = Object(w["a"])(j, i, a, !1, null, "0bc57822", null);
+      e["default"] = A.exports;
+    },
+    d28b: function (t, e, n) {
+      var r = n("746f");
+      r("iterator");
+    },
+    e01a: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        o = n("83ab"),
+        i = n("da84"),
+        a = n("5135"),
+        u = n("861d"),
+        c = n("9bf2").f,
+        l = n("e893"),
+        s = i.Symbol;
+      if (o && "function" == typeof s && (!("description" in s.prototype) || void 0 !== s().description)) {
+        var f = {},
+          v = function () {
+            var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : String(arguments[0]),
+              e = this instanceof v ? new s(t) : void 0 === t ? s() : s(t);
+            return ("" === t && (f[e] = !0), e);
+          };
+        l(v, s);
+        var m = (v.prototype = s.prototype);
+        m.constructor = v;
+        var b = m.toString,
+          d = "Symbol(test)" == String(s("test")),
+          h = /^Symbol\((.*)\)[^)]+$/;
+        (c(m, "description", {
+          configurable: !0,
+          get: function () {
+            var t = u(this) ? this.valueOf() : this,
+              e = b.call(t);
+            if (a(f, t)) return "";
+            var n = d ? e.slice(7, -1) : e.replace(h, "$1");
+            return "" === n ? void 0 : n;
+          },
+        }),
+          r({ global: !0, forced: !0 }, { Symbol: v }));
+      }
+    },
+    f2b9: function (t, e, n) {
+      "use strict";
+      (n.d(e, "a", function () {
+        return r;
+      }),
+        n.d(e, "b", function () {
+          return u;
+        }));
+      var r,
+        o = n("9f12"),
+        i = n("2fa7"),
+        a = n("73ec");
+      (function (t) {
+        ((t[(t["Edit"] = 0)] = "Edit"), (t[(t["Normal"] = 1)] = "Normal"), (t[(t["Task"] = 2)] = "Task"));
+      })(r || (r = {}));
+      var u = function t() {
+        (Object(o["a"])(this, t),
+          Object(i["a"])(this, "Mode", r.Normal),
+          Object(i["a"])(this, "IsShowDeviceTool", !0),
+          Object(i["a"])(this, "IsShowHandleTool", !0),
+          Object(i["a"])(this, "IsShowSwitchTip", !0),
+          Object(i["a"])(this, "IsShowTab", !0),
+          Object(i["a"])(this, "IsShowLineVerify", !0),
+          Object(i["a"])(this, "IsVerifyDesktopHelp", !0),
+          Object(i["a"])(this, "DefaultXml", ""),
+          Object(i["a"])(this, "Remark", ""),
+          Object(i["a"])(this, "ExperimentMsg", ""),
+          Object(i["a"])(this, "LocksDeviceds", []),
+          Object(i["a"])(this, "Lang", Object(a["k"])("language")),
+          Object(i["a"])(this, "HideDevices", []));
+      };
+    },
+  },
+]);

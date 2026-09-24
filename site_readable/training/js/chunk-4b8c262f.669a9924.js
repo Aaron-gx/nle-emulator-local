@@ -1,0 +1,346 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-4b8c262f"],
+  {
+    "0bc4": function (A, g, C) {
+      "use strict";
+      C.r(g);
+      var I,
+        t = function () {
+          var A = this,
+            g = A.$createElement,
+            C = A._self._c || g;
+          return C("div", [
+            C("div", { staticClass: "container" }, [
+              C(
+                "div",
+                { staticClass: "main-menu no-select", class: A.hideMenubar ? "hide-main" : "" },
+                [
+                  C("div", { staticClass: "menubar-top" }, [
+                    C("div", { staticClass: "mb-top-l" }),
+                    C("div", { staticClass: "mb-top-r", on: { click: A.toggleMenubar } }),
+                  ]),
+                  C(
+                    "el-menu",
+                    {
+                      attrs: { router: !0, "background-color": "#313136", "text-color": "white", "default-openeds": A.activeMenu, "unique-opened": !0 },
+                      on: { open: A.openMenu },
+                    },
+                    [
+                      C(
+                        "el-menu-item",
+                        { staticStyle: { "padding-left": "15px" }, attrs: { index: "/main/teacher/stat" } },
+                        [
+                          C("template", { slot: "title" }, [
+                            C("i", { staticClass: "el-icon-s-data icon-mr15 ml6" }),
+                            C("span", { attrs: { title: A.config.menu_教学总览 } }, [A._v(A._s(A.config.menu_教学总览))]),
+                          ]),
+                        ],
+                        2,
+                      ),
+                      C(
+                        "el-submenu",
+                        { attrs: { index: "1" } },
+                        [
+                          C("template", { slot: "title" }, [
+                            C("i", { staticClass: "el-icon-s-claim icon-mr15" }),
+                            C("span", { attrs: { title: A.config.menu_任务管理 } }, [A._v(A._s(A.config.menu_任务管理))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/taskmanager" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_任务列表 } }, [A._v(A._s(A.config.menu_任务列表))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/taskprogress" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_任务进度 } }, [A._v(A._s(A.config.menu_任务进度))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/taskcomment" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_任务评分 } }, [A._v(A._s(A.config.menu_任务评分))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/taskreport" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_任务报告 } }, [A._v(A._s(A.config.menu_任务报告))]),
+                          ]),
+                        ],
+                        2,
+                      ),
+                      C(
+                        "el-submenu",
+                        { attrs: { index: "2" } },
+                        [
+                          C("template", { slot: "title" }, [
+                            C("i", { staticClass: "el-icon-s-management icon-mr15" }),
+                            C("span", { attrs: { title: A.config.menu_课程管理 } }, [A._v(A._s(A.config.menu_课程管理))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/lessonlist" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_课程列表 } }, [A._v(A._s(A.config.menu_课程列表))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/tasktemplate" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_课程任务 } }, [A._v(A._s(A.config.menu_课程任务))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/lessonresource" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_课件管理 } }, [A._v(A._s(A.config.menu_课件管理))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/emulatorpracticelist" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_实训管理 } }, [A._v(A._s(A.config.menu_实训管理))]),
+                          ]),
+                          C("el-menu-item", { attrs: { index: "/main/teacher/exerciselist" } }, [
+                            C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                            C("span", { attrs: { title: A.config.menu_习题管理 } }, [A._v(A._s(A.config.menu_习题管理))]),
+                          ]),
+                        ],
+                        2,
+                      ),
+                      A.config.do_not_show_selfstudy
+                        ? A._e()
+                        : C(
+                            "el-menu-item",
+                            { attrs: { index: "/main/teacher/selfstudy" } },
+                            [
+                              C("template", { slot: "title" }, [
+                                C("i", { staticClass: "lesson icon-mr15" }),
+                                C("span", { attrs: { title: A.config.menu_自主学习 } }, [A._v(A._s(A.config.menu_自主学习))]),
+                              ]),
+                            ],
+                            2,
+                          ),
+                      A.config.do_not_show_simulation
+                        ? A._e()
+                        : C(
+                            "el-submenu",
+                            { attrs: { index: "3" } },
+                            [
+                              C("template", { slot: "title" }, [
+                                C("i", { staticClass: "el-icon-s-data icon-mr15" }),
+                                C("span", { attrs: { title: A.config.menu_仿真工具 } }, [A._v(A._s(A.config.menu_仿真工具))]),
+                              ]),
+                              A.config.do_not_show_rfid
+                                ? A._e()
+                                : C("el-menu-item", { attrs: { index: "/main/teacher/emulatorrfid" } }, [
+                                    C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                                    C("span", { staticClass: "menu-content", attrs: { title: A.config.menu_自动识别工程实训与仿真系统 } }, [
+                                      A._v(A._s(A.config.menu_自动识别工程实训与仿真系统)),
+                                    ]),
+                                  ]),
+                              A.config.do_not_show_emulator
+                                ? A._e()
+                                : C("el-menu-item", { attrs: { index: "/main/teacher/emulator" } }, [
+                                    C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                                    C("span", { staticClass: "menu-content", attrs: { title: A.config.menu_技术仿真 } }, [A._v(A._s(A.config.menu_技术仿真))]),
+                                  ]),
+                              A.config.do_not_show_rfid
+                                ? A._e()
+                                : C("el-menu-item", { attrs: { index: "/main/teacher/rfidexprecord" } }, [
+                                    C("i", { staticClass: "icon-mr15 menu-navlist" }),
+                                    C("span", { attrs: { title: A.config.menu_实验记录 } }, [A._v(A._s(A.config.menu_实验记录))]),
+                                  ]),
+                            ],
+                            2,
+                          ),
+                      C(
+                        "el-menu-item",
+                        { attrs: { index: "/main/teacher/classmanager" } },
+                        [
+                          C("template", { slot: "title" }, [
+                            C("i", { staticClass: "el-icon-s-grid icon-mr15" }),
+                            C("span", { attrs: { title: A.config.menu_班级管理 } }, [A._v(A._s(A.config.menu_班级管理))]),
+                          ]),
+                        ],
+                        2,
+                      ),
+                      C(
+                        "el-menu-item",
+                        { attrs: { index: "/main/teacher/studentmanager" } },
+                        [
+                          C("template", { slot: "title" }, [
+                            C("i", { staticClass: "el-icon-s-custom icon-mr15" }),
+                            C("span", { attrs: { title: A.config.menu_学生管理 } }, [A._v(A._s(A.config.menu_学生管理))]),
+                          ]),
+                        ],
+                        2,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              C("div", { staticClass: "main-content" }, [
+                C("div", { staticClass: "main" }, [C("router-view", { ref: "mainbody", on: { footSwitch: A.footSwitch } })], 1),
+              ]),
+            ]),
+          ]);
+        },
+        e = [],
+        i = (C("99af"), C("9f12")),
+        a = C("53fe"),
+        n = C("8b83"),
+        o = C("c65a"),
+        s = C("9aa6"),
+        l = C("c03e"),
+        m = C("2fa7"),
+        c = C("9ab4"),
+        r = C("60a3"),
+        u = C("9157"),
+        d = C("482f"),
+        b =
+          ((I = (function (A) {
+            function g() {
+              var A, C;
+              Object(i["a"])(this, g);
+              for (var I = arguments.length, t = new Array(I), e = 0; e < I; e++) t[e] = arguments[e];
+              return (
+                (C = Object(n["a"])(this, (A = Object(o["a"])(g)).call.apply(A, [this].concat(t)))),
+                Object(m["a"])(Object(s["a"])(C), "title", ""),
+                Object(m["a"])(Object(s["a"])(C), "activeMenu", [1]),
+                Object(m["a"])(Object(s["a"])(C), "hideMenubar", !0),
+                Object(m["a"])(Object(s["a"])(C), "showFoot", !0),
+                Object(m["a"])(Object(s["a"])(C), "config", d["a"]),
+                C
+              );
+            }
+            return (
+              Object(l["a"])(g, A),
+              Object(a["a"])(g, [
+                {
+                  key: "beforeRouteUpdate",
+                  value: function (A, g, C) {
+                    ((this.title = A.meta.title), C());
+                  },
+                },
+                {
+                  key: "open_rfid",
+                  value: function () {
+                    window.open("".concat(d["a"].emulator_host, "/main/rfidsimtion"), "_blank");
+                  },
+                },
+                {
+                  key: "gosimulation",
+                  value: function () {
+                    this.$router.push("/main/simulation");
+                  },
+                },
+                {
+                  key: "toggleMenubar",
+                  value: function () {
+                    ((this.hideMenubar = !this.hideMenubar),
+                      this.hideMenubar && (this.activeMenu = []),
+                      this.$refs["mainbody"].bodyResize && this.$refs["mainbody"].bodyResize());
+                  },
+                },
+                {
+                  key: "openMenu",
+                  value: function (A, g) {
+                    this.hideMenubar && this.toggleMenubar();
+                  },
+                },
+                {
+                  key: "footSwitch",
+                  value: function (A) {
+                    this.showFoot = A;
+                  },
+                },
+              ]),
+              g
+            );
+          })(r["c"])),
+          I);
+      b = Object(c["a"])(
+        [
+          Object(r["a"])({
+            beforeRouteEnter: function (A, g, C) {
+              u["b"].validRight(A.path) ? C() : (console.log("老师权限验证不通过"), C("/"));
+            },
+          }),
+        ],
+        b,
+      );
+      var p = b,
+        f = p,
+        h = (C("3ce3"), C("2877")),
+        v = Object(h["a"])(f, t, e, !1, null, "5726eab6", null);
+      g["default"] = v.exports;
+    },
+    "3a9f": function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAYAAAAbvf3sAAAACXBIWXMAAAsTAAALEwEAmpwYAAA5z2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDIwLTA3LTA3VDE0OjIzOjM3KzA4OjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMjAtMDctMDdUMTQ6MjY6NDUrMDg6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDIwLTA3LTA3VDE0OjI2OjQ1KzA4OjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICAgICA8cGhvdG9zaG9wOkNvbG9yTW9kZT4zPC9waG90b3Nob3A6Q29sb3JNb2RlPgogICAgICAgICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOmNmZTVlMWVkLTM1MjUtMWI0Ny1hNGUzLTIzNWY4NmJjYTk5NTwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDoxNDQ4Y2JmYy0wNjJhLWQ0NGYtYjVkZS0yNTc4ZmE5MDg1YTI8L3htcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+eG1wLmRpZDoxNDQ4Y2JmYy0wNjJhLWQ0NGYtYjVkZS0yNTc4ZmE5MDg1YTI8L3htcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkhpc3Rvcnk+CiAgICAgICAgICAgIDxyZGY6U2VxPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmFjdGlvbj5jcmVhdGVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6MTQ0OGNiZmMtMDYyYS1kNDRmLWI1ZGUtMjU3OGZhOTA4NWEyPC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDIwLTA3LTA3VDE0OjIzOjM3KzA4OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC9zdEV2dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDpjZmU1ZTFlZC0zNTI1LTFiNDctYTRlMy0yMzVmODZiY2E5OTU8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMjAtMDctMDdUMTQ6MjY6NDUrMDg6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cyk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+NjU1MzU8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjEyPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjE0PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7F2FuzAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABVSURBVHjanJLBCQAhDASXq8iSLOlKvQ7Gl3CErOAu+AkzYmIEqJwXmE1dgLriAD4nydxkpQrOH9RKFd6xUgcfJQdb6dFtkidFTUdjjT4uWo3j8q0BAJsB+8yvhPtCAAAAAElFTkSuQmCC";
+    },
+    "3ce3": function (A, g, C) {
+      "use strict";
+      var I = C("da9c"),
+        t = C.n(I);
+      t.a;
+    },
+    "3faa": function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAA4UlEQVQoke3SsS5EQRgF4G+FF5BQKEhWpZBQaXkEep1O4hV4hS03sZVERTyC1ShpRGc7SgWNhOyV4WwiN9Nsb5p/5sw55547/9/p9/sqaxf7mM/VK85w1abOVMRdXGL9D7YUrNsmz1YMNtHBGr6ClfMYGxjVEvQSs8FFsM+cm4glRRNub5JgC0c4wBO2cYydVrJrnOAGqzjFeTFYCWGQupg6rPzeY/BhDJZrjzjV+jf4NZj0eBqzudRxaeNdhuMWH1jIZa2NZQ4OM9pFc1++WkZzDy8hveO5Ii7YW/YPPxpG3/RYMHD60vpEAAAAAElFTkSuQmCC";
+    },
+    "4ea3": function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAhElEQVQokWP8//8/AwMDgz4DA4MgA2HwhOH///+F/4kHP0Eanv3//78ZZBMBHAYylomBgUGSgYHhEhHOAQMmYhWOaA0sUFqegYHBgYBaLRABShrgtEFqsK4FaSaAw2EaPjIwMDwj2or///87/f///z2Rye8vLHlzMTAwGCEFAnbAwPAdAOEllZmI9YVbAAAAAElFTkSuQmCC";
+    },
+    "60ae4": function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAYAAAD+vg1LAAAB8ElEQVRIidXVzYvNURgH8M+MmZKXNH+BGiaTt7WyoFgw7G0mY4GSjAV5KUqNDbIwFlIUyYJSNl7KJAvFRhYjXWGsbKeQ1Xjr1PdOd657596ulW+dOuf3nOd7zu95vs9zuoZH9mkDA7ic+SG8b+XQ3cLeh0t4m3lf5uNY1glxT272EbtQfmtDxt58m8qeBe0Sb8EkLuIaVuAGfmfcxEpcz5438WlKPIiHmMDnrI/he4PDv8U2mL0T8R2oJa7GcTI32Ymt+dVWmMreHVhVG/8Sy8MYxWmcw0wbhPUot32C4xjDdG0oznZIWsVMOGZDUY8lGEZXG2RFEbuxsN7QiLhI6hZeY+M8pJuiiKKSNe0QlwxvxyI8xz0sr7EX+d3Hs6w341U9SU+T2zzGahxIMt7hQmwlQV9xEFfxsxFBM+KCH+kPt3EGJ1MgV6KgL/P4zktcxXTkuD7r0TZ8WjahjvF/E59A7z9w9YZjlng82S/lWGnUAoNfzaSFbfEdC9d4d03W1+JTCuQB+uucy8Gn6r71R/OP4rsuXHOaUCUtcCh9tazPY3HsT/Ei86WxVVKVQ/Gt1IaiHuX0UnVHsD/P0540pTJG8CFP1NHcsvjMQTO5Vauu/OrdPFEvM8r8Th6Fkp+y9y+00nFt/MtzVMZsHJt64Q9KuG48Jm19xAAAAABJRU5ErkJggg==";
+    },
+    7840: function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAA20lEQVQoke3TsS5EQRQG4I+QqCUaJdtQ0aBjH4GETuc9eAX9dh7AI4hO1KJiO5pNbkGjkD0y69zkZnIL2/uTyeScOef/z2T+WYgIPTjGOVbzqMENbuvSPoINvOAVb5lbwR4GGHeLl3rUdwsxtvDdCmGKnZpAmSAiriOiib+jyZ7ZFfbxgIsc+wiXGFaT3eEK99jECAdF/Sx122nquF0Fp3W82PcE8+Cf4JegGGResuXcp8UHrXUf8YU1bOd7d3GIZ0ywnrYeFNVizRO8Z/Vn5w90UXIfmXia9TD+AcNknnp8n0DDAAAAAElFTkSuQmCC";
+    },
+    "9cb5": function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAAMUlEQVQokWNs6uhvYKACYKKGISDA+P//f6oYRDUXDT6DWJo7J4zG2lAzaJDFGgMDAwDcqgxp81LOBAAAAABJRU5ErkJggg==";
+    },
+    a3a2: function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAhklEQVQokeXRMQrCUBCE4S8h2FsGC3sbwRN4BhurHMLCG9gF0r8jWHgFD+EZxN5KsFB5YpFCeC91BoZt5mfY3SKEAEtMpXWtsEOXEY56ltjjgCLhLSYRqHHJbFDmBkcNVL85xzqRXfSBduhZT5mf/gJ33IY0bNDgnfARr7jDGTOsejv9F48PI4QXpJFeKIQAAAAASUVORK5CYII=";
+    },
+    a767: function (A, g) {
+      A.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAYAAAAbvf3sAAAAeklEQVQokYWQ0Q2AIAxET9OBHMFRZANH8ZcvHMURHMk0waQ5r9gvoO8d0KnWCqoDwA3g5IaXiTMHr7D+FTx9zSQWtgBJyQhu9LSPZAncMskEPJRmAQ5r7glFQKX3lp6++/69gSUJ85TivCXMQpQknH06hTPBxyxhAHgA0ScmtrkKgdQAAAAASUVORK5CYII=";
+    },
+    adb2: function (A, g, C) {
+      g = A.exports = C("24fb")(!1);
+      var I = C("1de5"),
+        t = I(C("a767")),
+        e = I(C("3a9f")),
+        i = I(C("60ae4")),
+        a = I(C("9cb5")),
+        n = I(C("a3a2")),
+        o = I(C("3faa")),
+        s = I(C("4ea3")),
+        l = I(C("7840"));
+      g.push([
+        A.i,
+        ".container[data-v-5726eab6]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}.main-menu[data-v-5726eab6]{width:200px;-ms-flex-negative:0;flex-shrink:0;height:calc(100vh - 60px);background:#35353b;overflow:hidden;-webkit-transition:width .1s ease;transition:width .1s ease}.main-menu>ul[data-v-5726eab6]{-webkit-transition:-webkit-transform .1s ease;transition:-webkit-transform .1s ease;transition:transform .1s ease;transition:transform .1s ease,-webkit-transform .1s ease}.main-menu li[data-v-5726eab6],.main-menu ul[data-v-5726eab6]{width:200px}.main-menu li .el-menu-item.is-active[data-v-5726eab6],.main-menu ul .el-menu-item.is-active[data-v-5726eab6]{background:#2681ff!important;color:#fff!important}.main-menu[data-v-5726eab6] .el-submenu__title{padding-left:20px}.main-menu[data-v-5726eab6] .el-submenu__icon-arrow{right:15px;font-size:14px;font-weight:700}.main-menu[data-v-5726eab6] .el-submenu .el-menu-item{padding-left:54px!important}.main-menu[data-v-5726eab6] .el-submenu.is-active:not(.is-opened) .el-submenu__title{background:#2681ff!important}.main-menu[data-v-5726eab6] .el-submenu.is-active:not(.is-opened) .el-submenu__title i{color:#fff!important}.main-menu .icon-mr15[data-v-5726eab6]{margin-right:15px}.main-menu .ml6[data-v-5726eab6]{margin-left:6px!important}.hide-main[data-v-5726eab6]{width:40px}.hide-main .menubar-top[data-v-5726eab6]{-webkit-transform:translateX(-160px);transform:translateX(-160px);padding:0}.hide-main>ul.el-menu[data-v-5726eab6]{-webkit-transform:translateX(-13px);transform:translateX(-13px)}.menu-navlist[data-v-5726eab6]:before{content:url(" +
+          t +
+          ");top:4px;left:45px;position:absolute}[data-v-5726eab6] .el-menu-item.is-active .menu-navlist:before{content:url(" +
+          e +
+          ")}.menubar-top[data-v-5726eab6]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;height:60px;padding:0 10px;min-width:200px;border-bottom:1px solid hsla(0,0%,78.4%,.1);-webkit-transition:all .3s ease;transition:all .3s ease}.menubar-top .mb-top-l[data-v-5726eab6]{width:40px;background:url(" +
+          i +
+          ") no-repeat 50%;cursor:pointer}.menubar-top .mb-top-r[data-v-5726eab6]{width:40px;background:url(" +
+          a +
+          ') no-repeat 50%;cursor:pointer}.main-content[data-v-5726eab6]{position:relative;height:calc(100vh - 60px);width:100%;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:stretch;-ms-flex-pack:stretch;justify-content:stretch}.main-content .main[data-v-5726eab6]{min-width:calc(100vw - 200px);overflow:auto hidden;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.main-content .foot-t[data-v-5726eab6]{width:100%;overflow:hidden;position:absolute;bottom:0;right:0}.tea-index-sim[data-v-5726eab6]{color:#2b84ff;font-size:16px;background-color:#eff8ff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:60px;cursor:pointer}.tea-index-left[data-v-5726eab6]{height:60px;border-bottom:1px solid #eff8ff;padding-top:20px;font-size:14px;padding-left:20px}.blue-b-1[data-v-5726eab6]:before{color:#2b84ff;content:"";position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;width:4px;height:20px;background-color:#2b84ff}.cell[data-v-5726eab6]{text-align:center}.menu-content[data-v-5726eab6]{display:inline-block;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.el-table th[data-v-5726eab6]{background-color:#f2f5f8}.el-menu-item i.lesson[data-v-5726eab6],.el-menu-item i.tools[data-v-5726eab6]{display:inline-block;width:24px;text-align:center;font-size:18px;vertical-align:middle}.el-menu-item i.lesson[data-v-5726eab6]:before{content:url(' +
+          n +
+          ")}.el-menu-item i.tools[data-v-5726eab6]:before{content:url(" +
+          o +
+          ")}.el-menu-item.is-active i.lesson[data-v-5726eab6]:before{content:url(" +
+          s +
+          ")}.el-menu-item.is-active i.tools[data-v-5726eab6]:before{content:url(" +
+          l +
+          ")}",
+        "",
+      ]);
+    },
+    da9c: function (A, g, C) {
+      var I = C("adb2");
+      ("string" === typeof I && (I = [[A.i, I, ""]]), I.locals && (A.exports = I.locals));
+      var t = C("499e").default;
+      t("fb8b2574", I, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+  },
+]);

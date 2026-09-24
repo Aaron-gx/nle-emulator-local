@@ -1,0 +1,26 @@
+[
+  {
+    "id": "f2f73201-0092-2c2e-950b-08df1a088f52",
+    "createTime": "2026-09-24T14:53:37.6514427",
+    "modifyTime": "2026-09-24T14:53:37.6514427",
+    "studentId": null,
+    "studentNo": null,
+    "studentName": null,
+    "classId": null,
+    "className": null,
+    "experimentName": null,
+    "experimentResult": null
+  },
+  {
+    "id": "e4f73201-0092-2c2e-af5e-08df1a0872b2",
+    "createTime": "2026-09-24T14:52:49.6273371",
+    "modifyTime": "2026-09-24T14:52:49.6273371",
+    "studentId": null,
+    "studentNo": null,
+    "studentName": null,
+    "classId": null,
+    "className": null,
+    "experimentName": null,
+    "experimentResult": null
+  }
+]

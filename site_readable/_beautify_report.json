@@ -1,0 +1,534 @@
+[
+  {
+    "rel": "training\\version.js",
+    "size": 51,
+    "outSize": 54,
+    "ms": 43,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d0c7ce3.f459f161.js",
+    "size": 581,
+    "outSize": 925,
+    "ms": 25,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d0dd442.9cb3c671.js",
+    "size": 584,
+    "outSize": 926,
+    "ms": 10,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d22205f.08a3722c.js",
+    "size": 585,
+    "outSize": 925,
+    "ms": 8,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d0d07ba.98b15d58.js",
+    "size": 593,
+    "outSize": 929,
+    "ms": 11,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d0d6f02.cf0266c6.js",
+    "size": 689,
+    "outSize": 1064,
+    "ms": 10,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-46ed78d3.dbf37f12.js",
+    "size": 1099,
+    "outSize": 1644,
+    "ms": 14,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2e463b80.f603e604.js",
+    "size": 1103,
+    "outSize": 1648,
+    "ms": 12,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\config\\config.js",
+    "size": 1293,
+    "outSize": 1022,
+    "ms": 12,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-ef5b8ae8.dcb9c234.js",
+    "size": 1829,
+    "outSize": 2765,
+    "ms": 16,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-d959b33e.8340322c.js",
+    "size": 3130,
+    "outSize": 6060,
+    "ms": 29,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\config\\config.js",
+    "size": 3240,
+    "outSize": 2571,
+    "ms": 16,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-7d20730e.0cebc54b.js",
+    "size": 3677,
+    "outSize": 7279,
+    "ms": 25,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-c9a1c958.119f283a.js",
+    "size": 4331,
+    "outSize": 6417,
+    "ms": 19,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\js\\styles.42bac045.js",
+    "size": 6023,
+    "outSize": 6620,
+    "ms": 9,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-704d6c4d.6f419058.js",
+    "size": 6329,
+    "outSize": 14297,
+    "ms": 33,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-8df737fc.6f093e42.js",
+    "size": 9973,
+    "outSize": 18827,
+    "ms": 54,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-48c78fe8.9139d669.js",
+    "size": 9975,
+    "outSize": 18829,
+    "ms": 38,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-4d976abe.6b0021e1.js",
+    "size": 10734,
+    "outSize": 19842,
+    "ms": 46,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-6ab49c7c.a72d27f7.js",
+    "size": 11241,
+    "outSize": 26167,
+    "ms": 35,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2fb6d740.fcc47c54.js",
+    "size": 11359,
+    "outSize": 26315,
+    "ms": 34,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-6e600536.e5150ae0.js",
+    "size": 11405,
+    "outSize": 26920,
+    "ms": 45,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-d20d8cd8.182493f4.js",
+    "size": 11511,
+    "outSize": 24970,
+    "ms": 42,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-3d592150.301b9954.js",
+    "size": 12404,
+    "outSize": 17012,
+    "ms": 14,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-71b3d3a6.b9e10fcc.js",
+    "size": 12677,
+    "outSize": 30307,
+    "ms": 35,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-4e2a9514.e4fe95da.js",
+    "size": 13039,
+    "outSize": 27201,
+    "ms": 38,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-7d0804ac.b3677b9c.js",
+    "size": 13438,
+    "outSize": 25249,
+    "ms": 45,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2ab545b0.b6428b96.js",
+    "size": 13585,
+    "outSize": 24812,
+    "ms": 47,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d21eebe.b25dd38e.js",
+    "size": 15136,
+    "outSize": 43117,
+    "ms": 35,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-75919ced.ff5187a7.js",
+    "size": 15202,
+    "outSize": 31421,
+    "ms": 48,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-9fd82662.2e891bcf.js",
+    "size": 15343,
+    "outSize": 29442,
+    "ms": 37,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-86296a5c.7b8ea363.js",
+    "size": 16665,
+    "outSize": 38777,
+    "ms": 48,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-1138e13e.eaca9316.js",
+    "size": 17328,
+    "outSize": 38910,
+    "ms": 44,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-491422d8.dacb2f45.js",
+    "size": 17593,
+    "outSize": 39022,
+    "ms": 52,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-30fa697c.d30dc8e6.js",
+    "size": 17934,
+    "outSize": 34315,
+    "ms": 45,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\lib\\nleEmulatorLib.js",
+    "size": 18514,
+    "outSize": 14789,
+    "ms": 35,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-e680f3b6.386635ea.js",
+    "size": 20457,
+    "outSize": 49228,
+    "ms": 70,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-64a22492.47b9c124.js",
+    "size": 20679,
+    "outSize": 48022,
+    "ms": 49,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-24ce1332.15324e27.js",
+    "size": 21352,
+    "outSize": 48030,
+    "ms": 57,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-ea31d1aa.d1177563.js",
+    "size": 21568,
+    "outSize": 47231,
+    "ms": 46,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2a30faa4.d9d3772b.js",
+    "size": 22536,
+    "outSize": 53933,
+    "ms": 44,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2d27230d.b7f242d8.js",
+    "size": 23553,
+    "outSize": 42798,
+    "ms": 53,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-5f4f24a9.3d9e36b1.js",
+    "size": 25668,
+    "outSize": 49052,
+    "ms": 79,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-6abeac5a.997df995.js",
+    "size": 26633,
+    "outSize": 64184,
+    "ms": 71,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-12417a23.4e97d03c.js",
+    "size": 26921,
+    "outSize": 34364,
+    "ms": 13,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-7ea40e1c.99bbdc82.js",
+    "size": 29645,
+    "outSize": 32550,
+    "ms": 11,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-198bfb6d.370edcb2.js",
+    "size": 30992,
+    "outSize": 55476,
+    "ms": 42,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-2eee7b78.da895e23.js",
+    "size": 31435,
+    "outSize": 71724,
+    "ms": 61,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-c5b6f69a.b59c11b6.js",
+    "size": 31844,
+    "outSize": 56576,
+    "ms": 47,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-4b079678.ce50eb8c.js",
+    "size": 32943,
+    "outSize": 75887,
+    "ms": 65,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-4b8c262f.669a9924.js",
+    "size": 34126,
+    "outSize": 41016,
+    "ms": 19,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-19db64e5.21feb57b.js",
+    "size": 35495,
+    "outSize": 94069,
+    "ms": 71,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-0ab30982.3ddbffaa.js",
+    "size": 35973,
+    "outSize": 77868,
+    "ms": 67,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-36832f9a.945fa9cf.js",
+    "size": 38973,
+    "outSize": 83853,
+    "ms": 71,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-6042757f.6f49bf08.js",
+    "size": 39792,
+    "outSize": 99421,
+    "ms": 96,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-0be95add.88588fc8.js",
+    "size": 39828,
+    "outSize": 67979,
+    "ms": 68,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-1bb1436b.21679ced.js",
+    "size": 39845,
+    "outSize": 97056,
+    "ms": 82,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-b19fc0d2.fe1570bf.js",
+    "size": 42057,
+    "outSize": 92321,
+    "ms": 105,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-893855b4.214aa743.js",
+    "size": 44522,
+    "outSize": 101590,
+    "ms": 96,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-a7e9bda8.8ca2f980.js",
+    "size": 46946,
+    "outSize": 93524,
+    "ms": 70,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-540aa599.6f05349f.js",
+    "size": 50333,
+    "outSize": 117348,
+    "ms": 98,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-1cc681fc.88d04f3f.js",
+    "size": 51183,
+    "outSize": 65188,
+    "ms": 51,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-548e8092.7f6bb044.js",
+    "size": 53607,
+    "outSize": 93668,
+    "ms": 136,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-6da48c20.37019af6.js",
+    "size": 62796,
+    "outSize": 130458,
+    "ms": 151,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-d602cabe.f2464652.js",
+    "size": 71114,
+    "outSize": 131351,
+    "ms": 111,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\app.2fbd3d13.js",
+    "size": 92050,
+    "outSize": 146291,
+    "ms": 186,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-4e65008c.1c3b4958.js",
+    "size": 96639,
+    "outSize": 107932,
+    "ms": 53,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\js\\app.6ae0aea6.js",
+    "size": 136563,
+    "outSize": 234185,
+    "ms": 351,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-1bde37bc.dad5c73c.js",
+    "size": 365195,
+    "outSize": 549161,
+    "ms": 452,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-5d95f918.f176e011.js",
+    "size": 532567,
+    "outSize": 682263,
+    "ms": 366,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-8ebc2656.f8bed52c.js",
+    "size": 612298,
+    "outSize": 895252,
+    "ms": 523,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-663577ae.3d73b232.js",
+    "size": 836868,
+    "outSize": 846237,
+    "ms": 52,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-aa9b8968.429a3e8c.js",
+    "size": 952151,
+    "outSize": 1383083,
+    "ms": 1819,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\js\\vendor.d43bd1ff.js",
+    "size": 2114684,
+    "outSize": 3562856,
+    "ms": 3928,
+    "status": "formatted"
+  },
+  {
+    "rel": "training\\js\\chunk-vendors.ef3efcc1.js",
+    "size": 3314392,
+    "outSize": 5880749,
+    "ms": 7882,
+    "status": "formatted"
+  },
+  {
+    "rel": "emulator\\js\\manifest.c882d2bd.js",
+    "size": 7195857,
+    "outSize": 9070317,
+    "ms": 4436,
+    "status": "formatted"
+  }
+]

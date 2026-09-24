@@ -1,0 +1,93 @@
+[
+  {
+    "name": "exercise",
+    "ok": true,
+    "items": 5332,
+    "file": "exercise.json"
+  },
+  {
+    "name": "lesson_params",
+    "ok": true,
+    "items": 1,
+    "file": "lesson_params.json"
+  },
+  {
+    "name": "lesson_page",
+    "ok": true,
+    "total": 0,
+    "rows": 0,
+    "file": "lesson_page.json"
+  },
+  {
+    "name": "lesson_perm",
+    "ok": true,
+    "items": 0,
+    "file": "lesson_perm.json"
+  },
+  {
+    "name": "task_page",
+    "ok": true,
+    "total": 1,
+    "rows": 5,
+    "file": "task_page.json"
+  },
+  {
+    "name": "task_record",
+    "ok": true,
+    "total": 2,
+    "rows": 10,
+    "file": "task_record.json"
+  },
+  {
+    "name": "template_page",
+    "ok": true,
+    "total": 0,
+    "rows": 0,
+    "file": "template_page.json"
+  },
+  {
+    "name": "template_all",
+    "ok": true,
+    "items": 0,
+    "file": "template_all.json"
+  },
+  {
+    "name": "emu_practice",
+    "ok": true,
+    "total": 1,
+    "rows": 1,
+    "file": "emu_practice.json"
+  },
+  {
+    "name": "exercise_page",
+    "ok": true,
+    "total": 0,
+    "rows": 0,
+    "file": "exercise_page.json"
+  },
+  {
+    "name": "exercise_comp",
+    "ok": true,
+    "items": 0,
+    "file": "exercise_comp.json"
+  },
+  {
+    "name": "rfid_record",
+    "ok": true,
+    "total": 1,
+    "rows": 2,
+    "file": "rfid_record.json"
+  },
+  {
+    "name": "statistic",
+    "ok": true,
+    "items": 1,
+    "file": "statistic.json"
+  },
+  {
+    "name": "section_state",
+    "ok": true,
+    "items": 0,
+    "file": "section_state.json"
+  }
+]

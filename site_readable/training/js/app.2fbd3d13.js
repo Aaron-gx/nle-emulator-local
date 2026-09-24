@@ -1,0 +1,3566 @@
+(function (e) {
+  function t(t) {
+    for (var r, i, c = t[0], s = t[1], u = t[2], d = 0, p = []; d < c.length; d++)
+      ((i = c[d]), Object.prototype.hasOwnProperty.call(o, i) && o[i] && p.push(o[i][0]), (o[i] = 0));
+    for (r in s) Object.prototype.hasOwnProperty.call(s, r) && (e[r] = s[r]);
+    l && l(t);
+    while (p.length) p.shift()();
+    return (a.push.apply(a, u || []), n());
+  }
+  function n() {
+    for (var e, t = 0; t < a.length; t++) {
+      for (var n = a[t], r = !0, i = 1; i < n.length; i++) {
+        var s = n[i];
+        0 !== o[s] && (r = !1);
+      }
+      r && (a.splice(t--, 1), (e = c((c.s = n[0]))));
+    }
+    return e;
+  }
+  var r = {},
+    o = { app: 0 },
+    a = [];
+  function i(e) {
+    return (
+      c.p +
+      "js/" +
+      ({}[e] || e) +
+      "." +
+      {
+        "chunk-0ab30982": "3ddbffaa",
+        "chunk-1138e13e": "eaca9316",
+        "chunk-6042757f": "6f49bf08",
+        "chunk-b19fc0d2": "fe1570bf",
+        "chunk-12417a23": "4e97d03c",
+        "chunk-2ab545b0": "b6428b96",
+        "chunk-c9a1c958": "119f283a",
+        "chunk-2d0c7ce3": "f459f161",
+        "chunk-2d0d07ba": "98b15d58",
+        "chunk-2d0d6f02": "cf0266c6",
+        "chunk-2d0dd442": "9cb3c671",
+        "chunk-2d21eebe": "b25dd38e",
+        "chunk-0be95add": "88588fc8",
+        "chunk-2eee7b78": "da895e23",
+        "chunk-548e8092": "7f6bb044",
+        "chunk-1bde37bc": "dad5c73c",
+        "chunk-6da48c20": "37019af6",
+        "chunk-7d0804ac": "b3677b9c",
+        "chunk-5d95f918": "f176e011",
+        "chunk-7d20730e": "0cebc54b",
+        "chunk-86296a5c": "7b8ea363",
+        "chunk-d602cabe": "f2464652",
+        "chunk-c5b6f69a": "b59c11b6",
+        "chunk-e680f3b6": "386635ea",
+        "chunk-4e2a9514": "e4fe95da",
+        "chunk-19db64e5": "21feb57b",
+        "chunk-4b079678": "ce50eb8c",
+        "chunk-a7e9bda8": "8ca2f980",
+        "chunk-2d22205f": "08a3722c",
+        "chunk-2d27230d": "b7f242d8",
+        "chunk-30fa697c": "d30dc8e6",
+        "chunk-36832f9a": "945fa9cf",
+        "chunk-3d592150": "301b9954",
+        "chunk-48c78fe8": "9139d669",
+        "chunk-491422d8": "dacb2f45",
+        "chunk-4b8c262f": "669a9924",
+        "chunk-4d976abe": "6b0021e1",
+        "chunk-aa9b8968": "429a3e8c",
+        "chunk-4e65008c": "1c3b4958",
+        "chunk-1cc681fc": "88d04f3f",
+        "chunk-663577ae": "3d73b232",
+        "chunk-6abeac5a": "997df995",
+        "chunk-540aa599": "6f05349f",
+        "chunk-1bb1436b": "21679ced",
+        "chunk-75919ced": "ff5187a7",
+        "chunk-5f4f24a9": "3d9e36b1",
+        "chunk-24ce1332": "15324e27",
+        "chunk-64a22492": "47b9c124",
+        "chunk-704d6c4d": "6f419058",
+        "chunk-2a30faa4": "d9d3772b",
+        "chunk-2e463b80": "f603e604",
+        "chunk-46ed78d3": "dbf37f12",
+        "chunk-8ebc2656": "f8bed52c",
+        "chunk-ea31d1aa": "d1177563",
+        "chunk-7ea40e1c": "99bbdc82",
+        "chunk-893855b4": "214aa743",
+        "chunk-8df737fc": "6f093e42",
+        "chunk-9fd82662": "2e891bcf",
+        "chunk-d20d8cd8": "182493f4",
+        "chunk-71b3d3a6": "b9e10fcc",
+        "chunk-d959b33e": "8340322c",
+        "chunk-198bfb6d": "370edcb2",
+        "chunk-2fb6d740": "fcc47c54",
+        "chunk-6ab49c7c": "a72d27f7",
+        "chunk-6e600536": "e5150ae0",
+        "chunk-ef5b8ae8": "dcb9c234",
+      }[e] +
+      ".js"
+    );
+  }
+  function c(t) {
+    if (r[t]) return r[t].exports;
+    var n = (r[t] = { i: t, l: !1, exports: {} });
+    return (e[t].call(n.exports, n, n.exports, c), (n.l = !0), n.exports);
+  }
+  ((c.e = function (e) {
+    var t = [],
+      n = o[e];
+    if (0 !== n)
+      if (n) t.push(n[2]);
+      else {
+        var r = new Promise(function (t, r) {
+          n = o[e] = [t, r];
+        });
+        t.push((n[2] = r));
+        var a,
+          s = document.createElement("script");
+        ((s.charset = "utf-8"), (s.timeout = 120), c.nc && s.setAttribute("nonce", c.nc), (s.src = i(e)));
+        var u = new Error();
+        a = function (t) {
+          ((s.onerror = s.onload = null), clearTimeout(d));
+          var n = o[e];
+          if (0 !== n) {
+            if (n) {
+              var r = t && ("load" === t.type ? "missing" : t.type),
+                a = t && t.target && t.target.src;
+              ((u.message = "Loading chunk " + e + " failed.\n(" + r + ": " + a + ")"), (u.name = "ChunkLoadError"), (u.type = r), (u.request = a), n[1](u));
+            }
+            o[e] = void 0;
+          }
+        };
+        var d = setTimeout(function () {
+          a({ type: "timeout", target: s });
+        }, 12e4);
+        ((s.onerror = s.onload = a), document.head.appendChild(s));
+      }
+    return Promise.all(t);
+  }),
+    (c.m = e),
+    (c.c = r),
+    (c.d = function (e, t, n) {
+      c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+    }),
+    (c.r = function (e) {
+      ("undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(e, "__esModule", { value: !0 }));
+    }),
+    (c.t = function (e, t) {
+      if ((1 & t && (e = c(e)), 8 & t)) return e;
+      if (4 & t && "object" === typeof e && e && e.__esModule) return e;
+      var n = Object.create(null);
+      if ((c.r(n), Object.defineProperty(n, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e))
+        for (var r in e)
+          c.d(
+            n,
+            r,
+            function (t) {
+              return e[t];
+            }.bind(null, r),
+          );
+      return n;
+    }),
+    (c.n = function (e) {
+      var t =
+        e && e.__esModule
+          ? function () {
+              return e["default"];
+            }
+          : function () {
+              return e;
+            };
+      return (c.d(t, "a", t), t);
+    }),
+    (c.o = function (e, t) {
+      return Object.prototype.hasOwnProperty.call(e, t);
+    }),
+    (c.p = "/training/"),
+    (c.oe = function (e) {
+      throw (console.error(e), e);
+    }));
+  var s = (window["webpackJsonp"] = window["webpackJsonp"] || []),
+    u = s.push.bind(s);
+  ((s.push = t), (s = s.slice()));
+  for (var d = 0; d < s.length; d++) t(s[d]);
+  var l = u;
+  (a.push([0, "chunk-vendors"]), n());
+})({
+  0: function (e, t, n) {
+    e.exports = n("cd49");
+  },
+  "02aa": function (e, t, n) {
+    ((t = e.exports = n("24fb")(!1)),
+      t.push([
+        e.i,
+        "*{-webkit-box-sizing:border-box;box-sizing:border-box}body{line-height:1.4;color:#666;font-family:微软雅黑;font-size:14px;background:#fff}input,select,textarea{font-size:12px;font-size:100%;font-family:微软雅黑;font-family:inherit}body,form,h1,h2,h3,h4,h5,h6,ol,p,ul{margin:0}h4,h5,h6{font-size:1em}ol,ul{padding-left:0;list-style-type:none}a img,img{border:0}input[type=number]{-moz-appearance:textfield}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{border:1px solid #e8e8e8}input[type=number]:hover{border-color:#bbb}input[type=number]:active,input[type=number]:focus{outline:none;border-color:#409eff}",
+        "",
+      ]));
+  },
+  "0613": function (e, t, n) {
+    "use strict";
+    var r = n("ba4c"),
+      o = n.n(r),
+      a = n("2f62"),
+      i = {
+        namespaced: !0,
+        state: { user: { phone: "", name: "", roles: [] }, isLogin: !1, userRole: "" },
+        mutations: {
+          initUser: function (e, t) {
+            ((e.user = t), (e.isLogin = !0));
+          },
+          logoutUser: function (e) {
+            ((e.user = { phone: "", name: "", roles: [] }), (e.isLogin = !1));
+          },
+          setUserRole: function (e, t) {
+            e.userRole = t;
+          },
+        },
+        getters: {
+          userId: function (e) {
+            return e.user.userId;
+          },
+          collegeId: function (e) {
+            return e.user.collegeId;
+          },
+          userRole: function (e) {
+            return e.userRole;
+          },
+          userRoles: function (e) {
+            return e.user.roles;
+          },
+        },
+        actions: {},
+      },
+      c = i,
+      s = (n("4de4"), n("7db0"), n("c740"), n("4160"), n("159b"), n("f3fd")),
+      u = {
+        namespaced: !0,
+        state: { info: { id: "", taskNumber: "", taskId: "" }, template: new s["a"](""), sectionStates: [], progress: 0 },
+        mutations: {
+          setRecord: function (e, t) {
+            ((e.template = new s["a"]("")), (e.sectionStates = []), (e.info = t));
+          },
+          clearRecord: function (e) {
+            ((e.info = { id: "", taskNumber: "", taskId: "" }), (e.template = new s["a"]("")), (e.sectionStates = []), (e.progress = 0));
+          },
+          setTemplate: function (e, t) {
+            ((e.sectionStates = []), (e.template = t));
+          },
+          setState: function (e, t) {
+            ((e.sectionStates = t),
+              e.template.sections.forEach(function (e) {
+                e.children.forEach(function (e) {
+                  var n = t.find(function (t) {
+                    return t.sectionId == e.id;
+                  });
+                  n && (e.state = n);
+                });
+              }));
+          },
+          updateState: function (e, t) {
+            if (t.sectionId) {
+              var n = e.sectionStates.findIndex(function (e) {
+                return e.sectionId == t.sectionId;
+              });
+              (-1 !== n ? (e.sectionStates[n] = t) : e.sectionStates.push(t),
+                e.template.sections.forEach(function (e) {
+                  var n = e.children.find(function (e) {
+                    return t.sectionId == e.id;
+                  });
+                  n && (n.state = t);
+                }),
+                (e.progress = d(e)));
+            }
+          },
+          setTimetick: function (e) {
+            e.info.timeLeft = e.info.timeLeft > 0 ? --e.info.timeLeft : 0;
+          },
+        },
+        actions: {},
+      };
+    function d(e) {
+      var t = 0;
+      if (
+        (e.template.sections.forEach(function (e) {
+          t += e.children.length;
+        }),
+        0 === t)
+      )
+        return 0;
+      var n = e.sectionStates.filter(function (e) {
+        return e.isFinished;
+      }).length;
+      return Math.round((n / t) * 100);
+    }
+    var l = u;
+    o.a.use(a["a"]);
+    t["a"] = new a["a"].Store({ state: {}, mutations: {}, actions: {}, modules: { user: c, task: l } });
+  },
+  "068e": function (e, t, n) {
+    ((t = e.exports = n("24fb")(!1)),
+      t.push([
+        e.i,
+        "#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.el-main{padding:0!important}.dialog-contianer{margin:0 20px}.dialog-contianer .tip{margin-bottom:18px}.dialog-contianer .el-radio-group{margin:6px;padding:6px;display:block}.recorder{position:fixed;bottom:22px;left:4px;z-index:100;padding:2px 2px;background-color:#fff;border-radius:5px;border:1px solid hsla(0,0%,59.2%,.28)}.start-recorder{background-color:#87ceeb!important}.start-recorder,.stop-recorder{padding:7px!important;color:#fff!important}.stop-recorder{background-color:red!important;animation:flash 3s infinite;-webkit-animation:flash 3s infinite}@-webkit-keyframes flash{0%{-webkit-transform:scale(1);transform:scale(1);opacity:0}50%{-webkit-transform:scale(1);transform:scale(1);opacity:1}to{-webkit-transform:scale(1);transform:scale(1);opacity:0}}@keyframes flash{0%{-webkit-transform:scale(1);transform:scale(1);opacity:0}50%{-webkit-transform:scale(1);transform:scale(1);opacity:1}to{-webkit-transform:scale(1);transform:scale(1);opacity:0}}",
+        "",
+      ]));
+  },
+  1: function (e, t) {},
+  "184e": function (e, t, n) {
+    var r = n("068e");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("67f46ba6", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  "197f": function (e, t, n) {
+    t = e.exports = n("24fb")(!1);
+    var r = n("1de5"),
+      o = r(n("7957")),
+      a = r(n("7957") + "#iefix"),
+      i = r(n("8a55")),
+      c = r(n("f591")),
+      s = r(n("5cd4") + "#iconfont");
+    t.push([
+      e.i,
+      "@font-face{font-family:iconfont;src:url(" +
+        o +
+        ");src:url(" +
+        a +
+        ') format("embedded-opentype"),url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAeUAAsAAAAAD9QAAAdFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCEZgqPMIwSATYCJANMCygABCAFhG0HggMbRQ2zAzVsHID4yQZk/8WB3ezjNWIRIQam4iGq6SaDNxkchNtu6ioEyuAgWDAssAm+iUE4uPfxwLfftzvz5tkXhW1sQiztoYtIU014ckmNEAkFTvc4eMj703vWvKh7M0narnWSgmLhrHjZc/fgz+Jgf8rVAf7kMl2J6Mj0Y2289cU23SkESIUUq5zfN23/qqIYezdjQV21lL4bJIquS88akSh0nciTlCqRCb1qHI9ZPMY4MKx4jeDX79fq/Y9r1IcuHhK1ndg7cUHMkiZKJCQRbwxJPBIlFCs5spjX0pOKUSkm/e50AjpmrRY2ve46pJFQXoBWV/D8SU1CLlUkBY2oKtg1Ce+Umvg8fsRb7+vDX3OhISoLdNN95zafsS7X8mTuzTtHHAqmOS2ue1FgNRLhTqH+tiLAqz1+p6hysguVxIumrKoQEhkfYdXTikmpEtVyreq/eF09fQNDI2MTQoXyexD2KzAhgwACGYFEJqAkM1CRBYhkBWqyAQ3ZgZYcQEFOoEMuoEtuoEdeQJ+8gQH5AEPyBUbkB4zJ08UETJ2OS7GPOAOKH2jsI/yCJUVlUpTop4alpNY5HVRJs5NJSt1UVf6AeeYkM8cTI+b5YADJZlma5ayYYbhqGqFl6R8+Pt1mzQu3f5LfD7THQwKBKE+EyyevdEVQDq90w+ssRw75jC/CE+gfAPD72+32WldEKu4Wz8oIWbU3dznCJefs/LwCrahYs0SpOFgEy4eKNa1EK252aXG+4qxoNhkExDNGmtg6x0BCgB0Bz04iWzPizOUUTxf2KEEpxBrmzdkSZtUOR3K7FC7oIlzBsSeD+HyyvwBv342QorU4o4qcEcWuqJUAJPBCdu3yRPofKhgckDtGJpkwuCJiWu1QhBjMgVdkBGRX7uj1Sn6/EgioPi1OAypsYZXbKLosQcveTLxKSl+d7NoHyn0HIOwNSk7XjqjAK5kgB3FFaZ7IEheo+oncMA1X9PHq+USoGSFzvYB4axfh2V0O1w+R2ICHwh4SKrL84ujqlJBzmBLZwgFnZpXDmMaUAHoQGULnI4BRkViagK0PPEU0hOJJQyNb1EXYDg2VSGgClgBr4FMLARE1GWh15TQFAs0EqxrLc65k9endyLpSVdrLJRiRojnBShdxblcJe5h2TchA1x5NC07uPc1tC8FPSU3aP1q+dEneM7qWIU9xiO2Aa1KfK5XXWxtV/G3dioKbE5J//fpKvrW8YO23bIO7990Xnt4bZpIZN5q0iG8RemHBvn16xH9/qYsXZ6BkevDy4PIAi4z5T3locE9NuV03I2sJzrjXABimPy20+0HzdfXUmcuoUM+8hfvCAZZJhDgQDkPuQftgIrRxTAAotiVk4d0Y5YixFrzSax7Fik8RIr8WueggblADdc6cIYfqptbH2VuB1nM2bU5DRpMeWvT7RcZIhJCl39q1I1t3G4LxPuO0MmZsretglwN82Ip3w34KrU8BoPkfESOntE/Z1xOp3F7zVMe+vi2ifh8NecfRGDTakY2GiGbjMVCvg43Sb1FQ2Xqr2QbW0Hy7ne2mPnTU8eNPeAe0eMbvN79fFXVqKWP6pi0Zc277T3Ctz4drexIBnGj90/huWNgKfKjLwVpXzFhY2rgP4yFzI1uvXWvpZxlfskYmpCWLN/St9EqTeSs2JkSoJS5y0kQNQlsGg6XmRR7VllrKXwJk7LD1C+LNVg+BjMZvb6cTq4Ge0KRT8N7wg2mwO4yLdZ5yZBKXpq495FiTNZE6VzZUy3XWMNVAyWNOIh8TmwN5pWiNDzg2U2RDnj7XJPWngIbC1L02jsEw62opyd06bbBxd3Jq3ldYLTrpy25fFbiAQBnsD4q0IeZP9+kjAMh0pP8AMq6Al7ITL9u6+AP6X1TjoD92wrTq3FRN0jHyFMS3LKrCSGv5dzENSeDzfy68XebvJcU9NCJo5v8LEzkufdhUMU2vsRcMw7lTG3T8EZ1INY+aJ360L1yIpju4STCvKKotQoXGYiKFrUalrjWo0liLOlbZunfX1FWFkFqs9NhCwch7FA18QIWRT0QK+45KM/6jyigUqOOK/+H6kMcbj+Hi0ZMHHkGyemEoyCquikd+62/QqeM+zvay/sEHdLEyK9K1b2DBm9gijLqKUTHlqWev1tmg64gNnhoQMTMxDqs8V0VbZoL6jaONJx7golNUYmpLdSQQS80fHWU+/xvQkg7nKwZ9V/8HvAAXzpQyBYJ441vUoH3pGIy0SiRahYmeHukxr0QLOuYnzFC8UgMIUcYoeAcrOZlMYflZ+8J++wttxCHoY09DBBoYYIEDA4RAK8BAgAcBRDCCKYzDJEzDAnsjeFTL4Yx8QQFWHwfDrY6sR8Kki6RBu8NezUkke5aph2uDTYKGZPW+MKCUSYcSF5EJHe5K3nKHhvCrtC8xKz0PcemAWpgK9oOFUq70xOlW1EkvPtapX5JsVHgayay+yY46v2uyE+DBOpGcbGMDAAA=") format("woff2"),url(' +
+        i +
+        ') format("woff"),url(' +
+        c +
+        ') format("truetype"),url(' +
+        s +
+        ') format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-verify:before{content:"\\e63f"}.icon-xiayiceng:before{content:"\\e6aa"}.icon-shangyiceng:before{content:"\\e6ae"}.icon-chuangjian:before{content:"\\e6a7"}.icon-baocun:before{content:"\\e6a8"}.icon-chuizhijuzhong:before{content:"\\e6a9"}.icon-chexiao:before{content:"\\e6ab"}.icon-dingduiqi:before{content:"\\e6ac"}.icon-dakai:before{content:"\\e6ad"}.icon-huifu:before{content:"\\e6af"}.icon-diduiqi:before{content:"\\e6b0"}.icon-shuipingjuzhong:before{content:"\\e6b1"}.icon-youduiqi:before{content:"\\e6b2"}.icon-quanbubaocun:before{content:"\\e6b3"}.icon-zhiyudiceng:before{content:"\\e6b4"}.icon-zhiyudingceng:before{content:"\\e6b5"}.icon-lingcunwei:before{content:"\\e6b6"}.icon-zuoduiqi:before{content:"\\e6b7"}',
+      "",
+    ]);
+  },
+  "19b2": function (e, t, n) {
+    "use strict";
+    (n.r(t),
+      n.d(t, "lang", function () {
+        return r;
+      }));
+    var r = {
+      登录: "登录",
+      免费注册: "免费注册",
+      关于: "关于",
+      设备资料: "设备资料",
+      课程学习: "课程学习",
+      实验中心: "实验中心",
+      首页: "首页",
+      教学总览: "教学总览",
+      学习总览: "学习总览",
+      起始时间: "起始时间",
+      结束时间: "结束时间",
+      已完成: "已完成",
+      待完成: "待完成",
+      下发时间: "下发时间",
+      剩余时长: "剩余时长",
+      任务进度: "任务进度",
+      我的学习记录: "我的学习记录",
+      查看所有: "查看所有",
+      任务编号: "任务编号",
+      指导老师: "指导老师",
+      任务耗时: "任务耗时",
+      分钟: "分钟",
+      提交时间: "提交时间",
+      查看任务: "查看任务",
+      任务报告: "任务报告",
+      评分报告: "评分报告",
+      "当前没有待完成的任务，您可以前往": "当前没有待完成的任务，您可以前往",
+      自主学习选择学习任务: "自主学习选择学习任务",
+      当前没有已完成的任务: "当前没有已完成的任务",
+      开始任务: "开始任务",
+      填写报告: "填写报告",
+      完成任务: "完成任务",
+      控制台: "控制台",
+      学生: "学生",
+      老师: "老师",
+      个人中心: "个人中心",
+      退出登录: "退出登录",
+      角色: "角色",
+      所属课程: "所属课程",
+      难度等级: "难度等级",
+      任务时长: "任务时长",
+      任务目标: "任务目标",
+      任务状态: "任务状态",
+      学生首页: "学生首页",
+      任务预览: "任务预览",
+      上次进行至: "上次进行至",
+      任务未开始: "任务未开始",
+      继续任务: "继续任务",
+      简介: "简介",
+      未完成: "未完成",
+      上一节: "上一节",
+      下一节: "下一节",
+      提交: "提交",
+      再次提交: "再次提交",
+      剩余时间: "剩余时间",
+      章节: "章节",
+      编码说明: "编码说明",
+      检测到未打开桌面助手: "检测到未打开桌面助手",
+      点击开启: "点击开启",
+      运行: "运行",
+      重置代码: "重置代码",
+      最新案例数据: "最新案例数据",
+      "提示:复制下面地址到案例程序的对应设置": "提示:复制下面地址到案例程序的对应设置",
+      复制: "复制",
+      开始运行: "开始运行",
+      重新运行: "重新运行",
+      登录地址: "登录地址",
+      提交地址: "提交地址",
+      第: "第",
+      题: "题",
+      共: "共",
+      "题，当前第": "题，当前第",
+      标记: "标记",
+      正确: "正确",
+      错误: "错误",
+      答案: "答案",
+      完成: "完成",
+      下一题: "下一题",
+      上一题: "上一题",
+      答题卡: "答题卡",
+      未答题: "未答题",
+      已答题: "已答题",
+      标记题: "标记题",
+      当前题: "当前题",
+      "是否确定完成任务并提交？": "是否确定完成任务并提交？",
+      提示: "提示",
+      "有章节未提交,是否强制提交？": "有章节未提交,是否强制提交？",
+      注意: "注意",
+      确定: "确定",
+      取消: "取消",
+      免费试用: "免费试用",
+      了解详情: "了解详情",
+      移动互联随时随地学习体验: "移动互联随时随地学习体验",
+      "7×24小时的陪伴式学习体验": "7×24小时的陪伴式学习体验",
+      线上交流平台体验深度学习: "线上交流平台体验深度学习",
+      虚拟仿真工具: "虚拟仿真工具",
+      设备: "设备",
+      支持各种常见的传感器和执行器: "支持各种常见的传感器和执行器",
+      协议: "协议",
+      "支持常见协议，如Modbus、Zigbee协议等，正在开发LoRa、CANbus、BLE协议": "支持常见协议，如Modbus、Zigbee协议等，正在开发LoRa、CANbus、BLE协议",
+      通讯: "通讯",
+      "能够作为数据源连接云平台，提供虚拟串口，连接上位机案例，提供串口服务器，能够使用socket通讯":
+        "能够作为数据源连接云平台，提供虚拟串口，连接上位机案例，提供串口服务器，能够使用socket通讯",
+      界面: "界面",
+      "采用设备区和工作区的经典设计，支持设备拖拽，连线，校验，模拟，仿真实验包导入、导出等":
+        "采用设备区和工作区的经典设计，支持设备拖拽，连线，校验，模拟，仿真实验包导入、导出等",
+      拓展: "拓展",
+      "提供设备插件开发接口，支持开发自定义设备": "提供设备插件开发接口，支持开发自定义设备",
+      丰富功能满足您的课程学习需求: "丰富功能满足您的课程学习需求",
+      课程管理: "课程管理",
+      "简洁的课程管理，支持灵活的课程搜索": "简洁的课程管理，支持灵活的课程搜索",
+      "任务下发&进度跟踪": "任务下发&进度跟踪",
+      "丰富的任务管理，支持下发、进度跟踪、任务": "丰富的任务管理，支持下发、进度跟踪、任务",
+      课件管理: "课件管理",
+      "便捷的课件管理，支持PDF，Word，Excel，PPT，视频管理课件": "便捷的课件管理，支持PDF，Word，Excel，PPT，视频管理课件",
+      题库管理: "题库管理",
+      "完善的题库管理，支持填空题、单选题、多选题、判断题等题型": "完善的题库管理，支持填空题、单选题、多选题、判断题等题型",
+      实训管理: "实训管理",
+      "强大的题库管理，支持仿真包导入、导出、分享功能": "强大的题库管理，支持仿真包导入、导出、分享功能",
+      平台特点: "平台特点",
+      丰富课程: "丰富课程",
+      "拥有适合各种语言、各个方向的、各个学力的课程": "拥有适合各种语言、各个方向的、各个学力的课程",
+      在线仿真实训: "在线仿真实训",
+      "提供在线仿真实训，在线连线，在线模拟": "提供在线仿真实训，在线连线，在线模拟",
+      在线编码练习: "在线编码练习",
+      "配套在线编码练习，能够针对仿真实训实时编码响应": "配套在线编码练习，能够针对仿真实训实时编码响应",
+      多种题型: "多种题型",
+      "题型丰富，选择多样": "题型丰富，选择多样",
+      任务自动评分: "任务自动评分",
+      "提供基础自动评分，辅助教学，提高效率": "提供基础自动评分，辅助教学，提高效率",
+      关注官方微信: "关注官方微信",
+      关注平台微信: "关注平台微信",
+      了解我们: "了解我们",
+      关于我们: "关于我们",
+      加入我们: "加入我们",
+      新大陆教育: "新大陆教育",
+      新大陆集团: "新大陆集团",
+      开发者: "开发者",
+      开发文档: "开发文档",
+      协议文档: "协议文档",
+      API接口: "API接口",
+      SDK: "SDK",
+      联系方式: "联系方式",
+      "QQ群：981219496": "QQ群：98121949",
+      "技术支持 - 2906593291": "技术支持 - 2906593291",
+      "热线电话：400-860-0591": "热线电话：400-860-0591",
+      "公司电话：0591-83979915": "公司电话：0591-83979915",
+      "公司传真：0591-83979621": "公司传真：0591-83979621",
+      公司邮箱: "公司邮箱：chen_sheng@newlandcomputer.com",
+      "公司地址：北京海淀区首体南路22号国兴大厦16层": "公司地址：北京海淀区首体南路22号国兴大厦16层",
+      "Copyright 2015-2018 新大陆物联网云平台": "Copyright 2015-2018 新大陆物联网云平台",
+      "京ICP备15057567号-2": "京ICP备15057567号-2",
+      开始自主学习: "开始自主学习",
+      学习进度: "学习进度",
+      继续学习: "继续学习",
+      "当前没有自习任务，您可以前往": "当前没有自习任务，您可以前往",
+      下载成功: "下载成功",
+      启动成功: "启动成功",
+      启动应用出错: "启动应用出错",
+      下载应用出错: "下载应用出错",
+      提交成功: "提交成功",
+      提交失败: "提交失败",
+      保存成功: "保存成功",
+      当前修改已自动保存: "当前修改已自动保存",
+      我的任务: "我的任务",
+      未到任务开始时间: "未到任务开始时间",
+      已过任务截止时间: "已过任务截止时间",
+      任务时间已到: "任务时间已到",
+      复制成功: "复制成功",
+      到剪切板: "到剪切板",
+      学生主页: "学生主页",
+      自主学习: "自主学习",
+      仿真工具: "仿真工具",
+      RFID技术仿真: "RFID技术仿真",
+      成绩未公布: "成绩未公布",
+      "教育云-物联网仿真实训教学平台": "教育云-物联网仿真实训教学平台",
+      物联网仿真实训教学平台: "物联网仿真实训教学平台",
+      任务说明: "任务说明",
+      当前任务已完成: "当前任务已完成",
+      管理员: "管理员",
+      手机: "手机",
+      姓名: "姓名",
+      电话: "电话",
+      分: "分",
+      已结束: "已结束",
+      已开始: "已开始",
+      未开始: "未开始",
+      倒计时: "倒计时",
+      加载中: "加载中",
+      多选题: "多选题",
+      单选题: "单选题",
+      填空题: "填空题",
+      判断题: "判断题",
+      教育云: "教育云",
+    };
+  },
+  "38bd": function (e, t, n) {
+    ((t = e.exports = n("24fb")(!1)),
+      t.push([
+        e.i,
+        "::-webkit-scrollbar{background:transparent;width:10px;height:10px}::-webkit-scrollbar-thumb{border-radius:5px;background-color:#b9b3b3;width:6px;height:6px;border:1px solid transparent;background-clip:content-box}::-webkit-scrollbar-track{border-radius:5px;background-color:#eee}::-webkit-scrollbar-track-piece{display:none}.w30{width:30%}.w60{width:60%}.text-c{text-align:center}.bdr-3{border-radius:3px}.fz-16{font-size:16px}#app .fz-20{font-size:20px}#app .fz-24{font-size:24px}.mrb-10{margin-bottom:-10px}.c-9{color:#999}.text-one-l{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.inline-c{display:inline-block;text-align:center;vertical-align:middle}.fl-r{float:right}.fl-l{float:left}",
+        "",
+      ]));
+  },
+  "38ef": function (e, t, n) {
+    var r = n("38bd");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("63ac74b1", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  "3a10": function (e, t, n) {
+    var r = n("197f");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("5b620073", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  "482f": function (e, t, n) {
+    "use strict";
+    var r = window.config;
+    t["a"] = r;
+  },
+  "59b9": function (e, t, n) {
+    "use strict";
+    n.d(t, "b", function () {
+      return l;
+    });
+    (n("c975"), n("d3b7"), n("ac1f"), n("5319"));
+    var r,
+      o = n("bc3a"),
+      a = n.n(o),
+      i = n("5c96"),
+      c = n("73ec"),
+      s = n("9157"),
+      u = n("afbc");
+    function d(e) {
+      Object(i["Message"])({ showClose: !0, message: e, type: "error", duration: 3e3 });
+    }
+    ((r = a.a.create({ timeout: 5e4 })),
+      r.interceptors.request.use(
+        function (e) {
+          var t = e.headers["Authorization"];
+          if ((!t || -1 == t.indexOf("Basic")) && Object(c["k"])("cloud-token")) {
+            var n = Object(c["k"])("cloud-token").replace(/[^0-9a-zA-Z]/g, "");
+            e.headers["Authorization"] = "Bearer " + n;
+          }
+          return e;
+        },
+        function (e) {
+          (console.error("error:", e), Promise.reject(e));
+        },
+      ),
+      r.interceptors.response.use(
+        function (e) {
+          if (200 === e.status) {
+            var t = e.data;
+            switch (t.code) {
+              case 9999:
+                d(e.data.msg);
+                break;
+              case 9e3:
+                d(e.data.msg);
+                break;
+              case 8e3:
+                d(e.data.msg);
+                break;
+              case 8001:
+                d(e.data.msg);
+                break;
+              case 8002:
+                d(e.data.msg);
+                break;
+              case 8003:
+                d(e.data.msg);
+                break;
+              case 8004:
+                s["b"].redirectLogin(u["a"].currentRoute.path);
+                break;
+              case 8005:
+                d(e.data.msg);
+                break;
+              case 8006:
+                d(e.data.msg);
+                break;
+              case 8007:
+                d(e.data.msg);
+                break;
+              case 8008:
+                d(e.data.msg);
+                break;
+              case 89999:
+                d(e.data.msg);
+                break;
+              case 401:
+                d(e.data.message);
+                break;
+              default:
+                return t;
+            }
+            return t;
+          }
+        },
+        function (e) {
+          return Promise.reject(e);
+        },
+      ));
+    var l = a.a.create({
+      timeout: 5e4,
+      headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
+      auth: { username: "upms", password: "123456" },
+    });
+    t["a"] = r;
+  },
+  "5cd4": function (e, t, n) {
+    e.exports = n.p + "img/iconfont.5d40555a.svg";
+  },
+  "5d46": function (e, t, n) {
+    "use strict";
+    var r = n("184e"),
+      o = n.n(r);
+    o.a;
+  },
+  "6b89": function (e, t, n) {
+    "use strict";
+    (n.r(t),
+      n.d(t, "lang", function () {
+        return r;
+      }));
+    var r = {
+      登录: "Login",
+      免费注册: "Register",
+      关于: "About",
+      设备资料: "Device Info",
+      课程学习: "Lession Study",
+      实验中心: "Lab Center",
+      首页: "Index",
+      教学总览: "Overview of teaching",
+      学习总览: "Overview of learning",
+      我的任务: "My Task",
+      已完成: "Finished",
+      待完成: "Ongoing",
+      下发时间: "Issue time",
+      剩余时长: "Remaining time",
+      任务进度: "Progress",
+      我的学习记录: "My study record",
+      查看所有: "View all",
+      任务编号: "Task number",
+      指导老师: "Instructor",
+      任务耗时: "Time-consuming",
+      分钟: "min",
+      提交时间: "Submit time",
+      查看任务: "View",
+      任务报告: "Report",
+      评分报告: "Score",
+      "当前没有待完成的任务，您可以前往": "There is no task, you can go to",
+      自主学习选择学习任务: "Self-directed learning selects learning tasks",
+      当前没有已完成的任务: "There are no completed tasks",
+      开始任务: "Start",
+      填写报告: "Report",
+      完成任务: "Finish",
+      控制台: "Console",
+      学生: "Player",
+      老师: "Teacher",
+      个人中心: "Personal Center",
+      退出登录: "Logout",
+      角色: "Role",
+      所属课程: "Course",
+      难度等级: "Level",
+      任务时长: "Duration",
+      任务目标: "The target",
+      任务状态: "Task status",
+      学生首页: "Student Homepage",
+      任务预览: "Task preview",
+      上次进行至: "Last conducted",
+      任务未开始: "Mission not started",
+      继续任务: "Continue task",
+      简介: "Brief introduction",
+      未完成: "Ongoing",
+      上一节: "Previous",
+      下一节: "Next",
+      提交: "Submit",
+      再次提交: "Submit agiain",
+      剩余时间: "Remaining",
+      章节: "Section",
+      编码说明: "Coded instructions",
+      检测到未打开桌面助手: "Not open desktop assistant detected",
+      点击开启: "Click to open",
+      运行: "run",
+      重置代码: "The reset code",
+      最新案例数据: "Latest submitted data",
+      "提示:复制下面地址到案例程序的对应设置": "Tip: Copy the following address to the corresponding Settings of the case program",
+      复制: "copy",
+      开始运行: "Began to run",
+      重新运行: "Rerun",
+      登录地址: "login address",
+      提交地址: "submit address",
+      第: "The",
+      题: "question",
+      共: "Total",
+      "题，当前第": "Cureent",
+      标记: "Mark",
+      正确: "Right",
+      错误: "Wrong",
+      答案: "Answer",
+      完成: "Finish",
+      下一题: "Next",
+      上一题: "Previous",
+      答题卡: "Answer sheet",
+      未答题: "Unanswered",
+      已答题: "Answered",
+      标记题: "Marcked",
+      当前题: "Current",
+      "是否确定完成任务并提交？": "Are you sure the task is completed and submitted?",
+      提示: "Prompt",
+      "有章节未提交,是否强制提交？": "Some chapters are not submitted. Is it mandatory to submit?",
+      注意: "Notice",
+      确定: "Confirm",
+      取消: "Cancel",
+      免费试用: " Free trial",
+      了解详情: "For details",
+      移动互联随时随地学习体验: "Mobile Internet anytime, anywhere learning experience",
+      "7×24小时的陪伴式学习体验": "7x24 hour companionship learning experience",
+      线上交流平台体验深度学习: "Experience deep learning on online communication platform",
+      虚拟仿真工具: "Virtual simulation tool",
+      设备: "Device",
+      支持各种常见的传感器和执行器: "Supports a variety of common sensors and actuators",
+      协议: "Protocol",
+      "支持常见协议，如Modbus、Zigbee协议等，正在开发LoRa、CANbus、BLE协议":
+        "Support common protocols, such as MODBUS and ZigBee protocols, and Lora, CANbus and ble protocols are being developed",
+      通讯: "Communication ",
+      "能够作为数据源连接云平台，提供虚拟串口，连接上位机案例，提供串口服务器，能够使用socket通讯":
+        "It can be used as a data source to connect to the cloud platform, provide virtual serial port, connect to the upper computer case, provide serial port server, and use socket communication",
+      界面: "UI",
+      "采用设备区和工作区的经典设计，支持设备拖拽，连线，校验，模拟，仿真实验包导入、导出等":
+        "The classic design of equipment area and work area is adopted to support equipment drag, connection, verification, simulation, import and export of simulation experiment package, etc",
+      拓展: "Expand",
+      "提供设备插件开发接口，支持开发自定义设备": "Provide device plug-in development interface and support the development of custom devices",
+      丰富功能满足您的课程学习需求: "Rich functions to meet your learning needs",
+      课程管理: "course management",
+      "简洁的课程管理，支持灵活的课程搜索": "Simple course management and flexible course search",
+      "任务下发&进度跟踪": "Task distribution & progress tracking",
+      "丰富的任务管理，支持下发、进度跟踪、任务": "Rich task management, support distribution, progress tracking and task management",
+      课件管理: "Courseware management",
+      "便捷的课件管理，支持PDF，Word，Excel，PPT，视频管理课件": "Convenient courseware management, support PDF, word, Excel, PPT, video management courseware",
+      题库管理: "Question bank management",
+      "完善的题库管理，支持填空题、单选题、多选题、判断题等题型":
+        "Perfect question bank management, support blank filling questions, single choice questions, multiple-choice questions, judgment questions and other question types",
+      实训管理: "Training management",
+      "强大的题库管理，支持仿真包导入、导出、分享功能":
+        "Powerful question bank management, support the import, export and sharing functions of simulation package",
+      平台特点: "Platform features",
+      丰富课程: "Enrich Curriculum",
+      "拥有适合各种语言、各个方向的、各个学力的课程": "It has courses suitable for all languages, all directions and all learning abilities",
+      在线仿真实训: "Online simulation training",
+      "提供在线仿真实训，在线连线，在线模拟": "Provide online simulation training, online connection and online simulation",
+      在线编码练习: "Online coding exercise",
+      "配套在线编码练习，能够针对仿真实训实时编码响应": "Supporting online coding practice, it can code response in real time for simulation training",
+      多种题型: "Multiple question types",
+      "题型丰富，选择多样": "Rich types of questions and diverse choices",
+      任务自动评分: "Automatic task scoring",
+      "提供基础自动评分，辅助教学，提高效率": "Provide basic automatic scoring, assist teaching and improve efficiency",
+      关注官方微信: "Follow official WeChat",
+      关注平台微信: "Follow  the platform WeChat",
+      了解我们: "Know us",
+      关于我们: "About us",
+      加入我们: "Join us",
+      新大陆教育: "New world education",
+      新大陆集团: "New World Group",
+      开发者: "Developer",
+      开发文档: "Development documentation",
+      协议文档: "Agreement document",
+      API接口: "API interface",
+      SDK: "SDK",
+      联系方式: "Contact information",
+      "QQ群：981219496": "QQ group: 98121949",
+      "技术支持 - 2906593291": "Technical support - 2906593291",
+      "热线电话：400-860-0591": "Hotline: 400-860-0591",
+      "公司电话：0591-83979915": "Tel: 0591-83979915",
+      "公司传真：0591-83979621": "Fax: 0591-83979621",
+      公司邮箱: "Company email：chen_sheng@newlandcomputer.com",
+      "公司地址：北京海淀区首体南路22号国兴大厦16层": "Company address: 16th floor, Guoxing building, No. 22, Shouti South Road, Haidian District, Beijing",
+      "Copyright 2015-2018 新大陆物联网云平台": "Copyright 2015-2018 New World Internet of things cloud platform",
+      "京ICP备15057567号-2": "Jing ICP Bei No. 15057567-2",
+      开始自主学习: "Start learning",
+      学习进度: "Progress",
+      继续学习: "Continue",
+      "当前没有自习任务，您可以前往": "There is no self-study task at present. You can go there",
+      下载成功: "Download successful",
+      启动成功: "Run success",
+      启动应用出错: "Error starting application",
+      下载应用出错: "Error starting application",
+      提交成功: "Submit successfully",
+      提交失败: "Submit failure",
+      保存成功: "Save successfully",
+      当前修改已自动保存: "The current modification is automatically saved",
+      起始时间: "Start time",
+      结束时间: "Deadline",
+      未到任务开始时间: "Waiting",
+      已过任务截止时间: "Overtime",
+      任务时间已到: "Ongoing",
+      复制成功: "Success copy",
+      到剪切板: "to the clipboard",
+      学生主页: "Student home page",
+      自主学习: "Autonomous learning",
+      仿真工具: "Simulation tools",
+      RFID技术仿真: "RFID simulation",
+      成绩未公布: "Score not published",
+      "教育云-物联网仿真实训教学平台": "IOT Stimulation Platform - Education Cloud",
+      物联网仿真实训教学平台: "IOT Stimulation Platform",
+      当前任务已完成: "This task already submit",
+      管理员: "administrator",
+      手机: "Phone",
+      电话: "Phone",
+      姓名: "Name",
+      分: "score",
+      已结束: "Over",
+      已开始: "Ongoing",
+      未开始: "Waiting",
+      倒计时: "Countdown",
+      加载中: "Loading",
+      多选题: "select one or more answer choices",
+      单选题: "select one answer choice",
+      填空题: "fill in the blanks",
+      判断题: "true or false",
+      教育云: "EDU Cloud",
+    };
+  },
+  "70b0": function (e, t, n) {
+    "use strict";
+    (n.d(t, "c", function () {
+      return b;
+    }),
+      n.d(t, "b", function () {
+        return g;
+      }));
+    (n("99af"), n("a623"), n("4de4"), n("4160"), n("c975"), n("d81d"), n("0d03"), n("b0c0"), n("d3b7"), n("3ca3"), n("159b"), n("ddb0"), n("2b3d"));
+    var r = n("284c"),
+      o = n("9f12"),
+      a = n("53fe"),
+      i = n("2fa7"),
+      c = n("ba4c"),
+      s = n.n(c),
+      u = n("a925"),
+      d = n("482f"),
+      l = n("59b9");
+    s.a.use(u["a"]);
+    var p = new u["a"]({ locale: "zh-CN", messages: { "zh-CN": n("19b2"), "en-US": n("6b89") } }),
+      m = (function () {
+        function e() {
+          (Object(o["a"])(this, e),
+            Object(i["a"])(this, "onStarted", null),
+            Object(i["a"])(this, "onStoped", null),
+            Object(i["a"])(this, "onData", null),
+            Object(i["a"])(this, "uploadUrl", d["a"].web_host + "/api/ScreenRecord/Upload"),
+            Object(i["a"])(this, "spliceFrequency", 30),
+            Object(i["a"])(this, "_videos", []),
+            Object(i["a"])(this, "_crrentVideo", null),
+            Object(i["a"])(this, "_running", !1),
+            Object(i["a"])(this, "_allRecords", []),
+            Object(i["a"])(this, "_waitUploadRecords", []),
+            Object(i["a"])(this, "_uploadedRecords", []),
+            Object(i["a"])(this, "_uploadingRecord", null),
+            Object(i["a"])(this, "_crrentRecord", null),
+            Object(i["a"])(this, "_lock", !1),
+            Object(i["a"])(this, "_fileName", null),
+            Object(i["a"])(this, "_stream", null),
+            Object(i["a"])(this, "_mediaRecorder", null),
+            Object(i["a"])(this, "_allowUpload", !1),
+            Object(i["a"])(this, "_stopByMethod", !1),
+            Object(i["a"])(this, "mimeType", void 0),
+            Object(i["a"])(this, "interval", null),
+            Object(i["a"])(this, "intervalUpload", null),
+            Object(i["a"])(this, "_extention", void 0),
+            Object(i["a"])(this, "mimes", [{ extention: "webm", mimeType: "video/webm; codecs=vp8" }]));
+        }
+        return (
+          Object(a["a"])(e, [
+            {
+              key: "startRecord",
+              value: function (e) {
+                var t = this;
+                if (
+                  (window.removeEventListener("beforeunload", this.unload),
+                  window.addEventListener("beforeunload", this.unload),
+                  (this._fileName = e || "random-" + new Date().getTime()),
+                  this._mediaRecorder)
+                ) {
+                  if ("paused" == this._mediaRecorder.state) return void this._mediaRecorder.resume();
+                  if ("recording" == this._mediaRecorder.state) return void console.log("screen-recorder : 已经在录制了");
+                  if ("inactive" == this._mediaRecorder.state)
+                    try {
+                      return void this._mediaRecorder.start();
+                    } catch (r) {}
+                }
+                var n = this.mimes[0];
+                n
+                  ? ((this.mimeType = n.mimeType),
+                    (this._extention = n.extention),
+                    window.navigator.mediaDevices
+                      ? this._lock ||
+                        ((this._lock = !0),
+                        window.navigator.mediaDevices
+                          .getDisplayMedia({ audio: !0, video: !0 })
+                          .then(function (e) {
+                            ((t._stream = e), (t._lock = !1));
+                            var r = new window.MediaRecorder(e, { mimeType: n.mimeType });
+                            ((t._mediaRecorder = r),
+                              (t._mediaRecorder.ondataavailable = function (e) {
+                                if ((console.log("screen-recorder : 【数据获取】 >>>>>>>", e), e && e.data && e.data.size > 0)) {
+                                  var n = e.data;
+                                  ((t._crrentRecord.endTime = new Date()),
+                                    (t._crrentRecord.Data = n),
+                                    (t._crrentRecord.state = -1),
+                                    console.log(
+                                      "screen-recorder : 【数据获取】 完成当前分段",
+                                      "video: name=".concat(t._crrentVideo.name, " index=").concat(t._crrentVideo.index),
+                                      "record: index=".concat(t._crrentRecord.index),
+                                      t._crrentVideo == t._crrentRecord.video,
+                                    ),
+                                    t._waitUploadRecords.push(t._crrentRecord),
+                                    "inactive" != t._mediaRecorder.state &&
+                                      ((t._crrentRecord = new h()),
+                                      (t._crrentRecord.startTime = new Date()),
+                                      (t._crrentRecord.state = -2),
+                                      (t._crrentRecord.video = t._crrentVideo),
+                                      t._crrentVideo.segements.push(t._crrentRecord),
+                                      (t._crrentRecord.index = t._crrentVideo.segements.indexOf(t._crrentRecord)),
+                                      t._allRecords.push(t._crrentRecord),
+                                      console.log(
+                                        "screen-recorder : 【数据获取】 进行下一分段",
+                                        "video: name=".concat(t._crrentVideo.name, " index=").concat(t._crrentVideo.index),
+                                        "record: index=".concat(t._crrentRecord.index),
+                                        t._crrentVideo == t._crrentRecord.video,
+                                      )));
+                                }
+                                (t.onData && t.onData(), console.log("screen-recorder : 【数据获取】 <<<<<<"));
+                              }),
+                              (t._mediaRecorder.onstart = function (e) {
+                                (console.log("screen-recorder : 【开始录制】 >>>>>>", e),
+                                  (t._crrentVideo = new f()),
+                                  (t._crrentVideo.uploadProgress = 0),
+                                  (t._crrentVideo.state = 1),
+                                  (t._crrentVideo.segements = []),
+                                  t._videos.push(t._crrentVideo),
+                                  (t._crrentVideo.index = t._videos.indexOf(t._crrentVideo)),
+                                  (t._crrentVideo.name = t._fileName),
+                                  (t._crrentRecord = new h()),
+                                  (t._crrentRecord.startTime = new Date()),
+                                  (t._crrentRecord.state = -2),
+                                  (t._crrentRecord.video = t._crrentVideo),
+                                  t._crrentVideo.segements.push(t._crrentRecord),
+                                  (t._crrentRecord.index = t._crrentVideo.segements.indexOf(t._crrentRecord)),
+                                  t._allRecords.push(t._crrentRecord),
+                                  (t._running = !0),
+                                  t.initSplice(),
+                                  t.onStarted && t.onStarted(),
+                                  console.log(
+                                    "screen-recorder : 【开始录制】 <<<<<<",
+                                    "video: name=".concat(t._crrentVideo.name, " index=").concat(t._crrentVideo.index),
+                                    "record: index=".concat(t._crrentRecord.index),
+                                    t._crrentVideo == t._crrentRecord.video,
+                                  ));
+                              }),
+                              (t._mediaRecorder.onstop = function (e) {
+                                (console.log("screen-recorder : 【录制结束】 >>>>>>", e, t._mediaRecorder.state),
+                                  (t._crrentVideo.state = 0),
+                                  (t._running = !1),
+                                  t.onStoped && t.onStoped(),
+                                  console.log(
+                                    "screen-recorder : 【录制结束】 <<<<<<",
+                                    "video: name=".concat(t._crrentVideo.name, " index=").concat(t._crrentVideo.index),
+                                    "record: index=".concat(t._crrentRecord.index),
+                                    t._crrentVideo == t._crrentRecord.video,
+                                  ));
+                              }),
+                              (t._mediaRecorder.onpause = function (e) {
+                                console.log("screen-recorder : 暂停录制", e);
+                              }),
+                              (t._mediaRecorder.onresume = function (e) {
+                                console.log("screen-recorder : 恢复录制", e);
+                              }),
+                              (t._mediaRecorder.onerror = function (e) {
+                                (console.log("screen-recorder : 录制出错", e), (t._running = !1));
+                              }),
+                              t._mediaRecorder.start(),
+                              (t._stopByMethod = !1),
+                              t.initUpload());
+                          })
+                          .catch(function (e) {
+                            ((t._lock = !1), console.error("screen-recorder : 开启录屏失败", e));
+                          }))
+                      : console.error(
+                          "需要https才能访问该属性。如果需要临时使用，首先请在地址栏输入：chrome://flags/#unsafely-treat-insecure-origin-as-secure  ;  然后在 Insecure origins treated as secure 一栏的文本框中输入 " +
+                            window.location.protocol +
+                            window.location.host +
+                            " ；最后在文本框旁的下拉框中选择 Enable，点击底部的 Relaunch ",
+                        ))
+                  : console.error("没有找到可以支持的mimeType, 无法启动录制");
+              },
+            },
+            {
+              key: "initSplice",
+              value: function () {
+                var e = this;
+                (this.interval && clearInterval(this.interval),
+                  (this.interval = setInterval(
+                    function () {
+                      try {
+                        "inactive" != e._mediaRecorder.state && e._mediaRecorder.requestData();
+                      } catch (t) {
+                        console.error("screen-recorder : 分片失败", t);
+                      }
+                    },
+                    1e3 * (this.spliceFrequency <= 0 ? 5 : this.spliceFrequency),
+                  )));
+              },
+            },
+            {
+              key: "initUpload",
+              value: function () {
+                var e = this;
+                (this.intervalUpload && clearInterval(this.interval),
+                  (this.intervalUpload = setInterval(function () {
+                    if (0 != e._allowUpload)
+                      if (e._uploadingRecord) console.log("screen-recorder : 上一个分片还没传完");
+                      else
+                        try {
+                          if (e._waitUploadRecords.length > 0) {
+                            ((e._uploadingRecord = e._waitUploadRecords[0]),
+                              (e._uploadingRecord.state = 1),
+                              (e._uploadingRecord.uploadedStartTime = new Date()));
+                            var t = new FormData();
+                            (t.append(
+                              "file",
+                              new File([e._uploadingRecord.Data], e._uploadingRecord.video.name + "#" + e._uploadingRecord.index + "#" + e._extention),
+                            ),
+                              console.log("screen-recorder : 数据开始上传", e._uploadingRecord),
+                              Object(l["a"])({ url: e.uploadUrl, method: "post", data: t })
+                                .then(function (t) {
+                                  if (0 == t.code) {
+                                    (console.log("screen-recorder : 数据上传成功", t, e._uploadingRecord),
+                                      e._waitUploadRecords.shift(),
+                                      (e._uploadingRecord.state = 2),
+                                      (e._uploadingRecord.uploadedEndTime = new Date()),
+                                      e._uploadedRecords.push(e._uploadingRecord));
+                                    var n =
+                                      e._uploadingRecord.video.segements.filter(function (e) {
+                                        return 2 == e.state;
+                                      }).length / e._uploadingRecord.video.segements.length;
+                                    ((e._uploadingRecord.video.uploadProgress = n),
+                                      console.log("screen-recorder : 数据上传成功", t, e._uploadingRecord, e._uploadingRecord.video.uploadProgress));
+                                  } else
+                                    ((e._uploadingRecord.uploadedStartTime = null),
+                                      (e._uploadingRecord.state = 3),
+                                      console.log("screen-recorder : 数据上传失败", t, e._uploadingRecord));
+                                  e._uploadingRecord = null;
+                                })
+                                .catch(function (t) {
+                                  (console.error("screen-recorder : 数据上传失败", t, e._uploadingRecord),
+                                    (e._uploadingRecord.uploadedStartTime = null),
+                                    (e._uploadingRecord.state = 3),
+                                    (e._uploadingRecord = null));
+                                }));
+                          } else console.log("没有可供上传的视频");
+                        } catch (n) {
+                          (console.error("screen-recorder : 数据上传失败", n, e._uploadingRecord), (e._uploadingRecord.state = 3), (e._uploadingRecord = null));
+                        }
+                    else console.log("screen-recorder : 没有开启上传");
+                  }, 1e3)));
+              },
+            },
+            {
+              key: "unload",
+              value: function (e) {
+                if (
+                  (console.log("unload"),
+                  0 ==
+                    g.allRecords.every(function (e) {
+                      return 2 == e.state;
+                    }) || g.running)
+                )
+                  return (e.preventDefault(), (e.returnValue = "正在录屏或正在上传录屏，确定要离开吗？"));
+              },
+            },
+            {
+              key: "stopRecord",
+              value: function () {
+                this._mediaRecorder && "inactive" != this._mediaRecorder.state
+                  ? (this._mediaRecorder.stop(), (this._stopByMethod = !0))
+                  : this.onStoped && this.onStoped();
+              },
+            },
+            {
+              key: "clearRecords",
+              value: function () {
+                ((this._allRecords = []), (this._waitUploadRecords = []), (this._uploadedRecords = []));
+              },
+            },
+            {
+              key: "playRecordAtSegement",
+              value: function (e, t) {
+                var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "video/webm; codecs=vp8";
+                if (null == t)
+                  this._stream && this._stream.active && (console.log("screen-recorder : 直播", e), (e.srcObject = this._stream), (e.controls = !0), e.play());
+                else {
+                  console.log("screen-recorder : 播放视频", e, t);
+                  var r = new Blob(
+                    t.video.segements.map(function (e) {
+                      return e.Data;
+                    }),
+                    { type: n },
+                  );
+                  ((e.src = window.URL.createObjectURL(r)),
+                    (e.srcObject = null),
+                    (e.controls = !0),
+                    (e.currentTime = t.video.segements.indexOf(t) * (this.spliceFrequency <= 0 ? 5 : this.spliceFrequency)),
+                    e.play());
+                }
+              },
+            },
+            {
+              key: "downloadRecord",
+              value: function () {
+                var e = this;
+                this._videos.forEach(function (t, n) {
+                  var r = new Blob(
+                      t.segements
+                        .filter(function (e) {
+                          return -2 != e.state;
+                        })
+                        .map(function (e) {
+                          return e.Data;
+                        }),
+                      { type: e.mimeType },
+                    ),
+                    o = URL.createObjectURL(r),
+                    a = document.createElement("a");
+                  (document.body.appendChild(a),
+                    a.setAttribute("style", "display: none"),
+                    (a.href = o),
+                    (a.download = "screen_record_" + n + ".webm"),
+                    a.click(),
+                    window.URL.revokeObjectURL(o));
+                });
+              },
+            },
+            {
+              key: "startUploadRecord",
+              value: function () {
+                this._allowUpload = !0;
+              },
+            },
+            {
+              key: "stopUploadRecord",
+              value: function () {
+                this._allowUpload = !1;
+              },
+            },
+            {
+              key: "uploadingRecord",
+              get: function () {
+                return this._uploadingRecord;
+              },
+            },
+            {
+              key: "uploadedRecords",
+              get: function () {
+                var e = new Array();
+                return (e.push.apply(e, Object(r["a"])(this._uploadedRecords)), e);
+              },
+            },
+            {
+              key: "waitUploadRecords",
+              get: function () {
+                var e = new Array();
+                return (e.push.apply(e, Object(r["a"])(this._waitUploadRecords)), e);
+              },
+            },
+            {
+              key: "allRecords",
+              get: function () {
+                var e = new Array();
+                return (e.push.apply(e, Object(r["a"])(this._allRecords)), e);
+              },
+            },
+            {
+              key: "allVideos",
+              get: function () {
+                var e = new Array();
+                return (e.push.apply(e, Object(r["a"])(this._videos)), e);
+              },
+            },
+            {
+              key: "running",
+              get: function () {
+                return null != this._mediaRecorder && this._running;
+              },
+            },
+            {
+              key: "allowUpload",
+              get: function () {
+                return this._allowUpload;
+              },
+            },
+            {
+              key: "stopByMethod",
+              get: function () {
+                return this._stopByMethod;
+              },
+            },
+          ]),
+          e
+        );
+      })(),
+      h = function e() {
+        (Object(o["a"])(this, e),
+          Object(i["a"])(this, "index", void 0),
+          Object(i["a"])(this, "video", void 0),
+          Object(i["a"])(this, "startTime", void 0),
+          Object(i["a"])(this, "endTime", void 0),
+          Object(i["a"])(this, "state", void 0),
+          Object(i["a"])(this, "uploadedStartTime", void 0),
+          Object(i["a"])(this, "uploadedEndTime", void 0),
+          Object(i["a"])(this, "Data", void 0),
+          Object(i["a"])(this, "uploadUrl", void 0));
+      },
+      f = (function () {
+        function e() {
+          (Object(o["a"])(this, e),
+            Object(i["a"])(this, "index", void 0),
+            Object(i["a"])(this, "name", void 0),
+            Object(i["a"])(this, "segements", void 0),
+            Object(i["a"])(this, "state", void 0),
+            Object(i["a"])(this, "uploadProgress", void 0),
+            Object(i["a"])(this, "uploadUrl", void 0));
+        }
+        return (
+          Object(a["a"])(e, [
+            {
+              key: "startTime",
+              get: function () {
+                return 0 == this.segements.length ? null : this.segements[0].startTime;
+              },
+            },
+            {
+              key: "endTime",
+              get: function () {
+                return 0 == this.segements.length ? null : this.segements[this.segements.length - 1].endTime;
+              },
+            },
+          ]),
+          e
+        );
+      })(),
+      b = { tip: null },
+      g = new m();
+    t["a"] = p;
+  },
+  7371: function (e, t, n) {
+    var r = n("02aa");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("53db0071", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  "73ec": function (e, t, n) {
+    "use strict";
+    (n.d(t, "n", function () {
+      return i;
+    }),
+      n.d(t, "o", function () {
+        return c;
+      }),
+      n.d(t, "a", function () {
+        return s;
+      }),
+      n.d(t, "d", function () {
+        return u;
+      }),
+      n.d(t, "p", function () {
+        return d;
+      }),
+      n.d(t, "r", function () {
+        return l;
+      }),
+      n.d(t, "k", function () {
+        return p;
+      }),
+      n.d(t, "e", function () {
+        return m;
+      }),
+      n.d(t, "q", function () {
+        return h;
+      }),
+      n.d(t, "j", function () {
+        return f;
+      }),
+      n.d(t, "g", function () {
+        return b;
+      }),
+      n.d(t, "h", function () {
+        return g;
+      }),
+      n.d(t, "f", function () {
+        return v;
+      }),
+      n.d(t, "s", function () {
+        return k;
+      }),
+      n.d(t, "i", function () {
+        return x;
+      }),
+      n.d(t, "l", function () {
+        return O;
+      }),
+      n.d(t, "c", function () {
+        return w;
+      }),
+      n.d(t, "b", function () {
+        return y;
+      }),
+      n.d(t, "m", function () {
+        return j;
+      }));
+    (n("99af"),
+      n("4160"),
+      n("c975"),
+      n("a15b"),
+      n("d81d"),
+      n("fb6a"),
+      n("ace4"),
+      n("0d03"),
+      n("b680"),
+      n("b64b"),
+      n("d3b7"),
+      n("acd8"),
+      n("e25e"),
+      n("4d63"),
+      n("ac1f"),
+      n("25f0"),
+      n("466d"),
+      n("38cf"),
+      n("5319"),
+      n("498a"),
+      n("5cc6"),
+      n("9a8c"),
+      n("a975"),
+      n("735e"),
+      n("c1ac"),
+      n("d139"),
+      n("3a7b"),
+      n("d5d6"),
+      n("82f8"),
+      n("e91f"),
+      n("60bd"),
+      n("5f96"),
+      n("3280"),
+      n("3fcc"),
+      n("ca91"),
+      n("25a1"),
+      n("cd26"),
+      n("3c5d"),
+      n("2954"),
+      n("649e"),
+      n("219c"),
+      n("170b"),
+      n("b39a9"),
+      n("72f7"),
+      n("159b"));
+    var r = n("5c96"),
+      o = n("0895"),
+      a = n("70b0");
+    function i(e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a["a"].t("lang.加载中").toString(),
+        n = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+        o = arguments.length > 3 ? arguments[3] : void 0;
+      o
+        ? r["Loading"].service(o)
+        : e
+          ? r["Loading"].service({ text: t, lock: n, fullscreen: !0 })
+          : r["Loading"].service({ text: t, lock: n, fullscreen: !0 }).close();
+    }
+    function c(e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "success",
+        n = arguments.length > 2 ? arguments[2] : void 0;
+      return n ? Object(r["Message"])(n) : Object(r["Message"])({ showClose: !0, message: e, type: t });
+    }
+    function s(e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a["a"].t("lang.提示信息").toString(),
+        n = arguments.length > 2 ? arguments[2] : void 0,
+        o = arguments.length > 3 ? arguments[3] : void 0;
+      r["MessageBox"].alert(e, t, o || { confirmButtonText: a["a"].t("lang.确定").toString(), callback: n });
+    }
+    function u(e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a["a"].t("lang.提示信息").toString(),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a["a"].t("lang.确定").toString(),
+        o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a["a"].t("lang.取消").toString(),
+        i = arguments.length > 4 ? arguments[4] : void 0,
+        c = arguments.length > 5 ? arguments[5] : void 0,
+        s = arguments.length > 6 ? arguments[6] : void 0;
+      r["MessageBox"]
+        .confirm(e, t, s || { confirmButtonText: n, cancelButtonText: o, type: "warning" })
+        .then(i)
+        .catch(c);
+    }
+    function d(e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a["a"].t("lang.提示信息").toString(),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a["a"].t("lang.确定").toString(),
+        o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a["a"].t("lang.取消").toString(),
+        i = arguments.length > 4 ? arguments[4] : void 0,
+        c = arguments.length > 5 ? arguments[5] : void 0,
+        s = arguments.length > 6 ? arguments[6] : void 0;
+      r["MessageBox"]
+        .prompt(e, t, s || { confirmButtonText: n, cancelButtonText: o, type: "warning" })
+        .then(i)
+        .catch(c);
+    }
+    function l(e, t) {
+      window.localStorage.setItem(e, JSON.stringify(t));
+    }
+    function p(e) {
+      var t = window.localStorage.getItem(e);
+      return t ? JSON.parse(t) : null;
+    }
+    function m(e) {
+      var t = window.localStorage.getItem(e);
+      return null != t;
+    }
+    function h(e) {
+      window.localStorage.removeItem(e);
+    }
+    function f(e) {
+      var t = window.location.href.match(new RegExp("[?&]" + e + "=([^&]+)", "i"));
+      return null == t || t.length < 1 ? "" : t[1];
+    }
+    function b(e) {
+      var t = parseInt(e);
+      if (!t) return "00:00:00";
+      if (t / 60 < 1) return "00:00:" + t;
+      if (Math.floor(t / 3600) > 0) {
+        var n = Math.floor(t / 3600),
+          r = Math.floor((t - 3600 * n) / 60);
+        return n + ":" + r + ":00";
+      }
+      return "00:" + Math.floor(t / 60) + ":00";
+    }
+    function g(e) {
+      var t = parseInt(e);
+      if (!t || t < 0) return "00:00:00";
+      var n = Math.floor(t / 3600),
+        r = Math.floor((t - 3600 * n) / 60),
+        o = t % 60;
+      return ""
+        .concat(n, ":")
+        .concat((Array(2).join("0") + r).slice(-2), ":")
+        .concat((Array(2).join("0") + o).slice(-2));
+    }
+    function v(e, t) {
+      var n = {
+        "M+": t.getMonth() + 1,
+        "d+": t.getDate(),
+        "h+": t.getHours(),
+        "m+": t.getMinutes(),
+        "s+": t.getSeconds(),
+        "q+": Math.floor((t.getMonth() + 3) / 3),
+        S: t.getMilliseconds(),
+      };
+      for (var r in (/(y+)/.test(e) && (e = e.replace(RegExp.$1, (t.getFullYear() + "").substr(4 - RegExp.$1.length))), n))
+        new RegExp("(" + r + ")").test(e) && (e = e.replace(RegExp.$1, 1 === RegExp.$1.length ? n[r] : ("00" + n[r]).substr(("" + n[r]).length)));
+      return e;
+    }
+    function k(e) {
+      if (!e) return "";
+      var t = 1024;
+      return e < t
+        ? e + "B"
+        : e < Math.pow(t, 2)
+          ? parseFloat((e / t).toFixed(2)) + "K"
+          : e < Math.pow(t, 3)
+            ? parseFloat((e / Math.pow(t, 2)).toFixed(2)) + "M"
+            : e < Math.pow(t, 4)
+              ? parseFloat((e / Math.pow(t, 3)).toFixed(2)) + "G"
+              : parseFloat((e / Math.pow(t, 4)).toFixed(2)) + "T";
+    }
+    function x() {
+      var e = new Date().getTime(),
+        t = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (t) {
+          var n = ((e + 16 * Math.random()) % 16) | 0;
+          return ((e = Math.floor(e / 16)), ("x" == t ? n : (3 & n) | 8).toString(16));
+        });
+      return t;
+    }
+    function O(e, t) {
+      var n = {};
+      return (
+        e.forEach(function (e) {
+          var r = JSON.stringify(t(e));
+          ((n[r] = n[r] || []), n[r].push(e));
+        }),
+        Object.keys(n).map(function (e) {
+          return n[e];
+        })
+      );
+    }
+    function w() {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "*",
+        t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 ? arguments[2] : void 0;
+      Object(o["a"])({ accept: e, multiple: t }).then(function (e) {
+        n(e);
+      });
+    }
+    n("21a6");
+    function y(e) {
+      for (
+        var t = "=".repeat((4 - (e.length % 4)) % 4),
+          n = (e + t).replace(/\-/g, "+").replace(/_/g, "/"),
+          r = window.atob(n),
+          o = new Uint8Array(r.length),
+          a = 0;
+        a < r.length;
+        ++a
+      )
+        o[a] = r.charCodeAt(a);
+      return o;
+    }
+    function j(e) {
+      if ("" === e || "" === e.trim()) return !1;
+      try {
+        return btoa(atob(e)) == e;
+      } catch (t) {
+        return !1;
+      }
+    }
+  },
+  "764b8": function (e, t, n) {
+    var r = n("e139");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("a5b555bc", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  7957: function (e, t, n) {
+    e.exports = n.p + "fonts/iconfont.75b99fef.eot";
+  },
+  "8a55": function (e, t, n) {
+    e.exports = n.p + "fonts/iconfont.dec42474.woff";
+  },
+  9157: function (e, t, n) {
+    "use strict";
+    (n("7db0"), n("c975"), n("a15b"), n("d81d"), n("b0c0"), n("ac1f"), n("5319"), n("2ca0"), n("96cf"));
+    var r = n("89ba"),
+      o = n("53fe"),
+      a = n("9f12"),
+      i = n("2fa7"),
+      c = n("482f"),
+      s = n("59b9"),
+      u = n("0613"),
+      d = n("8b83"),
+      l = n("c65a"),
+      p = n("c03e"),
+      m = n("a0f7"),
+      h = function e() {
+        (Object(a["a"])(this, e),
+          Object(i["a"])(this, "Id", void 0),
+          Object(i["a"])(this, "Name", void 0),
+          Object(i["a"])(this, "Phone", void 0),
+          Object(i["a"])(this, "UserName", void 0),
+          Object(i["a"])(this, "Role", void 0),
+          Object(i["a"])(this, "Avatar", void 0),
+          Object(i["a"])(this, "UserId", void 0),
+          Object(i["a"])(this, "Address", ""),
+          Object(i["a"])(this, "Birthday", ""),
+          Object(i["a"])(this, "City", ""),
+          Object(i["a"])(this, "CollegeId", void 0),
+          Object(i["a"])(this, "CollegeKind", void 0),
+          Object(i["a"])(this, "CollegeName", ""),
+          Object(i["a"])(this, "ContactName", ""),
+          Object(i["a"])(this, "ContactPhone", ""),
+          Object(i["a"])(this, "Email", ""),
+          Object(i["a"])(this, "Kind", ""),
+          Object(i["a"])(this, "Province", ""),
+          Object(i["a"])(this, "Sex", void 0),
+          Object(i["a"])(this, "StuNo", ""));
+      },
+      f = (function (e) {
+        function t() {
+          return (Object(a["a"])(this, t), Object(d["a"])(this, Object(l["a"])(t).apply(this, arguments)));
+        }
+        return (
+          Object(p["a"])(t, e),
+          Object(o["a"])(t, [
+            {
+              key: "AddOrUpdate",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t) {
+                    var n;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return ((e.next = 2), this.WebPost("/api/NLEUser/AddOrUpdateNLEUser", t));
+                            case 2:
+                              return ((n = e.sent), e.abrupt("return", n));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "GetEentity",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t) {
+                    var n;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return ((e.next = 2), this.WebGet("/api/NLEUser/GetNLEUser/".concat(t), {}));
+                            case 2:
+                              return ((n = e.sent), e.abrupt("return", n));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+          ]),
+          t
+        );
+      })(m["e"]),
+      b = new f(),
+      g = n("afbc"),
+      v = n("73ec");
+    n.d(t, "a", function () {
+      return k;
+    });
+    var k = function e() {
+        (Object(a["a"])(this, e),
+          Object(i["a"])(this, "phone", ""),
+          Object(i["a"])(this, "accessToken", ""),
+          Object(i["a"])(this, "refreshToken", ""),
+          Object(i["a"])(this, "userName", ""),
+          Object(i["a"])(this, "name", ""),
+          Object(i["a"])(this, "userId", void 0),
+          Object(i["a"])(this, "roles", void 0),
+          Object(i["a"])(this, "rights", void 0),
+          Object(i["a"])(this, "avatar", ""),
+          Object(i["a"])(this, "address", ""),
+          Object(i["a"])(this, "birthday", ""),
+          Object(i["a"])(this, "city", ""),
+          Object(i["a"])(this, "collegeId", void 0),
+          Object(i["a"])(this, "collegeKind", void 0),
+          Object(i["a"])(this, "collegeName", ""),
+          Object(i["a"])(this, "contactName", ""),
+          Object(i["a"])(this, "contactPhone", ""),
+          Object(i["a"])(this, "email", ""),
+          Object(i["a"])(this, "kind", ""),
+          Object(i["a"])(this, "province", ""),
+          Object(i["a"])(this, "sex", void 0),
+          Object(i["a"])(this, "stuNo", ""));
+      },
+      x = (function () {
+        function e() {
+          Object(a["a"])(this, e);
+        }
+        return (
+          Object(o["a"])(e, [
+            {
+              key: "tokenValid",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t;
+                    return regeneratorRuntime.wrap(function (e) {
+                      while (1)
+                        switch ((e.prev = e.next)) {
+                          case 0:
+                            return ((e.next = 2), Object(s["a"])({ url: "".concat(c["a"].cloud_host, "/upms/auth/tokenValid"), method: "POST" }));
+                          case 2:
+                            return ((t = e.sent), e.abrupt("return", "0" != t.data.status));
+                          case 4:
+                          case "end":
+                            return e.stop();
+                        }
+                    }, e);
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "getUserInfo",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t;
+                    return regeneratorRuntime.wrap(function (e) {
+                      while (1)
+                        switch ((e.prev = e.next)) {
+                          case 0:
+                            return ((e.next = 2), Object(s["a"])({ url: "".concat(c["a"].cloud_host, "/upms/my/userInfo"), method: "POST" }));
+                          case 2:
+                            return ((t = e.sent), e.abrupt("return", t.data));
+                          case 4:
+                          case "end":
+                            return e.stop();
+                        }
+                    }, e);
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "logout",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t;
+                    return regeneratorRuntime.wrap(function (e) {
+                      while (1)
+                        switch ((e.prev = e.next)) {
+                          case 0:
+                            return ((e.next = 2), Object(s["a"])({ url: "".concat(c["a"].cloud_host, "/upms/auth/exit"), method: "POST" }));
+                          case 2:
+                            return ((t = e.sent), e.abrupt("return", t));
+                          case 4:
+                          case "end":
+                            return e.stop();
+                        }
+                    }, e);
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "redirectLogin",
+              value: function () {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "/";
+                g["a"].push("/login?backUrl=".concat(e));
+              },
+            },
+            {
+              key: "redirectRegister",
+              value: function () {
+                window.location.href = c["a"].redirect_register + "?backUrl=" + window.location.href;
+              },
+            },
+            {
+              key: "initStore",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t, n;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if ("" == Object(v["k"])("cloud-token")) {
+                                e.next = 27;
+                                break;
+                              }
+                              return ((e.next = 3), this.tokenValid());
+                            case 3:
+                              if (!e.sent) {
+                                e.next = 27;
+                                break;
+                              }
+                              return ((e.next = 6), this.getUserInfo());
+                            case 6:
+                              return (
+                                (t = e.sent),
+                                (n = new h()),
+                                (n.Name = t.name),
+                                (n.UserName = t.userName),
+                                (n.UserId = t.userId),
+                                (n.Avatar = t.avatar),
+                                (n.Birthday = t.birthday),
+                                (n.City = t.city),
+                                (n.CollegeId = t.collegeId),
+                                (n.CollegeKind = t.collegeKind),
+                                (n.CollegeName = t.collegeName),
+                                (n.ContactPhone = t.contactPhone),
+                                (n.ContactName = t.contactName),
+                                (n.Email = t.email),
+                                (n.Kind = t.kind),
+                                (n.Sex = t.sex),
+                                (n.StuNo = t.stuNo),
+                                (n.Role = t.roles
+                                  .map(function (e) {
+                                    return e.roleName;
+                                  })
+                                  .join()),
+                                (e.next = 26),
+                                b.AddOrUpdate(n)
+                              );
+                            case 26:
+                              u["a"].commit("user/initUser", t);
+                            case 27:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "initToken",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (t = Object(v["j"])("token").replace(/[^0-9a-zA-Z]/g, "")),
+                                "" != t && (Object(v["r"])("cloud-token", t), location.replace(location.href.substring(0, location.href.indexOf("token") - 1))),
+                                (e.next = 4),
+                                this.initStore()
+                              );
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "loginValid",
+              value: function (e) {
+                return !!u["a"].state.user.isLogin || (this.redirectLogin(e), !1);
+              },
+            },
+            {
+              key: "validRight",
+              value: function (e) {
+                var t = u["a"].getters["user/userRole"],
+                  n = c["a"].roleSettings.find(function (e) {
+                    return e.roleName == t;
+                  });
+                return (
+                  !!n &&
+                  null !=
+                    n.startsWiths.find(function (t) {
+                      return e.startsWith(t);
+                    })
+                );
+              },
+            },
+          ]),
+          e
+        );
+      })(),
+      O = new x();
+    t["b"] = O;
+  },
+  a0f7: function (e, t, n) {
+    "use strict";
+    (n.d(t, "d", function () {
+      return m;
+    }),
+      n.d(t, "c", function () {
+        return h;
+      }),
+      n.d(t, "b", function () {
+        return f;
+      }),
+      n.d(t, "a", function () {
+        return b;
+      }),
+      n.d(t, "e", function () {
+        return g;
+      }));
+    (n("99af"), n("96cf"));
+    var r = n("89ba"),
+      o = n("53fe"),
+      a = n("8b83"),
+      i = n("c65a"),
+      c = n("9aa6"),
+      s = n("c03e"),
+      u = n("9f12"),
+      d = n("2fa7"),
+      l = n("59b9"),
+      p = n("482f"),
+      m = function e() {
+        (Object(u["a"])(this, e),
+          Object(d["a"])(this, "status", void 0),
+          Object(d["a"])(this, "msg", ""),
+          Object(d["a"])(this, "message", ""),
+          Object(d["a"])(this, "data", void 0),
+          Object(d["a"])(this, "code", void 0));
+      },
+      h = function e() {
+        (Object(u["a"])(this, e),
+          Object(d["a"])(this, "pageNum", void 0),
+          Object(d["a"])(this, "pageSize", void 0),
+          Object(d["a"])(this, "size", void 0),
+          Object(d["a"])(this, "startRow", void 0),
+          Object(d["a"])(this, "endRow", void 0),
+          Object(d["a"])(this, "total", void 0),
+          Object(d["a"])(this, "pages", void 0),
+          Object(d["a"])(this, "prePage", void 0),
+          Object(d["a"])(this, "nextPage", void 0),
+          Object(d["a"])(this, "isFirstPage", void 0),
+          Object(d["a"])(this, "isLastPage", void 0),
+          Object(d["a"])(this, "hasPreviousPage", void 0),
+          Object(d["a"])(this, "hasNextPage", void 0),
+          Object(d["a"])(this, "navigatePages", void 0),
+          Object(d["a"])(this, "navigatepageNums", void 0),
+          Object(d["a"])(this, "navigateFirstPage", void 0),
+          Object(d["a"])(this, "navigateLastPage", void 0),
+          Object(d["a"])(this, "lastPage", void 0),
+          Object(d["a"])(this, "firstPage", void 0));
+      },
+      f = function e() {
+        (Object(u["a"])(this, e),
+          Object(d["a"])(this, "records", void 0),
+          Object(d["a"])(this, "page", void 0),
+          Object(d["a"])(this, "total", void 0),
+          Object(d["a"])(this, "pagesize", void 0));
+      },
+      b = (function (e) {
+        function t() {
+          var e, n;
+          Object(u["a"])(this, t);
+          for (var r = arguments.length, o = new Array(r), s = 0; s < r; s++) o[s] = arguments[s];
+          return (
+            (n = Object(a["a"])(this, (e = Object(i["a"])(t)).call.apply(e, [this].concat(o)))),
+            Object(d["a"])(Object(c["a"])(n), "list", void 0),
+            Object(d["a"])(Object(c["a"])(n), "pageParam", void 0),
+            Object(d["a"])(Object(c["a"])(n), "page", void 0),
+            n
+          );
+        }
+        return (Object(s["a"])(t, e), t);
+      })(m),
+      g = (function () {
+        function e() {
+          (Object(u["a"])(this, e), Object(d["a"])(this, "cloud_host", p["a"].cloud_host), Object(d["a"])(this, "web_host", p["a"].web_host));
+        }
+        return (
+          Object(o["a"])(e, [
+            {
+              key: "CloudGet",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t) {
+                    var n;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return ((e.next = 2), Object(l["a"])({ url: "".concat(this.cloud_host + t), method: "get" }));
+                            case 2:
+                              return ((n = e.sent), e.abrupt("return", n));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "CloudPost",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t, n) {
+                    var r;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return ((e.next = 2), Object(l["a"])({ url: "".concat(this.cloud_host + t), method: "post", data: n }));
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t, n) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "WebGet",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t, n) {
+                    var r;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(l["a"])({ url: "".concat(this.web_host + t), method: "get", params: n, headers: { "Content-Type": "application/json" } })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t, n) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "WebPost",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t, n) {
+                    var r;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(l["a"])({ url: "".concat(this.web_host + t), method: "post", data: n, headers: { "Content-Type": "application/json" } })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t(t, n) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "WebPostForm",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e(t, n) {
+                    var r;
+                    return regeneratorRuntime.wrap(function (e) {
+                      while (1)
+                        switch ((e.prev = e.next)) {
+                          case 0:
+                            return ((e.next = 2), Object(l["a"])({ url: "".concat(t), method: "post", data: n }));
+                          case 2:
+                            return ((r = e.sent), e.abrupt("return", r));
+                          case 4:
+                          case "end":
+                            return e.stop();
+                        }
+                    }, e);
+                  }),
+                );
+                function t(t, n) {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "GetFromData",
+              value: function (e) {
+                var t = new FormData();
+                for (var n in e) void 0 != e[n] && t.append(n, e[n]);
+                return t;
+              },
+            },
+          ]),
+          e
+        );
+      })();
+  },
+  afbc: function (e, t, n) {
+    "use strict";
+    var r = n("ba4c"),
+      o = n.n(r),
+      a = n("8c4f"),
+      i =
+        (n("99af"),
+        n("d3b7"),
+        [
+          {
+            path: "/",
+            name: "home",
+            permission: "",
+            meta: { title: "首页" },
+            component: function () {
+              return Promise.all([n.e("chunk-4e65008c"), n.e("chunk-1cc681fc")]).then(n.bind(null, "6511"));
+            },
+          },
+          {
+            path: "/login",
+            name: "login",
+            permission: "",
+            meta: { title: "登录" },
+            component: function () {
+              return n.e("chunk-9fd82662").then(n.bind(null, "dd7b"));
+            },
+          },
+          {
+            path: "/about",
+            name: "about",
+            permission: "",
+            meta: { title: "关于" },
+            component: function () {
+              return n.e("chunk-2d0d6f02").then(n.bind(null, "754b"));
+            },
+          },
+          {
+            path: "/information",
+            name: "information",
+            permission: "",
+            meta: { title: "设备资料" },
+            component: function () {
+              return Promise.all([n.e("chunk-4e65008c"), n.e("chunk-663577ae")]).then(n.bind(null, "b684"));
+            },
+          },
+          {
+            path: "/lession",
+            name: "lession",
+            permission: "",
+            meta: { title: "课程学习" },
+            component: function () {
+              return Promise.all([n.e("chunk-4e65008c"), n.e("chunk-6abeac5a")]).then(n.bind(null, "b583"));
+            },
+          },
+        ]),
+      c = [
+        {
+          path: "/main",
+          name: "main",
+          permission: "",
+          meta: { title: "个人中心" },
+          icon: "&#xe68a;",
+          component: function () {
+            return n.e("chunk-30fa697c").then(n.bind(null, "7f94"));
+          },
+          children: [
+            {
+              path: "task",
+              permission: "",
+              meta: { title: "执行任务" },
+              name: "task",
+              component: function () {
+                return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-6da48c20")]).then(n.bind(null, "ec1e"));
+              },
+              children: [
+                {
+                  path: "videoTask",
+                  permission: "",
+                  meta: { title: "视频任务" },
+                  name: "videoTask",
+                  component: function () {
+                    return n.e("chunk-2d27230d").then(n.bind(null, "9e53"));
+                  },
+                },
+                {
+                  path: "documentTask",
+                  permission: "",
+                  meta: { title: "文档任务" },
+                  name: "documentTask",
+                  component: function () {
+                    return n.e("chunk-5f4f24a9").then(n.bind(null, "7685a"));
+                  },
+                },
+                {
+                  path: "appCaseTask",
+                  permission: "",
+                  meta: { title: "案例任务" },
+                  name: "appCaseTask",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-24ce1332"), n.e("chunk-64a22492")]).then(n.bind(null, "6958"));
+                  },
+                },
+                {
+                  path: "codeTask",
+                  permission: "",
+                  meta: { title: "编码任务" },
+                  name: "codeTask",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-548e8092"), n.e("chunk-24ce1332"), n.e("chunk-ea31d1aa")]).then(n.bind(null, "736e"));
+                  },
+                },
+                {
+                  path: "exerciseTask",
+                  permission: "",
+                  meta: { title: "习题任务" },
+                  name: "exerciseTask",
+                  component: function () {
+                    return Promise.all([n.e("chunk-1138e13e"), n.e("chunk-b19fc0d2")]).then(n.bind(null, "a4cd"));
+                  },
+                },
+                {
+                  path: "emulatorTask",
+                  permission: "",
+                  meta: { title: "仿真任务" },
+                  name: "emulatorTask",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-24ce1332"), n.e("chunk-704d6c4d")]).then(n.bind(null, "08f3"));
+                  },
+                },
+              ],
+            },
+            {
+              path: "student",
+              redirect: "/main/student/home",
+              permission: "",
+              meta: { title: "学生首页" },
+              name: "student",
+              component: function () {
+                return n.e("chunk-3d592150").then(n.bind(null, "5e09"));
+              },
+              children: [
+                {
+                  path: "home",
+                  permission: "",
+                  meta: { title: "学生首页" },
+                  name: "stuhome",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-86296a5c"), n.e("chunk-d602cabe")]).then(n.bind(null, "dce0"));
+                  },
+                },
+                {
+                  path: "center",
+                  permission: "",
+                  meta: { title: "个人中心" },
+                  name: "center",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-7d20730e")]).then(n.bind(null, "2d8e"));
+                  },
+                },
+                {
+                  path: "executetask",
+                  permission: "",
+                  meta: { title: "执行任务" },
+                  name: "executetask",
+                  component: function () {
+                    return n.e("chunk-ef5b8ae8").then(n.bind(null, "66ce"));
+                  },
+                },
+                {
+                  path: "stutaskdetial",
+                  permission: "",
+                  meta: { title: "任务详情" },
+                  name: "stutaskdetial",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-0be95add")]).then(n.bind(null, "23fa"));
+                  },
+                },
+                {
+                  path: "stutaskreport",
+                  permission: "",
+                  meta: { title: "任务报告" },
+                  name: "stutaskreport",
+                  component: function () {
+                    return Promise.all([n.e("chunk-12417a23"), n.e("chunk-c9a1c958")]).then(n.bind(null, "5b6d"));
+                  },
+                },
+                {
+                  path: "stucenter",
+                  permission: "",
+                  meta: { title: "数据统计" },
+                  name: "stucenter",
+                  component: function () {
+                    return n.e("chunk-2d22205f").then(n.bind(null, "cd9a"));
+                  },
+                },
+                {
+                  path: "trainingsimulation",
+                  permission: "",
+                  meta: { title: "虚拟仿真工具练习" },
+                  name: "trainingsimulation",
+                  component: function () {
+                    return n.e("chunk-2d0d07ba").then(n.bind(null, "67be"));
+                  },
+                },
+                {
+                  path: "selfstudy",
+                  permission: "",
+                  meta: { title: "自主学习" },
+                  name: "selfstudys",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-2eee7b78")]).then(n.bind(null, "6dd1"));
+                  },
+                },
+                {
+                  path: "codestudy",
+                  permission: "",
+                  meta: { title: "代码工具练习" },
+                  name: "codestudy",
+                  component: function () {
+                    return n.e("chunk-4d976abe").then(n.bind(null, "8b4f"));
+                  },
+                },
+                {
+                  path: "examstudy",
+                  permission: "",
+                  meta: { title: "练习题工具" },
+                  name: "examstudy",
+                  component: function () {
+                    return n.e("chunk-2d0dd442").then(n.bind(null, "813f"));
+                  },
+                },
+                {
+                  path: "emulatorrfid",
+                  permission: "",
+                  meta: { title: "RFID实验室" },
+                  name: "emulatorrfid",
+                  component: function () {
+                    return Promise.all([n.e("chunk-d20d8cd8"), n.e("chunk-d959b33e")]).then(n.bind(null, "6c3a"));
+                  },
+                },
+                {
+                  path: "emulator",
+                  permission: "",
+                  meta: { title: "实验室" },
+                  name: "simulations",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-46ed78d3")]).then(n.bind(null, "ff2b"));
+                  },
+                },
+                {
+                  path: "commentreport",
+                  permission: "",
+                  meta: { title: "评分报告" },
+                  name: "commentreports",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-548e8092"), n.e("chunk-1138e13e"), n.e("chunk-1bde37bc")]).then(n.bind(null, "9f83"));
+                  },
+                },
+              ],
+            },
+            {
+              path: "teacher",
+              redirect: "/main/teacher/stat",
+              permission: "",
+              meta: { title: "老师首页" },
+              name: "teacher",
+              component: function () {
+                return n.e("chunk-4b8c262f").then(n.bind(null, "0bc4"));
+              },
+              children: [
+                {
+                  path: "stat",
+                  permission: "",
+                  meta: { title: "数据统计" },
+                  name: "stat",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-c5b6f69a")]).then(n.bind(null, "8aaf"));
+                  },
+                },
+                {
+                  path: "classmanager",
+                  permission: "",
+                  meta: { title: "班级管理" },
+                  name: "classmanager",
+                  component: function () {
+                    return n.e("chunk-491422d8").then(n.bind(null, "afab"));
+                  },
+                },
+                {
+                  path: "studentmanager",
+                  permission: "",
+                  meta: { title: "学生管理" },
+                  name: "studentmanager",
+                  component: function () {
+                    return Promise.all([n.e("chunk-4e2a9514"), n.e("chunk-aa9b8968")]).then(n.bind(null, "645b"));
+                  },
+                },
+                {
+                  path: "taskreport",
+                  permission: "",
+                  meta: { title: "任务报告" },
+                  name: "taskreport",
+                  component: function () {
+                    return Promise.all([n.e("chunk-e680f3b6"), n.e("chunk-6ab49c7c")]).then(n.bind(null, "6617"));
+                  },
+                },
+                {
+                  path: "taskreportdetail",
+                  permission: "",
+                  meta: { title: "报告详情" },
+                  name: "taskreportdetail",
+                  component: function () {
+                    return Promise.all([n.e("chunk-e680f3b6"), n.e("chunk-198bfb6d")]).then(n.bind(null, "b539"));
+                  },
+                },
+                {
+                  path: "taskreportview",
+                  permission: "",
+                  meta: { title: "报告详情" },
+                  name: "taskreportview",
+                  component: function () {
+                    return Promise.all([n.e("chunk-12417a23"), n.e("chunk-2ab545b0")]).then(n.bind(null, "1e8c"));
+                  },
+                },
+                {
+                  path: "scoreremark",
+                  permission: "",
+                  meta: { title: "成绩点评" },
+                  name: "scoreremark",
+                  component: function () {
+                    return Promise.all([
+                      n.e("chunk-2d21eebe"),
+                      n.e("chunk-7d0804ac"),
+                      n.e("chunk-548e8092"),
+                      n.e("chunk-1138e13e"),
+                      n.e("chunk-5d95f918"),
+                    ]).then(n.bind(null, "a7e3"));
+                  },
+                },
+                {
+                  path: "taskmanager",
+                  permission: "",
+                  meta: { title: "任务管理" },
+                  name: "taskmanager",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-e680f3b6"), n.e("chunk-4e2a9514"), n.e("chunk-19db64e5")]).then(n.bind(null, "05e8"));
+                  },
+                },
+                {
+                  path: "taskrecord",
+                  permission: "",
+                  meta: { title: "任务记录" },
+                  name: "taskrecord",
+                  component: function () {
+                    return n.e("chunk-2d0c7ce3").then(n.bind(null, "51d5"));
+                  },
+                },
+                {
+                  path: "tasktemplate",
+                  permission: "",
+                  meta: { title: "任务模板" },
+                  name: "tasktemplate",
+                  component: function () {
+                    return n.e("chunk-893855b4").then(n.bind(null, "4a32"));
+                  },
+                },
+                {
+                  path: "taskprogress",
+                  permission: "",
+                  meta: { title: "任务进度" },
+                  name: "taskprogress",
+                  component: function () {
+                    return Promise.all([n.e("chunk-e680f3b6"), n.e("chunk-6e600536")]).then(n.bind(null, "4074"));
+                  },
+                },
+                {
+                  path: "taskprogressdetail",
+                  permission: "",
+                  meta: { title: "任务进度详情" },
+                  name: "taskprogressdetail",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-e680f3b6"), n.e("chunk-a7e9bda8")]).then(n.bind(null, "feb8"));
+                  },
+                },
+                {
+                  path: "taskdetial",
+                  permission: "",
+                  meta: { title: "任务详情" },
+                  name: "taskdetial",
+                  component: function () {
+                    return Promise.all([n.e("chunk-548e8092"), n.e("chunk-1bb1436b"), n.e("chunk-75919ced")]).then(n.bind(null, "6971"));
+                  },
+                },
+                {
+                  path: "taskcomment",
+                  permission: "",
+                  meta: { title: "任务评分" },
+                  name: "taskcomment",
+                  component: function () {
+                    return Promise.all([n.e("chunk-e680f3b6"), n.e("chunk-2fb6d740")]).then(n.bind(null, "fb66"));
+                  },
+                },
+                {
+                  path: "taskcommentdetial",
+                  permission: "",
+                  meta: { title: "" },
+                  name: "taskcommentdetial",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-e680f3b6"), n.e("chunk-86296a5c"), n.e("chunk-4b079678")]).then(n.bind(null, "f2d1"));
+                  },
+                },
+                {
+                  path: "tasktemplateedit",
+                  permission: "",
+                  meta: { title: "任务模板编辑" },
+                  name: "tasktemplateedit",
+                  component: function () {
+                    return Promise.all([
+                      n.e("chunk-7d0804ac"),
+                      n.e("chunk-548e8092"),
+                      n.e("chunk-1138e13e"),
+                      n.e("chunk-1bb1436b"),
+                      n.e("chunk-8ebc2656"),
+                    ]).then(n.bind(null, "117d"));
+                  },
+                },
+                {
+                  path: "selfstudy",
+                  permission: "",
+                  meta: { title: "自主学习" },
+                  name: "selfstudyt",
+                  component: function () {
+                    return Promise.all([n.e("chunk-2d21eebe"), n.e("chunk-2eee7b78")]).then(n.bind(null, "6dd1"));
+                  },
+                },
+                {
+                  path: "emulator",
+                  permission: "",
+                  meta: { title: "实验室" },
+                  name: "simulationt",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-2e463b80")]).then(n.bind(null, "bed0"));
+                  },
+                },
+                {
+                  path: "emulatorrfid",
+                  permission: "",
+                  meta: { title: "RFID实验室" },
+                  name: "emulatorrfid",
+                  component: function () {
+                    return n.e("chunk-8df737fc").then(n.bind(null, "49cc"));
+                  },
+                },
+                {
+                  path: "lessonlist",
+                  permission: "",
+                  meta: { title: "课程列表" },
+                  name: "lessonlist",
+                  component: function () {
+                    return n.e("chunk-0ab30982").then(n.bind(null, "0ab4"));
+                  },
+                },
+                {
+                  path: "commentreport",
+                  permission: "",
+                  meta: { title: "评分报告" },
+                  name: "commentreportt",
+                  component: function () {
+                    return n.e("chunk-0ab30982").then(n.bind(null, "0ab4"));
+                  },
+                },
+                {
+                  path: "exerciselist",
+                  permission: "",
+                  meta: { title: "习题管理" },
+                  name: "exerciselist",
+                  component: function () {
+                    return Promise.all([n.e("chunk-1138e13e"), n.e("chunk-6042757f")]).then(n.bind(null, "5251"));
+                  },
+                },
+                {
+                  path: "emulatorpracticelist",
+                  permission: "",
+                  meta: { title: "实训管理" },
+                  name: "emulatorpracticelist",
+                  component: function () {
+                    return Promise.all([n.e("chunk-7d0804ac"), n.e("chunk-2a30faa4")]).then(n.bind(null, "5964"));
+                  },
+                },
+                {
+                  path: "lessonresource",
+                  permission: "",
+                  meta: { title: "课件管理" },
+                  name: "lessonresource",
+                  component: function () {
+                    return n.e("chunk-36832f9a").then(n.bind(null, "ec0b"));
+                  },
+                },
+                {
+                  path: "rfidexprecord",
+                  permission: "",
+                  meta: { title: "实验记录" },
+                  name: "rfidexprecord",
+                  component: function () {
+                    return Promise.all([n.e("chunk-d20d8cd8"), n.e("chunk-71b3d3a6")]).then(n.bind(null, "81fa"));
+                  },
+                },
+              ],
+            },
+            {
+              path: "admin",
+              redirect: "/main/admin/templatemanage",
+              permission: "",
+              meta: { title: "管理员" },
+              name: "admin",
+              component: function () {
+                return n.e("chunk-7ea40e1c").then(n.bind(null, "645e"));
+              },
+              children: [
+                {
+                  path: "templatemanage",
+                  meta: { title: "课程管理" },
+                  name: "templatemanage",
+                  component: function () {
+                    return n.e("chunk-540aa599").then(n.bind(null, "5b6c"));
+                  },
+                },
+                {
+                  path: "tasktemplateedit",
+                  meta: { title: "任务模板编辑" },
+                  name: "tasktemplateedit",
+                  component: function () {
+                    return Promise.all([
+                      n.e("chunk-7d0804ac"),
+                      n.e("chunk-548e8092"),
+                      n.e("chunk-1138e13e"),
+                      n.e("chunk-1bb1436b"),
+                      n.e("chunk-8ebc2656"),
+                    ]).then(n.bind(null, "117d"));
+                  },
+                },
+              ],
+            },
+            {
+              path: "simulation",
+              permission: "",
+              meta: { title: "实验室" },
+              name: "simulation",
+              component: function () {
+                return n.e("chunk-7d0804ac").then(n.bind(null, "c33c"));
+              },
+            },
+            {
+              path: "emulatorrfid",
+              permission: "",
+              meta: { title: "RFID实验室" },
+              name: "emulatorrfid",
+              component: function () {
+                return n.e("chunk-48c78fe8").then(n.bind(null, "8fb3"));
+              },
+            },
+          ],
+        },
+      ],
+      s = [].concat(i, c);
+    (n.d(t, "a", function () {
+      return u;
+    }),
+      o.a.use(a["a"]));
+    var u = new a["a"]({ mode: "history", base: "/training/", routes: s });
+  },
+  ba66: function (e, t, n) {
+    ((t = e.exports = n("24fb")(!1)), t.push([e.i, "a{text-decoration:none}html *{font-family:Microsoft YaHei}", ""]));
+  },
+  cc57: function (e, t, n) {
+    var r = n("ba66");
+    ("string" === typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals));
+    var o = n("499e").default;
+    o("73d4f360", r, !0, { sourceMap: !1, shadowMode: !1 });
+  },
+  cd49: function (e, t, n) {
+    "use strict";
+    n.r(t);
+    n("2ca0");
+    var r,
+      o = n("9f12"),
+      a = n("53fe"),
+      i = n("8b83"),
+      c = n("c65a"),
+      s = n("902f"),
+      u = n("c03e"),
+      d = n("2fa7"),
+      l = (n("e260"), n("e6cf"), n("cca6"), n("a79d"), n("ba4c")),
+      p = n.n(l),
+      m = function () {
+        var e = this,
+          t = e.$createElement,
+          n = e._self._c || t;
+        return n(
+          "div",
+          { attrs: { id: "app" } },
+          [
+            n("router-view"),
+            n(
+              "el-dialog",
+              {
+                attrs: {
+                  title: "请选择角色",
+                  "show-close": !1,
+                  "close-on-press-escape": !1,
+                  "close-on-click-modal": !1,
+                  visible: e.dialogVisible,
+                  width: "30%",
+                },
+                on: {
+                  "update:visible": function (t) {
+                    e.dialogVisible = t;
+                  },
+                },
+              },
+              [
+                n(
+                  "div",
+                  { staticClass: "dialog-contianer" },
+                  [
+                    n("div", { staticClass: "tip" }, [e._v(" 您有多个角色，请选择一个进入系统。 ")]),
+                    e._l(e.userRoles, function (t, r) {
+                      return n(
+                        "el-radio-group",
+                        {
+                          key: r,
+                          model: {
+                            value: e.userRole,
+                            callback: function (t) {
+                              e.userRole = t;
+                            },
+                            expression: "userRole",
+                          },
+                        },
+                        [
+                          n(
+                            "el-radio",
+                            {
+                              attrs: {
+                                label: t,
+                                disabled:
+                                  null ==
+                                  e.roleSettings.find(function (e) {
+                                    return e.roleName === t;
+                                  }),
+                              },
+                            },
+                            [e._v(e._s(t))],
+                          ),
+                        ],
+                        1,
+                      );
+                    }),
+                  ],
+                  2,
+                ),
+                n(
+                  "span",
+                  { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" },
+                  [
+                    n(
+                      "el-button",
+                      {
+                        attrs: { type: "primary" },
+                        on: {
+                          click: function (t) {
+                            ((e.dialogVisible = !1), e.routeDefualt());
+                          },
+                        },
+                      },
+                      [e._v("确 定")],
+                    ),
+                  ],
+                  1,
+                ),
+              ],
+            ),
+            n(
+              "div",
+              [
+                e.recorder.running
+                  ? n(
+                      "div",
+                      {
+                        staticClass: "recorder",
+                        on: {
+                          mouseover: function (t) {
+                            e.showRecorder = !0;
+                          },
+                          mouseleave: function (t) {
+                            e.showRecorder = !1;
+                          },
+                        },
+                      },
+                      [
+                        e.recorder.running
+                          ? e._e()
+                          : n("el-button", {
+                              staticClass: "start-recorder",
+                              attrs: { disabled: !0, size: "mini", circle: "", icon: "el-icon-caret-right", title: "点击开始录屏" },
+                              on: { click: e.startRecord },
+                            }),
+                        e.recorder.running
+                          ? n("el-button", {
+                              staticClass: "stop-recorder",
+                              attrs: { disabled: !0, size: "mini", circle: "", icon: "el-icon-remove", title: "正在录屏，点击停止" },
+                              on: { click: e.stopRecord },
+                            })
+                          : e._e(),
+                        e._v(" "),
+                        e.showRecorder
+                          ? n(
+                              "span",
+                              [
+                                n(
+                                  "el-button",
+                                  {
+                                    attrs: {
+                                      icon: "el-icon-document",
+                                      size: "mini",
+                                      disabled: 0 == e.recorder.allRecords.length,
+                                      title: 0 == e.recorder.allRecords.length ? "暂无录屏" : "",
+                                    },
+                                    on: {
+                                      click: function (t) {
+                                        e.showScreenRecordDialog = !0;
+                                      },
+                                    },
+                                  },
+                                  [e._v("播放")],
+                                ),
+                                n(
+                                  "el-button",
+                                  {
+                                    attrs: {
+                                      icon: "el-icon-download",
+                                      size: "mini",
+                                      disabled: 0 == e.recorder.allRecords.length,
+                                      title: 0 == e.recorder.allRecords.length ? "暂无录屏" : "",
+                                    },
+                                    on: {
+                                      click: function (t) {
+                                        return e.recorder.downloadRecord();
+                                      },
+                                    },
+                                  },
+                                  [e._v("下载")],
+                                ),
+                              ],
+                              1,
+                            )
+                          : e._e(),
+                      ],
+                      1,
+                    )
+                  : e._e(),
+                n(
+                  "el-dialog",
+                  {
+                    attrs: {
+                      width: "75%",
+                      top: "30px",
+                      title: "录屏" + (e.currentScreenRecord ? "（回放）" : "（实时）"),
+                      visible: e.showScreenRecordDialog,
+                      "close-on-click-modal": !1,
+                    },
+                    on: {
+                      "update:visible": function (t) {
+                        e.showScreenRecordDialog = t;
+                      },
+                      opened: function (t) {
+                        return e.playScreenRecords(null);
+                      },
+                    },
+                  },
+                  [
+                    n(
+                      "div",
+                      [
+                        n(
+                          "el-row",
+                          { attrs: { gutter: 10 } },
+                          [
+                            n("el-col", { attrs: { span: 5 } }, [
+                              n(
+                                "div",
+                                { staticStyle: { overflow: "auto", height: "500px" } },
+                                e._l(e.recorder.allVideos, function (t, r) {
+                                  return n(
+                                    "ul",
+                                    [
+                                      n("div", { staticStyle: { margin: "5px" } }, [
+                                        n("div", { staticStyle: { "font-size": "6px" } }, [e._v(" " + e._s(t.name) + " ")]),
+                                      ]),
+                                      e._l(t.segements, function (t, r) {
+                                        return n(
+                                          "li",
+                                          {
+                                            style:
+                                              e.currentScreenRecord == t
+                                                ? "cursor: pointer;margin:3px 8px 0;color: #000;"
+                                                : "cursor: pointer;margin:3px 8px 0;color: #aaa;",
+                                            on: {
+                                              click: function (n) {
+                                                return e.playScreenRecords(t);
+                                              },
+                                            },
+                                          },
+                                          [
+                                            n("i", {
+                                              directives: [{ name: "show", rawName: "v-show", value: 2 == t.state, expression: "r.state == 2" }],
+                                              staticClass: "el-icon-success",
+                                              staticStyle: { color: "green" },
+                                              attrs: { title: "已上传:" + t.uploadedEndTime },
+                                            }),
+                                            n("i", {
+                                              directives: [{ name: "show", rawName: "v-show", value: 1 == t.state, expression: "r.state == 1" }],
+                                              staticClass: "el-icon-upload",
+                                              attrs: { title: "上传中:" + t.uploadedStartTime },
+                                            }),
+                                            n("i", {
+                                              directives: [{ name: "show", rawName: "v-show", value: t.state <= 0, expression: "r.state <= 0" }],
+                                              staticClass: "el-icon-warning",
+                                              staticStyle: { color: "orange" },
+                                              attrs: { title: "未上传" },
+                                            }),
+                                            n("i", {
+                                              directives: [{ name: "show", rawName: "v-show", value: 3 == t.state, expression: "r.state == 3" }],
+                                              staticClass: "el-icon-error",
+                                              attrs: { title: "上传失败:" },
+                                            }),
+                                            e._v(" " + e._s(e._f("format")(t.startTime)) + " - "),
+                                            t.endTime ? n("span", [e._v(e._s(e._f("format2")(t.endTime)) + " ")]) : n("span", [e._v(" ....... ")]),
+                                          ],
+                                        );
+                                      }),
+                                    ],
+                                    2,
+                                  );
+                                }),
+                                0,
+                              ),
+                            ]),
+                            n("el-col", { attrs: { span: 19 } }, [
+                              n("div", { staticClass: "grid-content bg-purple" }, [
+                                n("video", { staticStyle: { border: "1px solid #eee", width: "100%" }, attrs: { id: "sreenRecordPlayer" } }),
+                              ]),
+                            ]),
+                          ],
+                          1,
+                        ),
+                      ],
+                      1,
+                    ),
+                    n(
+                      "div",
+                      { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" },
+                      [
+                        n(
+                          "el-button",
+                          {
+                            on: {
+                              click: function (t) {
+                                e.showScreenRecordDialog = !1;
+                              },
+                            },
+                          },
+                          [e._v("关闭")],
+                        ),
+                      ],
+                      1,
+                    ),
+                  ],
+                ),
+              ],
+              1,
+            ),
+          ],
+          1,
+        );
+      },
+      h = [],
+      f = (n("99af"), n("7db0"), n("c975"), n("d81d"), n("0d03"), n("d3b7"), n("ac1f"), n("25f0"), n("5319"), n("9aa6")),
+      b = n("9ab4"),
+      g = n("60a3"),
+      v = n("482f"),
+      k = n("9157"),
+      x = n("70b0"),
+      O = n("73ec"),
+      w = n("0613"),
+      y =
+        ((r = (function (e) {
+          function t() {
+            var e, n;
+            Object(o["a"])(this, t);
+            for (var r = arguments.length, a = new Array(r), s = 0; s < r; s++) a[s] = arguments[s];
+            return (
+              (n = Object(i["a"])(this, (e = Object(c["a"])(t)).call.apply(e, [this].concat(a)))),
+              Object(d["a"])(Object(f["a"])(n), "dialogVisible", !1),
+              Object(d["a"])(Object(f["a"])(n), "roleSettings", v["a"].roleSettings),
+              Object(d["a"])(Object(f["a"])(n), "showRecorder", !1),
+              Object(d["a"])(Object(f["a"])(n), "currentScreenRecord", null),
+              Object(d["a"])(Object(f["a"])(n), "showScreenRecordDialog", !1),
+              Object(d["a"])(Object(f["a"])(n), "recorder", x["b"]),
+              n
+            );
+          }
+          return (
+            Object(u["a"])(t, e),
+            Object(a["a"])(t, [
+              {
+                key: "setUserRole",
+                value: function () {
+                  var e = this;
+                  if (0 == this.userRoles.length) this.userRole = "未设置";
+                  else if (1 == this.userRoles.length) this.userRole = this.userRoles[0];
+                  else if (this.userRoles.length > 1) {
+                    var t = Object(O["k"])("userRole");
+                    if (
+                      t &&
+                      this.userRoles.find(function (e) {
+                        return e === t;
+                      }) &&
+                      this.roleSettings.find(function (e) {
+                        return e.roleName == t;
+                      })
+                    )
+                      this.userRole = t;
+                    else {
+                      var n = this.userRoles.find(function (t) {
+                        return (
+                          null !=
+                          e.roleSettings.find(function (e) {
+                            return e.roleName == t;
+                          })
+                        );
+                      });
+                      this.userRole = n || this.userRoles[0];
+                    }
+                    this.dialogVisible = !0;
+                  }
+                },
+              },
+              {
+                key: "routeDefualt",
+                value: function () {
+                  var e = this;
+                  if (this.$router.currentRoute.path.startsWith("/main") && !k["b"].validRight(this.$router.currentRoute.path)) {
+                    var t = this.roleSettings.find(function (t) {
+                      return t.roleName == e.userRole;
+                    });
+                    t
+                      ? this.$router.replace(t.defualtPath)
+                      : (this.$message({ message: "【".concat(this.userRole, "】页面正在开发中,敬请期待..."), type: "warning", showClose: !0, duration: 0 }),
+                        this.$router.replace("/"));
+                  }
+                },
+              },
+              {
+                key: "created",
+                value: function () {
+                  var e = this,
+                    t = navigator.userAgent;
+                  (-1 == t.indexOf("Chrome") && this.$message({ message: "请使用谷歌浏览器", type: "warning", showClose: !0, duration: 0 }),
+                    this.isLogin && this.setUserRole(),
+                    Object(O["e"])("lang") && Object(O["q"])("lang"),
+                    this.langConfig(),
+                    setInterval(function () {
+                      try {
+                        (e.langConfig(),
+                          v["a"].title ? (document.title = v["a"].title) : (document.title = e.$i18n.t("lang.物联网仿真实训教学平台").toString()));
+                      } catch (r) {}
+                      try {
+                        var t = w["a"].state.task.info,
+                          n = e.$store.state.user.user;
+                        n.userId &&
+                          t.id &&
+                          1 == t.mode &&
+                          0 == t.completed &&
+                          0 == e.recorder.running &&
+                          (e.recorder.startUploadRecord(), e.recorder.startRecord(n.userId + "#" + t.taskId + "#" + new Date().getTime()));
+                      } catch (r) {}
+                    }, 1e3));
+                },
+              },
+              {
+                key: "startRecord",
+                value: function () {
+                  var e = this.$route.path,
+                    t = this.$store.state.user.user,
+                    n = w["a"].state.task.info;
+                  this.recorder.startRecord("".concat(e, "-").concat(t.phone, "-").concat(n.taskNumber));
+                },
+              },
+              {
+                key: "stopRecord",
+                value: function () {
+                  ((this.recorder.onData = null), (this.recorder.onStoped = null), this.recorder.stopRecord());
+                },
+              },
+              {
+                key: "langConfig",
+                value: function () {
+                  var e = Object(O["k"])("language");
+                  if ((null == e && ((e = "auto"), Object(O["r"])("language", e)), "auto" == e)) {
+                    var t = navigator.language || (Array.isArray(navigator.languages) && navigator.languages.length && navigator.languages[0]) || "zh-CN";
+                    ((t = t.startsWith("zh") ? "zh-CN" : "en-US"), this.$i18n.locale != t && (this.$i18n.locale = t));
+                  } else this.$i18n.locale != e && (this.$i18n.locale = e);
+                },
+              },
+              {
+                key: "playScreenRecords",
+                value: function (e) {
+                  this.currentScreenRecord = e;
+                  var t = document.getElementById("sreenRecordPlayer");
+                  this.recorder.playRecordAtSegement(t, e);
+                },
+              },
+              {
+                key: "isLogin",
+                get: function () {
+                  return this.$store.state.user.isLogin;
+                },
+              },
+              {
+                key: "userRoles",
+                get: function () {
+                  return this.$store.getters["user/userRoles"].map(function (e) {
+                    return e.roleName;
+                  });
+                },
+              },
+              {
+                key: "userRole",
+                get: function () {
+                  return this.$store.getters["user/userRole"];
+                },
+                set: function (e) {
+                  (Object(O["r"])("userRole", e), this.$store.commit("user/setUserRole", e));
+                },
+              },
+            ]),
+            t
+          );
+        })(g["c"])),
+        r);
+    (Object(b["a"])(
+      [
+        Object(g["d"])("isLogin"),
+        Object(b["b"])("design:type", Function),
+        Object(b["b"])("design:paramtypes", []),
+        Object(b["b"])("design:returntype", void 0),
+      ],
+      y.prototype,
+      "setUserRole",
+      null,
+    ),
+      (y = Object(b["a"])(
+        [
+          Object(g["a"])({
+            filters: {
+              format: function (e) {
+                return Object(O["f"])("MM-dd hh:mm:ss", new Date(e));
+              },
+              format2: function (e) {
+                return Object(O["f"])("hh:mm:ss", new Date(e));
+              },
+            },
+            components: {},
+          }),
+        ],
+        y,
+      )));
+    var j = y,
+      R = j,
+      _ = (n("5d46"), n("2877")),
+      S = Object(_["a"])(R, m, h, !1, null, null, null),
+      P = S.exports,
+      A = n("afbc"),
+      T = n("5c96"),
+      C = n.n(T),
+      I = (n("7371"), n("38ef"), n("0fae"), n("7591")),
+      N = n.n(I),
+      U = n("8f94"),
+      M = n.n(U),
+      D = (n("a7be"), n("764b8"), n("cc57"), n("2819")),
+      z = n.n(D),
+      E = n("2fe1"),
+      L = n("953d"),
+      F = n.n(L),
+      q = (n("a7539"), n("8096"), n("14e1"), n("d6d3")),
+      V = n.n(q),
+      B = (n("fda2"), n("d842")),
+      K = n.n(B),
+      W = (n("2ba8"), n("a925")),
+      Q = n("4eb5"),
+      J = n.n(Q),
+      Y = n("f7b1");
+    n("3a10");
+    var H = L["Quill"].import("formats/link"),
+      Z = (function (e) {
+        function t() {
+          return (Object(o["a"])(this, t), Object(i["a"])(this, Object(c["a"])(t).apply(this, arguments)));
+        }
+        return (
+          Object(u["a"])(t, e),
+          Object(a["a"])(t, null, [
+            {
+              key: "create",
+              value: function (e) {
+                var n = void 0;
+                return (
+                  e && !e.href
+                    ? (n = Object(s["a"])(Object(c["a"])(t), "create", this).call(this, e))
+                    : ((n = Object(s["a"])(Object(c["a"])(t), "create", this).call(this, e.href)), (n.innerText = e.innerText), (n.download = e.innerText)),
+                  n
+                );
+              },
+            },
+          ]),
+          t
+        );
+      })(H);
+    (Object(d["a"])(Z, "blotName", "link"),
+      Object(d["a"])(Z, "tagName", "A"),
+      L["Quill"].register(Z),
+      (p.a.prototype.$layer = K()(p.a)),
+      p.a.use(V.a),
+      p.a.use(F.a),
+      p.a.use(z.a),
+      p.a.use(M.a),
+      p.a.use(N.a),
+      (p.a.config.productionTip = !1),
+      p.a.use(C.a),
+      p.a.use(W["a"]),
+      (J.a.config.autoSetContainer = !0),
+      p.a.use(J.a),
+      Y["a"].syncTime().then(function () {
+        k["b"].initToken().then(function (e) {
+          (E["b"].registerHooks(["beforeRouteEnter", "beforeRouteLeave", "beforeRouteUpdate"]),
+            A["a"].beforeEach(function (e, t, n) {
+              (e.path.startsWith("/main") && 0 == k["b"].loginValid(e.fullPath)) || (e.path.startsWith("/main/task") || w["a"].commit("task/clearRecord"), n());
+            }),
+            A["a"].afterEach(function (e, t) {}),
+            (p.a.config.devtools = !1),
+            new p.a({
+              router: A["a"],
+              store: w["a"],
+              i18n: x["a"],
+              render: function (e) {
+                return e(P);
+              },
+            }).$mount("#app"));
+        });
+      }));
+  },
+  e139: function (e, t, n) {
+    ((t = e.exports = n("24fb")(!1)),
+      t.push([
+        e.i,
+        '.fl{float:left}.fr{float:right}.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}.tac{text-align:center!important}.tal{text-align:left!important}.tar{text-align:right!important}.f0{font-size:0}.f7{font-size:7px}.f8{font-size:8px}.f9{font-size:9px}.f10{font-size:10px}.f11{font-size:11px}.f12{font-size:12px}.f13{font-size:13px}.f14{font-size:14px!important}.f15{font-size:15px!important}.f16{font-size:16px!important}.f17{font-size:17px}.f18{font-size:18px}.f19{font-size:19px}.f20{font-size:20px}.f22{font-size:22px}.f24{font-size:24px}.f25{font-size:25px}.f30{font-size:30px}.f40{font-size:40px}.fw-b{font-weight:700}.line-h-1-6{line-height:1.6}.mtauto{margin:auto!important}.mt0{margin-top:0}.mb0{margin-bottom:0}.ml0{margin-left:0}.mr0{margin-right:0}.m0{margin:0}.pt0{padding-top:0}.pb0{padding-bottom:0}.pl0{padding-left:0}.pr0{padding-right:0}.p0{padding:0}.mt1{margin-top:1px}.mb1{margin-bottom:1px}.ml1{margin-left:1px}.mr1{margin-right:1px}.m1{margin:1px}.pt1{padding-top:1px}.pb1{padding-bottom:1px}.pl1{padding-left:1px}.pr1{padding-right:1px}.p1{padding:1px}.mt3{margin-top:3px}.mb3{margin-bottom:3px}.ml3{margin-left:3px}.mr3{margin-right:3px}.m3{margin:3px}.pt3{padding-top:3px}.pb3{padding-bottom:3px}.pl3{padding-left:3px}.pr3{padding-right:3px}.p3{padding:3px}.mt5{margin-top:5px}.mb5{margin-bottom:5px}.ml5{margin-left:5px}.mr5{margin-right:5px}.m5{margin:5px}.pt5{padding-top:5px}.pb5{padding-bottom:5px}.pl5{padding-left:5px}.pr5{padding-right:5px}.p5{padding:5px}.mt8{margin-top:8px}.mb8{margin-bottom:8px}.ml8{margin-left:8px}.mr8{margin-right:8px}.m8{margin:8px}.pt8{padding-top:8px}.pb8{padding-bottom:8px}.pl8{padding-left:8px}.pr8{padding-right:8px}.p8{padding:8px}.mt10{margin-top:10px}.mb10{margin-bottom:10px}.ml10{margin-left:10px}.mr10{margin-right:10px}.m10{margin:10px}.pt10{padding-top:10px}.pb10{padding-bottom:10px}.pl10{padding-left:10px}.pr10{padding-right:10px}.p10{padding:10px}.mt12{margin-top:12px}.mb12{margin-bottom:12px}.ml12{margin-left:12px}.mr12{margin-right:12px}.m12{margin:12px}.pt12{padding-top:12px}.pb12{padding-bottom:12px}.pl12{padding-left:12px}.pr12{padding-right:12px}.p12{padding:12px}.mt15{margin-top:15px}.mb15{margin-bottom:15px}.ml15{margin-left:15px}.mr15{margin-right:15px}.m15{margin:15px}.pt15{padding-top:15px}.pb15{padding-bottom:15px}.pl15{padding-left:15px}.pr15{padding-right:15px}.p15{padding:15px}.mt20{margin-top:20px}.mb20{margin-bottom:20px}.ml20{margin-left:20px}.mr20{margin-right:20px}.m20{margin:20px}.pt20{padding-top:20px}.pb20{padding-bottom:20px}.pl20{padding-left:20px}.pr20{padding-right:20px}.p20{padding:20px}.mt25{margin-top:25px}.mb25{margin-bottom:25px}.ml25{margin-left:25px}.mr25{margin-right:25px}.m25{margin:25px}.pt25{padding-top:25px}.pb25{padding-bottom:25px}.pl25{padding-left:25px}.pr25{padding-right:25px}.p25{padding:25px}.mt30{margin-top:30px}.mb30{margin-bottom:30px}.ml30{margin-left:30px}.mr30{margin-right:30px}.m30{margin:30px}.pt30{padding-top:30px}.pb30{padding-bottom:30px}.pl30{padding-left:30px}.pr30{padding-right:30px}.p30{padding:30px}.mt35{margin-top:35px}.mb35{margin-bottom:35px}.ml35{margin-left:35px}.mr35{margin-right:35px}.m35{margin:35px}.pt35{padding-top:35px}.pb35{padding-bottom:35px}.pl35{padding-left:35px}.pr35{padding-right:35px}.p35{padding:35px}.mt40{margin-top:40px}.mb40{margin-bottom:40px}.ml40{margin-left:40px}.mr40{margin-right:40px}.m40{margin:40px}.pt40{padding-top:40px}.pb40{padding-bottom:40px}.pl40{padding-left:40px}.pr40{padding-right:40px}.p40{padding:40px}.mt45{margin-top:45px}.mb45{margin-bottom:45px}.ml45{margin-left:45px}.mr45{margin-right:45px}.m45{margin:45px}.pt45{padding-top:45px}.pb45{padding-bottom:45px}.pl45{padding-left:45px}.pr45{padding-right:45px}.p45{padding:45px}.mt48{margin-top:48px}.mb48{margin-bottom:48px}.ml48{margin-left:48px}.mr48{margin-right:48px}.m48{margin:48px}.pt48{padding-top:48px}.pb48{padding-bottom:48px}.pl48{padding-left:48px}.pr48{padding-right:48px}.p48{padding:48px}.mt50{margin-top:50px}.mb50{margin-bottom:50px}.ml50{margin-left:50px}.mr50{margin-right:50px}.m50{margin:50px}.pt50{padding-top:50px}.pb50{padding-bottom:50px}.pl50{padding-left:50px}.pr50{padding-right:50px}.p50{padding:50px}.mt60{margin-top:60px}.mb60{margin-bottom:60px}.ml60{margin-left:60px}.mr60{margin-right:60px}.m60{margin:60px}.pt60{padding-top:60px}.pb60{padding-bottom:60px}.pl60{padding-left:60px}.pr60{padding-right:60px}.p60{padding:60px}.mt120{margin-top:120px}.mb120{margin-bottom:120px}.ml120{margin-left:120px}.mr120{margin-right:120px}.m120{margin:120px}.pt120{padding-top:120px}.pb120{padding-bottom:120px}.pl120{padding-left:120px}.pr120{padding-right:120px}.p120{padding:120px}.c000{color:#000!important}.c333{color:#333!important}.c555{color:#555!important}.c666{color:#666!important}.c777{color:#777!important}.c999{color:#999!important}.caaa{color:#aaa!important}.cccc{color:#ccc!important}.cfff{color:#fff!important}.cred{color:#c20207!important}.c707070{color:#707070!important}.c0c0c0{color:silver!important}.b2b2b2{color:#b2b2b2!important}.e51d1d{color:#e51d1d!important}.f6b20f{color:#f6b20f!important}.fff45c{color:#fff45c!important}.ffd9d9{color:#ffd9d9!important}.ff0000{color:red!important}.c2b84ff{color:#2b84ff!important}.c8f96a8{color:#8f96a8!important}.bc29a5fb{background-color:#29a5fb!important}.el-breadcrumb{font-size:18px;line-height:1}.bcfff{background:#fff!important}.bg-f1f3f4{background:#f1f3f4!important}.bg-c2d6ff{background:#c2d6ff!important}.bg-ebebeb{background:#ebebeb!important}.bgca1313{background:#ca1313!important}.bg-orange{background:#f08300!important}.bg-green{background:#53bf48!important}.bg-blue{background:#3b55e6!important}.bg-gray{background:#dcdddd!important}.bg-red{background:#c20207!important}.bg-white{background:#fff!important}.bgebf3ff{background-color:#ebf3ff!important}.bg0ecb8f{background-color:#0ecb8f!important}.bgeef9f8{background-color:#eef9f8!important}.bgfff3f1{background-color:#fff3f1!important}.postion-abs-0{position:absolute;top:0;left:0}.bd-gray{border:1px solid #f3ebeb}.postion-rel-0{position:relative;top:0;left:0}.nle-col{min-height:10px}.w200{width:200px}.w100{width:100%!important}.no-select{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.el-input.is-disabled .el-input__inner{color:#606266!important}.single-line{display:inline-block;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis}.green{color:#00c3ae}.red{color:#ff6648}.blue{color:#409eff}.hide{display:none}.show{display:block}',
+        "",
+      ]));
+  },
+  f3fd: function (e, t, n) {
+    "use strict";
+    n.d(t, "a", function () {
+      return a;
+    });
+    n("b0c0");
+    var r = n("9f12"),
+      o = n("2fa7"),
+      a = function e(t) {
+        (Object(r["a"])(this, e),
+          Object(o["a"])(this, "id", void 0),
+          Object(o["a"])(this, "lessonId", void 0),
+          Object(o["a"])(this, "name", void 0),
+          Object(o["a"])(this, "templateNumber", void 0),
+          Object(o["a"])(this, "teacherId", void 0),
+          Object(o["a"])(this, "collegeId", void 0),
+          Object(o["a"])(this, "description", void 0),
+          Object(o["a"])(this, "objective", void 0),
+          Object(o["a"])(this, "totalPoints", void 0),
+          Object(o["a"])(this, "duration", void 0),
+          Object(o["a"])(this, "level", void 0),
+          Object(o["a"])(this, "image", void 0),
+          Object(o["a"])(this, "number", void 0),
+          Object(o["a"])(this, "publicLevel", void 0),
+          Object(o["a"])(this, "publishCount", void 0),
+          Object(o["a"])(this, "sectionLoaded", void 0),
+          Object(o["a"])(this, "sections", void 0),
+          Object(o["a"])(this, "createTime", void 0),
+          Object(o["a"])(this, "modifyTime", void 0),
+          Object(o["a"])(this, "score", void 0),
+          Object(o["a"])(this, "sectionCount", void 0),
+          Object(o["a"])(this, "limitTime", void 0),
+          Object(o["a"])(this, "version", void 0),
+          Object(o["a"])(this, "hide", void 0),
+          (this.name = t),
+          (this.teacherId = ""),
+          (this.level = 0),
+          (this.duration = 0),
+          (this.totalPoints = 0),
+          (this.publicLevel = 0),
+          (this.publishCount = 0),
+          (this.sectionLoaded = !1),
+          (this.sections = []),
+          (this.limitTime = !1));
+      };
+    new a("");
+  },
+  f591: function (e, t, n) {
+    e.exports = n.p + "fonts/iconfont.aeadb32e.ttf";
+  },
+  f7b1: function (e, t, n) {
+    "use strict";
+    (n("4160"), n("0d03"), n("159b"), n("96cf"));
+    var r = n("89ba"),
+      o = n("9f12"),
+      a = n("53fe"),
+      i = n("2fa7"),
+      c = n("59b9"),
+      s = n("482f"),
+      u = n("73ec"),
+      d = (function () {
+        function e() {
+          (Object(o["a"])(this, e),
+            Object(i["a"])(this, "reflesh", 300),
+            Object(i["a"])(this, "timeCount", 0),
+            Object(i["a"])(this, "interval", null),
+            Object(i["a"])(this, "cookieName", "server-time"),
+            Object(i["a"])(this, "sleepEvent", []),
+            Object(i["a"])(this, "sleepLast", null),
+            Object(i["a"])(this, "sleepMargin", 5));
+        }
+        return (
+          Object(a["a"])(e, [
+            {
+              key: "Time",
+              value: function () {
+                if (s["a"].do_not_asyn_server_time) return new Date();
+                var e = new Date(Object(u["k"])(this.cookieName));
+                return e;
+              },
+            },
+            {
+              key: "syncTime",
+              value: (function () {
+                var e = Object(r["a"])(
+                  regeneratorRuntime.mark(function e() {
+                    var t,
+                      n,
+                      o = this;
+                    return regeneratorRuntime.wrap(
+                      function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!s["a"].do_not_asyn_server_time) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", new Date());
+                            case 2:
+                              return ((e.next = 4), Object(c["a"])({ url: "".concat(s["a"].web_host, "/api/server/time"), method: "GET" }));
+                            case 4:
+                              return (
+                                (t = e.sent),
+                                (n = new Date(t.data)),
+                                Object(u["r"])(this.cookieName, n),
+                                null == this.interval &&
+                                  (this.interval = setInterval(
+                                    Object(r["a"])(
+                                      regeneratorRuntime.mark(function e() {
+                                        var t, n;
+                                        return regeneratorRuntime.wrap(function (e) {
+                                          while (1)
+                                            switch ((e.prev = e.next)) {
+                                              case 0:
+                                                if (!o.detectSleep(1)) {
+                                                  e.next = 9;
+                                                  break;
+                                                }
+                                                return ((o.timeCount = 0), (e.t0 = u["r"]), (e.t1 = o.cookieName), (e.next = 6), o.syncTime());
+                                              case 6:
+                                                return ((e.t2 = e.sent), (0, e.t0)(e.t1, e.t2), e.abrupt("return"));
+                                              case 9:
+                                                if (
+                                                  (0 != o.timeCount &&
+                                                    ((t = new Date(Object(u["k"])(o.cookieName)).getTime() + 1e3),
+                                                    (n = new Date(t)),
+                                                    Object(u["r"])(o.cookieName, n)),
+                                                  o.timeCount++,
+                                                  o.timeCount % o.reflesh != 0)
+                                                ) {
+                                                  e.next = 18;
+                                                  break;
+                                                }
+                                                return ((e.t3 = u["r"]), (e.t4 = o.cookieName), (e.next = 16), o.syncTime());
+                                              case 16:
+                                                ((e.t5 = e.sent), (0, e.t3)(e.t4, e.t5));
+                                              case 18:
+                                              case "end":
+                                                return e.stop();
+                                            }
+                                        }, e);
+                                      }),
+                                    ),
+                                    1e3,
+                                  )),
+                                e.abrupt("return", n)
+                              );
+                            case 9:
+                            case "end":
+                              return e.stop();
+                          }
+                      },
+                      e,
+                      this,
+                    );
+                  }),
+                );
+                function t() {
+                  return e.apply(this, arguments);
+                }
+                return t;
+              })(),
+            },
+            {
+              key: "detectSleep",
+              value: function (e) {
+                var t = this;
+                if (!this.sleepLast) return ((this.sleepLast = new Date()), console.log("第一次判断是否睡眠过", this.sleepLast), !1);
+                var n = new Date(),
+                  r = !1;
+                return (
+                  n.getTime() - this.sleepLast.getTime() > 1e3 * e + 1e3 * this.sleepMargin
+                    ? (console.log("------睡眠过了", this.sleepLast, n),
+                      this.sleepEvent.forEach(function (e) {
+                        try {
+                          e(t.Time());
+                        } catch (n) {}
+                      }),
+                      (r = !0))
+                    : (r = !1),
+                  (this.sleepLast = new Date()),
+                  r
+                );
+              },
+            },
+          ]),
+          e
+        );
+      })();
+    t["a"] = new d();
+  },
+});

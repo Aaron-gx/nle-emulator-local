@@ -1,0 +1,34 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-2d22205f"],
+  {
+    cd9a: function (t, c, e) {
+      "use strict";
+      e.r(c);
+      var n = function () {
+          var t = this,
+            c = t.$createElement,
+            e = t._self._c || c;
+          return e("div", [t._v(" 学生个人中心 ")]);
+        },
+        a = [],
+        u = e("9f12"),
+        r = e("8b83"),
+        i = e("c65a"),
+        s = e("c03e"),
+        b = e("9ab4"),
+        l = e("60a3"),
+        o = (function (t) {
+          function c() {
+            return (Object(u["a"])(this, c), Object(r["a"])(this, Object(i["a"])(c).apply(this, arguments)));
+          }
+          return (Object(s["a"])(c, t), c);
+        })(l["c"]);
+      o = Object(b["a"])([l["a"]], o);
+      var f = o,
+        p = f,
+        d = e("2877"),
+        h = Object(d["a"])(p, n, a, !1, null, null, null);
+      c["default"] = h.exports;
+    },
+  },
+]);

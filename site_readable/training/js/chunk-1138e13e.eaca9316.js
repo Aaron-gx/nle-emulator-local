@@ -1,0 +1,938 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-1138e13e"],
+  {
+    4127: function (e, t, r) {
+      "use strict";
+      var n = r("d233"),
+        a = r("b313"),
+        o = {
+          brackets: function (e) {
+            return e + "[]";
+          },
+          indices: function (e, t) {
+            return e + "[" + t + "]";
+          },
+          repeat: function (e) {
+            return e;
+          },
+        },
+        i = Date.prototype.toISOString,
+        c = {
+          delimiter: "&",
+          encode: !0,
+          encoder: n.encode,
+          encodeValuesOnly: !1,
+          serializeDate: function (e) {
+            return i.call(e);
+          },
+          skipNulls: !1,
+          strictNullHandling: !1,
+        },
+        u = function e(t, r, a, o, i, u, s, l, p, d, f, h) {
+          var y = t;
+          if ("function" === typeof s) y = s(r, y);
+          else if (y instanceof Date) y = d(y);
+          else if (null === y) {
+            if (o) return u && !h ? u(r, c.encoder) : r;
+            y = "";
+          }
+          if ("string" === typeof y || "number" === typeof y || "boolean" === typeof y || n.isBuffer(y)) {
+            if (u) {
+              var b = h ? r : u(r, c.encoder);
+              return [f(b) + "=" + f(u(y, c.encoder))];
+            }
+            return [f(r) + "=" + f(String(y))];
+          }
+          var m,
+            g = [];
+          if ("undefined" === typeof y) return g;
+          if (Array.isArray(s)) m = s;
+          else {
+            var v = Object.keys(y);
+            m = l ? v.sort(l) : v;
+          }
+          for (var j = 0; j < m.length; ++j) {
+            var O = m[j];
+            (i && null === y[O]) ||
+              (g = Array.isArray(y)
+                ? g.concat(e(y[O], a(r, O), a, o, i, u, s, l, p, d, f, h))
+                : g.concat(e(y[O], r + (p ? "." + O : "[" + O + "]"), a, o, i, u, s, l, p, d, f, h)));
+          }
+          return g;
+        };
+      e.exports = function (e, t) {
+        var r = e,
+          i = t ? n.assign({}, t) : {};
+        if (null !== i.encoder && void 0 !== i.encoder && "function" !== typeof i.encoder) throw new TypeError("Encoder has to be a function.");
+        var s = "undefined" === typeof i.delimiter ? c.delimiter : i.delimiter,
+          l = "boolean" === typeof i.strictNullHandling ? i.strictNullHandling : c.strictNullHandling,
+          p = "boolean" === typeof i.skipNulls ? i.skipNulls : c.skipNulls,
+          d = "boolean" === typeof i.encode ? i.encode : c.encode,
+          f = "function" === typeof i.encoder ? i.encoder : c.encoder,
+          h = "function" === typeof i.sort ? i.sort : null,
+          y = "undefined" !== typeof i.allowDots && i.allowDots,
+          b = "function" === typeof i.serializeDate ? i.serializeDate : c.serializeDate,
+          m = "boolean" === typeof i.encodeValuesOnly ? i.encodeValuesOnly : c.encodeValuesOnly;
+        if ("undefined" === typeof i.format) i.format = a["default"];
+        else if (!Object.prototype.hasOwnProperty.call(a.formatters, i.format)) throw new TypeError("Unknown format option provided.");
+        var g,
+          v,
+          j = a.formatters[i.format];
+        "function" === typeof i.filter ? ((v = i.filter), (r = v("", r))) : Array.isArray(i.filter) && ((v = i.filter), (g = v));
+        var O,
+          w = [];
+        if ("object" !== typeof r || null === r) return "";
+        O = i.arrayFormat in o ? i.arrayFormat : "indices" in i ? (i.indices ? "indices" : "repeat") : "indices";
+        var x = o[O];
+        (g || (g = Object.keys(r)), h && g.sort(h));
+        for (var E = 0; E < g.length; ++E) {
+          var k = g[E];
+          (p && null === r[k]) || (w = w.concat(u(r[k], k, x, l, p, d ? f : null, v, h, y, b, j, m)));
+        }
+        var T = w.join(s),
+          R = !0 === i.addQueryPrefix ? "?" : "";
+        return T.length > 0 ? R + T : "";
+      };
+    },
+    4328: function (e, t, r) {
+      "use strict";
+      var n = r("4127"),
+        a = r("9e6a"),
+        o = r("b313");
+      e.exports = { formats: o, parse: a, stringify: n };
+    },
+    "52cf": function (e, t, r) {
+      "use strict";
+      r.d(t, "a", function () {
+        return i;
+      });
+      r("0d03");
+      var n = r("9f12"),
+        a = r("53fe"),
+        o = r("2fa7"),
+        i = (function () {
+          function e() {
+            (Object(n["a"])(this, e),
+              Object(o["a"])(this, "id", void 0),
+              Object(o["a"])(this, "sectionId", void 0),
+              Object(o["a"])(this, "taskRecordId", void 0),
+              Object(o["a"])(this, "studentId", void 0),
+              Object(o["a"])(this, "targetId", void 0),
+              Object(o["a"])(this, "targetType", void 0),
+              Object(o["a"])(this, "duration", void 0),
+              Object(o["a"])(this, "content", void 0),
+              Object(o["a"])(this, "comment", void 0),
+              Object(o["a"])(this, "score", void 0),
+              Object(o["a"])(this, "autoScore", void 0),
+              Object(o["a"])(this, "submitTime", void 0),
+              Object(o["a"])(this, "tag", void 0),
+              Object(o["a"])(this, "isFinished", void 0),
+              Object(o["a"])(this, "lastTime", void 0),
+              Object(o["a"])(this, "lastDuration", void 0));
+          }
+          return (
+            Object(a["a"])(e, null, [
+              {
+                key: "noState",
+                value: function () {
+                  return {
+                    id: "",
+                    sectionId: "",
+                    taskRecordId: "",
+                    studentId: "",
+                    targetId: "",
+                    targetType: -1,
+                    duration: 0,
+                    content: "",
+                    comment: "",
+                    score: 0,
+                    autoScore: 0,
+                    tag: 0,
+                    submitTime: new Date("2020/1/1"),
+                    isFinished: !1,
+                    lastTime: new Date().getTime(),
+                    lastDuration: 0,
+                  };
+                },
+              },
+            ]),
+            e
+          );
+        })();
+    },
+    "9e6a": function (e, t, r) {
+      "use strict";
+      var n = r("d233"),
+        a = Object.prototype.hasOwnProperty,
+        o = {
+          allowDots: !1,
+          allowPrototypes: !1,
+          arrayLimit: 20,
+          decoder: n.decode,
+          delimiter: "&",
+          depth: 5,
+          parameterLimit: 1e3,
+          plainObjects: !1,
+          strictNullHandling: !1,
+        },
+        i = function (e, t) {
+          for (
+            var r = {},
+              n = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e,
+              i = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
+              c = n.split(t.delimiter, i),
+              u = 0;
+            u < c.length;
+            ++u
+          ) {
+            var s,
+              l,
+              p = c[u],
+              d = p.indexOf("]="),
+              f = -1 === d ? p.indexOf("=") : d + 1;
+            (-1 === f
+              ? ((s = t.decoder(p, o.decoder)), (l = t.strictNullHandling ? null : ""))
+              : ((s = t.decoder(p.slice(0, f), o.decoder)), (l = t.decoder(p.slice(f + 1), o.decoder))),
+              a.call(r, s) ? (r[s] = [].concat(r[s]).concat(l)) : (r[s] = l));
+          }
+          return r;
+        },
+        c = function (e, t, r) {
+          for (var n = t, a = e.length - 1; a >= 0; --a) {
+            var o,
+              i = e[a];
+            if ("[]" === i) ((o = []), (o = o.concat(n)));
+            else {
+              o = r.plainObjects ? Object.create(null) : {};
+              var c = "[" === i.charAt(0) && "]" === i.charAt(i.length - 1) ? i.slice(1, -1) : i,
+                u = parseInt(c, 10);
+              !isNaN(u) && i !== c && String(u) === c && u >= 0 && r.parseArrays && u <= r.arrayLimit ? ((o = []), (o[u] = n)) : (o[c] = n);
+            }
+            n = o;
+          }
+          return n;
+        },
+        u = function (e, t, r) {
+          if (e) {
+            var n = r.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
+              o = /(\[[^[\]]*])/,
+              i = /(\[[^[\]]*])/g,
+              u = o.exec(n),
+              s = u ? n.slice(0, u.index) : n,
+              l = [];
+            if (s) {
+              if (!r.plainObjects && a.call(Object.prototype, s) && !r.allowPrototypes) return;
+              l.push(s);
+            }
+            var p = 0;
+            while (null !== (u = i.exec(n)) && p < r.depth) {
+              if (((p += 1), !r.plainObjects && a.call(Object.prototype, u[1].slice(1, -1)) && !r.allowPrototypes)) return;
+              l.push(u[1]);
+            }
+            return (u && l.push("[" + n.slice(u.index) + "]"), c(l, t, r));
+          }
+        };
+      e.exports = function (e, t) {
+        var r = t ? n.assign({}, t) : {};
+        if (null !== r.decoder && void 0 !== r.decoder && "function" !== typeof r.decoder) throw new TypeError("Decoder has to be a function.");
+        if (
+          ((r.ignoreQueryPrefix = !0 === r.ignoreQueryPrefix),
+          (r.delimiter = "string" === typeof r.delimiter || n.isRegExp(r.delimiter) ? r.delimiter : o.delimiter),
+          (r.depth = "number" === typeof r.depth ? r.depth : o.depth),
+          (r.arrayLimit = "number" === typeof r.arrayLimit ? r.arrayLimit : o.arrayLimit),
+          (r.parseArrays = !1 !== r.parseArrays),
+          (r.decoder = "function" === typeof r.decoder ? r.decoder : o.decoder),
+          (r.allowDots = "boolean" === typeof r.allowDots ? r.allowDots : o.allowDots),
+          (r.plainObjects = "boolean" === typeof r.plainObjects ? r.plainObjects : o.plainObjects),
+          (r.allowPrototypes = "boolean" === typeof r.allowPrototypes ? r.allowPrototypes : o.allowPrototypes),
+          (r.parameterLimit = "number" === typeof r.parameterLimit ? r.parameterLimit : o.parameterLimit),
+          (r.strictNullHandling = "boolean" === typeof r.strictNullHandling ? r.strictNullHandling : o.strictNullHandling),
+          "" === e || null === e || "undefined" === typeof e)
+        )
+          return r.plainObjects ? Object.create(null) : {};
+        for (var a = "string" === typeof e ? i(e, r) : e, c = r.plainObjects ? Object.create(null) : {}, s = Object.keys(a), l = 0; l < s.length; ++l) {
+          var p = s[l],
+            d = u(p, a[p], r);
+          c = n.merge(c, d, r);
+        }
+        return n.compact(c);
+      };
+    },
+    b313: function (e, t, r) {
+      "use strict";
+      var n = String.prototype.replace,
+        a = /%20/g;
+      e.exports = {
+        default: "RFC3986",
+        formatters: {
+          RFC1738: function (e) {
+            return n.call(e, a, "+");
+          },
+          RFC3986: function (e) {
+            return e;
+          },
+        },
+        RFC1738: "RFC1738",
+        RFC3986: "RFC3986",
+      };
+    },
+    c18d: function (e, t, r) {
+      "use strict";
+      (r("99af"), r("4160"), r("159b"), r("96cf"));
+      var n = r("89ba"),
+        a = r("9f12"),
+        o = r("53fe"),
+        i = r("2fa7"),
+        c = r("59b9"),
+        u = r("482f"),
+        s = r("52cf"),
+        l = r("a0f7"),
+        p = r("4328"),
+        d = r.n(p),
+        f = (function () {
+          function e() {
+            (Object(a["a"])(this, e), Object(i["a"])(this, "currentPage", 1), Object(i["a"])(this, "pageSize", 10), Object(i["a"])(this, "itemsCount", 0));
+          }
+          return (
+            Object(o["a"])(e, [
+              {
+                key: "addExercise",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(c["a"])({ url: "".concat(u["a"].web_host, "/api/Exercise/AddExerciseList"), method: "POST", data: t })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getExerciseBySectionId",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r, n;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", []);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(c["a"])({ url: "".concat(u["a"].web_host, "/api/Exercise/SearchBySectionId/").concat(t), method: "GET" })
+                              );
+                            case 4:
+                              return (
+                                (r = e.sent),
+                                (n = []),
+                                console.log(r),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (e) {
+                                    ((e.state = s["a"].noState()), n.push(e));
+                                  }),
+                                e.abrupt("return", n)
+                              );
+                            case 9:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getExerciseWithState",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t, r) {
+                      var n, a;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!(!t || !r || t.length < 32 || r.length < 32)) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", []);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/GetExerciseWithState"),
+                                  method: "GET",
+                                  params: { recordId: t, sectionId: r },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (n = e.sent),
+                                (a = []),
+                                n &&
+                                  0 === n.code &&
+                                  n.data.forEach(function (e) {
+                                    (e.state || (e.state = s["a"].noState()), a.push(e));
+                                  }),
+                                e.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t, r) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "addExerciseItem",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return ((e.next = 2), Object(c["a"])({ url: "".concat(u["a"].web_host, "/api/Exercise/AddExercise"), method: "POST", data: t }));
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetExercisePageFromStorag",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r,
+                        n,
+                        a,
+                        o,
+                        i,
+                        s,
+                        l,
+                        p,
+                        f = arguments;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return (
+                                  (r = f.length > 1 && void 0 !== f[1] ? f[1] : 1),
+                                  (n = f.length > 2 && void 0 !== f[2] ? f[2] : 10),
+                                  (a = f.length > 3 && void 0 !== f[3] ? f[3] : ""),
+                                  (o = f.length > 4 && void 0 !== f[4] ? f[4] : "-1"),
+                                  (i = f.length > 5 && void 0 !== f[5] ? f[5] : []),
+                                  (s = f.length > 6 && void 0 !== f[6] ? f[6] : []),
+                                  (o = o || "-1"),
+                                  (e.next = 9),
+                                  Object(c["a"])({
+                                    url: "".concat(u["a"].web_host, "/api/Exercise/GetExercisePageFromStorag"),
+                                    method: "GET",
+                                    params: { author: t, pageIndex: r, size: n, key: a, type: o, tag: i, importTitle: s },
+                                    paramsSerializer: function (e) {
+                                      return d.a.stringify(e, { indices: !1 });
+                                    },
+                                  })
+                                );
+                              case 9:
+                                return (
+                                  (l = e.sent),
+                                  (p = []),
+                                  "undefined" !== typeof l &&
+                                    0 === l.code &&
+                                    ((this.itemsCount = l.data.records),
+                                    l.data.rows.forEach(function (e) {
+                                      p.push(e);
+                                    })),
+                                  e.abrupt("return", p)
+                                );
+                              case 13:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetComposeExerciseFromStorag",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t, r, n, a, o) {
+                      var i;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/GetComposeExerciseFromStorag"),
+                                  method: "GET",
+                                  params: { author: t, judgmentNum: r, completiontNum: n, singleChoiceNum: a, mutiChoiceNum: o },
+                                })
+                              );
+                            case 2:
+                              return ((i = e.sent), e.abrupt("return", i));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t, r, n, a, o) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetExerciseListFromStorag",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r,
+                        n,
+                        a,
+                        o,
+                        i,
+                        s,
+                        p,
+                        d = arguments;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (r = d.length > 1 && void 0 !== d[1] ? d[1] : 1),
+                                (n = d.length > 2 && void 0 !== d[2] ? d[2] : 10),
+                                (a = d.length > 3 && void 0 !== d[3] ? d[3] : ""),
+                                (o = d.length > 4 && void 0 !== d[4] ? d[4] : "-1"),
+                                (o = o || "-1"),
+                                (e.next = 7),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/GetExercisePageFromStorag"),
+                                  method: "GET",
+                                  params: { author: t, pageIndex: r, size: n, key: a, type: o },
+                                })
+                              );
+                            case 7:
+                              return (
+                                (i = e.sent),
+                                (s = new l["b"]()),
+                                (p = new l["a"]()),
+                                i &&
+                                  0 == i.code &&
+                                  ((s.page = i.data.page),
+                                  (s.pagesize = i.data.pagesize),
+                                  (s.records = i.data.records),
+                                  (s.total = i.data.total),
+                                  (p.list = i.data.rows)),
+                                (p.page = s),
+                                e.abrupt("return", p)
+                              );
+                            case 13:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "DeleteExercise",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!("undefined" === typeof t || t.length < 32)) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", null);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/DeleteExercise/").concat(t),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                })
+                              );
+                            case 4:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 6:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "DeleteExercises",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!("undefined" === typeof t || t.length < 1)) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", null);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/DeleteExercises"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "POST",
+                                  data: t,
+                                })
+                              );
+                            case 4:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 6:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetItemsCount",
+                value: function () {
+                  return this.itemsCount;
+                },
+              },
+              {
+                key: "ExportExerciseFile",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r,
+                        n,
+                        a,
+                        o,
+                        i,
+                        s = arguments;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (r = s.length > 1 && void 0 !== s[1] ? s[1] : ""),
+                                (n = s.length > 2 && void 0 !== s[2] ? s[2] : "-1"),
+                                (a = s.length > 3 && void 0 !== s[3] ? s[3] : []),
+                                (o = s.length > 4 ? s[4] : void 0),
+                                (n = n || "-1"),
+                                (e.next = 7),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/ExportExerciseFile"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { author: t, key: r, type: n, tag: a, fileType: o },
+                                  paramsSerializer: function (e) {
+                                    return d.a.stringify(e, { indices: !1 });
+                                  },
+                                  responseType: "blob",
+                                })
+                              );
+                            case 7:
+                              return ((i = e.sent), e.abrupt("return", i));
+                            case 9:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "AddTestToStorageAsync",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/AddTestToStorageAsync"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "POST",
+                                  data: t,
+                                })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetTags",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/GetTags"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { author: t },
+                                })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetImportTitles",
+                value: (function () {
+                  var e = Object(n["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(c["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/Exercise/GetImportTitles"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { author: t },
+                                })
+                              );
+                            case 2:
+                              return ((r = e.sent), e.abrupt("return", r));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+            ]),
+            e
+          );
+        })();
+      t["a"] = new f();
+    },
+    d233: function (e, t, r) {
+      "use strict";
+      var n = Object.prototype.hasOwnProperty,
+        a = (function () {
+          for (var e = [], t = 0; t < 256; ++t) e.push("%" + ((t < 16 ? "0" : "") + t.toString(16)).toUpperCase());
+          return e;
+        })(),
+        o = function (e) {
+          var t;
+          while (e.length) {
+            var r = e.pop();
+            if (((t = r.obj[r.prop]), Array.isArray(t))) {
+              for (var n = [], a = 0; a < t.length; ++a) "undefined" !== typeof t[a] && n.push(t[a]);
+              r.obj[r.prop] = n;
+            }
+          }
+          return t;
+        },
+        i = function (e, t) {
+          for (var r = t && t.plainObjects ? Object.create(null) : {}, n = 0; n < e.length; ++n) "undefined" !== typeof e[n] && (r[n] = e[n]);
+          return r;
+        },
+        c = function e(t, r, a) {
+          if (!r) return t;
+          if ("object" !== typeof r) {
+            if (Array.isArray(t)) t.push(r);
+            else {
+              if ("object" !== typeof t) return [t, r];
+              (a.plainObjects || a.allowPrototypes || !n.call(Object.prototype, r)) && (t[r] = !0);
+            }
+            return t;
+          }
+          if ("object" !== typeof t) return [t].concat(r);
+          var o = t;
+          return (
+            Array.isArray(t) && !Array.isArray(r) && (o = i(t, a)),
+            Array.isArray(t) && Array.isArray(r)
+              ? (r.forEach(function (r, o) {
+                  n.call(t, o) ? (t[o] && "object" === typeof t[o] ? (t[o] = e(t[o], r, a)) : t.push(r)) : (t[o] = r);
+                }),
+                t)
+              : Object.keys(r).reduce(function (t, o) {
+                  var i = r[o];
+                  return (n.call(t, o) ? (t[o] = e(t[o], i, a)) : (t[o] = i), t);
+                }, o)
+          );
+        },
+        u = function (e, t) {
+          return Object.keys(t).reduce(function (e, r) {
+            return ((e[r] = t[r]), e);
+          }, e);
+        },
+        s = function (e) {
+          try {
+            return decodeURIComponent(e.replace(/\+/g, " "));
+          } catch (t) {
+            return e;
+          }
+        },
+        l = function (e) {
+          if (0 === e.length) return e;
+          for (var t = "string" === typeof e ? e : String(e), r = "", n = 0; n < t.length; ++n) {
+            var o = t.charCodeAt(n);
+            45 === o || 46 === o || 95 === o || 126 === o || (o >= 48 && o <= 57) || (o >= 65 && o <= 90) || (o >= 97 && o <= 122)
+              ? (r += t.charAt(n))
+              : o < 128
+                ? (r += a[o])
+                : o < 2048
+                  ? (r += a[192 | (o >> 6)] + a[128 | (63 & o)])
+                  : o < 55296 || o >= 57344
+                    ? (r += a[224 | (o >> 12)] + a[128 | ((o >> 6) & 63)] + a[128 | (63 & o)])
+                    : ((n += 1),
+                      (o = 65536 + (((1023 & o) << 10) | (1023 & t.charCodeAt(n)))),
+                      (r += a[240 | (o >> 18)] + a[128 | ((o >> 12) & 63)] + a[128 | ((o >> 6) & 63)] + a[128 | (63 & o)]));
+          }
+          return r;
+        },
+        p = function (e) {
+          for (var t = [{ obj: { o: e }, prop: "o" }], r = [], n = 0; n < t.length; ++n)
+            for (var a = t[n], i = a.obj[a.prop], c = Object.keys(i), u = 0; u < c.length; ++u) {
+              var s = c[u],
+                l = i[s];
+              "object" === typeof l && null !== l && -1 === r.indexOf(l) && (t.push({ obj: i, prop: s }), r.push(l));
+            }
+          return o(t);
+        },
+        d = function (e) {
+          return "[object RegExp]" === Object.prototype.toString.call(e);
+        },
+        f = function (e) {
+          return null !== e && "undefined" !== typeof e && !!(e.constructor && e.constructor.isBuffer && e.constructor.isBuffer(e));
+        };
+      e.exports = { arrayToObject: i, assign: u, compact: p, decode: s, encode: l, isBuffer: f, isRegExp: d, merge: c };
+    },
+  },
+]);

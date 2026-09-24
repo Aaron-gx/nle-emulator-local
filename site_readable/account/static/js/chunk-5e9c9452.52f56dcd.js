@@ -1,0 +1,833 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-5e9c9452"],
+  {
+    "1dd6": function (e, t, o) {
+      "use strict";
+      o("a800");
+    },
+    2: function (e, t) {},
+    3: function (e, t) {},
+    4: function (e, t) {},
+    "6ab2": function (e, t, o) {
+      "use strict";
+      o.r(t);
+      o("b0c0");
+      var a = function () {
+          var e = this,
+            t = e._self._c;
+          return t(
+            "div",
+            { staticClass: "app-cont" },
+            [
+              t("div", { staticClass: "ctrl-line clearfix" }, [
+                t(
+                  "div",
+                  { staticClass: "ctr-l" },
+                  [
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/school/save", expression: "'/school/save'" }],
+                        attrs: { type: "primary" },
+                        on: { click: e.addSchool },
+                      },
+                      [e._v("添加学校")],
+                    ),
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/school/importSchools", expression: "'/school/importSchools'" }],
+                        attrs: { type: "primary" },
+                        on: {
+                          click: function (t) {
+                            e.showImport = !0;
+                          },
+                        },
+                      },
+                      [e._v("批量导入")],
+                    ),
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/school/delete", expression: "'/school/delete'" }],
+                        staticClass: "bg-danger",
+                        attrs: { type: "danger" },
+                        on: { click: e.delSchools },
+                      },
+                      [e._v("删除学校")],
+                    ),
+                  ],
+                  1,
+                ),
+                t(
+                  "div",
+                  { staticClass: "ctr-r" },
+                  [
+                    t("span", { staticClass: "ctr-item" }, [e._v("搜索：")]),
+                    t(
+                      "el-select",
+                      {
+                        attrs: { clearable: "", placeholder: "请选择省份" },
+                        on: {
+                          change: function (t) {
+                            return e.getQueryCityData(t);
+                          },
+                        },
+                        model: {
+                          value: e.queryProvince,
+                          callback: function (t) {
+                            e.queryProvince = t;
+                          },
+                          expression: "queryProvince",
+                        },
+                      },
+                      e._l(e.queryProvinceData, function (e) {
+                        return t("el-option", { key: e.regionId, attrs: { value: e.regionId, label: e.regionName } });
+                      }),
+                      1,
+                    ),
+                    t(
+                      "el-select",
+                      {
+                        attrs: { clearable: "", placeholder: "请选择城市" },
+                        model: {
+                          value: e.queryCity,
+                          callback: function (t) {
+                            e.queryCity = t;
+                          },
+                          expression: "queryCity",
+                        },
+                      },
+                      e._l(e.queryCityData, function (e) {
+                        return t("el-option", { key: e.id, attrs: { value: e.id, label: e.name } });
+                      }),
+                      1,
+                    ),
+                    t(
+                      "el-select",
+                      {
+                        model: {
+                          value: e.querySchoolType,
+                          callback: function (t) {
+                            e.querySchoolType = t;
+                          },
+                          expression: "querySchoolType",
+                        },
+                      },
+                      [
+                        t("el-option", { attrs: { label: "全部类型", value: "" } }),
+                        t("el-option", { attrs: { label: "本科高校", value: 1 } }),
+                        t("el-option", { attrs: { label: "高职院校", value: 2 } }),
+                        t("el-option", { attrs: { label: "独立学院", value: 3 } }),
+                        t("el-option", { attrs: { label: "其他", value: 4 } }),
+                        t("el-option", { attrs: { label: "中职中专", value: 5 } }),
+                      ],
+                      1,
+                    ),
+                    t("el-input", {
+                      attrs: { placeholder: "请输入学校名称进行查询" },
+                      model: {
+                        value: e.querySchoolName,
+                        callback: function (t) {
+                          e.querySchoolName = t;
+                        },
+                        expression: "querySchoolName",
+                      },
+                    }),
+                    t("el-button", { attrs: { type: "primary" }, on: { click: e.getSchools } }, [e._v("查询")]),
+                  ],
+                  1,
+                ),
+              ]),
+              t(
+                "div",
+                { staticClass: "tb-cont" },
+                [
+                  t(
+                    "el-table",
+                    { attrs: { data: e.tableData.list, border: "", stripe: "" }, on: { "selection-change": e.handleSelectionChange } },
+                    [
+                      t("el-table-column", { attrs: { type: "selection", align: "center", width: "50" } }),
+                      t("el-table-column", { attrs: { property: "id", label: "学校代码", "min-width": "5%" } }),
+                      t("el-table-column", { attrs: { property: "schoolName", label: "学校名称", "min-width": "18%" } }),
+                      t("el-table-column", { attrs: { property: "typeName", label: "学校类型", "min-width": "10%" } }),
+                      t("el-table-column", { attrs: { property: "regionName", label: "学校区域(省/市)", "min-width": "10%" } }),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "div",
+                {
+                  directives: [{ name: "show", rawName: "v-show", value: e.tableData.pages > 1, expression: "tableData.pages > 1" }],
+                  staticStyle: { "text-align": "center", margin: "10px 0" },
+                },
+                [
+                  t("el-pagination", {
+                    attrs: {
+                      layout: "prev, pager, next, jumper",
+                      "hide-on-single-page": !1,
+                      background: "",
+                      "current-page": e.tableData.pageNum,
+                      "page-count": e.tableData.pages,
+                    },
+                    on: { "current-change": e.pageChange },
+                  }),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: "添加学校", visible: e.showAddDialog, "close-on-click-modal": !1, width: "530px", center: "" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showAddDialog = t;
+                    },
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "schoolForm", staticClass: "form-cont", attrs: { model: e.schoolForm, rules: e.rules } },
+                    [
+                      t(
+                        "el-form-item",
+                        { attrs: { prop: "schoolName" } },
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "req-tag item-name" }, [e._v("学校名称：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t("el-input", {
+                                attrs: { maxlength: "20", "show-word-limit": "" },
+                                model: {
+                                  value: e.schoolForm.schoolName,
+                                  callback: function (t) {
+                                    e.$set(e.schoolForm, "schoolName", t);
+                                  },
+                                  expression: "schoolForm.schoolName",
+                                },
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { prop: "typeId" } },
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "req-tag item-name" }, [e._v("学校类型：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 19 } },
+                            [
+                              t(
+                                "el-select",
+                                {
+                                  staticStyle: { width: "100%" },
+                                  model: {
+                                    value: e.schoolForm.typeId,
+                                    callback: function (t) {
+                                      e.$set(e.schoolForm, "typeId", t);
+                                    },
+                                    expression: "schoolForm.typeId",
+                                  },
+                                },
+                                [
+                                  t("el-option", { attrs: { label: "本科高校", value: 1 } }),
+                                  t("el-option", { attrs: { label: "高职院校", value: 2 } }),
+                                  t("el-option", { attrs: { label: "独立学院", value: 3 } }),
+                                  t("el-option", { attrs: { label: "其他", value: 4 } }),
+                                  t("el-option", { attrs: { label: "中职中专", value: 5 } }),
+                                ],
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        [
+                          t("el-col", { attrs: { span: 5 } }, [t("div", { staticClass: "req-tag item-name" }, [e._v("学校区域：")])]),
+                          t(
+                            "el-col",
+                            { attrs: { span: 9 } },
+                            [
+                              t(
+                                "el-select",
+                                {
+                                  attrs: { clearable: "", placeholder: "请选择省份" },
+                                  on: {
+                                    change: function (t) {
+                                      return e.getCityData(t);
+                                    },
+                                  },
+                                  model: {
+                                    value: e.schoolForm.province,
+                                    callback: function (t) {
+                                      e.$set(e.schoolForm, "province", t);
+                                    },
+                                    expression: "schoolForm.province",
+                                  },
+                                },
+                                e._l(e.provinceData, function (e) {
+                                  return t("el-option", { key: e.regionId, attrs: { value: e.regionId, label: e.regionName } });
+                                }),
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                          t(
+                            "el-col",
+                            { staticStyle: { "margin-left": "15px" }, attrs: { span: 9 } },
+                            [
+                              t(
+                                "el-select",
+                                {
+                                  attrs: { clearable: "", placeholder: "请选择城市" },
+                                  model: {
+                                    value: e.schoolForm.city,
+                                    callback: function (t) {
+                                      e.$set(e.schoolForm, "city", t);
+                                    },
+                                    expression: "schoolForm.city",
+                                  },
+                                },
+                                e._l(e.cityData, function (e) {
+                                  return t("el-option", { key: e.id, attrs: { value: e.id, label: e.name } });
+                                }),
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                  t("div", { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" }, [
+                    t(
+                      "div",
+                      { staticClass: "dia-footer-cont" },
+                      [
+                        t("el-button", { attrs: { type: "info" }, on: { click: e.closeShowAddDialog } }, [e._v("取 消")]),
+                        t("el-button", { attrs: { type: "primary", loading: e.loading }, on: { click: e.postSchool } }, [e._v("确 定")]),
+                      ],
+                      1,
+                    ),
+                  ]),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: "导入学校", visible: e.showImport, width: "50%" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showImport = t;
+                    },
+                    close: e.importClosed,
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "importForm", attrs: { "label-width": "80px" } },
+                    [
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "导入" } },
+                        [
+                          t(
+                            "div",
+                            [
+                              t(
+                                "el-upload",
+                                {
+                                  staticStyle: { display: "inline-block" },
+                                  attrs: {
+                                    action: "https://jsonplaceholder.typicode.com/posts/",
+                                    accept: ".xls,.xlsx,.csv",
+                                    "on-change": e.importExcel,
+                                    "show-file-list": !1,
+                                    "auto-upload": !1,
+                                  },
+                                },
+                                [t("el-button", { attrs: { type: "primary" } }, [e._v("选择文件")])],
+                                1,
+                              ),
+                              t(
+                                "el-button",
+                                { staticStyle: { display: "inline-block", margin: "0 10px" }, attrs: { type: "primary" }, on: { click: e.saveTemplate } },
+                                [e._v("导出模板")],
+                              ),
+                            ],
+                            1,
+                          ),
+                          t("p", [e._v("说明：导入文件（.xls、.xlsc或.csv），数据必须按照下表格式填写")]),
+                          t("p", { staticStyle: { color: "red" } }, [e._v("学校类型只有五种（本科高校、高职院校、独立学院、其他、中职中专）")]),
+                          t(
+                            "el-table",
+                            { staticStyle: { width: "100%" }, attrs: { data: e.importSchoolData, border: "", "max-height": "300" } },
+                            [
+                              t("el-table-column", {
+                                attrs: { prop: "schoolName", label: "学校名称" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (o) {
+                                      return [
+                                        t("div", { class: { error: e.validateRequired(o.row.schoolName) } }, [t("span", [e._v(e._s(o.row.schoolName))])]),
+                                      ];
+                                    },
+                                  },
+                                ]),
+                              }),
+                              t("el-table-column", {
+                                attrs: { prop: "regionName", label: "学校区域" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (o) {
+                                      return [
+                                        t("div", { class: { error: e.validateRequired(o.row.regionName) } }, [t("span", [e._v(e._s(o.row.regionName))])]),
+                                      ];
+                                    },
+                                  },
+                                ]),
+                              }),
+                              t("el-table-column", {
+                                attrs: { prop: "typeName", label: "学校类型" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (o) {
+                                      return [t("div", { class: { error: e.validateRequired(o.row.typeName) } }, [t("span", [e._v(e._s(o.row.typeName))])])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        [
+                          t("el-button", { attrs: { type: "primary" }, on: { click: e.saveImportData } }, [e._v("保存")]),
+                          t(
+                            "el-button",
+                            {
+                              on: {
+                                click: function (t) {
+                                  e.showImport = !1;
+                                },
+                              },
+                            },
+                            [e._v("取消")],
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { directives: [{ name: "show", rawName: "v-show", value: e.errShow, expression: "errShow" }], attrs: { label: "异常" } },
+                        [
+                          t(
+                            "el-table",
+                            { staticStyle: { width: "100%" }, attrs: { data: e.errorList, border: "", "max-height": "300" } },
+                            [
+                              t("el-table-column", {
+                                attrs: { prop: "schoolName", label: "学校名称" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (o) {
+                                      return [t("span", [e._v(e._s(o.row.schoolName))])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                              t("el-table-column", {
+                                attrs: { prop: "errorMsg", label: "错误消息" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (o) {
+                                      return [t("span", [e._v(e._s(o.row.errorMsg))])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: "异常信息", visible: e.delSchErrShow, width: "50%" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.delSchErrShow = t;
+                    },
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "delSchForm", attrs: { "label-width": "80px" } },
+                    [
+                      t(
+                        "el-table",
+                        { staticStyle: { width: "100%" }, attrs: { data: e.delSchErrorList, border: "", "max-height": "300" } },
+                        [
+                          t("el-table-column", {
+                            attrs: { prop: "schoolId", label: "学校代码" },
+                            scopedSlots: e._u([
+                              {
+                                key: "default",
+                                fn: function (o) {
+                                  return [t("span", [e._v(e._s(o.row.schoolId))])];
+                                },
+                              },
+                            ]),
+                          }),
+                          t("el-table-column", {
+                            attrs: { prop: "errorMsg", label: "错误消息" },
+                            scopedSlots: e._u([
+                              {
+                                key: "default",
+                                fn: function (o) {
+                                  return [t("span", [e._v(e._s(o.row.errorMsg))])];
+                                },
+                              },
+                            ]),
+                          }),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+            ],
+            1,
+          );
+        },
+        s = [],
+        r = (o("d81d"), o("14d9"), o("a15b"), o("d3b7"), o("159b"), o("ac1f"), o("00b4"), o("1146")),
+        l = o.n(r),
+        i = {
+          data: function () {
+            return {
+              tableData: [],
+              showTableData: [],
+              querySchoolType: "",
+              querySchoolName: "",
+              queryProvince: "",
+              queryCity: "",
+              provinceData: "",
+              queryProvinceData: "",
+              cityData: [],
+              queryCityData: [],
+              showAddDialog: !1,
+              schoolForm: { schoolName: "", typeId: "", regionId: "", province: "", city: "" },
+              rules: {
+                schoolName: [{ required: !0, message: "请输入学校名称！", trigger: "blur" }],
+                typeId: [{ required: !0, message: "请选择学校类型！", trigger: "blur" }],
+              },
+              loading: !1,
+              moveCooling: !1,
+              pageNo: 1,
+              pageSize: 20,
+              importSchoolData: [
+                { schoolName: "xxx学校", regionName: "安徽省", typeName: "本科高校" },
+                { schoolName: "yyy学校", regionName: "福州市", typeName: "高职院校" },
+              ],
+              schoolImportForm: {},
+              importReady: !1,
+              showImport: !1,
+              errorList: [],
+              errShow: !1,
+              delSchErrorList: [],
+              delSchErrShow: !1,
+              chooseSchoolList: [],
+            };
+          },
+          filters: {
+            transStatus: function (e) {
+              return 1 == e ? "已启用" : "未启用";
+            },
+          },
+          created: function () {
+            var e = this;
+            (this.getSchools(),
+              this.$request
+                .queryAllRegion()
+                .then(function (t) {
+                  ((e.provinceData = t.data), (e.queryProvinceData = t.data), e.schoolForm.province && e.getCityData(e.schoolForm.province));
+                })
+                .catch(function (t) {
+                  return e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" });
+                }));
+          },
+          methods: {
+            handleSelectionChange: function (e) {
+              this.chooseSchoolList = e;
+            },
+            closeShowAddDialog: function () {
+              ((this.showAddDialog = !1), this.initSchoolForm());
+            },
+            getCityData: function (e) {
+              var t = this;
+              ((this.schoolForm.city = ""),
+                e
+                  ? this.$request
+                      .queryCityByRegionId({ regionId: e })
+                      .then(function (e) {
+                        t.cityData = e.data;
+                      })
+                      .catch(function (e) {
+                        return t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" });
+                      })
+                  : (this.cityData = []));
+            },
+            getQueryCityData: function (e) {
+              var t = this;
+              ((this.queryCity = ""),
+                e
+                  ? this.$request
+                      .queryCityByRegionId({ regionId: e })
+                      .then(function (e) {
+                        t.queryCityData = e.data;
+                      })
+                      .catch(function (e) {
+                        return t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" });
+                      })
+                  : (this.queryCityData = []));
+            },
+            delSchool: function (e) {
+              var t = this;
+              this.$messageBox
+                .confirm("是否确定要删除学校【" + e.schoolName + "】?", "提示", { type: "warning" })
+                .then(function () {
+                  t.$request
+                    .delSchool({ ids: e.id })
+                    .then(function (e) {
+                      (t.$message({ type: "success", message: "删除成功！" }), t.getSchools());
+                    })
+                    .catch(function (e) {
+                      t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" });
+                    });
+                })
+                .catch(function (e) {
+                  console.log(e);
+                });
+            },
+            delSchools: function () {
+              var e = this,
+                t = this.chooseSchoolList;
+              if (t.length) {
+                var o = "是否确定要删除选中的（" + t.length + "）所学校？",
+                  a = [];
+                (t.map(function (e) {
+                  a.push(e.id);
+                }),
+                  this.$messageBox
+                    .confirm(o, "提示", { type: "warning" })
+                    .then(function (t) {
+                      e.$request
+                        .delSchool({ ids: a.join(",") })
+                        .then(function (t) {
+                          (t.data.errorList.length > 0
+                            ? ((e.delSchErrorList = t.data.errorList), (e.delSchErrShow = !0))
+                            : e.$message({ type: "success", message: "操作成功！" }),
+                            (e.chooseSchoolList = []),
+                            e.getSchools());
+                        })
+                        .catch(function (t) {
+                          e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" });
+                        });
+                    })
+                    .catch(function (e) {
+                      console.log(e);
+                    }));
+              } else this.$message({ type: "warning", message: "请选择需要删除的学校！" });
+            },
+            addSchool: function () {
+              var e = this;
+              ((this.showAddDialog = !0),
+                this.$nextTick(function () {
+                  e.$refs.schoolForm.clearValidate();
+                }));
+            },
+            initSchoolForm: function () {
+              ((this.schoolForm.schoolName = ""),
+                (this.schoolForm.typeId = ""),
+                (this.schoolForm.regionId = ""),
+                (this.schoolForm.province = ""),
+                (this.schoolForm.city = ""),
+                (this.cityData = []));
+            },
+            getSchools: function () {
+              var e = this,
+                t = {};
+              ((t.pageNo = this.pageNo),
+                (t.pageSize = this.pageSize),
+                (t.schoolName = this.querySchoolName),
+                (t.typeId = this.querySchoolType),
+                this.queryCity ? (t.regionId = this.queryCity) : (t.regionId = this.queryProvince),
+                this.$request
+                  .getSchoolList(t)
+                  .then(function (t) {
+                    e.$nextTick(function () {
+                      e.tableData = t.data || { list: [], pageNum: 1 };
+                    });
+                  })
+                  .catch(function (t) {
+                    e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" });
+                  }));
+            },
+            postSchool: function () {
+              var e = this;
+              this.$refs.schoolForm.validate(function (t) {
+                if (t) {
+                  if (((e.loading = !0), !e.schoolForm.province))
+                    return (e.$message({ type: "error", message: "学校区域省份必须选择" }), void (e.loading = !1));
+                  (e.schoolForm.city ? (e.schoolForm.regionId = e.schoolForm.city) : (e.schoolForm.regionId = e.schoolForm.province),
+                    e.$request
+                      .addSchool(e.schoolForm)
+                      .then(function (t) {
+                        (e.$message({ type: "success", message: "操作成功！" }), (e.loading = !1), e.closeShowAddDialog(), e.getSchools());
+                      })
+                      .catch(function (t) {
+                        (e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }), (e.loading = !1));
+                      }));
+                }
+              });
+            },
+            pageChange: function (e) {
+              ((this.pageNo = e), this.getSchools());
+            },
+            saveTemplate: function () {
+              var e = [],
+                t = "";
+              ((e = [
+                ["学校名称", "学校区域", "学校类型"],
+                ["xxx学校", "安徽省", "本科高校"],
+                ["yyy学校", "福州市", "高职院校"],
+              ]),
+                (t = "学校导入模板"));
+              var o = l.a.utils.aoa_to_sheet(e),
+                a = l.a.utils.book_new();
+              (l.a.utils.book_append_sheet(a, o, "Sheet1"), l.a.writeFile(a, t + ".xlsx"));
+            },
+            saveImportData: function () {
+              var e = this;
+              if (this.importReady) {
+                var t,
+                  o = 0;
+                !this.importSchoolData || this.importSchoolData.length < 1
+                  ? this.$message({ type: "error", message: "没有可用数据无法保存，请检查文件并重新导入" })
+                  : (this.importSchoolData.forEach(function (e) {
+                      (e["schoolName"] && e["regionName"] && e["typeName"]) || o++;
+                    }),
+                    (t = this.importSchoolData),
+                    o > 0
+                      ? this.$message({ type: "error", message: "导入数据有【" + o + "】条异常，请检查文件并重新导入" })
+                      : ((this.schoolImportForm.result = t),
+                        this.$request
+                          .importSchools(this.schoolImportForm)
+                          .then(function (t) {
+                            t.data.errorList.length > 0
+                              ? (e.$message({ type: "error", message: "导入数据有【" + t.data.errorList.length + "】条异常，请检查" }),
+                                (e.errorList = t.data.errorList),
+                                (e.errShow = !0))
+                              : (e.$message({ type: "success", message: "操作成功！" }), e.importClosed(), e.getSchools());
+                          })
+                          .catch(function (t) {
+                            return e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" });
+                          })));
+              } else this.$message({ type: "error", message: "请选择文件" });
+            },
+            importClosed: function () {
+              ((this.showImport = !1),
+                (this.importReady = !1),
+                (this.errShow = !1),
+                (this.importSchoolData = [
+                  { schoolName: "xxx学校", regionName: "安徽省", typeName: "本科高校" },
+                  { schoolName: "yyy学校", regionName: "福州市", typeName: "高职院校" },
+                ]),
+                (this.errorList = []));
+            },
+            importExcel: function (e, t) {
+              this.readExcel1(e);
+            },
+            readExcel1: function (e) {
+              var t = this;
+              if (!/\.(xls|xlsx|csv)$/.test(e.name.toLowerCase()))
+                return (this.$message({ type: "error", message: "上传格式不正确，请上传xls或者xlsx格式或者csv格式" }), !1);
+              var o = new FileReader();
+              ((o.onload = function (e) {
+                try {
+                  var o = e.target.result,
+                    a = l.a.read(o, { type: "binary" }),
+                    s = a.SheetNames[0],
+                    r = l.a.utils.sheet_to_json(a.Sheets[s]);
+                  ((t.importSchoolData = r.map(function (e) {
+                    return { schoolName: e["学校名称"], regionName: e["学校区域"], typeName: e["学校类型"] };
+                  })),
+                    (t.importReady = !0));
+                } catch (i) {
+                  return !1;
+                }
+              }),
+                o.readAsBinaryString(e.raw));
+            },
+            validateRequired: function (e) {
+              return !e;
+            },
+            validateType: function (e) {
+              return "本科高校" === e || "高职院校" === e || "独立学院" === e || "其他" === e || "中职中专" === e;
+            },
+          },
+        },
+        n = i,
+        c = (o("1dd6"), o("879f"), o("2877")),
+        h = Object(c["a"])(n, a, s, !1, null, "7b34fbc7", null);
+      t["default"] = h.exports;
+    },
+    "879f": function (e, t, o) {
+      "use strict";
+      o("8a9e");
+    },
+    "8a9e": function (e, t, o) {},
+    a800: function (e, t, o) {},
+  },
+]);

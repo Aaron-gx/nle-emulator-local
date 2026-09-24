@@ -1,0 +1,146 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-c9a1c958"],
+  {
+    "3e8b": function (t, a, e) {
+      ((a = t.exports = e("24fb")(!1)),
+        a.push([
+          t.i,
+          ".frame-main[data-v-0a7f48f2]{height:calc(100vh - 60px);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;overflow:auto;min-width:1440px}.main-body[data-v-0a7f48f2]{padding:30px 0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-align:center}.main-body .page[data-v-0a7f48f2]{display:inline-block;width:987px;min-height:600px;background:#fff;-webkit-box-shadow:0 0 38px 0 rgba(0,0,0,.17);box-shadow:0 0 38px 0 rgba(0,0,0,.17);padding:80px 110px;position:relative}.main-body .page>h3[data-v-0a7f48f2]{font-size:28px;color:#333;font-weight:700;text-align:center}.main-body .page img[data-v-0a7f48f2]{position:absolute;bottom:0;right:0}.main-body .page .report-content[data-v-0a7f48f2]{text-align:left;word-wrap:break-word}.main-body .page .r-info[data-v-0a7f48f2]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:62px;margin-bottom:28px;padding-bottom:30px;border-bottom:1px solid #eaeaea}.main-body .page .r-info p[data-v-0a7f48f2]{margin-bottom:18px;font-size:18px;color:#333;font-weight:700}.main-body .page .r-info p span[data-v-0a7f48f2]{color:#151515;font-weight:400;display:inline-block;width:80px;text-align:left;white-space:nowrap}.bread[data-v-0a7f48f2]{border-bottom:1px solid #e8e8e8;height:60px;padding:23px 27px}",
+          "",
+        ]));
+    },
+    "5b6d": function (t, a, e) {
+      "use strict";
+      e.r(a);
+      var o,
+        i = function () {
+          var t = this,
+            a = t.$createElement,
+            o = t._self._c || a;
+          return o("div", { staticClass: "frame-main" }, [
+            o("div", { staticClass: "main-body" }, [
+              o("div", { staticClass: "page" }, [
+                o("h3", [t._v(t._s(t.title))]),
+                o("div", { staticClass: "r-info" }, [
+                  o("div", [
+                    o("p", [t._v("学生姓名："), o("span", [t._v(t._s(t.record.studentName))])]),
+                    o("p", [t._v("指导老师："), o("span", [t._v(t._s(t.record.teacherName))])]),
+                  ]),
+                  o("div", [
+                    o("p", [t._v("学号："), o("span", [t._v(t._s(t.record.studentNumber))])]),
+                    o("p", [t._v("班级："), o("span", [t._v(t._s(t.record.className))])]),
+                  ]),
+                  o("div", [o("p", [t._v("报告日期："), t.record.report ? o("span", [t._v(t._s(t._f("format")(t.record.report.modifyTime)))]) : t._e()])]),
+                ]),
+                o("div", { staticClass: "report-content", domProps: { innerHTML: t._s(t.date) } }),
+                o("img", { attrs: { src: e("d574") } }),
+              ]),
+            ]),
+          ]);
+        },
+        n = [],
+        r = (e("99af"), e("0d03"), e("b0c0"), e("9f12")),
+        c = e("53fe"),
+        d = e("8b83"),
+        s = e("c65a"),
+        f = e("9aa6"),
+        p = e("c03e"),
+        b = e("2fa7"),
+        l = e("9ab4"),
+        u = e("60a3"),
+        x = e("168d"),
+        m = e("c6ba"),
+        v = e("73ec"),
+        h =
+          ((o = (function (t) {
+            function a() {
+              var t, e;
+              Object(r["a"])(this, a);
+              for (var o = arguments.length, i = new Array(o), n = 0; n < o; n++) i[n] = arguments[n];
+              return (
+                (e = Object(d["a"])(this, (t = Object(s["a"])(a)).call.apply(t, [this].concat(i)))),
+                Object(b["a"])(Object(f["a"])(e), "record", new x["a"]()),
+                Object(b["a"])(Object(f["a"])(e), "title", ""),
+                Object(b["a"])(Object(f["a"])(e), "date", ""),
+                e
+              );
+            }
+            return (
+              Object(p["a"])(a, t),
+              Object(c["a"])(a, [
+                {
+                  key: "destroyed",
+                  value: function () {
+                    this.$emit("footSwitch", !0);
+                  },
+                },
+                {
+                  key: "mounted",
+                  value: function () {
+                    this.$emit("footSwitch", !1);
+                  },
+                },
+                {
+                  key: "created",
+                  value: function () {
+                    var t = this;
+                    m["a"].getTaskReportWithRecord(this.$route.query["id"]).then(function (a) {
+                      0 == a.code &&
+                        a.data &&
+                        ((t.record = a.data),
+                        a.data.report && a.data.report.content && ((t.date = a.data.report.content.content), (t.title = a.data.report.content.name)));
+                    });
+                  },
+                },
+              ]),
+              a
+            );
+          })(u["c"])),
+          o);
+      h = Object(l["a"])(
+        [
+          Object(u["a"])({
+            filters: {
+              format: function (t) {
+                return Object(v["f"])("yy/MM/dd", new Date(t));
+              },
+            },
+          }),
+        ],
+        h,
+      );
+      var w = h,
+        g = w,
+        y = (e("75c8"), e("bd43"), e("2877")),
+        k = Object(y["a"])(g, i, n, !1, null, "0a7f48f2", null);
+      a["default"] = k.exports;
+    },
+    "75c8": function (t, a, e) {
+      "use strict";
+      var o = e("9b7d"),
+        i = e.n(o);
+      i.a;
+    },
+    "9b7d": function (t, a, e) {
+      var o = e("df8b");
+      ("string" === typeof o && (o = [[t.i, o, ""]]), o.locals && (t.exports = o.locals));
+      var i = e("499e").default;
+      i("5c1f1e20", o, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    bd43: function (t, a, e) {
+      "use strict";
+      var o = e("f968"),
+        i = e.n(o);
+      i.a;
+    },
+    df8b: function (t, a, e) {
+      ((a = t.exports = e("24fb")(!1)), a.push([t.i, ".report-content img{width:100%}", ""]));
+    },
+    f968: function (t, a, e) {
+      var o = e("3e8b");
+      ("string" === typeof o && (o = [[t.i, o, ""]]), o.locals && (t.exports = o.locals));
+      var i = e("499e").default;
+      i("2bb8cbfa", o, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+  },
+]);

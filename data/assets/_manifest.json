@@ -1,0 +1,160 @@
+[
+  {
+    "section": "1.1 章节教程",
+    "svc": "DocumentPractice",
+    "kind": "fileDocuments",
+    "file": "第2章 魔方课堂一体化教学平台阐述.docx",
+    "ok": true,
+    "size": 9801826
+  },
+  {
+    "section": "1.3 实操视频",
+    "svc": "VideoPractice",
+    "kind": "videos",
+    "file": "仿真软件使用案例.mp4",
+    "ok": true,
+    "size": 5412088
+  },
+  {
+    "section": "1.3 实操视频",
+    "svc": "VideoPractice",
+    "kind": "videos",
+    "file": "魔方课堂学生端.mp4",
+    "ok": true,
+    "size": 2722951
+  },
+  {
+    "section": "1.1 章节教程",
+    "svc": "DocumentPractice",
+    "kind": "fileDocuments",
+    "file": "第5章 农业气象站监测系统.docx",
+    "ok": true,
+    "size": 3118198
+  },
+  {
+    "section": "1.3 实操视频",
+    "svc": "VideoPractice",
+    "kind": "videos",
+    "file": "安装二氧化碳传感器.mp4",
+    "ok": true,
+    "size": 8477198
+  },
+  {
+    "section": "1.3 实操视频",
+    "svc": "VideoPractice",
+    "kind": "videos",
+    "file": "安装风速传感器和万用表测量风速的电流值.mp4",
+    "ok": true,
+    "size": 36188075
+  },
+  {
+    "section": "1.4 仿真实训",
+    "svc": "EmulatorPractice",
+    "kind": "packageXml",
+    "file": "农业气象站监测系统 (题目).N2V",
+    "ok": true,
+    "size": 32256,
+    "encrypted": true
+  },
+  {
+    "section": "1.4 仿真实训",
+    "svc": "EmulatorPractice",
+    "kind": "packageXmlAnsewer",
+    "file": "农业气象站监测系统.N2V",
+    "ok": true,
+    "size": 15532,
+    "encrypted": true
+  },
+  {
+    "section": "1.4 仿真实训",
+    "svc": "EmulatorPractice",
+    "kind": "remark",
+    "file": "1.4 仿真实训_说明.html",
+    "ok": true,
+    "size": 171989
+  },
+  {
+    "section": "1.5 项目案例",
+    "svc": "AppCasePractice",
+    "kind": "fileDocuments",
+    "file": "农业气象站监测系统.zip",
+    "ok": true,
+    "size": 884568
+  },
+  {
+    "section": "1.6 编码练习",
+    "svc": "CodePractice",
+    "kind": "codeFiles",
+    "file": "Program.cs",
+    "ok": true,
+    "size": 2948
+  },
+  {
+    "section": "1.6 编码练习",
+    "svc": "CodePractice",
+    "kind": "codeFiles",
+    "file": "Program(answer).cs",
+    "ok": true,
+    "size": 2996
+  },
+  {
+    "section": "1.6 编码练习",
+    "svc": "CodePractice",
+    "kind": "hint",
+    "file": "1.6 编码练习_提示.html",
+    "ok": true,
+    "size": 3185
+  },
+  {
+    "section": "B1. 仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "packageXml",
+    "file": "空.N2V",
+    "ok": true,
+    "size": 512,
+    "encrypted": true
+  },
+  {
+    "section": "B1. 仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "packageXmlAnsewer",
+    "file": "图书管理系统.N2V",
+    "ok": true,
+    "size": 18264,
+    "encrypted": true
+  },
+  {
+    "section": "B1. 仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "remark",
+    "file": "B1. 仿真连线_说明.html",
+    "ok": true,
+    "size": 309154
+  },
+  {
+    "section": "B2.仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "packageXml",
+    "file": "空.N2V",
+    "ok": true,
+    "size": 512,
+    "encrypted": true
+  },
+  {
+    "section": "B2.仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "packageXmlAnsewer",
+    "file": "火灾自动报警系统.N2V",
+    "ok": true,
+    "size": 87552,
+    "encrypted": true
+  },
+  {
+    "section": "B2.仿真连线",
+    "svc": "EmulatorPractice",
+    "kind": "remark",
+    "file": "B2.仿真连线_说明.html",
+    "ok": true,
+    "size": 117340
+  }
+]

@@ -1,0 +1,77 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-ef5b8ae8"],
+  {
+    4888: function (t, e, a) {
+      "use strict";
+      var i = a("ee91"),
+        s = a.n(i);
+      s.a;
+    },
+    "66ce": function (t, e, a) {
+      "use strict";
+      a.r(e);
+      var i = function () {
+          var t = this,
+            e = t.$createElement,
+            a = t._self._c || e;
+          return a("div", { staticClass: "frame-detial" }, [
+            a("div", { staticClass: "title" }, [
+              a("div", { staticClass: "title-left" }, [
+                a(
+                  "div",
+                  [
+                    a("router-link", { attrs: { to: "/main/student/home" } }, [t._v("课程章节标题")]),
+                    a("span", { staticClass: "splice" }, [t._v("/")]),
+                    t._v(" 章节练习名称 "),
+                  ],
+                  1,
+                ),
+              ]),
+              t._m(0),
+            ]),
+            a("div", { staticClass: "container" }),
+          ]);
+        },
+        s = [
+          function () {
+            var t = this,
+              e = t.$createElement,
+              a = t._self._c || e;
+            return a("div", { staticClass: "title-right" }, [a("div", [t._v(" 右边栏 ")])]);
+          },
+        ],
+        c = a("9f12"),
+        l = a("8b83"),
+        n = a("c65a"),
+        r = a("c03e"),
+        o = a("9ab4"),
+        f = a("60a3"),
+        d = (function (t) {
+          function e() {
+            return (Object(c["a"])(this, e), Object(l["a"])(this, Object(n["a"])(e).apply(this, arguments)));
+          }
+          return (Object(r["a"])(e, t), e);
+        })(f["c"]);
+      d = Object(o["a"])([f["a"]], d);
+      var p = d,
+        u = p,
+        v = (a("4888"), a("2877")),
+        b = Object(v["a"])(u, i, s, !1, null, "9f53547c", null);
+      e["default"] = b.exports;
+    },
+    ee91: function (t, e, a) {
+      var i = a("fc0d");
+      ("string" === typeof i && (i = [[t.i, i, ""]]), i.locals && (t.exports = i.locals));
+      var s = a("499e").default;
+      s("35367ac2", i, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    fc0d: function (t, e, a) {
+      ((e = t.exports = a("24fb")(!1)),
+        e.push([
+          t.i,
+          ".frame-detial[data-v-9f53547c]{height:calc(100vh - 60px);overflow-y:auto}.title[data-v-9f53547c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;border-bottom:1px solid #e8e8e8}.title div[data-v-9f53547c]{height:60px;display:-webkit-box;-webkit-box-align:center}.title .title-left[data-v-9f53547c]{margin-left:20px}.title .title-right[data-v-9f53547c]{margin-right:20px}.title .splice[data-v-9f53547c]{margin:0 10px}",
+          "",
+        ]));
+    },
+  },
+]);

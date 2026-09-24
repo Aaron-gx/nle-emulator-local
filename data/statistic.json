@@ -1,0 +1,20 @@
+{
+  "docTimes": 5,
+  "docDuration": 10,
+  "videoTimes": 2,
+  "videoDuration": 4,
+  "exerTimes": 75,
+  "exerDuration": 7387,
+  "codeTimes": 1,
+  "codeDuration": 4,
+  "appTimes": 1,
+  "appDuration": 1,
+  "emulTimes": 12,
+  "emulDuration": 823,
+  "reportsCount": 0,
+  "taskCount": 17,
+  "taskDuration": 8229,
+  "recordConut": 32,
+  "recordPassCount": 0,
+  "taskPassArray": []
+}

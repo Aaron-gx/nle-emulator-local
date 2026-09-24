@@ -1,0 +1,2278 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-b19fc0d2"],
+  {
+    "03cd": function (t, e, n) {
+      "use strict";
+      var r, i, a, o, s, c, u, l, f, d, p, h, x, b;
+      (n.d(e, "a", function () {
+        return d;
+      }),
+        n.d(e, "b", function () {
+          return h;
+        }),
+        (function (t) {
+          ((t["None"] = "未供电"), (t["Abnormal"] = "供电异常"), (t["Normal"] = "供电正常"));
+        })(r || (r = {})),
+        (function (t) {
+          ((t["None"] = "未定义"),
+            (t["GND"] = "地线"),
+            (t["VS"] = "+VS"),
+            (t["Power"] = "适配器信号"),
+            (t["Signal_Digital_I"] = "数字信号输入"),
+            (t["Signal_Digital_O"] = "数字信号输出"),
+            (t["Signal_Digital_IO"] = "数字信号输入/输出"),
+            (t["Signal_Analog_P"] = "正模拟信号"),
+            (t["Signal_Analog_N"] = "负模拟信号"),
+            (t["Signal_485_P"] = "正485信号"),
+            (t["Signal_485_N"] = "负485信号"),
+            (t["Signal_232"] = "232信号"),
+            (t["Signal_RJ45"] = "网口信号"),
+            (t["Signal_USB"] = "usb信号"),
+            (t["Signal_ZigBee"] = "ZigBee信号"),
+            (t["Signal_RFID"] = "RFID频射信号"),
+            (t["Signal_NewLab"] = "NewLab八根接线柱信号"),
+            (t["Signal_232_RX"] = "RX"),
+            (t["Signal_232_TX"] = "TX"),
+            (t["Signal_Analog_DC"] = "直流模拟信号"),
+            (t["Signal_RFID_Antenna"] = "RFID天线"),
+            (t["Signal_RFID_Multiplexer"] = "RFID多路复用器"),
+            (t["Signal_RFID_Control"] = "RFID控制器"),
+            (t["Signal_RFID_Door"] = "RFID门禁"));
+        })(i || (i = {})),
+        (function (t) {
+          ((t[(t["Unknow"] = 0)] = "Unknow"), (t[(t["Root"] = 1)] = "Root"), (t[(t["Node"] = 2)] = "Node"));
+        })(a || (a = {})),
+        (function (t) {
+          ((t["Error"] = "错误"), (t["Correct"] = "正确"), (t["Abnormal"] = "异常"));
+        })(o || (o = {})),
+        (function (t) {
+          ((t["VerifyData"] = "验证数据"), (t["Screenshot"] = "截图"));
+        })(s || (s = {})),
+        (function (t) {
+          ((t["RealPhysicalDevices"] = "连接真实物理设备"), (t["AndroidPad"] = "安卓平板"));
+        })(c || (c = {})),
+        (function (t) {
+          ((t[(t["Base"] = 0)] = "Base"),
+            (t[(t["Validate"] = 1)] = "Validate"),
+            (t[(t["Upload"] = 2)] = "Upload"),
+            (t[(t["Emulate"] = 3)] = "Emulate"),
+            (t[(t["VirtualCOM"] = 4)] = "VirtualCOM"));
+        })(u || (u = {})),
+        (function (t) {
+          ((t["Wired"] = "有线传感器"),
+            (t["Wireless"] = "无线传感器"),
+            (t["Actuator"] = "继电器"),
+            (t["Gatewary"] = "网关"),
+            (t["IO"] = "I/0模块"),
+            (t["RFID_125K"] = "125K设备(LF)"),
+            (t["RFID_ISO_144443_TypeA"] = "14443设备(HF)"),
+            (t["RFID_ISO_15693"] = "15693设备(HF)"),
+            (t["RFID_ISO_18000_6C"] = "18000设备(UHF)"),
+            (t["RFID_Other"] = "其他设备"),
+            (t["Terminal"] = "终端"),
+            (t["Load"] = "负载"),
+            (t["Power"] = "电源"),
+            (t["Other"] = "其他外设"),
+            (t["NewLabSensor"] = "NewLab传感器"),
+            (t["NewLabEmbedded"] = "嵌入式"),
+            (t["NewLabRFID"] = "NewLabRFID"));
+        })(l || (l = {})),
+        (function (t) {
+          ((t[(t["None"] = -1)] = "None"),
+            (t[(t["Top"] = 0)] = "Top"),
+            (t[(t["Right"] = 1)] = "Right"),
+            (t[(t["Bottom"] = 2)] = "Bottom"),
+            (t[(t["Left"] = 3)] = "Left"));
+        })(f || (f = {})),
+        (function (t) {
+          ((t[(t["RichText"] = 0)] = "RichText"),
+            (t[(t["Exercise"] = 1)] = "Exercise"),
+            (t[(t["Video"] = 2)] = "Video"),
+            (t[(t["Emulator"] = 3)] = "Emulator"),
+            (t[(t["Code"] = 4)] = "Code"),
+            (t[(t["AppCase"] = 5)] = "AppCase"));
+        })(d || (d = {})),
+        (function (t) {
+          ((t[(t["图文"] = 0)] = "图文"),
+            (t[(t["习题"] = 1)] = "习题"),
+            (t[(t["视频"] = 2)] = "视频"),
+            (t[(t["仿真"] = 3)] = "仿真"),
+            (t[(t["编码"] = 4)] = "编码"),
+            (t[(t["案例"] = 5)] = "案例"));
+        })(p || (p = {})),
+        (function (t) {
+          ((t[(t["undone"] = 1)] = "undone"), (t[(t["done"] = 2)] = "done"), (t[(t["flag"] = 4)] = "flag"), (t[(t["current"] = 8)] = "current"));
+        })(h || (h = {})),
+        (function (t) {
+          ((t[(t["Old"] = 0)] = "Old"), (t[(t["New"] = 1)] = "New"));
+        })(x || (x = {})),
+        (function (t) {
+          ((t[(t["Channel_11"] = 11)] = "Channel_11"),
+            (t[(t["Channel_12"] = 12)] = "Channel_12"),
+            (t[(t["Channel_13"] = 13)] = "Channel_13"),
+            (t[(t["Channel_14"] = 14)] = "Channel_14"),
+            (t[(t["Channel_15"] = 15)] = "Channel_15"),
+            (t[(t["Channel_16"] = 16)] = "Channel_16"),
+            (t[(t["Channel_17"] = 17)] = "Channel_17"),
+            (t[(t["Channel_18"] = 18)] = "Channel_18"),
+            (t[(t["Channel_19"] = 19)] = "Channel_19"),
+            (t[(t["Channel_20"] = 20)] = "Channel_20"),
+            (t[(t["Channel_21"] = 21)] = "Channel_21"),
+            (t[(t["Channel_22"] = 22)] = "Channel_22"),
+            (t[(t["Channel_23"] = 23)] = "Channel_23"),
+            (t[(t["Channel_24"] = 24)] = "Channel_24"),
+            (t[(t["Channel_25"] = 25)] = "Channel_25"),
+            (t[(t["Channel_26"] = 26)] = "Channel_26"));
+        })(b || (b = {})));
+    },
+    "057f": function (t, e, n) {
+      var r = n("fc6a"),
+        i = n("241c").f,
+        a = {}.toString,
+        o = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
+        s = function (t) {
+          try {
+            return i(t);
+          } catch (e) {
+            return o.slice();
+          }
+        };
+      t.exports.f = function (t) {
+        return o && "[object Window]" == a.call(t) ? s(t) : i(r(t));
+      };
+    },
+    "07d6": function (t, e) {
+      t.exports = function () {
+        throw new Error("define cannot be used indirect");
+      };
+    },
+    1212: function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this,
+              n = u();
+            ((e.next = function () {
+              var t = 2091639 * e.s0 + 2.3283064365386963e-10 * e.c;
+              return ((e.s0 = e.s1), (e.s1 = e.s2), (e.s2 = t - (e.c = 0 | t)));
+            }),
+              (e.c = 1),
+              (e.s0 = n(" ")),
+              (e.s1 = n(" ")),
+              (e.s2 = n(" ")),
+              (e.s0 -= n(t)),
+              e.s0 < 0 && (e.s0 += 1),
+              (e.s1 -= n(t)),
+              e.s1 < 0 && (e.s1 += 1),
+              (e.s2 -= n(t)),
+              e.s2 < 0 && (e.s2 += 1),
+              (n = null));
+          }
+          function s(t, e) {
+            return ((e.c = t.c), (e.s0 = t.s0), (e.s1 = t.s1), (e.s2 = t.s2), e);
+          }
+          function c(t, e) {
+            var n = new o(t),
+              r = e && e.state,
+              i = n.next;
+            return (
+              (i.int32 = function () {
+                return (4294967296 * n.next()) | 0;
+              }),
+              (i.double = function () {
+                return i() + 11102230246251565e-32 * ((2097152 * i()) | 0);
+              }),
+              (i.quick = i),
+              r &&
+                ("object" == typeof r && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          function u() {
+            var t = 4022871197,
+              e = function (e) {
+                e = String(e);
+                for (var n = 0; n < e.length; n++) {
+                  t += e.charCodeAt(n);
+                  var r = 0.02519603282416938 * t;
+                  ((t = r >>> 0), (r -= t), (r *= t), (t = r >>> 0), (r -= t), (t += 4294967296 * r));
+                }
+                return 2.3283064365386963e-10 * (t >>> 0);
+              };
+            return e;
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.alea = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    1276: function (t, e, n) {
+      "use strict";
+      var r = n("d784"),
+        i = n("44e7"),
+        a = n("825a"),
+        o = n("1d80"),
+        s = n("4840"),
+        c = n("8aa5"),
+        u = n("50c4"),
+        l = n("14c3"),
+        f = n("9263"),
+        d = n("d039"),
+        p = [].push,
+        h = Math.min,
+        x = 4294967295,
+        b = !d(function () {
+          return !RegExp(x, "y");
+        });
+      r(
+        "split",
+        2,
+        function (t, e, n) {
+          var r;
+          return (
+            (r =
+              "c" == "abbc".split(/(b)*/)[1] ||
+              4 != "test".split(/(?:)/, -1).length ||
+              2 != "ab".split(/(?:ab)*/).length ||
+              4 != ".".split(/(.?)(.?)/).length ||
+              ".".split(/()()/).length > 1 ||
+              "".split(/.?/).length
+                ? function (t, n) {
+                    var r = String(o(this)),
+                      a = void 0 === n ? x : n >>> 0;
+                    if (0 === a) return [];
+                    if (void 0 === t) return [r];
+                    if (!i(t)) return e.call(r, t, a);
+                    var s,
+                      c,
+                      u,
+                      l = [],
+                      d = (t.ignoreCase ? "i" : "") + (t.multiline ? "m" : "") + (t.unicode ? "u" : "") + (t.sticky ? "y" : ""),
+                      h = 0,
+                      b = new RegExp(t.source, d + "g");
+                    while ((s = f.call(b, r))) {
+                      if (
+                        ((c = b.lastIndex),
+                        c > h &&
+                          (l.push(r.slice(h, s.index)),
+                          s.length > 1 && s.index < r.length && p.apply(l, s.slice(1)),
+                          (u = s[0].length),
+                          (h = c),
+                          l.length >= a))
+                      )
+                        break;
+                      b.lastIndex === s.index && b.lastIndex++;
+                    }
+                    return (h === r.length ? (!u && b.test("")) || l.push("") : l.push(r.slice(h)), l.length > a ? l.slice(0, a) : l);
+                  }
+                : "0".split(void 0, 0).length
+                  ? function (t, n) {
+                      return void 0 === t && 0 === n ? [] : e.call(this, t, n);
+                    }
+                  : e),
+            [
+              function (e, n) {
+                var i = o(this),
+                  a = void 0 == e ? void 0 : e[t];
+                return void 0 !== a ? a.call(e, i, n) : r.call(String(i), e, n);
+              },
+              function (t, i) {
+                var o = n(r, t, this, i, r !== e);
+                if (o.done) return o.value;
+                var f = a(t),
+                  d = String(this),
+                  p = s(f, RegExp),
+                  g = f.unicode,
+                  v = (f.ignoreCase ? "i" : "") + (f.multiline ? "m" : "") + (f.unicode ? "u" : "") + (b ? "y" : "g"),
+                  y = new p(b ? f : "^(?:" + f.source + ")", v),
+                  m = void 0 === i ? x : i >>> 0;
+                if (0 === m) return [];
+                if (0 === d.length) return null === l(y, d) ? [d] : [];
+                var w = 0,
+                  _ = 0,
+                  S = [];
+                while (_ < d.length) {
+                  y.lastIndex = b ? _ : 0;
+                  var k,
+                    E = l(y, b ? d : d.slice(_));
+                  if (null === E || (k = h(u(y.lastIndex + (b ? 0 : _)), d.length)) === w) _ = c(d, _, g);
+                  else {
+                    if ((S.push(d.slice(w, _)), S.length === m)) return S;
+                    for (var C = 1; C <= E.length - 1; C++) if ((S.push(E[C]), S.length === m)) return S;
+                    _ = w = k;
+                  }
+                }
+                return (S.push(d.slice(w)), S);
+              },
+            ]
+          );
+        },
+        !b,
+      );
+    },
+    3: function (t, e) {},
+    "3c35": function (t, e) {
+      (function (e) {
+        t.exports = e;
+      }).call(this, {});
+    },
+    "3faa0": function (t, e, n) {
+      e = t.exports = n("24fb")(!1);
+      var r = n("1de5"),
+        i = r(n("a887"));
+      e.push([
+        t.i,
+        ".body[data-v-63858a62],.body .left[data-v-63858a62],.body .left .type[data-v-63858a62],.body .right[data-v-63858a62],.flex-box[data-v-63858a62]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;border:0}[data-v-63858a62]::-webkit-scrollbar{display:none}.body[data-v-63858a62]{height:calc(100vh - 120px);overflow-y:scroll}.body .left[data-v-63858a62]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;border-right:1px solid #ebebeb}.body .left .type[data-v-63858a62]{-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 30px;height:60px;min-height:60px;background:#f2f2f2}.body .left .type>p[data-v-63858a62]{font-size:18px;color:#1f1f1f}.body .left .type>div[data-v-63858a62]{font-size:14px;color:#666}.body .left .type>div span[data-v-63858a62]{color:#ff7b53}.body .left .exercise[data-v-63858a62]{position:relative;border-top:1px solid #ebebeb;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;overflow-y:hidden}.body .left .exercise .img-flag[data-v-63858a62]{position:absolute;top:30px;right:30px;height:16px;width:16px;cursor:pointer;background-image:url(" +
+          i +
+          ")}.body .left .btns[data-v-63858a62]{border-top:1px solid #ebebeb;height:80px;min-height:80px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.body .left .btns .btn.sub[data-v-63858a62]{background:#ff7b53}.body .left .btns .btn[data-v-63858a62]{width:100px;height:36px;margin:0 10px;background:#207bf8;color:#fff}.body .right[data-v-63858a62]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;width:270px}.body .right .card[data-v-63858a62]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;overflow-y:scroll;scrollbar-width:0}.body .right .card .card-title[data-v-63858a62]{height:40px;line-height:40px;font-size:14px;color:#207bf8;padding:0 12px;background:#f8fafc;margin:10px}.body .right .card .ans[data-v-63858a62]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;padding:0 10px}.body .right .card .ans .square-ans[data-v-63858a62]{height:36px;width:36px;text-align:center;line-height:36px;font-size:14px;margin:2.8px;cursor:pointer}.body .right .tips[data-v-63858a62]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;border-top:1px solid #ebebeb;height:80px;min-height:80px}.exer[data-v-63858a62]{overflow-y:hidden;padding:50px 30px}.exer .question[data-v-63858a62]{font-size:16px;color:#000;margin-bottom:50px}.exer .option[data-v-63858a62]{display:block;font-size:14px;color:#666;margin-bottom:25px}.exer .option .opt-item[data-v-63858a62]{margin:0 8px}.exer .option .opt-item .green[data-v-63858a62]{color:green}.exer .option .opt-item .red[data-v-63858a62]{color:red}.undone[data-v-63858a62]{background:#f2f2f2;color:#000}.done[data-v-63858a62]{background:#c1f5f0;color:#02c4af}.flag[data-v-63858a62]{background:#ffdcd1!important;color:#ff7b53!important}.current[data-v-63858a62]{background:#207bf8;color:#fff}.square[data-v-63858a62]{-ms-flex-item-align:center;align-self:center}.square div[data-v-63858a62]{margin-top:3px;width:55px;height:32px;line-height:32px;text-align:center;font-size:14px;border-radius:2px}.square p[data-v-63858a62]{font-size:12px;color:#333;margin-top:5px;text-align:center}",
+        "",
+      ]);
+    },
+    "4a80": function (t, e, n) {
+      "use strict";
+      (n("99af"), n("4160"), n("159b"), n("96cf"));
+      var r = n("89ba"),
+        i = n("9f12"),
+        a = n("53fe"),
+        o = n("59b9"),
+        s = n("482f"),
+        c = (function () {
+          function t() {
+            Object(i["a"])(this, t);
+          }
+          return (
+            Object(a["a"])(t, [
+              {
+                key: "getSectionStateByTargetId",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionStateByTargetId/").concat(e), method: "GET" })
+                              );
+                            case 4:
+                              return ((n = t.sent), (r = null), n && 0 === n.code && (r = n.data), t.abrupt("return", r));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getSectionStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n, r) {
+                      var i, a;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n && r) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n, sectionId: r },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (i = t.sent),
+                                (a = []),
+                                i &&
+                                  0 === i.code &&
+                                  i.data.forEach(function (t) {
+                                    a.push(t);
+                                  }),
+                                t.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n, r) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskAllStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r, i;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetTaskAllStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = t.sent),
+                                (i = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (t) {
+                                    i.push(t);
+                                  }),
+                                t.abrupt("return", i)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskSectionStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r, i;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetTaskSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = t.sent),
+                                (i = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (t) {
+                                    i.push(t);
+                                  }),
+                                t.abrupt("return", i)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getSectionState",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (((n = null), e)) {
+                                t.next = 3;
+                                break;
+                              }
+                              return t.abrupt("return", n);
+                            case 3:
+                              return (
+                                (t.next = 5),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionState/").concat(e), method: "GET" })
+                              );
+                            case 5:
+                              return ((r = t.sent), r && 0 === r.code && (n = r.data), t.abrupt("return", n));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "addOrUpdateSectionState",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/AddOrUpdateSectionState"), method: "POST", data: e })
+                              );
+                            case 4:
+                              if (((n = t.sent), "undefined" === typeof n)) {
+                                t.next = 7;
+                                break;
+                              }
+                              return t.abrupt("return", n);
+                            case 7:
+                              return t.abrupt("return", null);
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+            ]),
+            t
+          );
+        })();
+      e["a"] = new c();
+    },
+    "4e82": function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        i = n("1c0b"),
+        a = n("7b0b"),
+        o = n("d039"),
+        s = n("b301"),
+        c = [].sort,
+        u = [1, 2, 3],
+        l = o(function () {
+          u.sort(void 0);
+        }),
+        f = o(function () {
+          u.sort(null);
+        }),
+        d = s("sort"),
+        p = l || !f || d;
+      r(
+        { target: "Array", proto: !0, forced: p },
+        {
+          sort: function (t) {
+            return void 0 === t ? c.call(a(this)) : c.call(a(this), i(t));
+          },
+        },
+      );
+    },
+    6125: function (t, e, n) {
+      var r = n("1212"),
+        i = n("b838"),
+        a = n("a49e"),
+        o = n("cae0"),
+        s = n("7aec"),
+        c = n("89ed"),
+        u = n("a49d");
+      ((u.alea = r), (u.xor128 = i), (u.xorwow = a), (u.xorshift7 = o), (u.xor4096 = s), (u.tychei = c), (t.exports = u));
+    },
+    "62e4": function (t, e) {
+      t.exports = function (t) {
+        return (
+          t.webpackPolyfill ||
+            ((t.deprecate = function () {}),
+            (t.paths = []),
+            t.children || (t.children = []),
+            Object.defineProperty(t, "loaded", {
+              enumerable: !0,
+              get: function () {
+                return t.l;
+              },
+            }),
+            Object.defineProperty(t, "id", {
+              enumerable: !0,
+              get: function () {
+                return t.i;
+              },
+            }),
+            (t.webpackPolyfill = 1)),
+          t
+        );
+      };
+    },
+    "746f": function (t, e, n) {
+      var r = n("428f"),
+        i = n("5135"),
+        a = n("c032"),
+        o = n("9bf2").f;
+      t.exports = function (t) {
+        var e = r.Symbol || (r.Symbol = {});
+        i(e, t) || o(e, t, { value: a.f(t) });
+      };
+    },
+    "7aec": function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this;
+            function n(t, e) {
+              var n,
+                r,
+                i,
+                a,
+                o,
+                s = [],
+                c = 128;
+              for (e === (0 | e) ? ((r = e), (e = null)) : ((e += "\0"), (r = 0), (c = Math.max(c, e.length))), i = 0, a = -32; a < c; ++a)
+                (e && (r ^= e.charCodeAt((a + 32) % e.length)),
+                  0 === a && (o = r),
+                  (r ^= r << 10),
+                  (r ^= r >>> 15),
+                  (r ^= r << 4),
+                  (r ^= r >>> 13),
+                  a >= 0 && ((o = (o + 1640531527) | 0), (n = s[127 & a] ^= r + o), (i = 0 == n ? i + 1 : 0)));
+              for (i >= 128 && (s[127 & ((e && e.length) || 0)] = -1), i = 127, a = 512; a > 0; --a)
+                ((r = s[(i + 34) & 127]), (n = s[(i = (i + 1) & 127)]), (r ^= r << 13), (n ^= n << 17), (r ^= r >>> 15), (n ^= n >>> 12), (s[i] = r ^ n));
+              ((t.w = o), (t.X = s), (t.i = i));
+            }
+            ((e.next = function () {
+              var t,
+                n,
+                r = e.w,
+                i = e.X,
+                a = e.i;
+              return (
+                (e.w = r = (r + 1640531527) | 0),
+                (n = i[(a + 34) & 127]),
+                (t = i[(a = (a + 1) & 127)]),
+                (n ^= n << 13),
+                (t ^= t << 17),
+                (n ^= n >>> 15),
+                (t ^= t >>> 12),
+                (n = i[a] = n ^ t),
+                (e.i = a),
+                (n + (r ^ (r >>> 16))) | 0
+              );
+            }),
+              n(e, t));
+          }
+          function s(t, e) {
+            return ((e.i = t.i), (e.w = t.w), (e.X = t.X.slice()), e);
+          }
+          function c(t, e) {
+            null == t && (t = +new Date());
+            var n = new o(t),
+              r = e && e.state,
+              i = function () {
+                return (n.next() >>> 0) / 4294967296;
+              };
+            return (
+              (i.double = function () {
+                do {
+                  var t = n.next() >>> 11,
+                    e = (n.next() >>> 0) / 4294967296,
+                    r = (t + e) / (1 << 21);
+                } while (0 === r);
+                return r;
+              }),
+              (i.int32 = n.next),
+              (i.quick = i),
+              r &&
+                (r.X && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.xor4096 = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    "89ed": function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this,
+              n = "";
+            ((e.next = function () {
+              var t = e.b,
+                n = e.c,
+                r = e.d,
+                i = e.a;
+              return (
+                (t = (t << 25) ^ (t >>> 7) ^ n),
+                (n = (n - r) | 0),
+                (r = (r << 24) ^ (r >>> 8) ^ i),
+                (i = (i - t) | 0),
+                (e.b = t = (t << 20) ^ (t >>> 12) ^ n),
+                (e.c = n = (n - r) | 0),
+                (e.d = (r << 16) ^ (n >>> 16) ^ i),
+                (e.a = (i - t) | 0)
+              );
+            }),
+              (e.a = 0),
+              (e.b = 0),
+              (e.c = -1640531527),
+              (e.d = 1367130551),
+              t === Math.floor(t) ? ((e.a = (t / 4294967296) | 0), (e.b = 0 | t)) : (n += t));
+            for (var r = 0; r < n.length + 20; r++) ((e.b ^= 0 | n.charCodeAt(r)), e.next());
+          }
+          function s(t, e) {
+            return ((e.a = t.a), (e.b = t.b), (e.c = t.c), (e.d = t.d), e);
+          }
+          function c(t, e) {
+            var n = new o(t),
+              r = e && e.state,
+              i = function () {
+                return (n.next() >>> 0) / 4294967296;
+              };
+            return (
+              (i.double = function () {
+                do {
+                  var t = n.next() >>> 11,
+                    e = (n.next() >>> 0) / 4294967296,
+                    r = (t + e) / (1 << 21);
+                } while (0 === r);
+                return r;
+              }),
+              (i.int32 = n.next),
+              (i.quick = i),
+              r &&
+                ("object" == typeof r && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.tychei = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    a49d: function (t, e, n) {
+      var r;
+      (function (i, a, o) {
+        var s,
+          c = 256,
+          u = 6,
+          l = 52,
+          f = "random",
+          d = o.pow(c, u),
+          p = o.pow(2, l),
+          h = 2 * p,
+          x = c - 1;
+        function b(t, e, n) {
+          var r = [];
+          e = 1 == e ? { entropy: !0 } : e || {};
+          var i = m(y(e.entropy ? [t, _(a)] : null == t ? w() : t, 3), r),
+            s = new g(r),
+            l = function () {
+              var t = s.g(u),
+                e = d,
+                n = 0;
+              while (t < p) ((t = (t + n) * c), (e *= c), (n = s.g(1)));
+              while (t >= h) ((t /= 2), (e /= 2), (n >>>= 1));
+              return (t + n) / e;
+            };
+          return (
+            (l.int32 = function () {
+              return 0 | s.g(4);
+            }),
+            (l.quick = function () {
+              return s.g(4) / 4294967296;
+            }),
+            (l.double = l),
+            m(_(s.S), a),
+            (
+              e.pass ||
+              n ||
+              function (t, e, n, r) {
+                return (
+                  r &&
+                    (r.S && v(r, s),
+                    (t.state = function () {
+                      return v(s, {});
+                    })),
+                  n ? ((o[f] = t), e) : t
+                );
+              }
+            )(l, i, "global" in e ? e.global : this == o, e.state)
+          );
+        }
+        function g(t) {
+          var e,
+            n = t.length,
+            r = this,
+            i = 0,
+            a = (r.i = r.j = 0),
+            o = (r.S = []);
+          n || (t = [n++]);
+          while (i < c) o[i] = i++;
+          for (i = 0; i < c; i++) ((o[i] = o[(a = x & (a + t[i % n] + (e = o[i])))]), (o[a] = e));
+          (r.g = function (t) {
+            var e,
+              n = 0,
+              i = r.i,
+              a = r.j,
+              o = r.S;
+            while (t--) ((e = o[(i = x & (i + 1))]), (n = n * c + o[x & ((o[i] = o[(a = x & (a + e))]) + (o[a] = e))]));
+            return ((r.i = i), (r.j = a), n);
+          })(c);
+        }
+        function v(t, e) {
+          return ((e.i = t.i), (e.j = t.j), (e.S = t.S.slice()), e);
+        }
+        function y(t, e) {
+          var n,
+            r = [],
+            i = typeof t;
+          if (e && "object" == i)
+            for (n in t)
+              try {
+                r.push(y(t[n], e - 1));
+              } catch (a) {}
+          return r.length ? r : "string" == i ? t : t + "\0";
+        }
+        function m(t, e) {
+          var n,
+            r = t + "",
+            i = 0;
+          while (i < r.length) e[x & i] = x & ((n ^= 19 * e[x & i]) + r.charCodeAt(i++));
+          return _(e);
+        }
+        function w() {
+          try {
+            var t;
+            return (s && (t = s.randomBytes) ? (t = t(c)) : ((t = new Uint8Array(c)), (i.crypto || i.msCrypto).getRandomValues(t)), _(t));
+          } catch (r) {
+            var e = i.navigator,
+              n = e && e.plugins;
+            return [+new Date(), i, n, i.screen, _(a)];
+          }
+        }
+        function _(t) {
+          return String.fromCharCode.apply(0, t);
+        }
+        if ((m(o.random(), a), t.exports)) {
+          t.exports = b;
+          try {
+            s = n(3);
+          } catch (S) {}
+        } else
+          ((r = function () {
+            return b;
+          }.call(e, n, e, t)),
+            void 0 === r || (t.exports = r));
+      })("undefined" !== typeof self ? self : this, [], Math);
+    },
+    a49e: function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this,
+              n = "";
+            ((e.next = function () {
+              var t = e.x ^ (e.x >>> 2);
+              return ((e.x = e.y), (e.y = e.z), (e.z = e.w), (e.w = e.v), ((e.d = (e.d + 362437) | 0) + (e.v = e.v ^ (e.v << 4) ^ t ^ (t << 1))) | 0);
+            }),
+              (e.x = 0),
+              (e.y = 0),
+              (e.z = 0),
+              (e.w = 0),
+              (e.v = 0),
+              t === (0 | t) ? (e.x = t) : (n += t));
+            for (var r = 0; r < n.length + 64; r++) ((e.x ^= 0 | n.charCodeAt(r)), r == n.length && (e.d = (e.x << 10) ^ (e.x >>> 4)), e.next());
+          }
+          function s(t, e) {
+            return ((e.x = t.x), (e.y = t.y), (e.z = t.z), (e.w = t.w), (e.v = t.v), (e.d = t.d), e);
+          }
+          function c(t, e) {
+            var n = new o(t),
+              r = e && e.state,
+              i = function () {
+                return (n.next() >>> 0) / 4294967296;
+              };
+            return (
+              (i.double = function () {
+                do {
+                  var t = n.next() >>> 11,
+                    e = (n.next() >>> 0) / 4294967296,
+                    r = (t + e) / (1 << 21);
+                } while (0 === r);
+                return r;
+              }),
+              (i.int32 = n.next),
+              (i.quick = i),
+              r &&
+                ("object" == typeof r && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.xorwow = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    a4cd: function (t, e, n) {
+      "use strict";
+      n.r(e);
+      var r,
+        i,
+        a = function () {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("div", { directives: [{ name: "loading", rawName: "v-loading", value: t.load, expression: "load" }] }, [
+            n("div", { staticClass: "body" }, [
+              n("div", { staticClass: "left" }, [
+                n("div", { staticClass: "type" }, [
+                  n(
+                    "p",
+                    [
+                      t._v(" " + t._s(t.$t("lang.第")) + " "),
+                      n("span", { staticStyle: { margin: "0 3px" } }, [t._v(t._s(t.currentExercise.index))]),
+                      n("span", [t._v(" " + t._s(t.$t("lang.题")) + " ")]),
+                      t.record.scoreDisplay >= 2
+                        ? n("i", { staticStyle: { "font-size": "8px", color: "#aaa" } }, [
+                            t._v("（" + t._s(t.currentExercise.score) + " " + t._s(t.$t("lang.分")) + "）"),
+                          ])
+                        : t._e(),
+                      1 == t.currentExercise.type ? n("el-tag", { attrs: { size: "medium ", effect: "plain" } }, [t._v(t._s(t.$t("lang.判断题")))]) : t._e(),
+                      2 == t.currentExercise.type ? n("el-tag", { attrs: { size: "medium ", effect: "plain" } }, [t._v(t._s(t.$t("lang.填空题")))]) : t._e(),
+                      3 == t.currentExercise.type ? n("el-tag", { attrs: { size: "medium ", effect: "plain" } }, [t._v(t._s(t.$t("lang.单选题")))]) : t._e(),
+                      4 == t.currentExercise.type ? n("el-tag", { attrs: { size: "medium ", effect: "plain" } }, [t._v(t._s(t.$t("lang.多选题")))]) : t._e(),
+                    ],
+                    1,
+                  ),
+                  n("div", { staticClass: "total" }, [
+                    t._v(" " + t._s(t.$t("lang.共")) + " " + t._s(t.exercises.length) + " " + t._s(t.$t("lang.题，当前第")) + " "),
+                    n("span", [t._v(t._s(t.currentExercise.index))]),
+                    t._v(" " + t._s(t.$t("lang.题")) + " "),
+                  ]),
+                ]),
+                n(
+                  "div",
+                  { staticClass: "exercise" },
+                  [
+                    n("el-tooltip", { attrs: { effect: "dark", content: t.$t("lang.标记"), placement: "bottom" } }, [
+                      n("div", { staticClass: "img-flag", on: { click: t.exerflag } }),
+                    ]),
+                    1 == t.currentExercise.type
+                      ? n(
+                          "div",
+                          { staticClass: "exer" },
+                          [
+                            n("div", { staticClass: "question", domProps: { innerHTML: t._s(t.currentExercise.question) } }),
+                            n(
+                              "el-radio-group",
+                              {
+                                model: {
+                                  value: t.currentExercise.state.content,
+                                  callback: function (e) {
+                                    t.$set(t.currentExercise.state, "content", e);
+                                  },
+                                  expression: "currentExercise.state.content",
+                                },
+                              },
+                              [
+                                n(
+                                  "el-radio",
+                                  {
+                                    staticClass: "option",
+                                    attrs: { disabled: t.isReadonly, label: "A" },
+                                    on: {
+                                      change: function (e) {
+                                        t.dataChanged = !0;
+                                      },
+                                    },
+                                  },
+                                  [
+                                    n("span", { staticClass: "opt-item green" }, [
+                                      n("i", { staticClass: "el-icon-circle-check" }),
+                                      t._v(" " + t._s(t.$t("lang.正确"))),
+                                    ]),
+                                  ],
+                                ),
+                                n(
+                                  "el-radio",
+                                  {
+                                    staticClass: "option",
+                                    attrs: { disabled: t.isReadonly, label: "B" },
+                                    on: {
+                                      change: function (e) {
+                                        t.dataChanged = !0;
+                                      },
+                                    },
+                                  },
+                                  [
+                                    n("span", { staticClass: "opt-item red" }, [
+                                      n("i", { staticClass: "el-icon-circle-close" }),
+                                      t._v(" " + t._s(t.$t("lang.错误"))),
+                                    ]),
+                                  ],
+                                ),
+                              ],
+                              1,
+                            ),
+                          ],
+                          1,
+                        )
+                      : t._e(),
+                    2 == t.currentExercise.type
+                      ? n(
+                          "div",
+                          { staticClass: "exer" },
+                          [
+                            n("div", { staticClass: "question", domProps: { innerHTML: t._s(t.currentExercise.question) } }),
+                            n("span", { staticClass: "opt-item" }, [t._v(t._s(t.$t("lang.答案")) + "：")]),
+                            n("el-input", {
+                              staticStyle: { "max-width": "800px" },
+                              attrs: { maxlength: "150", disabled: t.isReadonly },
+                              on: {
+                                change: function (e) {
+                                  t.dataChanged = !0;
+                                },
+                              },
+                              model: {
+                                value: t.currentExercise.state.content,
+                                callback: function (e) {
+                                  t.$set(t.currentExercise.state, "content", e);
+                                },
+                                expression: "currentExercise.state.content",
+                              },
+                            }),
+                          ],
+                          1,
+                        )
+                      : t._e(),
+                    3 == t.currentExercise.type
+                      ? n(
+                          "div",
+                          { staticClass: "exer" },
+                          [
+                            n("div", { staticClass: "question", domProps: { innerHTML: t._s(t.currentExercise.question) } }),
+                            n(
+                              "el-radio-group",
+                              {
+                                model: {
+                                  value: t.currentExercise.state.content,
+                                  callback: function (e) {
+                                    t.$set(t.currentExercise.state, "content", e);
+                                  },
+                                  expression: "currentExercise.state.content",
+                                },
+                              },
+                              t._l(t.currentExercise.options, function (e) {
+                                return n(
+                                  "el-radio",
+                                  {
+                                    staticClass: "option",
+                                    attrs: { disabled: t.isReadonly, label: e.optionLabel },
+                                    on: {
+                                      change: function (e) {
+                                        t.dataChanged = !0;
+                                      },
+                                    },
+                                  },
+                                  [n("span", { staticClass: "opt-item" }, [t._v(t._s(e.optionDisplay) + ":")]), t._v(t._s(e.option) + " ")],
+                                );
+                              }),
+                              1,
+                            ),
+                          ],
+                          1,
+                        )
+                      : t._e(),
+                    n("div"),
+                    4 == t.currentExercise.type
+                      ? n(
+                          "div",
+                          { staticClass: "exer" },
+                          [
+                            n("div", { staticClass: "question", domProps: { innerHTML: t._s(t.currentExercise.question) } }),
+                            n(
+                              "el-checkbox-group",
+                              {
+                                model: {
+                                  value: t.currentExercise.state.content,
+                                  callback: function (e) {
+                                    t.$set(t.currentExercise.state, "content", e);
+                                  },
+                                  expression: "currentExercise.state.content",
+                                },
+                              },
+                              t._l(t.currentExercise.options, function (e) {
+                                return n(
+                                  "el-checkbox",
+                                  {
+                                    staticClass: "option",
+                                    attrs: { disabled: t.isReadonly, label: e.optionLabel },
+                                    on: {
+                                      change: function (e) {
+                                        t.dataChanged = !0;
+                                      },
+                                    },
+                                  },
+                                  [n("span", { staticClass: "opt-item" }, [t._v(t._s(e.optionDisplay) + ":")]), t._v(t._s(e.option) + " ")],
+                                );
+                              }),
+                              1,
+                            ),
+                          ],
+                          1,
+                        )
+                      : t._e(),
+                  ],
+                  1,
+                ),
+                n("div", { staticClass: "btns" }, [
+                  n(
+                    "div",
+                    [
+                      n("el-button", { attrs: { disabled: t.isFirst, round: "" }, on: { click: t.prevExercise } }, [t._v(t._s(t.$t("lang.上一题")))]),
+                      n("el-button", { attrs: { disabled: t.isLast, round: "" }, on: { click: t.nextExercise } }, [t._v(t._s(t.$t("lang.下一题")))]),
+                    ],
+                    1,
+                  ),
+                ]),
+              ]),
+              n("div", { staticClass: "right no-select" }, [
+                n("div", { staticClass: "card" }, [
+                  n("div", { staticClass: "card-title" }, [t._v(t._s(t.$t("lang.答题卡")))]),
+                  n(
+                    "div",
+                    { staticClass: "ans" },
+                    t._l(t.exercises, function (e) {
+                      return n(
+                        "div",
+                        {
+                          key: e.id,
+                          staticClass: "square-ans",
+                          class: t.getState(e),
+                          on: {
+                            click: function (n) {
+                              return t.jumpTo(e.index);
+                            },
+                          },
+                        },
+                        [t._v(" " + t._s(e.index) + " ")],
+                      );
+                    }),
+                    0,
+                  ),
+                ]),
+                n("div", { staticClass: "tips" }, [
+                  n("div", { staticClass: "square" }, [
+                    n("div", { staticClass: "undone" }, [t._v(t._s(t.countUndone))]),
+                    n("p", [t._v(t._s(t.$t("lang.未答题")))]),
+                  ]),
+                  n("div", { staticClass: "square" }, [
+                    n("div", { staticClass: "done" }, [t._v(t._s(t.countDone))]),
+                    n("p", [t._v(t._s(t.$t("lang.已答题")))]),
+                  ]),
+                  n("div", { staticClass: "square" }, [
+                    n("div", { staticClass: "flag" }, [t._v(t._s(t.countFlag))]),
+                    n("p", [t._v(t._s(t.$t("lang.标记题")))]),
+                  ]),
+                  n("div", { staticClass: "square" }, [
+                    n("div", { staticClass: "current" }, [t._v(t._s(t.currentExercise.index))]),
+                    n("p", [t._v(t._s(t.$t("lang.当前题")))]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]);
+        },
+        o = [],
+        s =
+          (n("a4d3"),
+          n("e01a"),
+          n("d28b"),
+          n("99af"),
+          n("4de4"),
+          n("7db0"),
+          n("4160"),
+          n("c975"),
+          n("a15b"),
+          n("d81d"),
+          n("4e82"),
+          n("0d03"),
+          n("d3b7"),
+          n("ac1f"),
+          n("25f0"),
+          n("3ca3"),
+          n("1276"),
+          n("159b"),
+          n("ddb0"),
+          n("96cf"),
+          n("89ba")),
+        c = n("9f12"),
+        u = n("53fe"),
+        l = n("8b83"),
+        f = n("c65a"),
+        d = n("9aa6"),
+        p = n("c03e"),
+        h = n("2fa7"),
+        x = n("9ab4"),
+        b = n("60a3"),
+        g = n("c18d"),
+        v = n("4a80"),
+        y = n("52cf"),
+        m = n("03cd"),
+        w = n("6125"),
+        _ = n.n(w),
+        S = n("73ec"),
+        k =
+          ((r = (function (t) {
+            function e() {
+              var t, n;
+              Object(c["a"])(this, e);
+              for (var r = arguments.length, i = new Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+              return (
+                (n = Object(l["a"])(this, (t = Object(f["a"])(e)).call.apply(t, [this].concat(i)))),
+                Object(h["a"])(Object(d["a"])(n), "load", !1),
+                Object(h["a"])(Object(d["a"])(n), "isReadonly", !0),
+                Object(h["a"])(Object(d["a"])(n), "sectionId", ""),
+                Object(h["a"])(Object(d["a"])(n), "currentSectionState", void 0),
+                Object(h["a"])(Object(d["a"])(n), "interval", void 0),
+                Object(h["a"])(Object(d["a"])(n), "singleModel", 1),
+                Object(h["a"])(Object(d["a"])(n), "isFirst", !0),
+                Object(h["a"])(Object(d["a"])(n), "isLast", !1),
+                Object(h["a"])(Object(d["a"])(n), "checkList", [1, 2]),
+                Object(h["a"])(Object(d["a"])(n), "exercises", []),
+                Object(h["a"])(Object(d["a"])(n), "currentExercise", {
+                  id: "",
+                  question: "",
+                  optionA: "",
+                  optionB: "",
+                  optionC: "",
+                  optionD: "",
+                  optionE: "",
+                  author: "",
+                  answer: "",
+                  sectionId: "",
+                  index: 0,
+                  score: 0,
+                  title: "",
+                  type: 0,
+                  state: y["a"].noState(),
+                  options: [],
+                }),
+                Object(h["a"])(Object(d["a"])(n), "dataChanged", !1),
+                Object(h["a"])(Object(d["a"])(n), "countUndone", 0),
+                Object(h["a"])(Object(d["a"])(n), "countDone", 0),
+                Object(h["a"])(Object(d["a"])(n), "countFlag", 0),
+                n
+              );
+            }
+            return (
+              Object(p["a"])(e, t),
+              Object(u["a"])(e, [
+                {
+                  key: "created",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  return ((this.isReadonly = this.record.completed), (this.sectionId = this.$route.query.id), (t.next = 4), this.initData());
+                                case 4:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "initData",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n,
+                          r,
+                          i,
+                          a,
+                          o,
+                          s,
+                          c,
+                          u,
+                          l = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (this.record.id) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  return ((this.load = !0), (t.next = 5), g["a"].getExerciseBySectionId(this.sectionId));
+                                case 5:
+                                  return ((e = t.sent), (t.next = 8), v["a"].getSectionStateList(this.record.id, this.stuid, this.sectionId));
+                                case 8:
+                                  for (
+                                    n = t.sent,
+                                      this.load = !1,
+                                      r = !0,
+                                      i = !1,
+                                      a = void 0,
+                                      t.prev = 13,
+                                      o = function () {
+                                        var t = c.value,
+                                          n = e.find(function (e) {
+                                            return e.id == t.targetId;
+                                          });
+                                        n && ((n.state = t), t.tag === m["b"].done && l.countDone++);
+                                      },
+                                      s = n[Symbol.iterator]();
+                                    !(r = (c = s.next()).done);
+                                    r = !0
+                                  )
+                                    o();
+                                  t.next = 22;
+                                  break;
+                                case 18:
+                                  ((t.prev = 18), (t.t0 = t["catch"](13)), (i = !0), (a = t.t0));
+                                case 22:
+                                  ((t.prev = 22), (t.prev = 23), r || null == s.return || s.return());
+                                case 25:
+                                  if (((t.prev = 25), !i)) {
+                                    t.next = 28;
+                                    break;
+                                  }
+                                  throw a;
+                                case 28:
+                                  return t.finish(25);
+                                case 29:
+                                  return t.finish(22);
+                                case 30:
+                                  ((this.countUndone = e.length - this.countDone),
+                                    e.forEach(function (t) {
+                                      4 === t.type &&
+                                        (t.state.content && "true" != t.state.content
+                                          ? (t.state.content = t.state.content.toString().split(","))
+                                          : (t.state.content = []));
+                                    }),
+                                    1 == this.record.exOrderRand &&
+                                      ((u = 0),
+                                      e.forEach(function (t) {
+                                        (u++, (t.index = _()(l.stuid + "-" + u.toString()).int32()));
+                                      }),
+                                      e
+                                        .sort(function (t, e) {
+                                          return t.index > e.index ? -1 : 1;
+                                        })
+                                        .forEach(function (t, e) {
+                                          t.index = e + 1;
+                                        })),
+                                    e.forEach(function (t) {
+                                      if (3 == t.type || 4 == t.type) {
+                                        if (
+                                          ((t.options = []),
+                                          t.optionA && t.options.push({ optionLabel: "A", optionDisplay: "A", option: t.optionA }),
+                                          t.optionB && t.options.push({ optionLabel: "B", optionDisplay: "B", option: t.optionB }),
+                                          t.optionC && t.options.push({ optionLabel: "C", optionDisplay: "C", option: t.optionC }),
+                                          t.optionD && t.options.push({ optionLabel: "D", optionDisplay: "D", option: t.optionD }),
+                                          t.optionE && t.options.push({ optionLabel: "E", optionDisplay: "E", option: t.optionE }),
+                                          l.record.exOptionsOrderRand)
+                                        ) {
+                                          var e = t.options.map(function (t) {
+                                            return t.optionLabel;
+                                          });
+                                          t.options.forEach(function (n) {
+                                            n.optionDisplay = l.getExOptionRandom(t, n.optionLabel, e);
+                                          });
+                                        }
+                                        t.options.sort(function (t, e) {
+                                          return t.optionDisplay < e.optionDisplay ? -1 : 1;
+                                        });
+                                      }
+                                    }),
+                                    (this.exercises = e),
+                                    1 == e.length && ((this.isLast = !0), (this.isFirst = !0)),
+                                    (this.currentExercise = this.exercises[0]),
+                                    (this.currentExercise.state.tag |= m["b"].current));
+                                case 38:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                          [
+                            [13, 18, 22, 30],
+                            [23, , 25, 29],
+                          ],
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "getExOptionRandom",
+                  value: function (t, e, n) {
+                    var r = this,
+                      i = n.indexOf(e),
+                      a = n.map(function (t, e) {
+                        return { optionLabel: t, random: _()(r.stuid + "-" + e.toString()).int32() };
+                      }),
+                      o = a.sort(function (t, e) {
+                        return t.random < e.random ? -1 : 1;
+                      });
+                    return (
+                      (n = o.map(function (t) {
+                        return t.optionLabel;
+                      })),
+                      console.log("".concat(t.index, ", 原先选项=").concat(e, ",现在选项=").concat(n[i])),
+                      n[i]
+                    );
+                  },
+                },
+                {
+                  key: "exerflag",
+                  value: function () {
+                    this.currentExercise.state.tag & m["b"].flag
+                      ? ((this.currentExercise.state.tag ^= m["b"].flag), this.countFlag--)
+                      : ((this.currentExercise.state.tag |= m["b"].flag), this.countFlag++);
+                  },
+                },
+                {
+                  key: "getState",
+                  value: function (t) {
+                    return t && t.state
+                      ? t.state.tag & m["b"].current
+                        ? "current"
+                        : t.state.tag & m["b"].flag
+                          ? "flag"
+                          : t.state.tag & m["b"].undone
+                            ? "undone"
+                            : t.state.tag & m["b"].done
+                              ? "done"
+                              : t.state.tag & m["b"].flag
+                                ? "flag"
+                                : "undone"
+                      : "undone";
+                  },
+                },
+                {
+                  key: "jumpTo",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t(e) {
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (this.currentExercise && e !== this.currentExercise.index) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  return (
+                                    this.currentExercise.state.tag & m["b"].current && (this.currentExercise.state.tag ^= m["b"].current),
+                                    (t.next = 5),
+                                    this.saveCurrentExerciseState()
+                                  );
+                                case 5:
+                                  ((this.currentExercise = this.exercises.find(function (t) {
+                                    return t.index === e;
+                                  })),
+                                    (this.currentExercise.state.tag |= m["b"].current),
+                                    (this.isLast = this.exercises.indexOf(this.currentExercise) === this.exercises.length - 1),
+                                    (this.isFirst = 0 === this.exercises.indexOf(this.currentExercise)));
+                                case 9:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e(e) {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "prevExercise",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (this.exercises && !(this.exercises.length < 1)) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  if ((this.isFirst && Object(S["o"])("已经是第一题", "info"), !(this.exercises.indexOf(this.currentExercise) > 0))) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  return ((t.next = 6), this.jumpTo(this.currentExercise.index - 1));
+                                case 6:
+                                  t.next = 11;
+                                  break;
+                                case 8:
+                                  return ((t.next = 10), this.saveCurrentExerciseState());
+                                case 10:
+                                  this.currentExercise.state.tag |= m["b"].current;
+                                case 11:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "nextExercise",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (this.exercises && !(this.exercises.length < 1)) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  if (
+                                    (this.isLast && Object(S["o"])("已经是最后一题", "info"),
+                                    !(this.exercises.indexOf(this.currentExercise) < this.exercises.length - 1))
+                                  ) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  return ((t.next = 6), this.jumpTo(this.currentExercise.index + 1));
+                                case 6:
+                                  t.next = 11;
+                                  break;
+                                case 8:
+                                  return ((t.next = 10), this.saveCurrentExerciseState());
+                                case 10:
+                                  this.currentExercise.state.tag |= m["b"].current;
+                                case 11:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "saveCurrentExerciseState",
+                  value: (function () {
+                    var t = Object(s["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e, n, r;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (this.dataChanged && this.currentExercise) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  if (
+                                    ("undefined" === typeof this.currentExercise.state && (this.currentExercise.state = y["a"].noState()),
+                                    (this.currentExercise.state.targetId = this.currentExercise.id),
+                                    (this.currentExercise.state.studentId = this.stuid),
+                                    (this.currentExercise.state.sectionId = this.currentExercise.sectionId),
+                                    (this.currentExercise.state.taskRecordId = this.record.id),
+                                    (this.currentExercise.state.targetType = m["a"].Exercise),
+                                    (e = JSON.parse(JSON.stringify(this.currentExercise.state))),
+                                    Array.isArray(e.content) && (e.content.sort(), (e.content = e.content.join())),
+                                    e.tag & m["b"].current && (e.tag ^= m["b"].current),
+                                    (n = !1),
+                                    e.tag & m["b"].flag && ((e.tag ^= m["b"].flag), (n = !0)),
+                                    !this.record.completed)
+                                  ) {
+                                    t.next = 15;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 15:
+                                  return ((this.load = !0), (t.next = 18), v["a"].addOrUpdateSectionState(e));
+                                case 18:
+                                  ((r = t.sent),
+                                    (this.load = !1),
+                                    r &&
+                                      0 === r.code &&
+                                      ((this.currentExercise.state.id = r.data),
+                                      (this.currentExercise.state.tag = m["b"].done),
+                                      (this.dataChanged = !1),
+                                      (this.countDone = this.exercises.filter(function (t) {
+                                        return t.state.tag == m["b"].done;
+                                      }).length),
+                                      (this.countUndone = this.exercises.length - this.countDone),
+                                      n && (this.currentExercise.state.tag |= m["b"].flag)));
+                                case 21:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "submitSection",
+                  value: function (t) {
+                    return (this.saveCurrentExerciseState(), (t.targetType = m["a"].Exercise), !1);
+                  },
+                },
+                {
+                  key: "stuid",
+                  get: function () {
+                    return this.$store.getters["user/userId"];
+                  },
+                },
+                {
+                  key: "record",
+                  get: function () {
+                    return this.$store.state.task.info;
+                  },
+                },
+              ]),
+              e
+            );
+          })(b["c"])),
+          r);
+      (Object(x["a"])(
+        [
+          Object(b["d"])("record"),
+          Object(x["b"])("design:type", Function),
+          Object(x["b"])("design:paramtypes", []),
+          Object(x["b"])("design:returntype", "function" === typeof (i = "undefined" !== typeof Promise && Promise) ? i : Object),
+        ],
+        k.prototype,
+        "initData",
+        null,
+      ),
+        (k = Object(x["a"])(
+          [
+            Object(b["a"])({
+              filters: {
+                showOption: function (t) {
+                  return t || "";
+                },
+              },
+            }),
+          ],
+          k,
+        )));
+      var E = k,
+        C = E,
+        O = (n("ce6e"), n("2877")),
+        j = Object(O["a"])(C, a, o, !1, null, "63858a62", null);
+      e["default"] = j.exports;
+    },
+    a4d3: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        i = n("da84"),
+        a = n("c430"),
+        o = n("83ab"),
+        s = n("4930"),
+        c = n("d039"),
+        u = n("5135"),
+        l = n("e8b5"),
+        f = n("861d"),
+        d = n("825a"),
+        p = n("7b0b"),
+        h = n("fc6a"),
+        x = n("c04e"),
+        b = n("5c6c"),
+        g = n("7c73"),
+        v = n("df75"),
+        y = n("241c"),
+        m = n("057f"),
+        w = n("7418"),
+        _ = n("06cf"),
+        S = n("9bf2"),
+        k = n("d1e7"),
+        E = n("9112"),
+        C = n("6eeb"),
+        O = n("5692"),
+        j = n("f772"),
+        R = n("d012"),
+        A = n("90e3"),
+        D = n("b622"),
+        I = n("c032"),
+        F = n("746f"),
+        L = n("d44e"),
+        T = n("69f3"),
+        q = n("b727").forEach,
+        N = j("hidden"),
+        $ = "Symbol",
+        P = "prototype",
+        z = D("toPrimitive"),
+        B = T.set,
+        M = T.getterFor($),
+        G = Object[P],
+        U = i.Symbol,
+        J = i.JSON,
+        V = J && J.stringify,
+        X = _.f,
+        Z = S.f,
+        H = m.f,
+        K = k.f,
+        Q = O("symbols"),
+        W = O("op-symbols"),
+        Y = O("string-to-symbol-registry"),
+        tt = O("symbol-to-string-registry"),
+        et = O("wks"),
+        nt = i.QObject,
+        rt = !nt || !nt[P] || !nt[P].findChild,
+        it =
+          o &&
+          c(function () {
+            return (
+              7 !=
+              g(
+                Z({}, "a", {
+                  get: function () {
+                    return Z(this, "a", { value: 7 }).a;
+                  },
+                }),
+              ).a
+            );
+          })
+            ? function (t, e, n) {
+                var r = X(G, e);
+                (r && delete G[e], Z(t, e, n), r && t !== G && Z(G, e, r));
+              }
+            : Z,
+        at = function (t, e) {
+          var n = (Q[t] = g(U[P]));
+          return (B(n, { type: $, tag: t, description: e }), o || (n.description = e), n);
+        },
+        ot =
+          s && "symbol" == typeof U.iterator
+            ? function (t) {
+                return "symbol" == typeof t;
+              }
+            : function (t) {
+                return Object(t) instanceof U;
+              },
+        st = function (t, e, n) {
+          (t === G && st(W, e, n), d(t));
+          var r = x(e, !0);
+          return (
+            d(n),
+            u(Q, r)
+              ? (n.enumerable ? (u(t, N) && t[N][r] && (t[N][r] = !1), (n = g(n, { enumerable: b(0, !1) }))) : (u(t, N) || Z(t, N, b(1, {})), (t[N][r] = !0)),
+                it(t, r, n))
+              : Z(t, r, n)
+          );
+        },
+        ct = function (t, e) {
+          d(t);
+          var n = h(e),
+            r = v(n).concat(pt(n));
+          return (
+            q(r, function (e) {
+              (o && !lt.call(n, e)) || st(t, e, n[e]);
+            }),
+            t
+          );
+        },
+        ut = function (t, e) {
+          return void 0 === e ? g(t) : ct(g(t), e);
+        },
+        lt = function (t) {
+          var e = x(t, !0),
+            n = K.call(this, e);
+          return !(this === G && u(Q, e) && !u(W, e)) && (!(n || !u(this, e) || !u(Q, e) || (u(this, N) && this[N][e])) || n);
+        },
+        ft = function (t, e) {
+          var n = h(t),
+            r = x(e, !0);
+          if (n !== G || !u(Q, r) || u(W, r)) {
+            var i = X(n, r);
+            return (!i || !u(Q, r) || (u(n, N) && n[N][r]) || (i.enumerable = !0), i);
+          }
+        },
+        dt = function (t) {
+          var e = H(h(t)),
+            n = [];
+          return (
+            q(e, function (t) {
+              u(Q, t) || u(R, t) || n.push(t);
+            }),
+            n
+          );
+        },
+        pt = function (t) {
+          var e = t === G,
+            n = H(e ? W : h(t)),
+            r = [];
+          return (
+            q(n, function (t) {
+              !u(Q, t) || (e && !u(G, t)) || r.push(Q[t]);
+            }),
+            r
+          );
+        };
+      (s ||
+        ((U = function () {
+          if (this instanceof U) throw TypeError("Symbol is not a constructor");
+          var t = arguments.length && void 0 !== arguments[0] ? String(arguments[0]) : void 0,
+            e = A(t),
+            n = function (t) {
+              (this === G && n.call(W, t), u(this, N) && u(this[N], e) && (this[N][e] = !1), it(this, e, b(1, t)));
+            };
+          return (o && rt && it(G, e, { configurable: !0, set: n }), at(e, t));
+        }),
+        C(U[P], "toString", function () {
+          return M(this).tag;
+        }),
+        (k.f = lt),
+        (S.f = st),
+        (_.f = ft),
+        (y.f = m.f = dt),
+        (w.f = pt),
+        o &&
+          (Z(U[P], "description", {
+            configurable: !0,
+            get: function () {
+              return M(this).description;
+            },
+          }),
+          a || C(G, "propertyIsEnumerable", lt, { unsafe: !0 })),
+        (I.f = function (t) {
+          return at(D(t), t);
+        })),
+        r({ global: !0, wrap: !0, forced: !s, sham: !s }, { Symbol: U }),
+        q(v(et), function (t) {
+          F(t);
+        }),
+        r(
+          { target: $, stat: !0, forced: !s },
+          {
+            for: function (t) {
+              var e = String(t);
+              if (u(Y, e)) return Y[e];
+              var n = U(e);
+              return ((Y[e] = n), (tt[n] = e), n);
+            },
+            keyFor: function (t) {
+              if (!ot(t)) throw TypeError(t + " is not a symbol");
+              if (u(tt, t)) return tt[t];
+            },
+            useSetter: function () {
+              rt = !0;
+            },
+            useSimple: function () {
+              rt = !1;
+            },
+          },
+        ),
+        r({ target: "Object", stat: !0, forced: !s, sham: !o }, { create: ut, defineProperty: st, defineProperties: ct, getOwnPropertyDescriptor: ft }),
+        r({ target: "Object", stat: !0, forced: !s }, { getOwnPropertyNames: dt, getOwnPropertySymbols: pt }),
+        r(
+          {
+            target: "Object",
+            stat: !0,
+            forced: c(function () {
+              w.f(1);
+            }),
+          },
+          {
+            getOwnPropertySymbols: function (t) {
+              return w.f(p(t));
+            },
+          },
+        ),
+        J &&
+          r(
+            {
+              target: "JSON",
+              stat: !0,
+              forced:
+                !s ||
+                c(function () {
+                  var t = U();
+                  return "[null]" != V([t]) || "{}" != V({ a: t }) || "{}" != V(Object(t));
+                }),
+            },
+            {
+              stringify: function (t) {
+                var e,
+                  n,
+                  r = [t],
+                  i = 1;
+                while (arguments.length > i) r.push(arguments[i++]);
+                if (((n = e = r[1]), (f(e) || void 0 !== t) && !ot(t)))
+                  return (
+                    l(e) ||
+                      (e = function (t, e) {
+                        if (("function" == typeof n && (e = n.call(this, t, e)), !ot(e))) return e;
+                      }),
+                    (r[1] = e),
+                    V.apply(J, r)
+                  );
+              },
+            },
+          ),
+        U[P][z] || E(U[P], z, U[P].valueOf),
+        L(U, $),
+        (R[N] = !0));
+    },
+    a887: function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7klEQVQ4ja3SvS5FURAF4M9vh0T8NGqNREEEofAMqpsobucFvIBK6xF4BqVCpaGg0IlGqbhoCJIbspM5yclOzr4nuSbZxZ5Zs/baa0YhdvCLhRJotFSMuMBGU3G8BcEmbmv3pOoBV3hs84XS6QxDkBS08qApeoMAlYJzfDWo2B0ZQHAdY/zAWmb6Ct7bKJgvgYbx4H8J5nCMO7xiKsPN4glnMfvpevEIn3jGIZYin3uQ8vu4DFMPKoK3AC5nrzaZmO59fGMyJbr4CaJT7GEiaxrDNk7wEgRJuWoPZqJxC+tYxWKNIM37Pjy6iTXuwR/62kFeXZBnXwAAAABJRU5ErkJggg==";
+    },
+    b838: function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this,
+              n = "";
+            ((e.x = 0),
+              (e.y = 0),
+              (e.z = 0),
+              (e.w = 0),
+              (e.next = function () {
+                var t = e.x ^ (e.x << 11);
+                return ((e.x = e.y), (e.y = e.z), (e.z = e.w), (e.w ^= (e.w >>> 19) ^ t ^ (t >>> 8)));
+              }),
+              t === (0 | t) ? (e.x = t) : (n += t));
+            for (var r = 0; r < n.length + 64; r++) ((e.x ^= 0 | n.charCodeAt(r)), e.next());
+          }
+          function s(t, e) {
+            return ((e.x = t.x), (e.y = t.y), (e.z = t.z), (e.w = t.w), e);
+          }
+          function c(t, e) {
+            var n = new o(t),
+              r = e && e.state,
+              i = function () {
+                return (n.next() >>> 0) / 4294967296;
+              };
+            return (
+              (i.double = function () {
+                do {
+                  var t = n.next() >>> 11,
+                    e = (n.next() >>> 0) / 4294967296,
+                    r = (t + e) / (1 << 21);
+                } while (0 === r);
+                return r;
+              }),
+              (i.int32 = n.next),
+              (i.quick = i),
+              r &&
+                ("object" == typeof r && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.xor128 = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    c032: function (t, e, n) {
+      e.f = n("b622");
+    },
+    cae0: function (t, e, n) {
+      (function (t) {
+        var r;
+        (function (t, i, a) {
+          function o(t) {
+            var e = this;
+            function n(t, e) {
+              var n,
+                r = [];
+              if (e === (0 | e)) r[0] = e;
+              else for (e = "" + e, n = 0; n < e.length; ++n) r[7 & n] = (r[7 & n] << 15) ^ ((e.charCodeAt(n) + r[(n + 1) & 7]) << 13);
+              while (r.length < 8) r.push(0);
+              for (n = 0; n < 8 && 0 === r[n]; ++n);
+              for (8 == n ? (r[7] = -1) : r[n], t.x = r, t.i = 0, n = 256; n > 0; --n) t.next();
+            }
+            ((e.next = function () {
+              var t,
+                n,
+                r = e.x,
+                i = e.i;
+              return (
+                (t = r[i]),
+                (t ^= t >>> 7),
+                (n = t ^ (t << 24)),
+                (t = r[(i + 1) & 7]),
+                (n ^= t ^ (t >>> 10)),
+                (t = r[(i + 3) & 7]),
+                (n ^= t ^ (t >>> 3)),
+                (t = r[(i + 4) & 7]),
+                (n ^= t ^ (t << 7)),
+                (t = r[(i + 7) & 7]),
+                (t ^= t << 13),
+                (n ^= t ^ (t << 9)),
+                (r[i] = n),
+                (e.i = (i + 1) & 7),
+                n
+              );
+            }),
+              n(e, t));
+          }
+          function s(t, e) {
+            return ((e.x = t.x.slice()), (e.i = t.i), e);
+          }
+          function c(t, e) {
+            null == t && (t = +new Date());
+            var n = new o(t),
+              r = e && e.state,
+              i = function () {
+                return (n.next() >>> 0) / 4294967296;
+              };
+            return (
+              (i.double = function () {
+                do {
+                  var t = n.next() >>> 11,
+                    e = (n.next() >>> 0) / 4294967296,
+                    r = (t + e) / (1 << 21);
+                } while (0 === r);
+                return r;
+              }),
+              (i.int32 = n.next),
+              (i.quick = i),
+              r &&
+                (r.x && s(r, n),
+                (i.state = function () {
+                  return s(n, {});
+                })),
+              i
+            );
+          }
+          i && i.exports
+            ? (i.exports = c)
+            : n("07d6") && n("3c35")
+              ? ((r = function () {
+                  return c;
+                }.call(e, n, e, i)),
+                void 0 === r || (i.exports = r))
+              : (this.xorshift7 = c);
+        })(0, t, n("07d6"));
+      }).call(this, n("62e4")(t));
+    },
+    ce6e: function (t, e, n) {
+      "use strict";
+      var r = n("f566"),
+        i = n.n(r);
+      i.a;
+    },
+    d28b: function (t, e, n) {
+      var r = n("746f");
+      r("iterator");
+    },
+    e01a: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        i = n("83ab"),
+        a = n("da84"),
+        o = n("5135"),
+        s = n("861d"),
+        c = n("9bf2").f,
+        u = n("e893"),
+        l = a.Symbol;
+      if (i && "function" == typeof l && (!("description" in l.prototype) || void 0 !== l().description)) {
+        var f = {},
+          d = function () {
+            var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : String(arguments[0]),
+              e = this instanceof d ? new l(t) : void 0 === t ? l() : l(t);
+            return ("" === t && (f[e] = !0), e);
+          };
+        u(d, l);
+        var p = (d.prototype = l.prototype);
+        p.constructor = d;
+        var h = p.toString,
+          x = "Symbol(test)" == String(l("test")),
+          b = /^Symbol\((.*)\)[^)]+$/;
+        (c(p, "description", {
+          configurable: !0,
+          get: function () {
+            var t = s(this) ? this.valueOf() : this,
+              e = h.call(t);
+            if (o(f, t)) return "";
+            var n = x ? e.slice(7, -1) : e.replace(b, "$1");
+            return "" === n ? void 0 : n;
+          },
+        }),
+          r({ global: !0, forced: !0 }, { Symbol: d }));
+      }
+    },
+    f566: function (t, e, n) {
+      var r = n("3faa0");
+      ("string" === typeof r && (r = [[t.i, r, ""]]), r.locals && (t.exports = r.locals));
+      var i = n("499e").default;
+      i("183f354e", r, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+  },
+]);

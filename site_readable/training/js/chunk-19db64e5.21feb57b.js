@@ -1,0 +1,1873 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-19db64e5"],
+  {
+    "05e8": function (e, t, a) {
+      "use strict";
+      a.r(t);
+      var s,
+        i = function () {
+          var e = this,
+            t = e.$createElement,
+            a = e._self._c || t;
+          return a(
+            "div",
+            { staticClass: "frame-main" },
+            [
+              a(
+                "el-row",
+                { staticClass: "row-tool" },
+                [
+                  a("el-col", { staticStyle: { width: "380px" } }, [
+                    a(
+                      "div",
+                      { staticClass: "pt20 pl20" },
+                      [
+                        a("el-button", { attrs: { plain: "", type: "primary", icon: "el-icon-circle-plus-outline" }, on: { click: e.addTaskClick } }, [
+                          e._v("新建任务"),
+                        ]),
+                        a("el-button", { attrs: { plain: "", type: "danger", icon: "el-icon-delete" }, on: { click: e.batchDeleteTaskClick } }, [
+                          e._v("批量删除"),
+                        ]),
+                      ],
+                      1,
+                    ),
+                  ]),
+                  a("el-col", [
+                    a("div", { staticClass: "pt20 pl20 fr mr20 " }, [
+                      a(
+                        "div",
+                        [
+                          a("span", [e._v("班级：")]),
+                          a(
+                            "el-select",
+                            {
+                              attrs: { placeholder: "请选择", clearable: "" },
+                              on: { change: e.selectedChanged },
+                              model: {
+                                value: e.search.classId,
+                                callback: function (t) {
+                                  e.$set(e.search, "classId", t);
+                                },
+                                expression: "search.classId",
+                              },
+                            },
+                            [
+                              a("el-option", { key: "", attrs: { label: "全部", value: "" } }),
+                              e._l(e.classList, function (e) {
+                                return a("el-option", { key: e.id, attrs: { label: e.className, value: e.id } });
+                              }),
+                            ],
+                            2,
+                          ),
+                          a("span", { staticClass: "ml20" }, [e._v("课程任务：")]),
+                          a(
+                            "el-select",
+                            {
+                              attrs: { clearable: "", placeholder: "请选择" },
+                              on: { change: e.selectedChanged },
+                              model: {
+                                value: e.search.taskTemplateId,
+                                callback: function (t) {
+                                  e.$set(e.search, "taskTemplateId", t);
+                                },
+                                expression: "search.taskTemplateId",
+                              },
+                            },
+                            [
+                              a("el-option", { attrs: { label: "全部", value: "" } }),
+                              e._l(e.tasktemplist, function (t) {
+                                return a("el-option", { key: t.id, attrs: { label: t.name, value: t.id } }, [
+                                  a("span", [
+                                    a("span", { staticStyle: { "min-width": "120px", display: "inline-block" } }, [e._v(e._s(t.name))]),
+                                    a("i", [a("small", [e._v("(" + e._s(t.number) + ")")])]),
+                                  ]),
+                                ]);
+                              }),
+                            ],
+                            2,
+                          ),
+                          a(
+                            "div",
+                            { staticClass: "search-input" },
+                            [
+                              a(
+                                "el-input",
+                                {
+                                  staticClass: "ml5",
+                                  attrs: { maxlength: "20", size: "large", clearable: "", placeholder: "请输入编号、名称进行查询" },
+                                  nativeOn: {
+                                    keyup: function (t) {
+                                      return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.btn_search(t);
+                                    },
+                                  },
+                                  model: {
+                                    value: e.search.key,
+                                    callback: function (t) {
+                                      e.$set(e.search, "key", t);
+                                    },
+                                    expression: "search.key",
+                                  },
+                                },
+                                [
+                                  a("el-button", {
+                                    attrs: { slot: "append", icon: "el-icon-search", type: "success" },
+                                    on: { click: e.btn_search },
+                                    slot: "append",
+                                  }),
+                                ],
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                          a("el-button", {
+                            staticClass: "ml5",
+                            staticStyle: { color: "#999" },
+                            attrs: { icon: "el-icon-refresh", type: "text", title: "重置搜索条件" },
+                            on: { click: e.reset },
+                          }),
+                        ],
+                        1,
+                      ),
+                    ]),
+                  ]),
+                ],
+                1,
+              ),
+              a("el-row", { staticClass: "main-body" }, [
+                a(
+                  "div",
+                  { staticClass: "mr20 mt20 ml20 p20 content  bd-gray" },
+                  [
+                    a(
+                      "el-table",
+                      {
+                        directives: [{ name: "loading", rawName: "v-loading", value: e.load, expression: "load" }],
+                        ref: "taskTable",
+                        staticStyle: { width: "100%" },
+                        attrs: { "show-overflow-tooltip": "", data: e.taskList, border: "", stripe: "", "header-row-class-name": "tb-header", height: "100%" },
+                      },
+                      [
+                        a("el-table-column", { attrs: { type: "selection", width: "55" } }),
+                        a("el-table-column", { attrs: { prop: "number", label: "任务编号", width: "180" } }),
+                        a("el-table-column", { attrs: { prop: "name", label: "任务名称", "min-width": "180" } }),
+                        a("el-table-column", { attrs: { prop: "templateName", label: "课程任务", "min-width": "180" } }),
+                        a("el-table-column", { attrs: { prop: "className", label: "班级名称", "min-width": "140" } }),
+                        a("el-table-column", {
+                          attrs: { prop: "publishTime", label: "下发时间", width: "160" },
+                          scopedSlots: e._u([
+                            {
+                              key: "default",
+                              fn: function (t) {
+                                return [a("span", [e._v(e._s(e._f("format")(t.row.publishTime)))])];
+                              },
+                            },
+                          ]),
+                        }),
+                        a("el-table-column", {
+                          attrs: { label: "任务状态", width: "90" },
+                          scopedSlots: e._u([
+                            {
+                              key: "default",
+                              fn: function (t) {
+                                return [
+                                  a("div", [
+                                    new Date(t.row.publishTime) >= new Date()
+                                      ? a("span", { staticStyle: { color: "orange" }, attrs: { title: "下发时间未到" } }, [
+                                          e._v(" 待下发 "),
+                                          t.row.autoSubmit ? a("i", { staticClass: "el-icon-stopwatch", attrs: { title: "到时间会自动完成的任务" } }) : e._e(),
+                                        ])
+                                      : a("span", { class: [t.row.completedCount == t.row.count ? "green" : "blue"] }, [
+                                          e._v(" " + e._s(t.row.completedCount == t.row.count ? "已完成" : "进行中") + " "),
+                                          t.row.autoSubmit ? a("i", { staticClass: "el-icon-stopwatch", attrs: { title: "到时间会自动完成的任务" } }) : e._e(),
+                                        ]),
+                                  ]),
+                                ];
+                              },
+                            },
+                          ]),
+                        }),
+                        a("el-table-column", {
+                          attrs: { label: "操作", width: "315" },
+                          scopedSlots: e._u([
+                            {
+                              key: "default",
+                              fn: function (t) {
+                                return [
+                                  a(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "primary", plain: "", icon: "el-icon-search" },
+                                      on: {
+                                        click: function (a) {
+                                          return e.viewTaskClick(t.$index, t.row);
+                                        },
+                                      },
+                                    },
+                                    [e._v("查看")],
+                                  ),
+                                  a(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "primary", plain: "", icon: "el-icon-edit" },
+                                      on: {
+                                        click: function (a) {
+                                          return e.editTaskClick(t.$index, t.row);
+                                        },
+                                      },
+                                    },
+                                    [e._v("编辑")],
+                                  ),
+                                  a(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "danger", plain: "", icon: "el-icon-delete" },
+                                      on: {
+                                        click: function (a) {
+                                          return e.deleteTaskClick(t.$index, t.row);
+                                        },
+                                      },
+                                    },
+                                    [e._v("删除")],
+                                  ),
+                                ];
+                              },
+                            },
+                          ]),
+                        }),
+                      ],
+                      1,
+                    ),
+                  ],
+                  1,
+                ),
+              ]),
+              a("el-pagination", {
+                staticClass: "ml20 mt20 mb20",
+                attrs: { "page-size": e.pageSize, background: "", layout: "prev, pager, next", total: e.itemsCount, "current-page": e.currentPage },
+                on: { "current-change": e.pageTurn },
+              }),
+              a(
+                "el-dialog",
+                {
+                  directives: [{ name: "loading", rawName: "v-loading", value: e.sending, expression: "sending" }],
+                  attrs: {
+                    "destroy-on-close": !0,
+                    "close-on-click-modal": !1,
+                    visible: e.dialogVisible,
+                    width: "750px",
+                    "element-loading-background": "rgba(0, 0, 0, 0.1)",
+                  },
+                  on: {
+                    "update:visible": function (t) {
+                      e.dialogVisible = t;
+                    },
+                  },
+                },
+                [
+                  a("div", { staticStyle: { "line-height": "24px" }, attrs: { slot: "title" }, slot: "title" }, [
+                    a("span", { staticStyle: { "justify-content": "center", "font-size": "18px", color: "#303133" } }, [e._v(e._s(e.dialogTitle))]),
+                    e._e(),
+                  ]),
+                  a(
+                    "el-row",
+                    [
+                      a(
+                        "el-col",
+                        [
+                          a(
+                            "el-form",
+                            { staticClass: "mr20", staticStyle: { position: "relative" }, attrs: { model: e.currentTask, "label-width": "90px" } },
+                            [
+                              a("el-form-item", { attrs: { label: "任务编号" } }, [
+                                a("div", { staticStyle: { "font-weight": "bold", color: "#888", "padding-left": "3px" } }, [
+                                  e._v(" " + e._s(e.currentTask.number)),
+                                ]),
+                              ]),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "课程任务" } },
+                                [
+                                  a(
+                                    "el-select",
+                                    {
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        clearable: !0,
+                                        disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display,
+                                        placeholder: "请选择课程任务",
+                                      },
+                                      on: { change: e.forceUpdate },
+                                      model: {
+                                        value: e.currentTask.templateId,
+                                        callback: function (t) {
+                                          e.$set(e.currentTask, "templateId", t);
+                                        },
+                                        expression: "currentTask.templateId",
+                                      },
+                                    },
+                                    e._l(e.tasktemplist, function (t) {
+                                      return a(
+                                        "el-option",
+                                        {
+                                          key: t.id,
+                                          attrs: { label: t.name + "   （ 编号 : " + t.number + "  时长 : " + t.duration / 60 + " min ）", value: t.id },
+                                        },
+                                        [
+                                          a("span", [
+                                            a("i", { staticStyle: { "min-width": "125px", display: "inline-block" } }, [a("small", [e._v(e._s(t.number))])]),
+                                            a("small", { staticStyle: { "min-width": "70px", display: "inline-block" } }, [
+                                              e._v("(" + e._s(t.duration / 60) + " min)"),
+                                            ]),
+                                            a("span", { staticStyle: { "font-weight": "bold", display: "inline-block" } }, [e._v(e._s(t.name))]),
+                                          ]),
+                                        ],
+                                      );
+                                    }),
+                                    1,
+                                  ),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "任务名称" } },
+                                [
+                                  a("el-input", {
+                                    attrs: { maxlength: "80", clearable: !0, disabled: "view" == e.currentTask.display, type: "text" },
+                                    on: {
+                                      input: function (t) {
+                                        e.taskSaved = !1;
+                                      },
+                                    },
+                                    model: {
+                                      value: e.currentTask.name,
+                                      callback: function (t) {
+                                        e.$set(e.currentTask, "name", t);
+                                      },
+                                      expression: "currentTask.name",
+                                    },
+                                  }),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "参与班级" } },
+                                [
+                                  a(
+                                    "el-select",
+                                    {
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        clearable: !0,
+                                        disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display,
+                                        placeholder: "请选择班级",
+                                      },
+                                      on: { change: e.classSelected },
+                                      model: {
+                                        value: e.currentTask.classId,
+                                        callback: function (t) {
+                                          e.$set(e.currentTask, "classId", t);
+                                        },
+                                        expression: "currentTask.classId",
+                                      },
+                                    },
+                                    e._l(e.classList, function (e) {
+                                      return a("el-option", { key: e.id, attrs: { label: e.className, value: e.id } });
+                                    }),
+                                    1,
+                                  ),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "参与学生" } },
+                                [
+                                  a(
+                                    "el-select",
+                                    {
+                                      staticClass: "stus",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        clearable: "new" == e.currentTask.display,
+                                        multiple: !0,
+                                        disabled: "view" == e.currentTask.display,
+                                        placeholder: "请选择学生",
+                                      },
+                                      on: { change: e.stuSelectChange },
+                                      model: {
+                                        value: e.selecteStudentInClass,
+                                        callback: function (t) {
+                                          e.selecteStudentInClass = t;
+                                        },
+                                        expression: "selecteStudentInClass",
+                                      },
+                                    },
+                                    [
+                                      a(
+                                        "div",
+                                        { staticStyle: { "max-width": "400px" } },
+                                        [
+                                          "new" == e.currentTask.display
+                                            ? a(
+                                                "el-checkbox",
+                                                {
+                                                  staticClass: "all-stu-select",
+                                                  attrs: { indeterminate: e.isIndeterminate },
+                                                  on: { change: e.selctAllStudent },
+                                                  model: {
+                                                    value: e.allStuCkb,
+                                                    callback: function (t) {
+                                                      e.allStuCkb = t;
+                                                    },
+                                                    expression: "allStuCkb",
+                                                  },
+                                                },
+                                                [e._v("全部学生 ")],
+                                              )
+                                            : e._e(),
+                                          e._l(e.allStudentInClass, function (e) {
+                                            return a("el-option", {
+                                              key: e.userId,
+                                              staticClass: "stu-select",
+                                              attrs: { label: e.stuName + "(" + e.phone + ")", value: e.userId },
+                                            });
+                                          }),
+                                        ],
+                                        2,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-button",
+                                {
+                                  staticStyle: { position: "absolute", right: "0px", "z-index": "10000", color: "#999" },
+                                  attrs: { type: "text", icon: e.moreSet ? "el-icon-arrow-up" : "el-icon-arrow-down", circle: "" },
+                                  on: {
+                                    click: function (t) {
+                                      e.moreSet = !e.moreSet;
+                                    },
+                                  },
+                                },
+                                [e._v(" " + e._s(e.moreSet ? "收起" : "更多") + " ")],
+                              ),
+                              a(
+                                "div",
+                                { directives: [{ name: "show", rawName: "v-show", value: e.moreSet, expression: "moreSet" }] },
+                                [
+                                  a(
+                                    "el-form-item",
+                                    { attrs: { label: "分值显示", prop: "scoreDisplay" } },
+                                    [
+                                      a(
+                                        "el-radio",
+                                        {
+                                          attrs: { disabled: "view" == e.currentTask.display, label: 0 },
+                                          model: {
+                                            value: e.currentTask.scoreDisplay,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "scoreDisplay", t);
+                                            },
+                                            expression: "currentTask.scoreDisplay",
+                                          },
+                                        },
+                                        [e._v("不显示分值")],
+                                      ),
+                                      a(
+                                        "el-radio",
+                                        {
+                                          attrs: { disabled: "view" == e.currentTask.display, label: 1 },
+                                          model: {
+                                            value: e.currentTask.scoreDisplay,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "scoreDisplay", t);
+                                            },
+                                            expression: "currentTask.scoreDisplay",
+                                          },
+                                        },
+                                        [e._v("只显示模块分值")],
+                                      ),
+                                      a(
+                                        "el-radio",
+                                        {
+                                          attrs: { disabled: "view" == e.currentTask.display, label: 2 },
+                                          model: {
+                                            value: e.currentTask.scoreDisplay,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "scoreDisplay", t);
+                                            },
+                                            expression: "currentTask.scoreDisplay",
+                                          },
+                                        },
+                                        [e._v("显示全部分值")],
+                                      ),
+                                    ],
+                                    1,
+                                  ),
+                                  a(
+                                    "el-form-item",
+                                    { attrs: { label: "习题设置", prop: "limitTime" } },
+                                    [
+                                      a(
+                                        "el-tag",
+                                        {
+                                          staticStyle: { height: "unset", border: "1px solid #eee", display: "block", padding: "2px 10px" },
+                                          attrs: { type: "info", effect: "plain" },
+                                        },
+                                        [
+                                          a(
+                                            "div",
+                                            [
+                                              e._v(" 习题排序 "),
+                                              a(
+                                                "el-radio",
+                                                {
+                                                  staticStyle: { "margin-left": "10px" },
+                                                  attrs: { disabled: "view" == e.currentTask.display, label: !1 },
+                                                  model: {
+                                                    value: e.currentTask.exOrderRand,
+                                                    callback: function (t) {
+                                                      e.$set(e.currentTask, "exOrderRand", t);
+                                                    },
+                                                    expression: "currentTask.exOrderRand",
+                                                  },
+                                                },
+                                                [e._v("原始排序")],
+                                              ),
+                                              a(
+                                                "el-radio",
+                                                {
+                                                  attrs: { disabled: "view" == e.currentTask.display, label: !0 },
+                                                  model: {
+                                                    value: e.currentTask.exOrderRand,
+                                                    callback: function (t) {
+                                                      e.$set(e.currentTask, "exOrderRand", t);
+                                                    },
+                                                    expression: "currentTask.exOrderRand",
+                                                  },
+                                                },
+                                                [e._v("随机排序")],
+                                              ),
+                                            ],
+                                            1,
+                                          ),
+                                          a(
+                                            "div",
+                                            [
+                                              e._v(" 选项排序 "),
+                                              a(
+                                                "el-radio",
+                                                {
+                                                  staticStyle: { "margin-left": "10px" },
+                                                  attrs: { disabled: "view" == e.currentTask.display, label: !1 },
+                                                  model: {
+                                                    value: e.currentTask.exOptionsOrderRand,
+                                                    callback: function (t) {
+                                                      e.$set(e.currentTask, "exOptionsOrderRand", t);
+                                                    },
+                                                    expression: "currentTask.exOptionsOrderRand",
+                                                  },
+                                                },
+                                                [e._v("原始排序")],
+                                              ),
+                                              a(
+                                                "el-radio",
+                                                {
+                                                  attrs: { disabled: "view" == e.currentTask.display, label: !0 },
+                                                  model: {
+                                                    value: e.currentTask.exOptionsOrderRand,
+                                                    callback: function (t) {
+                                                      e.$set(e.currentTask, "exOptionsOrderRand", t);
+                                                    },
+                                                    expression: "currentTask.exOptionsOrderRand",
+                                                  },
+                                                },
+                                                [e._v("随机排序")],
+                                              ),
+                                            ],
+                                            1,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                    1,
+                                  ),
+                                  a(
+                                    "el-form-item",
+                                    { attrs: { label: "任务报告", prop: "hideReport" } },
+                                    [
+                                      a(
+                                        "el-radio",
+                                        {
+                                          attrs: { disabled: "view" == e.currentTask.display, label: !1 },
+                                          model: {
+                                            value: e.currentTask.hideReport,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "hideReport", t);
+                                            },
+                                            expression: "currentTask.hideReport",
+                                          },
+                                        },
+                                        [e._v("需要填写")],
+                                      ),
+                                      a(
+                                        "el-radio",
+                                        {
+                                          attrs: { disabled: "view" == e.currentTask.display, label: !0 },
+                                          model: {
+                                            value: e.currentTask.hideReport,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "hideReport", t);
+                                            },
+                                            expression: "currentTask.hideReport",
+                                          },
+                                        },
+                                        [e._v("无需填写")],
+                                      ),
+                                    ],
+                                    1,
+                                  ),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "任务模式", prop: "mode" } },
+                                [
+                                  a(
+                                    "el-radio",
+                                    {
+                                      attrs: { disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display, label: 0 },
+                                      model: {
+                                        value: e.currentTask.mode,
+                                        callback: function (t) {
+                                          e.$set(e.currentTask, "mode", t);
+                                        },
+                                        expression: "currentTask.mode",
+                                      },
+                                    },
+                                    [e._v("学习训练")],
+                                  ),
+                                  a(
+                                    "el-radio",
+                                    {
+                                      attrs: { disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display, label: 1 },
+                                      model: {
+                                        value: e.currentTask.mode,
+                                        callback: function (t) {
+                                          e.$set(e.currentTask, "mode", t);
+                                        },
+                                        expression: "currentTask.mode",
+                                      },
+                                    },
+                                    [
+                                      e._v("考试比赛（录屏） "),
+                                      a("el-tooltip", { attrs: { content: "此模式下，考试时间一到自动开始最近一次下发的未完成考试比赛任务，且开启录屏" } }, [
+                                        a("i", { staticClass: "el-icon-question" }),
+                                      ]),
+                                    ],
+                                    1,
+                                  ),
+                                  a(
+                                    "el-radio",
+                                    {
+                                      attrs: { disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display, label: 2 },
+                                      model: {
+                                        value: e.currentTask.mode,
+                                        callback: function (t) {
+                                          e.$set(e.currentTask, "mode", t);
+                                        },
+                                        expression: "currentTask.mode",
+                                      },
+                                    },
+                                    [
+                                      e._v("考试比赛（不录屏） "),
+                                      a("el-tooltip", { attrs: { content: "此模式下，考试时间一到自动开始最近一次下发的未完成考试比赛任务，不开启录屏" } }, [
+                                        a("i", { staticClass: "el-icon-question" }),
+                                      ]),
+                                    ],
+                                    1,
+                                  ),
+                                ],
+                                1,
+                              ),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "起止时间", prop: "limitTime" } },
+                                [
+                                  a("el-switch", {
+                                    attrs: { disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display },
+                                    model: {
+                                      value: e.currentTask.limitTime,
+                                      callback: function (t) {
+                                        e.$set(e.currentTask, "limitTime", t);
+                                      },
+                                      expression: "currentTask.limitTime",
+                                    },
+                                  }),
+                                  e.currentTask.limitTime
+                                    ? a("el-date-picker", {
+                                        staticStyle: { "margin-left": "45px" },
+                                        attrs: {
+                                          disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display,
+                                          type: "datetimerange",
+                                          "start-placeholder": "起始时间",
+                                          "end-placeholder": "结束时间",
+                                          "default-time": ["12:00:00"],
+                                        },
+                                        model: {
+                                          value: e.currentTask.limitStartEndTime,
+                                          callback: function (t) {
+                                            e.$set(e.currentTask, "limitStartEndTime", t);
+                                          },
+                                          expression: "currentTask.limitStartEndTime",
+                                        },
+                                      })
+                                    : e._e(),
+                                ],
+                                1,
+                              ),
+                              e.currentTask.limitTime
+                                ? a(
+                                    "el-form-item",
+                                    { attrs: { label: "自动完成", prop: "limitTime" } },
+                                    [
+                                      a("el-switch", {
+                                        attrs: { disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display },
+                                        on: { change: e.resetLimitTimeByTemplateDuration },
+                                        model: {
+                                          value: e.currentTask.autoSubmit,
+                                          callback: function (t) {
+                                            e.$set(e.currentTask, "autoSubmit", t);
+                                          },
+                                          expression: "currentTask.autoSubmit",
+                                        },
+                                      }),
+                                    ],
+                                    1,
+                                  )
+                                : e._e(),
+                              a(
+                                "el-form-item",
+                                { attrs: { label: "下发时间", prop: "publishTime" } },
+                                [
+                                  "new" == e.currentTask.display
+                                    ? a(
+                                        "el-radio",
+                                        {
+                                          attrs: { label: !0 },
+                                          model: {
+                                            value: e.currentTask.isPublishNow,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "isPublishNow", t);
+                                            },
+                                            expression: "currentTask.isPublishNow",
+                                          },
+                                        },
+                                        [e._v("马上")],
+                                      )
+                                    : e._e(),
+                                  "new" == e.currentTask.display
+                                    ? a(
+                                        "el-radio",
+                                        {
+                                          attrs: { label: !1 },
+                                          model: {
+                                            value: e.currentTask.isPublishNow,
+                                            callback: function (t) {
+                                              e.$set(e.currentTask, "isPublishNow", t);
+                                            },
+                                            expression: "currentTask.isPublishNow",
+                                          },
+                                        },
+                                        [e._v("自定义")],
+                                      )
+                                    : e._e(),
+                                  a("el-date-picker", {
+                                    directives: [
+                                      { name: "show", rawName: "v-show", value: !e.currentTask.isPublishNow, expression: "!currentTask.isPublishNow" },
+                                    ],
+                                    attrs: {
+                                      disabled: "view" == e.currentTask.display || "edit" == e.currentTask.display,
+                                      type: "datetime",
+                                      placeholder: "选择下发时间",
+                                      align: "right",
+                                      "picker-options": e.pickerOptions,
+                                    },
+                                    model: {
+                                      value: e.currentTask.publishTime,
+                                      callback: function (t) {
+                                        e.$set(e.currentTask, "publishTime", t);
+                                      },
+                                      expression: "currentTask.publishTime",
+                                    },
+                                  }),
+                                ],
+                                1,
+                              ),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                  a("div", { attrs: { slot: "footer" }, slot: "footer" }, [
+                    a(
+                      "div",
+                      [
+                        "new" == e.currentTask.display || "edit" == e.currentTask.display
+                          ? a(
+                              "el-button",
+                              {
+                                attrs: { type: "danger" },
+                                on: {
+                                  click: function (t) {
+                                    e.dialogVisible = !1;
+                                  },
+                                },
+                              },
+                              [e._v(" 取 消 "), a("i", { staticClass: "el-icon-close el-icon--right" })],
+                            )
+                          : e._e(),
+                        "new" == e.currentTask.display
+                          ? a("el-button", { attrs: { type: "primary" }, on: { click: e.saveNewTask } }, [
+                              e._v(" 确 定 "),
+                              a("i", { staticClass: "el-icon-check el-icon--right" }),
+                            ])
+                          : e._e(),
+                        "edit" == e.currentTask.display
+                          ? a("el-button", { attrs: { type: "primary" }, on: { click: e.saveEditTask } }, [
+                              e._v(" 确 定 "),
+                              a("i", { staticClass: "el-icon-check el-icon--right" }),
+                            ])
+                          : e._e(),
+                        "view" == e.currentTask.display
+                          ? a(
+                              "el-button",
+                              {
+                                attrs: { type: "danger" },
+                                on: {
+                                  click: function (t) {
+                                    e.dialogVisible = !1;
+                                  },
+                                },
+                              },
+                              [e._v(" 关闭 "), a("i", { staticClass: "el-icon-close el-icon--right" })],
+                            )
+                          : e._e(),
+                      ],
+                      1,
+                    ),
+                  ]),
+                ],
+                1,
+              ),
+            ],
+            1,
+          );
+        },
+        r = [],
+        n =
+          (a("a4d3"),
+          a("e01a"),
+          a("d28b"),
+          a("99af"),
+          a("4de4"),
+          a("7db0"),
+          a("4160"),
+          a("d81d"),
+          a("a434"),
+          a("0d03"),
+          a("b0c0"),
+          a("d3b7"),
+          a("e25e"),
+          a("ac1f"),
+          a("25f0"),
+          a("3ca3"),
+          a("841c"),
+          a("159b"),
+          a("ddb0"),
+          a("96cf"),
+          a("89ba")),
+        l = a("9f12"),
+        c = a("53fe"),
+        o = a("8b83"),
+        u = a("c65a"),
+        d = a("9aa6"),
+        m = a("c03e"),
+        h = a("2fa7"),
+        p = a("9ab4"),
+        k = a("60a3"),
+        b = a("cdf92"),
+        T = a("a678"),
+        f = a("e9bd"),
+        v = a("4e28"),
+        g = a("a4a8"),
+        y = a("73ec"),
+        w = a("535f"),
+        x = a("f7b1"),
+        O = a("d82f"),
+        S =
+          ((s = (function (e) {
+            function t() {
+              var e, a;
+              Object(l["a"])(this, t);
+              for (var s = arguments.length, i = new Array(s), r = 0; r < s; r++) i[r] = arguments[r];
+              return (
+                (a = Object(o["a"])(this, (e = Object(u["a"])(t)).call.apply(e, [this].concat(i)))),
+                Object(h["a"])(Object(d["a"])(a), "load", !0),
+                Object(h["a"])(Object(d["a"])(a), "moreSet", !1),
+                Object(h["a"])(Object(d["a"])(a), "dialogTitle", "新建任务"),
+                Object(h["a"])(Object(d["a"])(a), "sending", !1),
+                Object(h["a"])(Object(d["a"])(a), "currentPage", 0),
+                Object(h["a"])(Object(d["a"])(a), "pageSize", 10),
+                Object(h["a"])(Object(d["a"])(a), "itemsCount", 0),
+                Object(h["a"])(Object(d["a"])(a), "taskList", []),
+                Object(h["a"])(Object(d["a"])(a), "tasktemplist", new Array()),
+                Object(h["a"])(Object(d["a"])(a), "taskSaved", !1),
+                Object(h["a"])(Object(d["a"])(a), "currentTask", new b["a"]()),
+                Object(h["a"])(Object(d["a"])(a), "dialogVisible", !1),
+                Object(h["a"])(Object(d["a"])(a), "classList", []),
+                Object(h["a"])(Object(d["a"])(a), "selecteStudentInClass", []),
+                Object(h["a"])(Object(d["a"])(a), "allStudentInClass", []),
+                Object(h["a"])(Object(d["a"])(a), "isIndeterminate", !1),
+                Object(h["a"])(Object(d["a"])(a), "allStuCkb", !1),
+                Object(h["a"])(Object(d["a"])(a), "currentTaskRecordList", []),
+                Object(h["a"])(Object(d["a"])(a), "value", ""),
+                Object(h["a"])(Object(d["a"])(a), "key", ""),
+                Object(h["a"])(Object(d["a"])(a), "options", [{ value: "1", label: "名称" }]),
+                Object(h["a"])(Object(d["a"])(a), "search", { page: 1, rows: 10, key: "", classId: "", taskTemplateId: "", name: "", number: "" }),
+                Object(h["a"])(Object(d["a"])(a), "pickerOptions", {
+                  shortcuts: [
+                    {
+                      text: "1 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 6e4), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "2 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 12e4), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "3 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 18e4), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "5 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 3e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "10 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 6e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "15 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 9e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "45 分钟后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 27e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "1 小时后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 36e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "2 小时后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 72e5), e.$emit("pick", t));
+                      },
+                    },
+                    {
+                      text: "3 小时后",
+                      onClick: function (e) {
+                        var t = new Date();
+                        (t.setTime(t.getTime() + 72e5), e.$emit("pick", t));
+                      },
+                    },
+                  ],
+                }),
+                a
+              );
+            }
+            return (
+              Object(m["a"])(t, e),
+              Object(c["a"])(t, [
+                {
+                  key: "selctAllStudent",
+                  value: function (e) {
+                    ((this.selecteStudentInClass = e
+                      ? this.allStudentInClass.map(function (e) {
+                          return e.userId;
+                        })
+                      : []),
+                      (this.isIndeterminate = !1),
+                      this.forceUpdate());
+                  },
+                },
+                {
+                  key: "stuSelectChange",
+                  value: function () {
+                    var e = this;
+                    if ("edit" == this.currentTask.display) {
+                      var t = this.currentTaskRecordList.map(function (e) {
+                        return parseInt(e.studentId);
+                      });
+                      t.forEach(function (t, a) {
+                        e.selecteStudentInClass.find(function (e) {
+                          return e == t;
+                        }) || (e.selecteStudentInClass.splice(a, 0, t), e.msg("不能删除已有学生，仅可添加新学生", "warning"));
+                      });
+                    }
+                    var a = this.allStudentInClass.length;
+                    (a
+                      ? a === this.allStudentInClass.length
+                        ? ((this.isIndeterminate = !1), (this.allStuCkb = !0))
+                        : (this.isIndeterminate = !0)
+                      : ((this.isIndeterminate = !1), (this.allStuCkb = !1)),
+                      this.forceUpdate());
+                  },
+                },
+                {
+                  key: "classSelected",
+                  value: function (e) {
+                    this.selecteStudentInClass = [];
+                    var t = this.classList.find(function (t) {
+                      return t.id === e;
+                    });
+                    ((this.allStudentInClass = t.students),
+                      (this.selecteStudentInClass = this.allStudentInClass.map(function (e) {
+                        return e.userId;
+                      })),
+                      this.stuSelectChange(),
+                      this.forceUpdate());
+                  },
+                },
+                {
+                  key: "forceUpdate",
+                  value: function () {
+                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+                    ((this.taskSaved = !1), this.$forceUpdate());
+                    var t = this.tasktemplist.find(function (t) {
+                      return t.id === e;
+                    });
+                    (!t ||
+                      this.currentTask.id ||
+                      this.currentTask.name ||
+                      (this.currentTask.name = "Task(".concat(Object(y["f"])("MMdd-hhmmss", new Date()), ")-").concat(t.name)),
+                      this.resetLimitTimeByTemplateDuration());
+                  },
+                },
+                {
+                  key: "resetLimitTimeByTemplateDuration",
+                  value: function () {
+                    var e = this;
+                    if (this.currentTask.templateId) {
+                      var t = this.tasktemplist.find(function (t) {
+                        return t.id === e.currentTask.templateId;
+                      });
+                      if (t) {
+                        var a = this.GetStepTime(5).getTime(),
+                          s = a + 1e3 * t.duration;
+                        this.currentTask.limitStartEndTime = [new Date(a), new Date(s)];
+                      }
+                    }
+                  },
+                },
+                {
+                  key: "GetStepTime",
+                  value: function () {
+                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
+                      t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                      a = 60 * e * 1e3,
+                      s = new Date(Math.ceil((t || new Date()).getTime() / a) * a);
+                    return s;
+                  },
+                },
+                {
+                  key: "saveNewTask",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e() {
+                        var t,
+                          a,
+                          s,
+                          i,
+                          r,
+                          n,
+                          l,
+                          c,
+                          o,
+                          u = this;
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  if (this.currentTask.number && this.currentTask.name && this.currentTask.classId && this.currentTask.templateId) {
+                                    e.next = 3;
+                                    break;
+                                  }
+                                  return (this.msg("请填写完整信息", "error"), e.abrupt("return"));
+                                case 3:
+                                  if (this.selecteStudentInClass && this.selecteStudentInClass.length) {
+                                    e.next = 6;
+                                    break;
+                                  }
+                                  return (this.msg("请至少选择一个学生", "error"), e.abrupt("return"));
+                                case 6:
+                                  if (!this.currentTask.limitTime || this.currentTask.limitStartEndTime.length) {
+                                    e.next = 9;
+                                    break;
+                                  }
+                                  return (this.msg("请设置起始时间", "error"), e.abrupt("return"));
+                                case 9:
+                                  if (!(this.currentTask.limitTime && this.currentTask.publishTime > this.currentTask.limitStartEndTime[0])) {
+                                    e.next = 12;
+                                    break;
+                                  }
+                                  return (this.msg("下发时间不能比起止时间晚", "error"), e.abrupt("return"));
+                                case 12:
+                                  for (
+                                    this.currentTask.templateName = this.tasktemplist.find(function (e) {
+                                      return e.id == u.currentTask.templateId;
+                                    }).name,
+                                      this.currentTask.templateScore = this.tasktemplist.find(function (e) {
+                                        return e.id == u.currentTask.templateId;
+                                      }).score,
+                                      t = [],
+                                      a = !0,
+                                      s = !1,
+                                      i = void 0,
+                                      e.prev = 18,
+                                      r = function () {
+                                        var e = l.value,
+                                          a = u.allStudentInClass.find(function (t) {
+                                            return t.userId == e;
+                                          });
+                                        t.push({ id: a.userId.toString(), name: a.stuName, stuNo: a.stuNo });
+                                      },
+                                      n = this.selecteStudentInClass[Symbol.iterator]();
+                                    !(a = (l = n.next()).done);
+                                    a = !0
+                                  )
+                                    r();
+                                  e.next = 27;
+                                  break;
+                                case 23:
+                                  ((e.prev = 23), (e.t0 = e["catch"](18)), (s = !0), (i = e.t0));
+                                case 27:
+                                  ((e.prev = 27), (e.prev = 28), a || null == n.return || n.return());
+                                case 30:
+                                  if (((e.prev = 30), !s)) {
+                                    e.next = 33;
+                                    break;
+                                  }
+                                  throw i;
+                                case 33:
+                                  return e.finish(30);
+                                case 34:
+                                  return e.finish(27);
+                                case 35:
+                                  return (
+                                    (c = this.classList.find(function (e) {
+                                      return e.id === u.currentTask.classId;
+                                    })),
+                                    (this.currentTask.className = c.className),
+                                    (this.currentTask.teacherId = this.userId),
+                                    (this.currentTask.teacherName = this.userName),
+                                    (this.currentTask.limitStartTime = new Date(this.currentTask.limitStartEndTime[0].getTime() + 288e5)),
+                                    (this.currentTask.limitEndTime = new Date(this.currentTask.limitStartEndTime[1].getTime() + 288e5)),
+                                    (this.currentTask.publishTime = new Date(this.currentTask.publishTime.getTime() + 288e5)),
+                                    this.currentTask.isPublishNow && (this.currentTask.publishTime = new Date(new Date().getTime() + 288e5)),
+                                    (this.sending = !0),
+                                    (e.next = 46),
+                                    T["a"].addTask(this.currentTask, t)
+                                  );
+                                case 46:
+                                  if (((o = e.sent), (this.sending = !1), !o || 0 !== o.code)) {
+                                    e.next = 58;
+                                    break;
+                                  }
+                                  return (
+                                    this.$message({ message: "创建成功", type: "success" }),
+                                    (this.dialogVisible = !1),
+                                    (e.next = 53),
+                                    T["a"].getTaskPage(1)
+                                  );
+                                case 53:
+                                  ((this.taskList = e.sent), (this.itemsCount = T["a"].GetItemsCount()), (this.currentPage = 1), (e.next = 59));
+                                  break;
+                                case 58:
+                                  this.$message.error("创建失败:" + o.msg + o.message);
+                                case 59:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                          [
+                            [18, 23, 27, 35],
+                            [28, , 30, 34],
+                          ],
+                        );
+                      }),
+                    );
+                    function t() {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "saveEditTask",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e() {
+                        var t,
+                          a,
+                          s,
+                          i,
+                          r,
+                          n,
+                          l,
+                          c,
+                          o = this;
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  if (this.currentTask.name) {
+                                    e.next = 3;
+                                    break;
+                                  }
+                                  return (this.msg("请填写任务名称", "error"), e.abrupt("return"));
+                                case 3:
+                                  for (
+                                    t = [],
+                                      a = !0,
+                                      s = !1,
+                                      i = void 0,
+                                      e.prev = 7,
+                                      r = function () {
+                                        var e = l.value;
+                                        if (
+                                          null ==
+                                          o.currentTaskRecordList.find(function (t) {
+                                            return t.studentId == e.toString();
+                                          })
+                                        ) {
+                                          var a = o.allStudentInClass.find(function (t) {
+                                            return t.userId == e;
+                                          });
+                                          t.push({ id: a.userId.toString(), name: a.stuName, stuNo: a.stuNo });
+                                        }
+                                      },
+                                      n = this.selecteStudentInClass[Symbol.iterator]();
+                                    !(a = (l = n.next()).done);
+                                    a = !0
+                                  )
+                                    r();
+                                  e.next = 16;
+                                  break;
+                                case 12:
+                                  ((e.prev = 12), (e.t0 = e["catch"](7)), (s = !0), (i = e.t0));
+                                case 16:
+                                  ((e.prev = 16), (e.prev = 17), a || null == n.return || n.return());
+                                case 19:
+                                  if (((e.prev = 19), !s)) {
+                                    e.next = 22;
+                                    break;
+                                  }
+                                  throw i;
+                                case 22:
+                                  return e.finish(19);
+                                case 23:
+                                  return e.finish(16);
+                                case 24:
+                                  return ((this.sending = !0), (e.next = 27), T["a"].editTask(this.currentTask, t));
+                                case 27:
+                                  if (((c = e.sent), (this.sending = !1), !c || 0 !== c.code)) {
+                                    e.next = 39;
+                                    break;
+                                  }
+                                  return (
+                                    this.$message({ message: "编辑成功", type: "success" }),
+                                    (this.dialogVisible = !1),
+                                    (e.next = 34),
+                                    T["a"].getTaskPage(1)
+                                  );
+                                case 34:
+                                  ((this.taskList = e.sent), (this.itemsCount = T["a"].GetItemsCount()), (this.currentPage = 1), (e.next = 40));
+                                  break;
+                                case 39:
+                                  this.$message.error("编辑失败:" + c.msg + c.message);
+                                case 40:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                          [
+                            [7, 12, 16, 24],
+                            [17, , 19, 23],
+                          ],
+                        );
+                      }),
+                    );
+                    function t() {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "addTaskClick",
+                  value: function () {
+                    ((this.moreSet = !1),
+                      (this.currentTask = new b["a"]()),
+                      (this.currentTask.display = "new"),
+                      (this.dialogTitle = "新建任务"),
+                      (this.currentTask.classId = ""),
+                      (this.currentTask.templateId = ""),
+                      (this.currentTask.scoreDisplay = 1),
+                      (this.currentTask.mode = 0),
+                      (this.currentTask.hideReport = !1),
+                      (this.selecteStudentInClass = []),
+                      (this.allStudentInClass = []),
+                      (this.isIndeterminate = !1),
+                      (this.allStuCkb = !1),
+                      (this.currentTask.number = "T" + Object(y["f"])("yy-MMddhhmmssS", new Date())));
+                    var e = this.GetStepTime(5),
+                      t = new Date(e.getTime() + 3e5),
+                      a = 27e5,
+                      s = new Date(t.getTime() + a);
+                    ((this.currentTask.limitStartEndTime = [t, s]), (this.currentTask.publishTime = e), (this.dialogVisible = !0));
+                  },
+                },
+                {
+                  key: "batchDeleteTaskClick",
+                  value: function () {
+                    var e = this;
+                    this.$confirm("是否确定删除任务？")
+                      .then(
+                        (function () {
+                          var t = Object(n["a"])(
+                            regeneratorRuntime.mark(function t(a) {
+                              var s, i;
+                              return regeneratorRuntime.wrap(function (t) {
+                                while (1)
+                                  switch ((t.prev = t.next)) {
+                                    case 0:
+                                      return (
+                                        (s = e.$refs.taskTable.selection.map(function (e) {
+                                          return e.id;
+                                        })),
+                                        console.log(s),
+                                        (e.load = !0),
+                                        (t.next = 5),
+                                        T["a"].bacthDeleteTask(s)
+                                      );
+                                    case 5:
+                                      if (((i = t.sent), !(i && 0 === i.code && i.data > 0))) {
+                                        t.next = 13;
+                                        break;
+                                      }
+                                      return ((t.next = 9), T["a"].getTaskPage(1));
+                                    case 9:
+                                      ((e.taskList = t.sent), (e.itemsCount = T["a"].GetItemsCount()), (e.currentPage = 1), (e.load = !1));
+                                    case 13:
+                                    case "end":
+                                      return t.stop();
+                                  }
+                              }, t);
+                            }),
+                          );
+                          return function (e) {
+                            return t.apply(this, arguments);
+                          };
+                        })(),
+                      )
+                      .catch(function (e) {});
+                  },
+                },
+                {
+                  key: "deleteTaskClick",
+                  value: function (e, t) {
+                    var a = this,
+                      s = t;
+                    this.$confirm("是否确定删除任务？")
+                      .then(
+                        (function () {
+                          var e = Object(n["a"])(
+                            regeneratorRuntime.mark(function e(t) {
+                              var i;
+                              return regeneratorRuntime.wrap(function (e) {
+                                while (1)
+                                  switch ((e.prev = e.next)) {
+                                    case 0:
+                                      return (console.log(s.id), (e.next = 3), T["a"].deleteTask(s.id));
+                                    case 3:
+                                      if (((i = e.sent), 0 !== i.code || !0 !== i.data)) {
+                                        e.next = 10;
+                                        break;
+                                      }
+                                      return ((e.next = 7), T["a"].getTaskPage(1));
+                                    case 7:
+                                      ((a.taskList = e.sent), (a.itemsCount = T["a"].GetItemsCount()), (a.currentPage = 1));
+                                    case 10:
+                                    case "end":
+                                      return e.stop();
+                                  }
+                              }, e);
+                            }),
+                          );
+                          return function (t) {
+                            return e.apply(this, arguments);
+                          };
+                        })(),
+                      )
+                      .catch(function (e) {});
+                  },
+                },
+                {
+                  key: "viewTaskClick",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e(t, a) {
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  return (
+                                    (this.moreSet = !1),
+                                    (this.dialogTitle = "查看任务"),
+                                    (this.currentTask = a),
+                                    (this.currentTask.display = "view"),
+                                    (this.dialogVisible = !0),
+                                    (e.next = 7),
+                                    O["a"].getTaskRecordByTaskId(this.currentTask.id)
+                                  );
+                                case 7:
+                                  ((this.currentTaskRecordList = e.sent),
+                                    this.classSelected(this.currentTask.classId),
+                                    (this.selecteStudentInClass = this.currentTaskRecordList.map(function (e) {
+                                      return parseInt(e.studentId);
+                                    })),
+                                    this.currentTask.limitTime &&
+                                      ((this.currentTask.limitStartEndTime = []),
+                                      this.currentTask.limitStartEndTime.push(this.currentTask.limitStartTime),
+                                      this.currentTask.limitStartEndTime.push(this.currentTask.limitEndTime)));
+                                case 11:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                        );
+                      }),
+                    );
+                    function t(t, a) {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "editTaskClick",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e(t, a) {
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  return (
+                                    (this.moreSet = !1),
+                                    (this.dialogTitle = "编辑任务"),
+                                    (this.currentTask = a),
+                                    (this.currentTask.display = "edit"),
+                                    (this.dialogVisible = !0),
+                                    (e.next = 7),
+                                    O["a"].getTaskRecordByTaskId(this.currentTask.id)
+                                  );
+                                case 7:
+                                  ((this.currentTaskRecordList = e.sent),
+                                    this.classSelected(this.currentTask.classId),
+                                    (this.selecteStudentInClass = this.currentTaskRecordList.map(function (e) {
+                                      return parseInt(e.studentId);
+                                    })),
+                                    this.currentTask.limitTime &&
+                                      ((this.currentTask.limitStartEndTime = []),
+                                      this.currentTask.limitStartEndTime.push(this.currentTask.limitStartTime),
+                                      this.currentTask.limitStartEndTime.push(this.currentTask.limitEndTime)),
+                                    null == this.currentTask.scoreDisplay && (this.currentTask.scoreDisplay = 0),
+                                    null == this.currentTask.mode && (this.currentTask.mode = 0),
+                                    null == this.currentTask.hideReport && (this.currentTask.hideReport = !1));
+                                case 14:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                        );
+                      }),
+                    );
+                    function t(t, a) {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "taskDetial",
+                  value: function (e, t) {
+                    this.$router.push({ name: "taskprogress", params: { number: t.number } });
+                  },
+                },
+                {
+                  key: "pageTurn",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e(t) {
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  return ((e.next = 2), T["a"].getTaskPage(t));
+                                case 2:
+                                  ((this.taskList = e.sent), (this.itemsCount = T["a"].GetItemsCount()), (this.currentPage = t));
+                                case 5:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                        );
+                      }),
+                    );
+                    function t(t) {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "LoadList",
+                  value: function () {
+                    var e = this;
+                    ((this.load = !0),
+                      T["a"]
+                        .ListByPage(this.search)
+                        .then(function (t) {
+                          ((e.load = !1), t.status ? ((e.taskList = t.list), (e.itemsCount = T["a"].GetItemsCount())) : e.msg("数据读取失败", "error"));
+                        })
+                        .catch(function (t) {
+                          ((e.load = !1), e.msg(t, "error"));
+                        }));
+                  },
+                },
+                {
+                  key: "reset",
+                  value: function () {
+                    ((this.search = { page: 1, rows: 10, key: "", classId: "", taskTemplateId: "", name: "", number: "" }), this.LoadList());
+                  },
+                },
+                {
+                  key: "btn_search",
+                  value: function () {
+                    ((this.search.name = this.search.number = ""), "" != this.search.key && (this.search.name = this.search.key), this.LoadList());
+                  },
+                },
+                {
+                  key: "selectedChanged",
+                  value: function (e) {
+                    this.LoadList();
+                  },
+                },
+                {
+                  key: "mounted",
+                  value: (function () {
+                    var e = Object(n["a"])(
+                      regeneratorRuntime.mark(function e() {
+                        var t, a, s, i, r, n, l;
+                        return regeneratorRuntime.wrap(
+                          function (e) {
+                            while (1)
+                              switch ((e.prev = e.next)) {
+                                case 0:
+                                  return (this.LoadList(), (e.next = 3), f["a"].getAllTasktemplateInfo(this.userId, this.collegeId));
+                                case 3:
+                                  return ((this.tasktemplist = e.sent.data), (e.next = 6), v["a"].ListAll());
+                                case 6:
+                                  return (
+                                    (this.classList = e.sent.list),
+                                    this.classList.forEach(function (e) {
+                                      e.id = e.id.toString();
+                                    }),
+                                    (e.next = 10),
+                                    g["a"].ListByPage({ pageSize: 1e7 })
+                                  );
+                                case 10:
+                                  for (
+                                    t = e.sent,
+                                      a = !0,
+                                      s = !1,
+                                      i = void 0,
+                                      e.prev = 14,
+                                      r = function () {
+                                        var e = l.value;
+                                        e.students = t.list.filter(function (t) {
+                                          return t.classId == e.id;
+                                        });
+                                      },
+                                      n = this.classList[Symbol.iterator]();
+                                    !(a = (l = n.next()).done);
+                                    a = !0
+                                  )
+                                    r();
+                                  e.next = 23;
+                                  break;
+                                case 19:
+                                  ((e.prev = 19), (e.t0 = e["catch"](14)), (s = !0), (i = e.t0));
+                                case 23:
+                                  ((e.prev = 23), (e.prev = 24), a || null == n.return || n.return());
+                                case 26:
+                                  if (((e.prev = 26), !s)) {
+                                    e.next = 29;
+                                    break;
+                                  }
+                                  throw i;
+                                case 29:
+                                  return e.finish(26);
+                                case 30:
+                                  return e.finish(23);
+                                case 31:
+                                case "end":
+                                  return e.stop();
+                              }
+                          },
+                          e,
+                          this,
+                          [
+                            [14, 19, 23, 31],
+                            [24, , 26, 30],
+                          ],
+                        );
+                      }),
+                    );
+                    function t() {
+                      return e.apply(this, arguments);
+                    }
+                    return t;
+                  })(),
+                },
+                {
+                  key: "serverNow",
+                  get: function () {
+                    return x["a"].Time().getTime();
+                  },
+                },
+                {
+                  key: "userId",
+                  get: function () {
+                    return this.$store.getters["user/userId"];
+                  },
+                },
+                {
+                  key: "userName",
+                  get: function () {
+                    return this.$store.state.user.user.name;
+                  },
+                },
+                {
+                  key: "collegeId",
+                  get: function () {
+                    return this.$store.getters["user/collegeId"];
+                  },
+                },
+              ]),
+              t
+            );
+          })(w["a"])),
+          s);
+      S = Object(p["a"])(
+        [
+          Object(k["a"])({
+            filters: {
+              format: function (e) {
+                return Object(y["f"])("yyyy/MM/dd hh:mm:ss", new Date(e));
+              },
+              durationFormat: function (e) {
+                return Object(y["g"])(e);
+              },
+              taskState: function (e) {
+                return 0 == e ? "进行中" : 1 == e ? "暂停" : "结束";
+              },
+            },
+          }),
+        ],
+        S,
+      );
+      var j = S,
+        C = j,
+        I = (a("bd87"), a("2877")),
+        _ = Object(I["a"])(C, i, r, !1, null, "1d5108f8", null);
+      t["default"] = _.exports;
+    },
+    "6db2": function (e, t, a) {
+      ((t = e.exports = a("24fb")(!1)),
+        t.push([
+          e.i,
+          '.frame-main[data-v-1d5108f8]{height:calc(100vh - 60px);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;overflow:auto;min-width:1266px}.main-body[data-v-1d5108f8]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.main-body .content[data-v-1d5108f8]{height:calc(100vh - 220px)}.row-tool[data-v-1d5108f8]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}[data-v-1d5108f8] .el-select-dropdown__item.stu-select{display:inline-block}[data-v-1d5108f8] .el-select-dropdown__item.stu-select.selected:after{content:"";display:none}.all-stu-select[data-v-1d5108f8]{display:block;margin:10px;font-size:16px}.stus[data-v-1d5108f8] .el-form-item__content,.stus[data-v-1d5108f8] .el-select{max-height:175px}.stus[data-v-1d5108f8] .el-select__tags{max-height:170px;overflow-y:auto}.el-input.el-input--suffix[data-v-1d5108f8]{max-height:205px}[data-v-1d5108f8] .el-checkbox__inner{z-index:0}[data-v-1d5108f8] .el-dialog__footer{text-align:center;padding:5px 0 50px 0}.foot-button[data-v-1d5108f8]{width:160px;margin:0 20px}.search-input[data-v-1d5108f8]{width:260px;display:inline-block;margin-left:0;margin-right:6px}.danger[data-v-1d5108f8]{color:#f56c6c}[data-v-1d5108f8] .el-table__row td:first-child .cell,[data-v-1d5108f8] .tb-header th:first-child .cell{text-align:center;padding:0}',
+          "",
+        ]));
+    },
+    a434: function (e, t, a) {
+      "use strict";
+      var s = a("23e7"),
+        i = a("23cb"),
+        r = a("a691"),
+        n = a("50c4"),
+        l = a("7b0b"),
+        c = a("65f0"),
+        o = a("8418"),
+        u = a("1dde"),
+        d = Math.max,
+        m = Math.min,
+        h = 9007199254740991,
+        p = "Maximum allowed length exceeded";
+      s(
+        { target: "Array", proto: !0, forced: !u("splice") },
+        {
+          splice: function (e, t) {
+            var a,
+              s,
+              u,
+              k,
+              b,
+              T,
+              f = l(this),
+              v = n(f.length),
+              g = i(e, v),
+              y = arguments.length;
+            if ((0 === y ? (a = s = 0) : 1 === y ? ((a = 0), (s = v - g)) : ((a = y - 2), (s = m(d(r(t), 0), v - g))), v + a - s > h)) throw TypeError(p);
+            for (u = c(f, s), k = 0; k < s; k++) ((b = g + k), b in f && o(u, k, f[b]));
+            if (((u.length = s), a < s)) {
+              for (k = g; k < v - s; k++) ((b = k + s), (T = k + a), b in f ? (f[T] = f[b]) : delete f[T]);
+              for (k = v; k > v - s + a; k--) delete f[k - 1];
+            } else if (a > s) for (k = v - s; k > g; k--) ((b = k + s - 1), (T = k + a - 1), b in f ? (f[T] = f[b]) : delete f[T]);
+            for (k = 0; k < a; k++) f[k + g] = arguments[k + 2];
+            return ((f.length = v - s + a), u);
+          },
+        },
+      );
+    },
+    bd87: function (e, t, a) {
+      "use strict";
+      var s = a("fbe8"),
+        i = a.n(s);
+      i.a;
+    },
+    cdf92: function (e, t, a) {
+      "use strict";
+      a.d(t, "a", function () {
+        return r;
+      });
+      (a("0d03"), a("b0c0"));
+      var s = a("9f12"),
+        i = a("2fa7"),
+        r = function e() {
+          var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+          (Object(s["a"])(this, e),
+            Object(i["a"])(this, "id", void 0),
+            Object(i["a"])(this, "number", void 0),
+            Object(i["a"])(this, "name", void 0),
+            Object(i["a"])(this, "duration", void 0),
+            Object(i["a"])(this, "templateId", void 0),
+            Object(i["a"])(this, "templateName", void 0),
+            Object(i["a"])(this, "templateScore", void 0),
+            Object(i["a"])(this, "classId", void 0),
+            Object(i["a"])(this, "className", void 0),
+            Object(i["a"])(this, "teacherId", void 0),
+            Object(i["a"])(this, "teacherName", void 0),
+            Object(i["a"])(this, "count", void 0),
+            Object(i["a"])(this, "completedCount", void 0),
+            Object(i["a"])(this, "publishTime", void 0),
+            Object(i["a"])(this, "completionTime", void 0),
+            Object(i["a"])(this, "state", void 0),
+            Object(i["a"])(this, "score", void 0),
+            Object(i["a"])(this, "isDone", void 0),
+            Object(i["a"])(this, "limitTime", void 0),
+            Object(i["a"])(this, "limitStartEndTime", void 0),
+            Object(i["a"])(this, "limitStartTime", void 0),
+            Object(i["a"])(this, "limitEndTime", void 0),
+            Object(i["a"])(this, "autoSubmit", void 0),
+            Object(i["a"])(this, "isPublishNow", void 0),
+            Object(i["a"])(this, "exOrderRand", void 0),
+            Object(i["a"])(this, "exOptionsOrderRand", void 0),
+            Object(i["a"])(this, "scoreDisplay", void 0),
+            Object(i["a"])(this, "mode", void 0),
+            Object(i["a"])(this, "hideReport", void 0),
+            Object(i["a"])(this, "display", "new|view|edit"),
+            (this.name = t),
+            (this.limitStartEndTime = []),
+            (this.isPublishNow = !0),
+            (this.publishTime = new Date()),
+            (this.exOrderRand = !1),
+            (this.exOptionsOrderRand = !1),
+            (this.scoreDisplay = 1),
+            (this.hideReport = !1),
+            (this.mode = 0));
+        };
+      new r();
+    },
+    fbe8: function (e, t, a) {
+      var s = a("6db2");
+      ("string" === typeof s && (s = [[e.i, s, ""]]), s.locals && (e.exports = s.locals));
+      var i = a("499e").default;
+      i("57561739", s, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+  },
+]);

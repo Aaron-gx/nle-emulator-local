@@ -1,0 +1,1026 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-3636d4ec"],
+  {
+    "04d1": function (e, t, s) {
+      var a = s("342f"),
+        o = a.match(/firefox\/(\d+)/i);
+      e.exports = !!o && +o[1];
+    },
+    2: function (e, t) {},
+    3: function (e, t) {},
+    4: function (e, t) {},
+    "4e82": function (e, t, s) {
+      "use strict";
+      var a = s("23e7"),
+        o = s("e330"),
+        l = s("59ed"),
+        r = s("7b0b"),
+        i = s("07fa"),
+        n = s("083a"),
+        c = s("577e"),
+        u = s("d039"),
+        d = s("addb"),
+        h = s("a640"),
+        p = s("04d1"),
+        m = s("d998"),
+        g = s("2d00"),
+        f = s("512ce"),
+        v = [],
+        b = o(v.sort),
+        y = o(v.push),
+        w = u(function () {
+          v.sort(void 0);
+        }),
+        N = u(function () {
+          v.sort(null);
+        }),
+        x = h("sort"),
+        I = !u(function () {
+          if (g) return g < 70;
+          if (!(p && p > 3)) {
+            if (m) return !0;
+            if (f) return f < 603;
+            var e,
+              t,
+              s,
+              a,
+              o = "";
+            for (e = 65; e < 76; e++) {
+              switch (((t = String.fromCharCode(e)), e)) {
+                case 66:
+                case 69:
+                case 70:
+                case 72:
+                  s = 3;
+                  break;
+                case 68:
+                case 71:
+                  s = 4;
+                  break;
+                default:
+                  s = 2;
+              }
+              for (a = 0; a < 47; a++) v.push({ k: t + a, v: s });
+            }
+            for (
+              v.sort(function (e, t) {
+                return t.v - e.v;
+              }),
+                a = 0;
+              a < v.length;
+              a++
+            )
+              ((t = v[a].k.charAt(0)), o.charAt(o.length - 1) !== t && (o += t));
+            return "DGBEFHACIJK" !== o;
+          }
+        }),
+        S = w || !N || !x || !I,
+        k = function (e) {
+          return function (t, s) {
+            return void 0 === s ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, s) || 0 : c(t) > c(s) ? 1 : -1;
+          };
+        };
+      a(
+        { target: "Array", proto: !0, forced: S },
+        {
+          sort: function (e) {
+            void 0 !== e && l(e);
+            var t = r(this);
+            if (I) return void 0 === e ? b(t) : b(t, e);
+            var s,
+              a,
+              o = [],
+              c = i(t);
+            for (a = 0; a < c; a++) a in t && y(o, t[a]);
+            (d(o, k(e)), (s = i(o)), (a = 0));
+            while (a < s) t[a] = o[a++];
+            while (a < c) n(t, a++);
+            return t;
+          },
+        },
+      );
+    },
+    "512ce": function (e, t, s) {
+      var a = s("342f"),
+        o = a.match(/AppleWebKit\/(\d+)\./);
+      e.exports = !!o && +o[1];
+    },
+    "7b4e": function (e, t, s) {
+      "use strict";
+      s.r(t);
+      (s("ac1f"), s("841c"));
+      var a = function () {
+          var e = this,
+            t = e._self._c;
+          return t(
+            "div",
+            { staticClass: "app-cont" },
+            [
+              t("div", { staticClass: "ctrl-line clearfix" }, [
+                t(
+                  "div",
+                  { staticClass: "ctr-l" },
+                  [
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/student/save", expression: "'/student/save'" }],
+                        attrs: { type: "primary" },
+                        on: { click: e.addOpen },
+                      },
+                      [e._v("手动添加")],
+                    ),
+                    t(
+                      "el-button",
+                      {
+                        directives: [{ name: "auth", rawName: "v-auth", value: "/student/importStus", expression: "'/student/importStus'" }],
+                        attrs: { type: "default" },
+                        on: { click: e.importOpen },
+                      },
+                      [e._v("批量导入")],
+                    ),
+                  ],
+                  1,
+                ),
+                t(
+                  "div",
+                  { staticClass: "ctr-r" },
+                  [
+                    t("span", { staticClass: "ctr-item" }, [e._v("班级：")]),
+                    t(
+                      "el-select",
+                      {
+                        staticStyle: { width: "300px" },
+                        attrs: { placeholder: "请选择学校" },
+                        on: {
+                          change: function (t) {
+                            return e.querySchoolChange(t);
+                          },
+                        },
+                        model: {
+                          value: e.search.collegeId,
+                          callback: function (t) {
+                            e.$set(e.search, "collegeId", t);
+                          },
+                          expression: "search.collegeId",
+                        },
+                      },
+                      e._l(e.querySchools, function (e) {
+                        return t("el-option", { key: parseInt(e.id), attrs: { label: e.schoolName, value: parseInt(e.id) } });
+                      }),
+                      1,
+                    ),
+                    t(
+                      "el-select",
+                      {
+                        staticStyle: { width: "300px" },
+                        attrs: { placeholder: "请选择班级" },
+                        model: {
+                          value: e.search.classId,
+                          callback: function (t) {
+                            e.$set(e.search, "classId", t);
+                          },
+                          expression: "search.classId",
+                        },
+                      },
+                      e._l(e.queryCls, function (e) {
+                        return t("el-option", { key: parseInt(e.id), attrs: { label: e.className, value: parseInt(e.id) } });
+                      }),
+                      1,
+                    ),
+                    t("span", { staticClass: "ctr-item" }, [e._v("搜索：")]),
+                    t(
+                      "el-input",
+                      {
+                        attrs: { size: "large", placeholder: "请输入关键字进行搜索" },
+                        model: {
+                          value: e.key,
+                          callback: function (t) {
+                            e.key = t;
+                          },
+                          expression: "key",
+                        },
+                      },
+                      [
+                        t(
+                          "el-select",
+                          {
+                            staticStyle: { width: "100px" },
+                            attrs: { slot: "prepend", placeholder: "请选择" },
+                            slot: "prepend",
+                            model: {
+                              value: e.searchMode,
+                              callback: function (t) {
+                                e.searchMode = t;
+                              },
+                              expression: "searchMode",
+                            },
+                          },
+                          [
+                            t("el-option", { attrs: { label: "学号", value: "1" } }),
+                            t("el-option", { attrs: { label: "姓名", value: "2" } }),
+                            t("el-option", { attrs: { label: "电话", value: "3" } }),
+                          ],
+                          1,
+                        ),
+                        t("el-button", { attrs: { slot: "append", icon: "el-icon-search", type: "success" }, on: { click: e.studentsSearch }, slot: "append" }),
+                      ],
+                      1,
+                    ),
+                    t(
+                      "el-button",
+                      { staticClass: "ml5", staticStyle: { color: "#999" }, attrs: { icon: "el-icon-refresh", type: "text" }, on: { click: e.reset } },
+                      [e._v("重置")],
+                    ),
+                  ],
+                  1,
+                ),
+              ]),
+              t(
+                "div",
+                { staticClass: "tb-cont" },
+                [
+                  t(
+                    "el-table",
+                    { attrs: { data: e.students, stripe: "", border: "", "header-row-class-name": "tb-header" } },
+                    [
+                      t("el-table-column", { attrs: { type: "index", width: "50", index: e.indexMethod, align: "center", label: "序号" } }),
+                      t("el-table-column", { attrs: { prop: "stuNo", label: "学号", "min-width": "20%", align: "center" } }),
+                      t("el-table-column", { attrs: { prop: "stuName", label: "姓名", "min-width": "20%", align: "center" } }),
+                      t("el-table-column", { attrs: { prop: "className", label: "班级", "min-width": "20%", align: "center" } }),
+                      t("el-table-column", { attrs: { prop: "phone", label: "电话", "min-width": "20%", align: "center" } }),
+                      t("el-table-column", {
+                        attrs: { label: "操作", "min-width": "20%", align: "center" },
+                        scopedSlots: e._u([
+                          {
+                            key: "default",
+                            fn: function (s) {
+                              return [
+                                t(
+                                  "el-button",
+                                  {
+                                    directives: [{ name: "auth", rawName: "v-auth", value: "/student/save", expression: "'/student/save'" }],
+                                    attrs: { type: "text", icon: "el-icon-edit" },
+                                    on: {
+                                      click: function (t) {
+                                        return e.handleEdit(s.row);
+                                      },
+                                    },
+                                  },
+                                  [e._v(" 编辑 ")],
+                                ),
+                                t(
+                                  "el-button",
+                                  {
+                                    directives: [{ name: "auth", rawName: "v-auth", value: "/student/del", expression: "'/student/del'" }],
+                                    staticClass: "danger",
+                                    attrs: { type: "text", icon: "el-icon-delete" },
+                                    on: {
+                                      click: function (t) {
+                                        return e.deleteStu(s.$index, s.row);
+                                      },
+                                    },
+                                  },
+                                  [e._v("删除 ")],
+                                ),
+                              ];
+                            },
+                          },
+                        ]),
+                      }),
+                    ],
+                    1,
+                  ),
+                  t(
+                    "div",
+                    { staticStyle: { "text-align": "center", margin: "10px 0" } },
+                    [
+                      t("el-pagination", {
+                        staticClass: "ml20 mt20",
+                        attrs: {
+                          "current-page": e.page.pageNum,
+                          "page-size": e.page.pageSize,
+                          background: "",
+                          layout: "prev, pager, next",
+                          total: e.page.total,
+                        },
+                        on: { "size-change": e.handleSizeChange, "current-change": e.handleCurrentChange },
+                      }),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: e.formTitle, visible: e.showEdit, width: "50%", "close-on-click-modal": !1 },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showEdit = t;
+                    },
+                    close: e.editClose,
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "form", attrs: { model: e.stumodel, "label-width": "80px", rules: e.rules } },
+                    [
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "姓名", prop: "stuName" } },
+                        [
+                          t("el-input", {
+                            attrs: { placeholder: "请输入学生姓名", maxlength: 20 },
+                            model: {
+                              value: e.stumodel.stuName,
+                              callback: function (t) {
+                                e.$set(e.stumodel, "stuName", t);
+                              },
+                              expression: "stumodel.stuName",
+                            },
+                          }),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "学号", prop: "stuNo" } },
+                        [
+                          t("el-input", {
+                            attrs: { placeholder: "请输入学号", type: "text", maxlength: 15 },
+                            model: {
+                              value: e.stumodel.stuNo,
+                              callback: function (t) {
+                                e.$set(e.stumodel, "stuNo", t);
+                              },
+                              expression: "stumodel.stuNo",
+                            },
+                          }),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "电话", prop: "phone" } },
+                        [
+                          t("el-input", {
+                            attrs: { placeholder: "请输入电话号码", type: "text", maxlength: 11, disabled: 0 != e.stumodel.id },
+                            model: {
+                              value: e.stumodel.phone,
+                              callback: function (t) {
+                                e.$set(e.stumodel, "phone", t);
+                              },
+                              expression: "stumodel.phone",
+                            },
+                          }),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        {
+                          directives: [{ name: "show", rawName: "v-show", value: 0 == e.stumodel.id, expression: "stumodel.id == 0" }],
+                          attrs: { label: "密码", prop: "pwd" },
+                        },
+                        [
+                          t("el-input", {
+                            attrs: { placeholder: "请输入密码，默认使用电话号码", "show-password": "", maxlength: 16 },
+                            model: {
+                              value: e.stumodel.password,
+                              callback: function (t) {
+                                e.$set(e.stumodel, "password", t);
+                              },
+                              expression: "stumodel.password",
+                            },
+                          }),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "班级", prop: "classId" } },
+                        [
+                          t(
+                            "el-select",
+                            {
+                              attrs: { placeholder: "请选择学校" },
+                              on: {
+                                change: function (t) {
+                                  return e.schoolChange(t);
+                                },
+                              },
+                              model: {
+                                value: e.stumodel.collegeId,
+                                callback: function (t) {
+                                  e.$set(e.stumodel, "collegeId", t);
+                                },
+                                expression: "stumodel.collegeId",
+                              },
+                            },
+                            e._l(e.schools, function (e) {
+                              return t("el-option", { key: String(e.id), attrs: { label: e.schoolName, value: String(e.id) } });
+                            }),
+                            1,
+                          ),
+                          t(
+                            "el-select",
+                            {
+                              attrs: { placeholder: "请选择班级" },
+                              model: {
+                                value: e.stumodel.classId,
+                                callback: function (t) {
+                                  e.$set(e.stumodel, "classId", t);
+                                },
+                                expression: "stumodel.classId",
+                              },
+                            },
+                            e._l(e.cls, function (e) {
+                              return t("el-option", { key: parseInt(e.id), attrs: { label: e.className, value: parseInt(e.id) } });
+                            }),
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        [
+                          t("el-button", { attrs: { type: "primary" }, on: { click: e.onEditSave } }, [e._v("保存")]),
+                          t(
+                            "el-button",
+                            {
+                              on: {
+                                click: function (t) {
+                                  e.showEdit = !1;
+                                },
+                              },
+                            },
+                            [e._v("取消")],
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { title: "导入学生", visible: e.showImport, width: "50%" },
+                  on: {
+                    "update:visible": function (t) {
+                      e.showImport = t;
+                    },
+                    close: e.importClosed,
+                  },
+                },
+                [
+                  t(
+                    "el-form",
+                    { ref: "form", attrs: { model: e.stuImportModel, "label-width": "80px" } },
+                    [
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "班级", prop: "classId" } },
+                        [
+                          t(
+                            "el-select",
+                            {
+                              staticStyle: { width: "300px" },
+                              attrs: { placeholder: "请选择学校" },
+                              on: {
+                                change: function (t) {
+                                  return e.importSchoolChange(t);
+                                },
+                              },
+                              model: {
+                                value: e.importCollegeId,
+                                callback: function (t) {
+                                  e.importCollegeId = t;
+                                },
+                                expression: "importCollegeId",
+                              },
+                            },
+                            e._l(e.importSchools, function (e) {
+                              return t("el-option", { key: parseInt(e.id), attrs: { label: e.schoolName, value: parseInt(e.id) } });
+                            }),
+                            1,
+                          ),
+                          t(
+                            "el-select",
+                            {
+                              staticStyle: { width: "300px" },
+                              attrs: { placeholder: "请选择班级" },
+                              model: {
+                                value: e.importClass,
+                                callback: function (t) {
+                                  e.importClass = t;
+                                },
+                                expression: "importClass",
+                              },
+                            },
+                            e._l(e.importCls, function (e) {
+                              return t("el-option", { key: parseInt(e.id), attrs: { label: e.className, value: parseInt(e.id) } });
+                            }),
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        { attrs: { label: "导入" } },
+                        [
+                          t(
+                            "div",
+                            [
+                              t(
+                                "el-upload",
+                                {
+                                  staticStyle: { display: "inline-block" },
+                                  attrs: {
+                                    action: "https://jsonplaceholder.typicode.com/posts/",
+                                    accept: ".xls,.xlsx,.csv",
+                                    "on-change": e.importExcel,
+                                    "show-file-list": !1,
+                                    "auto-upload": !1,
+                                  },
+                                },
+                                [t("el-button", { attrs: { type: "primary" } }, [e._v("选择文件")])],
+                                1,
+                              ),
+                              t(
+                                "el-button",
+                                { staticStyle: { display: "inline-block", margin: "0 10px" }, attrs: { type: "primary" }, on: { click: e.saveTemplate } },
+                                [e._v("导出模板")],
+                              ),
+                            ],
+                            1,
+                          ),
+                          t("p", [e._v("说明：导入文件（.xls、.xlsc或.csv），数据必须按照下表格式填写，默认密码为电话号码")]),
+                          t(
+                            "el-table",
+                            { staticStyle: { width: "100%" }, attrs: { data: e.importData, border: "", "max-height": "300" } },
+                            [
+                              t("el-table-column", {
+                                attrs: { prop: "stuNo", label: "学号", width: "180" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (s) {
+                                      return [t("div", { class: { error: e.validateRequired(s.row.stuNo) } }, [t("span", [e._v(e._s(s.row.stuNo))])])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                              t("el-table-column", {
+                                attrs: { prop: "stuName", label: "姓名", width: "180" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (s) {
+                                      return [t("div", { class: { error: e.validateRequired(s.row.stuName) } }, [t("span", [e._v(e._s(s.row.stuName))])])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                              t("el-table-column", {
+                                attrs: { prop: "phone", label: "电话" },
+                                scopedSlots: e._u([
+                                  {
+                                    key: "default",
+                                    fn: function (s) {
+                                      return [t("div", { class: { error: e.validatePhone(s.row.phone) } }, [t("span", [e._v(e._s(s.row.phone))])])];
+                                    },
+                                  },
+                                ]),
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      t(
+                        "el-form-item",
+                        [
+                          t("el-button", { attrs: { type: "primary" }, on: { click: e.saveImportData } }, [e._v("保存")]),
+                          t(
+                            "el-button",
+                            {
+                              on: {
+                                click: function (t) {
+                                  e.showImport = !1;
+                                },
+                              },
+                            },
+                            [e._v("取消")],
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+              t(
+                "el-dialog",
+                {
+                  attrs: { visible: e.showErrorMsg, title: "操作成功，其中【".concat(e.errorMsg.length, "】条信息导入失败") },
+                  on: {
+                    close: e.errDialogClose,
+                    "update:visible": function (t) {
+                      e.showErrorMsg = t;
+                    },
+                  },
+                },
+                [
+                  t(
+                    "el-table",
+                    { attrs: { data: e.errorMsg, border: "", "max-height": "300" } },
+                    [
+                      t("el-table-column", { attrs: { prop: "phone", label: "电话（用户）" } }),
+                      t("el-table-column", { attrs: { prop: "stuName", label: "姓名" } }),
+                      t("el-table-column", { attrs: { prop: "stuNo", label: "学号" } }),
+                      t("el-table-column", { attrs: { prop: "errorMsg", label: "失败原因" } }),
+                    ],
+                    1,
+                  ),
+                ],
+                1,
+              ),
+            ],
+            1,
+          );
+        },
+        o = [],
+        l = (s("00b4"), s("d3b7"), s("159b"), s("d81d"), s("4e82"), s("e9c4"), s("b0c0"), s("4de4"), s("1146")),
+        r = s.n(l),
+        i = {
+          data: function () {
+            return {
+              showEdit: !1,
+              showErrorMsg: !1,
+              errorMsg: [],
+              showImport: !1,
+              stuImportModel: {},
+              importData: [
+                { stuNo: "学号1", stuName: "张三", phone: "18000000000" },
+                { stuNo: "学号2", stuName: "李四", phone: "15000000000" },
+              ],
+              importClass: "",
+              importCollegeId: "",
+              importReady: !1,
+              searchMode: "1",
+              formTitle: "添加/编辑学生",
+              stumodel: { id: 0, userId: 0, stuNo: "", stuName: "", password: "", classId: "", phone: "", collegeId: "" },
+              rules: {
+                stuName: [{ required: !0, message: "请输入学生姓名", trigger: "blur" }],
+                stuNo: [{ required: !0, message: "请输入学号", trigger: "blur" }],
+                phone: [
+                  { required: !0, message: "请输入电话号码", trigger: "blur" },
+                  { pattern: /^1[3|4|5|6|7|8|9]\d{9}$/, message: "请输入正确的电话号码" },
+                ],
+                classId: [{ required: !0, message: "请选择班级", trigger: "blur" }],
+              },
+              searchValue: null,
+              key: "",
+              students: [],
+              cls: [],
+              schools: [],
+              queryCls: [],
+              querySchools: [],
+              importCls: [],
+              importSchools: [],
+              page: {},
+              search: { pageNo: 1, pageSize: 10, stuNo: "", stuName: "", classId: "", phone: "" },
+              schoolOptions: [
+                { value: 1, label: "本科/高职" },
+                { value: 2, label: "中职" },
+              ],
+              schoolProps: { lazy: !0, lazyLoad: this.schoolLazyLoad },
+            };
+          },
+          created: function () {
+            var e = this;
+            (this.LoadList(),
+              this.$request.queryAllSchool().then(function (t) {
+                ((e.schools = t.data), (e.querySchools = t.data), (e.importSchools = t.data));
+              }));
+          },
+          methods: {
+            validateRequired: function (e) {
+              return !e;
+            },
+            validatePhone: function (e) {
+              return !/^1[3|4|5|6|7|8|9]\d{9}$/.test(e);
+            },
+            addOpen: function () {
+              var e = this;
+              (this.$nextTick(function () {
+                e.$refs.form.clearValidate();
+              }),
+                (this.formTitle = "添加学生"),
+                (this.cls = []),
+                (this.showEdit = !0));
+            },
+            importOpen: function () {
+              ((this.showImport = !0), (this.importCls = []), (this.importCollegeId = ""), (this.importClass = ""));
+            },
+            editClose: function () {
+              this.stumodel = { id: 0, userId: 0, stuNo: "", stuName: "", password: "", classId: "", phone: "", collegeId: "" };
+            },
+            handleSizeChange: function (e) {
+              ((this.search.pageSize = e), this.LoadList());
+            },
+            handleCurrentChange: function (e) {
+              ((this.search.pageNo = e), this.LoadList());
+            },
+            LoadList: function () {
+              var e = this,
+                t = { pageNo: 1, pageSize: 10, stuNo: "", stuName: "", classId: "", phone: "" };
+              ((t.classId = this.search.classId),
+                (t.pageNo = this.search.pageNo),
+                (t.pageSize = this.search.pageSize),
+                this.key &&
+                  ("1" == this.searchMode
+                    ? (t.stuNo = this.key)
+                    : "2" == this.searchMode
+                      ? (t.stuName = this.key)
+                      : "3" == this.searchMode && (t.phone = this.key)),
+                this.$request.ListStuByPage(t).then(function (t) {
+                  ((e.students = t.data.list), (e.page = t.data));
+                }));
+            },
+            indexMethod: function (e) {
+              return e + 1 + (this.page.pageNum - 1) * this.page.pageSize;
+            },
+            reset: function () {
+              ((this.searchMode = "1"),
+                (this.key = ""),
+                (this.queryCls = []),
+                (this.search = { pageNo: 1, pageSize: 10, stuNo: "", stuName: "", classId: "", phone: "", collegeId: "" }),
+                this.LoadList());
+            },
+            studentsSearch: function () {
+              var e = this;
+              if ("" == this.search.collegeId || "" != this.search.classId) {
+                var t = { pageNo: 1, pageSize: 10, stuNo: "", stuName: "", classId: "", phone: "" };
+                ((t.classId = this.search.classId),
+                  this.key &&
+                    ("1" == this.searchMode
+                      ? (t.stuNo = this.key)
+                      : "2" == this.searchMode
+                        ? (t.stuName = this.key)
+                        : "3" == this.searchMode && (t.phone = this.key)),
+                  this.$request.ListStuByPage(t).then(function (t) {
+                    ((e.students = t.data.list), (e.page = t.data));
+                  }));
+              } else this.$message({ type: "warning", message: "请选择班级后进行查询" });
+            },
+            selectedChanged: function (e) {
+              this.LoadList();
+            },
+            saveTemplate: function () {
+              var e = [
+                  ["学号", "姓名", "电话"],
+                  ["学号1", "张三", "18000000000"],
+                  ["学号1", "李四", "15000000000"],
+                ],
+                t = r.a.utils.aoa_to_sheet(e),
+                s = r.a.utils.book_new();
+              (r.a.utils.book_append_sheet(s, t, "Sheet1"), r.a.writeFile(s, "学生列表模板.xlsx"));
+            },
+            saveImportData: function () {
+              var e = this;
+              if (this.importClass)
+                if (this.importReady) {
+                  var t = 0;
+                  if (
+                    (this.importData.forEach(function (e) {
+                      (e["stuNo"] && e["stuName"] && e["phone"] && /^1[3|4|5|6|7|8|9]\d{9}$/.test(e["phone"])) || t++;
+                    }),
+                    t > 0)
+                  )
+                    this.$message({ type: "error", message: "导入数据有【" + t + "】条异常，请检查文件并重新导入" });
+                  else if (!this.importData || this.importData.length < 1)
+                    this.$message({ type: "error", message: "没有可用数据无法保存，请检查文件并重新导入" });
+                  else {
+                    var s = this.importData.map(function (e) {
+                      return e["stuNo"];
+                    });
+                    s = s.sort();
+                    for (var a = 0; a < s.length; a++)
+                      if (s[a] == s[a + 1]) return void this.$message({ type: "error", message: "学号有重复，请检查文件并重新导入" });
+                    var o = this.importData.map(function (e) {
+                      return e["phone"];
+                    });
+                    o = o.sort();
+                    for (var l = 0; l < o.length; l++)
+                      if (o[l] == o[l + 1]) return void this.$message({ type: "error", message: "电话号码有重复，请检查文件并重新导入" });
+                    var r = {};
+                    ((r.classId = this.importClass),
+                      (r.collegeId = this.importCollegeId),
+                      (r.stuList = JSON.stringify(this.importData)),
+                      this.$request
+                        .AddStudentList(r)
+                        .then(function (t) {
+                          if (
+                            (e.LoadList(),
+                            (e.showImport = !1),
+                            (e.importClass = ""),
+                            (e.importReady = !1),
+                            t.data.errorStuList && t.data.errorStuList.length > 0)
+                          )
+                            return ((e.errorMsg = t.data.errorStuList), void (e.showErrorMsg = !0));
+                          e.$message({ type: "success", message: "操作成功！" });
+                        })
+                        .catch(function (t) {
+                          e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" });
+                        }));
+                  }
+                } else this.$message({ type: "error", message: "请选择文件" });
+              else this.$message({ type: "error", message: "请选择班级" });
+            },
+            errDialogClose: function () {
+              this.$message({ type: "success", message: "操作成功！" });
+            },
+            importClosed: function () {
+              ((this.showImport = !1),
+                (this.importData = [
+                  { stuNo: "学号1", stuName: "张三", phone: "18000000000" },
+                  { stuNo: "学号2", stuName: "李四", phone: "15000000000" },
+                ]));
+            },
+            importExcel: function (e, t) {
+              this.readExcel1(e);
+            },
+            readExcel1: function (e) {
+              var t = this;
+              if (!/\.(xls|xlsx|csv)$/.test(e.name.toLowerCase()))
+                return (this.$message({ type: "error", message: "上传格式不正确，请上传xls或者xlsx格式或者csv格式" }), !1);
+              var s = new FileReader();
+              ((s.onload = function (e) {
+                try {
+                  var s = e.target.result,
+                    a = r.a.read(s, { type: "binary" }),
+                    o = a.SheetNames[0],
+                    l = r.a.utils.sheet_to_json(a.Sheets[o]);
+                  ((t.importData = l.map(function (e) {
+                    return { stuNo: e["学号"], stuName: e["姓名"], phone: e["电话"], pwd: e["电话"] };
+                  })),
+                    (t.importReady = !0));
+                } catch (i) {
+                  return !1;
+                }
+              }),
+                s.readAsBinaryString(e.raw));
+            },
+            searchStudents: function (e) {
+              this.students = this.students.filter(function (t) {
+                return t.stuName.indexOf(e) > 0;
+              });
+            },
+            handleEdit: function (e) {
+              var t = this;
+              ((this.formTitle = "编辑学生"),
+                this.$utils.cloneToTarget(e, this.stumodel),
+                this.$nextTick(function () {
+                  t.$refs.form.clearValidate();
+                }),
+                (this.showEdit = !0));
+              var s = { collegeId: e.collegeId, className: "", pageNo: 1, pageSize: 1e5 };
+              this.$request
+                .ListByPage(s)
+                .then(function (e) {
+                  t.cls = e.data.list;
+                })
+                .catch(function (e) {
+                  t.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" });
+                });
+            },
+            deleteStu: function (e, t) {
+              var s = this;
+              this.$messageBox
+                .confirm("是否确定删除学生信息", "提示", { type: "warning" })
+                .then(function () {
+                  s.$request
+                    .deleteStudent({ studentId: t.userId })
+                    .then(function (e) {
+                      (s.$message({ type: "success", message: "删除成功！" }), s.LoadList());
+                    })
+                    .catch(function (e) {
+                      s.$message({ type: "error", message: e.msg || e.Msg || e.message || "操作失败" });
+                    });
+                })
+                .catch(function (e) {
+                  console.log(e);
+                });
+            },
+            onEditSave: function () {
+              var e = this;
+              this.stumodel.password && this.stumodel.password.length < 6
+                ? this.$message({ type: "warning", message: "密码长度必须是6-16位，或者不填" })
+                : (this.stumodel.password || (this.stumodel.password = this.stumodel.phone),
+                  this.$refs["form"].validate(function (t) {
+                    t
+                      ? 0 != e.stumodel.id && e.stumodel.id
+                        ? e.$request
+                            .editStudent(e.stumodel)
+                            .then(function (t) {
+                              (e.$message({ type: "success", message: "编辑成功" }), (e.showEdit = !1), e.LoadList());
+                            })
+                            .catch(function (t) {
+                              (console.log(t), e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }));
+                            })
+                        : e.$request
+                            .saveStudent(e.stumodel)
+                            .then(function (t) {
+                              (e.$message({ type: "success", message: "添加成功" }), (e.showEdit = !1), e.LoadList());
+                            })
+                            .catch(function (t) {
+                              (console.log(t), e.$message({ type: "error", message: t.msg || t.Msg || t.message || "操作失败" }));
+                            })
+                      : e.$message({ type: "warning", message: "请填写正确的信息" });
+                  }));
+            },
+            schoolChange: function (e) {
+              var t = this;
+              ((this.cls = []), (this.stumodel.classId = ""));
+              var s = { collegeId: e, className: "", pageNo: 1, pageSize: 1e5 };
+              this.$request.ListByPage(s).then(function (e) {
+                t.cls = e.data.list;
+              });
+            },
+            querySchoolChange: function (e) {
+              var t = this;
+              ((this.queryCls = []), (this.search.classId = ""));
+              var s = { collegeId: e, className: "", pageNo: 1, pageSize: 1e5 };
+              this.$request.ListByPage(s).then(function (e) {
+                t.queryCls = e.data.list;
+              });
+            },
+            importSchoolChange: function (e) {
+              var t = this;
+              ((this.importCls = []), (this.importClass = ""));
+              var s = { collegeId: e, className: "", pageNo: 1, pageSize: 1e5 };
+              this.$request.ListByPage(s).then(function (e) {
+                t.importCls = e.data.list;
+              });
+            },
+          },
+        },
+        n = i,
+        c = (s("aaa4"), s("2877")),
+        u = Object(c["a"])(n, a, o, !1, null, "3bc39cba", null);
+      t["default"] = u.exports;
+    },
+    aaa4: function (e, t, s) {
+      "use strict";
+      s("ba96");
+    },
+    addb: function (e, t, s) {
+      var a = s("4dae"),
+        o = Math.floor,
+        l = function (e, t) {
+          var s = e.length,
+            n = o(s / 2);
+          return s < 8 ? r(e, t) : i(e, l(a(e, 0, n), t), l(a(e, n), t), t);
+        },
+        r = function (e, t) {
+          var s,
+            a,
+            o = e.length,
+            l = 1;
+          while (l < o) {
+            ((a = l), (s = e[l]));
+            while (a && t(e[a - 1], s) > 0) e[a] = e[--a];
+            a !== l++ && (e[a] = s);
+          }
+          return e;
+        },
+        i = function (e, t, s, a) {
+          var o = t.length,
+            l = s.length,
+            r = 0,
+            i = 0;
+          while (r < o || i < l) e[r + i] = r < o && i < l ? (a(t[r], s[i]) <= 0 ? t[r++] : s[i++]) : r < o ? t[r++] : s[i++];
+          return e;
+        };
+      e.exports = l;
+    },
+    ba96: function (e, t, s) {},
+    d998: function (e, t, s) {
+      var a = s("342f");
+      e.exports = /MSIE|Trident/.test(a);
+    },
+  },
+]);

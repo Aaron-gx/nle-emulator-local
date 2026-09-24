@@ -1,0 +1,2690 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-6da48c20"],
+  {
+    "03cd": function (t, e, n) {
+      "use strict";
+      var r, a, i, o, s, c, u, l, d, h, f, p, b, g;
+      (n.d(e, "a", function () {
+        return h;
+      }),
+        n.d(e, "b", function () {
+          return p;
+        }),
+        (function (t) {
+          ((t["None"] = "未供电"), (t["Abnormal"] = "供电异常"), (t["Normal"] = "供电正常"));
+        })(r || (r = {})),
+        (function (t) {
+          ((t["None"] = "未定义"),
+            (t["GND"] = "地线"),
+            (t["VS"] = "+VS"),
+            (t["Power"] = "适配器信号"),
+            (t["Signal_Digital_I"] = "数字信号输入"),
+            (t["Signal_Digital_O"] = "数字信号输出"),
+            (t["Signal_Digital_IO"] = "数字信号输入/输出"),
+            (t["Signal_Analog_P"] = "正模拟信号"),
+            (t["Signal_Analog_N"] = "负模拟信号"),
+            (t["Signal_485_P"] = "正485信号"),
+            (t["Signal_485_N"] = "负485信号"),
+            (t["Signal_232"] = "232信号"),
+            (t["Signal_RJ45"] = "网口信号"),
+            (t["Signal_USB"] = "usb信号"),
+            (t["Signal_ZigBee"] = "ZigBee信号"),
+            (t["Signal_RFID"] = "RFID频射信号"),
+            (t["Signal_NewLab"] = "NewLab八根接线柱信号"),
+            (t["Signal_232_RX"] = "RX"),
+            (t["Signal_232_TX"] = "TX"),
+            (t["Signal_Analog_DC"] = "直流模拟信号"),
+            (t["Signal_RFID_Antenna"] = "RFID天线"),
+            (t["Signal_RFID_Multiplexer"] = "RFID多路复用器"),
+            (t["Signal_RFID_Control"] = "RFID控制器"),
+            (t["Signal_RFID_Door"] = "RFID门禁"));
+        })(a || (a = {})),
+        (function (t) {
+          ((t[(t["Unknow"] = 0)] = "Unknow"), (t[(t["Root"] = 1)] = "Root"), (t[(t["Node"] = 2)] = "Node"));
+        })(i || (i = {})),
+        (function (t) {
+          ((t["Error"] = "错误"), (t["Correct"] = "正确"), (t["Abnormal"] = "异常"));
+        })(o || (o = {})),
+        (function (t) {
+          ((t["VerifyData"] = "验证数据"), (t["Screenshot"] = "截图"));
+        })(s || (s = {})),
+        (function (t) {
+          ((t["RealPhysicalDevices"] = "连接真实物理设备"), (t["AndroidPad"] = "安卓平板"));
+        })(c || (c = {})),
+        (function (t) {
+          ((t[(t["Base"] = 0)] = "Base"),
+            (t[(t["Validate"] = 1)] = "Validate"),
+            (t[(t["Upload"] = 2)] = "Upload"),
+            (t[(t["Emulate"] = 3)] = "Emulate"),
+            (t[(t["VirtualCOM"] = 4)] = "VirtualCOM"));
+        })(u || (u = {})),
+        (function (t) {
+          ((t["Wired"] = "有线传感器"),
+            (t["Wireless"] = "无线传感器"),
+            (t["Actuator"] = "继电器"),
+            (t["Gatewary"] = "网关"),
+            (t["IO"] = "I/0模块"),
+            (t["RFID_125K"] = "125K设备(LF)"),
+            (t["RFID_ISO_144443_TypeA"] = "14443设备(HF)"),
+            (t["RFID_ISO_15693"] = "15693设备(HF)"),
+            (t["RFID_ISO_18000_6C"] = "18000设备(UHF)"),
+            (t["RFID_Other"] = "其他设备"),
+            (t["Terminal"] = "终端"),
+            (t["Load"] = "负载"),
+            (t["Power"] = "电源"),
+            (t["Other"] = "其他外设"),
+            (t["NewLabSensor"] = "NewLab传感器"),
+            (t["NewLabEmbedded"] = "嵌入式"),
+            (t["NewLabRFID"] = "NewLabRFID"));
+        })(l || (l = {})),
+        (function (t) {
+          ((t[(t["None"] = -1)] = "None"),
+            (t[(t["Top"] = 0)] = "Top"),
+            (t[(t["Right"] = 1)] = "Right"),
+            (t[(t["Bottom"] = 2)] = "Bottom"),
+            (t[(t["Left"] = 3)] = "Left"));
+        })(d || (d = {})),
+        (function (t) {
+          ((t[(t["RichText"] = 0)] = "RichText"),
+            (t[(t["Exercise"] = 1)] = "Exercise"),
+            (t[(t["Video"] = 2)] = "Video"),
+            (t[(t["Emulator"] = 3)] = "Emulator"),
+            (t[(t["Code"] = 4)] = "Code"),
+            (t[(t["AppCase"] = 5)] = "AppCase"));
+        })(h || (h = {})),
+        (function (t) {
+          ((t[(t["图文"] = 0)] = "图文"),
+            (t[(t["习题"] = 1)] = "习题"),
+            (t[(t["视频"] = 2)] = "视频"),
+            (t[(t["仿真"] = 3)] = "仿真"),
+            (t[(t["编码"] = 4)] = "编码"),
+            (t[(t["案例"] = 5)] = "案例"));
+        })(f || (f = {})),
+        (function (t) {
+          ((t[(t["undone"] = 1)] = "undone"), (t[(t["done"] = 2)] = "done"), (t[(t["flag"] = 4)] = "flag"), (t[(t["current"] = 8)] = "current"));
+        })(p || (p = {})),
+        (function (t) {
+          ((t[(t["Old"] = 0)] = "Old"), (t[(t["New"] = 1)] = "New"));
+        })(b || (b = {})),
+        (function (t) {
+          ((t[(t["Channel_11"] = 11)] = "Channel_11"),
+            (t[(t["Channel_12"] = 12)] = "Channel_12"),
+            (t[(t["Channel_13"] = 13)] = "Channel_13"),
+            (t[(t["Channel_14"] = 14)] = "Channel_14"),
+            (t[(t["Channel_15"] = 15)] = "Channel_15"),
+            (t[(t["Channel_16"] = 16)] = "Channel_16"),
+            (t[(t["Channel_17"] = 17)] = "Channel_17"),
+            (t[(t["Channel_18"] = 18)] = "Channel_18"),
+            (t[(t["Channel_19"] = 19)] = "Channel_19"),
+            (t[(t["Channel_20"] = 20)] = "Channel_20"),
+            (t[(t["Channel_21"] = 21)] = "Channel_21"),
+            (t[(t["Channel_22"] = 22)] = "Channel_22"),
+            (t[(t["Channel_23"] = 23)] = "Channel_23"),
+            (t[(t["Channel_24"] = 24)] = "Channel_24"),
+            (t[(t["Channel_25"] = 25)] = "Channel_25"),
+            (t[(t["Channel_26"] = 26)] = "Channel_26"));
+        })(g || (g = {})));
+    },
+    "057f": function (t, e, n) {
+      var r = n("fc6a"),
+        a = n("241c").f,
+        i = {}.toString,
+        o = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [],
+        s = function (t) {
+          try {
+            return a(t);
+          } catch (e) {
+            return o.slice();
+          }
+        };
+      t.exports.f = function (t) {
+        return o && "[object Window]" == i.call(t) ? s(t) : a(r(t));
+      };
+    },
+    "14ac": function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABXklEQVQ4jZWUTStEYRiGL5osfDTzA2aLn0BqRqFmoyykiJWPnzCysJXCHxBlY+NjY0MNJcMCO0vsZNiSsjAb3dPz1uM1xpmrps553rmv3uec5z0tbK5RhwIwDowAWVt+Bs6AQ6AUR2JRL7AF5OrZHWVgAXgIpVa3OAhcJ5CIPHBjmR+iHuAIyCSQBDKW6faibSDdhCSQtmxNVEjYTmAHuHP3anNYopkmJBvArILAh6tPSjTQhKRo13pjXW5tqNXNibgCpoDPSLLuJEvAarSeTQFVoM0K08AT8AocA+0mWWwgEVXtqOIKu0AncAGMAisJJKIi0aUr5GwnHcA5sJxAIsoS7UXFnGsriUQc6Bmd2q78LGk2TuwYFBsIsGwpZTfzwG003Xn7NeIdmNNFOCI6xWPA2z9Bj/6rzKMXCb2p/ujh/4U+I32WqRFaC9xbOzp/E5pYG9gv4MUE+78+bMA3gz1FSoAwsiUAAAAASUVORK5CYII=";
+    },
+    "2b5c": function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAu0lEQVQokZ2RMQrCQBBFX4KiNoKNCDZWlh7AVjyBeAYPEfAAFl7EAwg2XsG0SWOhpbUBRWWWrCyYmM082GaH/2aYCUZRFgMTfkmAGXApqH0JS8LCGNj+CwuNivoSeJfUgiLBJn+vqs5AG8hcwR3YAbKToYfgAUSh83EAVp5hoQmsXcEeWHiGLTcrkHE6QK+mILGCY77xuqRWkAJThcBMICcbKMKmsQhOwFwpMBO0gK4iLIs/i6Cv7H4Fnh/x7h9MzUr7UwAAAABJRU5ErkJggg==";
+    },
+    4311: function (t, e, n) {
+      "use strict";
+      var r = n("5726"),
+        a = n.n(r);
+      a.a;
+    },
+    "4a48": function (t, e, n) {
+      e = t.exports = n("24fb")(!1);
+      var r = n("1de5"),
+        a = r(n("894f"));
+      e.push([
+        t.i,
+        ".ql-editor{min-height:400px}.uploadFile{width:0;height:0;display:none}.ql-snow.ql-toolbar .ql-upload{background:url(" +
+          a +
+          ");background-size:13px 13px;background-position:50%;background-repeat:no-repeat}table{width:100%;border-collapse:collapse}table caption{font-size:2em;font-weight:700;margin:1em 0}td,th{border:1px solid #999;text-align:left;padding:8px}table thead tr{color:#fff}table tbody tr:nth-child(odd),table thead tr{background-color:#eee}table tbody tr:hover{background-color:#ccc}table tbody tr td:first-child{color:#666}table tfoot tr td{text-align:right;padding-right:20px}",
+        "",
+      ]);
+    },
+    "4a80": function (t, e, n) {
+      "use strict";
+      (n("99af"), n("4160"), n("159b"), n("96cf"));
+      var r = n("89ba"),
+        a = n("9f12"),
+        i = n("53fe"),
+        o = n("59b9"),
+        s = n("482f"),
+        c = (function () {
+          function t() {
+            Object(a["a"])(this, t);
+          }
+          return (
+            Object(i["a"])(t, [
+              {
+                key: "getSectionStateByTargetId",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionStateByTargetId/").concat(e), method: "GET" })
+                              );
+                            case 4:
+                              return ((n = t.sent), (r = null), n && 0 === n.code && (r = n.data), t.abrupt("return", r));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getSectionStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n, r) {
+                      var a, i;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n && r) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n, sectionId: r },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (a = t.sent),
+                                (i = []),
+                                a &&
+                                  0 === a.code &&
+                                  a.data.forEach(function (t) {
+                                    i.push(t);
+                                  }),
+                                t.abrupt("return", i)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n, r) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskAllStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r, a;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetTaskAllStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = t.sent),
+                                (a = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (t) {
+                                    a.push(t);
+                                  }),
+                                t.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskSectionStateList",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r, a;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && n) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", []);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(s["a"].web_host, "/api/SectionState/GetTaskSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: e, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = t.sent),
+                                (a = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (t) {
+                                    a.push(t);
+                                  }),
+                                t.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getSectionState",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (((n = null), e)) {
+                                t.next = 3;
+                                break;
+                              }
+                              return t.abrupt("return", n);
+                            case 3:
+                              return (
+                                (t.next = 5),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/GetSectionState/").concat(e), method: "GET" })
+                              );
+                            case 5:
+                              return ((r = t.sent), r && 0 === r.code && (n = r.data), t.abrupt("return", n));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "addOrUpdateSectionState",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(o["a"])({ url: "".concat(s["a"].web_host, "/api/SectionState/AddOrUpdateSectionState"), method: "POST", data: e })
+                              );
+                            case 4:
+                              if (((n = t.sent), "undefined" === typeof n)) {
+                                t.next = 7;
+                                break;
+                              }
+                              return t.abrupt("return", n);
+                            case 7:
+                              return t.abrupt("return", null);
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+            ]),
+            t
+          );
+        })();
+      e["a"] = new c();
+    },
+    "52cf": function (t, e, n) {
+      "use strict";
+      n.d(e, "a", function () {
+        return o;
+      });
+      n("0d03");
+      var r = n("9f12"),
+        a = n("53fe"),
+        i = n("2fa7"),
+        o = (function () {
+          function t() {
+            (Object(r["a"])(this, t),
+              Object(i["a"])(this, "id", void 0),
+              Object(i["a"])(this, "sectionId", void 0),
+              Object(i["a"])(this, "taskRecordId", void 0),
+              Object(i["a"])(this, "studentId", void 0),
+              Object(i["a"])(this, "targetId", void 0),
+              Object(i["a"])(this, "targetType", void 0),
+              Object(i["a"])(this, "duration", void 0),
+              Object(i["a"])(this, "content", void 0),
+              Object(i["a"])(this, "comment", void 0),
+              Object(i["a"])(this, "score", void 0),
+              Object(i["a"])(this, "autoScore", void 0),
+              Object(i["a"])(this, "submitTime", void 0),
+              Object(i["a"])(this, "tag", void 0),
+              Object(i["a"])(this, "isFinished", void 0),
+              Object(i["a"])(this, "lastTime", void 0),
+              Object(i["a"])(this, "lastDuration", void 0));
+          }
+          return (
+            Object(a["a"])(t, null, [
+              {
+                key: "noState",
+                value: function () {
+                  return {
+                    id: "",
+                    sectionId: "",
+                    taskRecordId: "",
+                    studentId: "",
+                    targetId: "",
+                    targetType: -1,
+                    duration: 0,
+                    content: "",
+                    comment: "",
+                    score: 0,
+                    autoScore: 0,
+                    tag: 0,
+                    submitTime: new Date("2020/1/1"),
+                    isFinished: !1,
+                    lastTime: new Date().getTime(),
+                    lastDuration: 0,
+                  };
+                },
+              },
+            ]),
+            t
+          );
+        })();
+    },
+    "535f": function (t, e, n) {
+      "use strict";
+      n.d(e, "a", function () {
+        return f;
+      });
+      (n("a4d3"), n("e01a"), n("d28b"), n("99af"), n("0d03"), n("d3b7"), n("25f0"), n("3ca3"), n("498a"), n("ddb0"));
+      var r = n("9f12"),
+        a = n("53fe"),
+        i = n("8b83"),
+        o = n("c65a"),
+        s = n("9aa6"),
+        c = n("c03e"),
+        u = n("2fa7"),
+        l = n("60a3"),
+        d = n("73ec"),
+        h = n("70b0"),
+        f = (function (t) {
+          function e() {
+            var t, n;
+            Object(r["a"])(this, e);
+            for (var a = arguments.length, c = new Array(a), l = 0; l < a; l++) c[l] = arguments[l];
+            return (
+              (n = Object(i["a"])(this, (t = Object(o["a"])(e)).call.apply(t, [this].concat(c)))),
+              Object(u["a"])(Object(s["a"])(n), "counTimerInterval", null),
+              Object(u["a"])(Object(s["a"])(n), "countTimer", 0),
+              n
+            );
+          }
+          return (
+            Object(c["a"])(e, t),
+            Object(a["a"])(e, [
+              {
+                key: "loading",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h["a"].t("lang.加载中").toString(),
+                    n = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                    r = arguments.length > 3 ? arguments[3] : void 0;
+                  Object(d["n"])(t, e, n, r);
+                },
+              },
+              {
+                key: "msg",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "success",
+                    n = arguments.length > 2 ? arguments[2] : void 0;
+                  return Object(d["o"])(t, e, n);
+                },
+              },
+              {
+                key: "alert",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 ? arguments[2] : void 0,
+                    r = arguments.length > 3 ? arguments[3] : void 0;
+                  Object(d["a"])(t, e, n, r);
+                },
+              },
+              {
+                key: "confirm",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h["a"].t("lang.确定").toString(),
+                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h["a"].t("lang.取消").toString(),
+                    a = arguments.length > 4 ? arguments[4] : void 0,
+                    i = arguments.length > 5 ? arguments[5] : void 0,
+                    o = arguments.length > 6 ? arguments[6] : void 0;
+                  Object(d["d"])(t, e, n, r, a, i, o);
+                },
+              },
+              {
+                key: "prompt",
+                value: function (t) {
+                  var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h["a"].t("lang.提示信息").toString(),
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h["a"].t("lang.确定").toString(),
+                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h["a"].t("lang.取消").toString(),
+                    a = arguments.length > 4 ? arguments[4] : void 0,
+                    i = arguments.length > 5 ? arguments[5] : void 0;
+                  arguments.length > 6 && arguments[6];
+                  Object(d["p"])(t, e, n, r, a, i);
+                },
+              },
+              {
+                key: "isNullOrEmpty",
+                value: function (t) {
+                  if (!t) return !0;
+                  var e = t,
+                    n = e.trim();
+                  return 0 === n.length;
+                },
+              },
+              {
+                key: "anyIsNullOrEmpty",
+                value: function (t) {
+                  if (!t) return !0;
+                  var e = !0,
+                    n = !1,
+                    r = void 0;
+                  try {
+                    for (var a, i = t[Symbol.iterator](); !(e = (a = i.next()).done); e = !0) {
+                      var o = a.value;
+                      if (this.isNullOrEmpty(o)) return !0;
+                    }
+                  } catch (s) {
+                    ((n = !0), (r = s));
+                  } finally {
+                    try {
+                      e || null == i.return || i.return();
+                    } finally {
+                      if (n) throw r;
+                    }
+                  }
+                  return !1;
+                },
+              },
+              {
+                key: "deepClone",
+                value: function (t) {
+                  var e = JSON.stringify(t),
+                    n = JSON.parse(e);
+                  return n;
+                },
+              },
+              {
+                key: "resetTimer",
+                value: function () {
+                  this.countTimer = 0;
+                },
+              },
+              {
+                key: "startTimer",
+                value: function () {
+                  var t = this;
+                  t.counTimerInterval ||
+                    (t.counTimerInterval = setInterval(function () {
+                      t.countTimer++;
+                    }, 1e3));
+                },
+              },
+              {
+                key: "stopTimer",
+                value: function () {
+                  (this.pauseTimer(), this.resetTimer());
+                },
+              },
+              {
+                key: "pauseTimer",
+                value: function () {
+                  var t = this;
+                  t.counTimerInterval && (clearInterval(t.counTimerInterval), (t.counTimerInterval = null));
+                },
+              },
+              {
+                key: "beforeDestroy",
+                value: function () {
+                  (console.log("beforeDestroy"), this.stopTimer());
+                },
+              },
+            ]),
+            e
+          );
+        })(l["c"]);
+    },
+    5726: function (t, e, n) {
+      var r = n("66fb");
+      ("string" === typeof r && (r = [[t.i, r, ""]]), r.locals && (t.exports = r.locals));
+      var a = n("499e").default;
+      a("4a344e46", r, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    "66fb": function (t, e, n) {
+      ((e = t.exports = n("24fb")(!1)),
+        e.push([
+          t.i,
+          ".index-main[data-v-6e8482f0]{display:-webkit-box;display:-ms-flexbox;display:flex}.index-main .index-body[data-v-6e8482f0]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}[data-v-6e8482f0]::-webkit-scrollbar{display:none}.task-body[data-v-6e8482f0]{width:calc(100vw - 50px);overflow-x:auto}.nav-open[data-v-6e8482f0]{background:#3c3c42}.col-fff[data-v-6e8482f0]{color:#fff!important}.center[data-v-6e8482f0]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.sections[data-v-6e8482f0]{width:50px;background:#313136;height:calc(100vh - 60px);position:relative}.sections .btn-ret[data-v-6e8482f0]{height:60px;cursor:pointer}.sections .b-sec[data-v-6e8482f0]{height:calc(100vh - 120px)}.sections .b-sec .btn-sec[data-v-6e8482f0]:hover{background:#3c3c42}.sections .b-sec .btn-sec[data-v-6e8482f0]{cursor:pointer;width:50px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:80px}.sections .b-sec .btn-sec>p[data-v-6e8482f0]{margin-top:15px;font-size:14px;color:#fff}.sections .nav.active[data-v-6e8482f0]{width:300px;opacity:1;overflow-x:hidden;z-index:99}.sections .nav[data-v-6e8482f0]{position:absolute;top:60px;left:50px;height:calc(100vh - 120px);background:#3c3c42;-webkit-transition:width .4s ease-out,opacity .4s ease-out;transition:width .4s ease-out,opacity .4s ease-out;width:0;opacity:0;overflow-x:hidden;padding-right:-1px;z-index:99}.sections .nav[data-v-6e8482f0] .el-menu-item:not(.is-active):hover{color:#409eff!important}[data-v-6e8482f0] .sections .nav>ul>li{width:300px;padding-bottom:2px}.sections .nav[data-v-6e8482f0] .el-submenu__title{border-bottom:1px solid hsla(0,0%,91%,.1);border-bottom-color:hsla(0,0%,91%,.1)!important;padding:0}.sections .nav[data-v-6e8482f0] .el-menu-item{padding:0;margin:2px 0}.sections .nav[data-v-6e8482f0] .el-submenu{padding:0}.sections .nav .sec-c[data-v-6e8482f0]{border-bottom:1px solid hsla(0,0%,91%,.1)}.sections .nav[data-v-6e8482f0] .el-submenu__icon-arrow{display:none}.sec-nav[data-v-6e8482f0]{height:calc(100vh - 60px);background:#313136}[data-v-6e8482f0] .el-menu{border-right:none!important}.task-title[data-v-6e8482f0]{border-bottom:1px solid #e8e8e8;height:59px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 20px}.task-title .splice[data-v-6e8482f0]{margin:0 10px}.title-right .right-tools[data-v-6e8482f0]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.title-right .right-tools .stat[data-v-6e8482f0]{width:240px}.title-right .right-tools .stat span[data-v-6e8482f0]{color:#333;font-size:14px}.title-right .right-tools .stat .stat-info[data-v-6e8482f0]{background:#fff;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.title-right .right-tools .stat .stat-info .progress-val[data-v-6e8482f0]{color:#02c4af;margin-left:10px}.title-right .right-tools .stat .stat-info .time-val[data-v-6e8482f0]{color:#ff7b53;margin-left:10px}.title-right .right-tools .opt[data-v-6e8482f0]{margin:0 -10px 0 50px}.title-right .right-tools .opt .opt-btn[data-v-6e8482f0]{width:80px;height:32px;padding:0!important}.title-right .right-tools .opt .opt-btn .el-button[data-v-6e8482f0]{border-color:#207bf8!important;color:#207bf8!important}.title-right .right-tools .opt .sub[data-v-6e8482f0]:not(.is-disabled):hover{background:rgba(2,196,175,.8)}.title-right .right-tools .opt .sub[data-v-6e8482f0]:not(.is-disabled):active{background:rgba(2,196,175,.6)}.title-right .right-tools .opt .last.opt-btn[data-v-6e8482f0]{padding:0 15px!important;width:auto}.title-right .right-tools .opt .sub[data-v-6e8482f0]{background:#02c4af;border:0}.title-right .right-tools .opt .sub.is-disabled[data-v-6e8482f0]{background:rgba(2,196,175,.5);border:0}.title-right[data-v-6e8482f0] .el-progress__text{display:none}.title-right[data-v-6e8482f0] .el-progress-bar{padding-right:0}.title-right[data-v-6e8482f0] .el-progress-bar__outer{background-color:#f2f2f2}.title-right[data-v-6e8482f0] .el-progress-bar__inner{background-image:-webkit-gradient(linear,left top,right top,from(#00c3ae),to(#65e7d9));background-image:linear-gradient(90deg,#00c3ae,#65e7d9)}.title-right[data-v-6e8482f0] .el-button.jump{border:1px solid #207bf8;color:#207bf8}.title-right[data-v-6e8482f0] .el-button.jump.is-disabled{border:1px solid #bbb;color:#bbb}.title-right .jump.el-button[data-v-6e8482f0]:not(.is-disabled):focus:hover,.title-right[data-v-6e8482f0] .jump.el-button:not(.is-disabled):hover{background-color:#ecf5ff}.title-right[data-v-6e8482f0] .jump.el-button:not(.is-disabled):focus:active{color:#207bf8;background-color:#b9d6ff}.title-right[data-v-6e8482f0] .jump.el-button:not(.is-disabled):focus{background-color:#fff}",
+          "",
+        ]));
+    },
+    "746f": function (t, e, n) {
+      var r = n("428f"),
+        a = n("5135"),
+        i = n("c032"),
+        o = n("9bf2").f;
+      t.exports = function (t) {
+        var e = r.Symbol || (r.Symbol = {});
+        a(e, t) || o(e, t, { value: i.f(t) });
+      };
+    },
+    "7fe8": function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACcElEQVRIia2WzUuUURTGf01TMrRwQqSEEimRaZnjolUtgrI/oAiSajVtCoQ+UHDXIrWRglbRpk+I/oGyj22rAYsCtXQWE36sVAochXiLI8+V6+X17S07cJk7733Oc+695znnfbeVSiVS2mFgUNA+YCyNWyYFphV4AlSAExo2f6q1fw6wGygDX4CeAGvzc1orC5s6QA64BlSBq0BDwiYahKnKJ5cUwObngQngNpBPIA4tL58Jcazzukm37vVRmntNsFZxVMRJFhgGrm+BNM5McS+NOyPJ2bFq/zFATZz9FiCSDAtK1NIWiJfEURBn5Ce5DowAB/S7+hfEq4Fv3S24AFkPvKhddADPdMLNLBKmQz6LHi7rApwBvqky2z1ATQXWBbyOCfBGaz1B/trFZZynLcB3YF6VOQ7cB/Z7DtZzTkp2Yxqn1DL8frRPvuPimgN+WIBXQBG4AMwCJbWAO0CzRzCqHXfJx1mzsF/lOyuuNZzLgd3lY2XfamIF6FULuOlVdeTlJK+1qrAr8i2IKyKmF9XVvA5KDTuAAZFYvezS6NOzAWFG5FP2FeQCWIO6AXR6zxcCJTUCt4BpYErzxkBBC55/pzhzGTWpIfWPF8ChBCXtAfYmKKggjoo411rFZanio8kK+AQ8BNo2UVJ3jILa5PNZHB/EecXlwCnpIjAjFUwC94CWQEmj3v8WYSblM+MrKExypFbrlLSs003ruE0etknPpoRZjlOQ2fZisRgIiZ/Ae+CByv0IcBS4BOwEjgHPgePAL+CuruWdfDdYmq8Ke4mYas56J7YdWpD+P7X5NF8VRmClb/f6VsPm9iz5HQL8BjWBo0czIx8vAAAAAElFTkSuQmCC";
+    },
+    "894f": function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABdCAYAAABafGNLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA44SURBVHhe7Z15yBXVG8ePVi4plZK2GNlCkqZS2oKKfwSRlBHhH2oWIRhialqZiCBoq0lphEUlJIUt0KqR2D8hRIWRmuK+pFJWaIaWW2k1v/N5eL/zO/ftvr4zc5e51+4XnnfmznLOs58zZ86ct80///wTuTqA59O1adPGtoB9oOOAbdu2bePfUVT7orVt2tY8UOrff/9doHh+a19A6aJ6QF1FAEplu3//frd06VK3cuVKd/HFF7u7777b9evXz5155pnurLPOsigQZLBaRU0bIPRsFPnnn3+6DRs2uIkTJ7pvv/02Vm6XLl3cpEmT3LRp01zHjh3tOPdiiNAYtYi6MIA8/9NPP3UTJkxwBw8edCdOnLBzoF27dnbNiBEj3IIFC9z5559vv+vBADXfBkj5b7/9trv//vvdgQMH7FhI8viPPvrIjRs3zu3bt8/aB46F19Uiai4CpFC2f/31lzt58qR7//333dSpU93hw4ftOF6tBhicccYZtkXhtAFDhw51r776quvRo4e1C4D7tF9LqKkIQEkilImi33nnHffQQw+5I0eO2HHAOYwk4jcEuOfzzz93DzzwgEUCx7lPRg2pFlBTESClSKFvvPGGe+SRRywSaICTAEWrTbjxxhvdkiVL3AUXXGCGUaQAGS9v1EQEhB4pRb/22mvu4YcfdseOHbM0lBQolQaae1atWuXGjh3r9uzZ03S2sK5aQE1EAN6uvI5yXn/9dffoo49azi8F5Hy8/vrrr7d25Lzzzms646ytaESABwqX8jHESy+9ZJ6fxutbAuWRjlavXu3uuusu98MPP1h9HK8V5BIBKAHv0/aPP/4wjyTtkPNJQxiF3F8qKEeePmTIELd48WJ7esYwIfKKhtxSEMoHSjuLFi1yM2fOdEePHrXj5QYKRukMWdCzuvTSS+04dZOq8jJALilIyicVIPjLL79syi9H2mkJirZNmza5e+65x9IR9YfPE3kglwhAcBE5f9asWXG6KUfaKQZ5urbXXHONe/fdd91FF13k2rdvb6kqD1StVgQXSfnk/Dlz5lgbgOIrpXyA9yvd0cZs27bNjRkzxu3duzfmRx2BaqKqZkd4Cfniiy+66dOnu+PHjzedrQ7gAWNg7I0bN7pRo0a53bt32285SDWRSwQsXLjQzZ49u6I5vzXgCNS/ZcsWaxOICHirdmNc0TZAArHFw/B8uoF0NRGec9UOeYG6VT9tQq9evdx7773nrrjiCusSA86FwxeVQMUiQN4OpOTnn3/ezZgxw5TPubyUD8L62d++fbulo++++86GMsL3DZVERVMQHkaoQyj/qaeesv1aA15OL2jXrl1u9OjRZgSiAgPJkURlh68kKhd55RaQf6iKfA8neuaZZ6KOHTtGXtDICxZ5YSNvnJoieIMvn36i/v37R2vWrDHefeqMCZmKyV0Kld0APnSNWZ9mTADv9VHnzp2LCl2LhCGgPn36RP6hzeTx3VaTpxIGKHsKIpR9wdboes93jz/+eK69nSzgwYwh7JEjR9okAMlUEYTWyEJKNxCe/+uvv0aHDx+OvOIt7ZByCOti3laLpDREFCgdrVu3LvLPKwWyFtNFFiq5G0rD5MuIveT333+34YW5c+faE269wxvCXXLJJe7DDz+04QvJSSPtDdZ0VXaUnIIwgJhi++STT9rUEFLQ6QAUzUSw++67zx7avPebnMiNAUo2AhFQCtFIQfR4Zs6cGbVr185Cl9SjsK5nQg7SEXL5h7Vo7dq1lo7UKJeakjIZQL0ctvR0fNqJnnjiiahDhw5FhahX8v5ppN841lVXXRWtWrXKekbIjvOVYoBMKcgzY1s9nDz77LPu6aefPm3SjoCckhUgK6OnjB3xXoHfwCvStlmQyQDKf2xfeOEFN3/+/JKYqBeorfvxxx/dvffea0/MMkJmKBTSECFHCK5YsSJ+yPLMxaGaljwbRY9XkrLwS1ugLXTLLbdEv/zyi6XiYnpKQpkigFTjb7YxfY3ne8bMQ9imId2r/Wqhed1JSN7Olt7RF1984T777LOSUm8mA+jJdsCAATbX5uyzzzaGIPrNaYgX5RgOIGS1QJ088fqGNTHfXAe/EPcx97Rr1652LisyPYj5FGRExcy//Pnnny0Ssgw5/PTTT27y5Mk2GwLPIrKqgZtuusn5nltBn741KBIwXKdOnVzPnj3tewTKyGqEzE/CYhqFseU3lJYRXgcyc+23336Ly6sGbrvtNpvOjvIg6m4NoaHEJ7+T3NsSMqWglpCFEQQhmqqNUHEoNi24B96z3BuiZANIiFCgtNB91fJ+gOLSeH9zKO1klVnIbABVzDakLEAZpXpSWsgAafgOr9N9Se9tCWVNQQ2kR8MAOaNhgJzRMEDOaBggZzQMkDMaBsgZDQPkjIYBckbDADmjYYCc0TBAzmgYIGc0DJAzGgbIGTVlgFLH1k+FYu8cqv0OohhqwgB6MVJNhVTS2GmQuwFQvlBJpVC2jAyF+3miLQzwLjbr+9hQiCzCnHPOOTbNQwoClVJK+AqSlRXTGiG8LiuPqk/6NgOEgmclClQ5acDErr59+1YkEkL+AC/RmVzFpKpBgwbFPOt8EshZobD8JMTsD+1LRpM6vCgthYrPOr2ENRukHMqUUqByQkpjDblhw4bZb5DU4CE/IY9JCcgIcd1NE0ttZtpzzz1nX4OkAYwwO4yP8ZiimHZiFgyxFihG+Prrr+PFmzgOX2I0C+CNyEJg+IK/EydO2AIhfK3PeSkyjMCWoDmxX375pXvrrbdSy8q9w4cPN+JeqxMDeGEjr4To6quv/teM4NbIe23k87h9mEc5vpJUxIcefOiwfv16+yCuU6dO9jWKV1Y8g9nznol0Px9WwCcfDY4dOzY6dOhQJl7hE34XLlwYz5ROQ/DDx4vonHIoM05Bsib7aQhPBfLYtKBePIs1Gli/59Zbb7VGGU+lfOCZN0oL3UM53bt3twVCmNFNhGUBHiu5kVX7SUn3APFmc0M5wQqFgwcPtg/R0gCmSEFM0mWbVlFiDiNwLylo7dq17uOPP3br1q2LJ+1CMnZSaAYzct15553u8ssvt+MYNwuvUuArr7zipkyZYvtpQfpjgSrqtvoxAOF48ODBqHfv3kVD51Tky7SPNEhBTcbMTPBBaPLdlb5OF3Gu2D2nIu4h3JVmi12ThiiHrY8ik7uYPk5F3PPYY48VlNl6y9MKfMG2lZeWA5RJZEHsq44sgCcvaFl4gw/JWQpPIUo2ACgXM4CyUDxtA/shpQX3UA5EmeVCFl6A5MAhhJgrH6KZvUQeVi4vKyfKwZMg5ZXKY4EBxKA8RYpMwzjGo7EsFfKQUMDmv9Oi1PtDoBMiiY9JsoIeHmVIv23FHFv1DNIyTWF8ssk9Mp4qOJ2Ao+G9W7dubTqSHnxfBmIDsEOhHTp0cN26dSvIv0nAdTDG5z7qu1Mex04HII/SM1u62zyxp3FQAb2yTqmUD6wNoDDGYa688ko7iALDi04FruN++u1878W9UDkbvTyBLHIyZH3zzTfd999/n8kAPJfwLKJUD0xLUta1115rF1F40gqUz1gKmAX5WK4G8GDF8ZDqASGvzR1x/fr1tghVmgwRgqH3yy67rMBB7S+VUODAgQPjsfmkEMP+YcktX77cnhD5lL95GVkYzhOKZDyfDsYnn3xia0QwYsAnuZxLAoxFdiH34+Dnnnuu6Uv3F3ymSg6/4YYb3ObNm2PFpgFKJoJY4Ij/63XHHXfY0C8MwEg9QIpHFv57B4tysNYpKZbozqITvJ0t0YODsk85FkmhAbD2vHnzbLwitFJSUBHKphwMwW/W6uejZo7XE0ihhw4dskYXoAuiXEhqCHSAojt37myNN8vmYwDInBIDiBhz8d4fde3atWAxC19OwZhGS8Q9Il94fIwtZdQDhbJ4p4nXj5NcOt8SFSuPofURI0bYQk8am2K8C50XdFV8BdZIsFog+xYiTdZKArxChMfoGFA5tU4CfBPJRAKySK60oEyyAf9WiyyAXiFlhAIDKHWMHz/e/j8jFYdMNdA6QkOyxYlvvvlmGxIvpssCAwAu6tOnj/3DTIxheaqBxCBK0KHaQNo/FjJUFDVHgQEUIiidfx1It5TCOK4QFDXwf0gf2kqHjC7wbMTDF3osqjcaApFPQfGLCxrk1atXR/7mTO8//2vkVRkTDTcLGI4ePdpeVPFyyXdp4xc6If0rBQlYq3fv3rYeHHN3fCUxNVAIdKXGFf3wm3+jyCwTUpHOtxoBIqIAa2lpxiVLlkQXXnihWRXrYnFf4L8sD3HsdKXmsoo4h17obqKjIUOGRDt37rTXvGQSupzqdjanogaAMAIGUPh88MEHZoT27dub8klLxYwQMny6UShnc+KZAd0MHz482rVrl/X5jx492uq76FOmIIUNW6aL8H/cCS0aGI4rpDxz/4n0FMrZnBhDo+PCf4Zi+EXHW0Uxq0BqkJWOCCGsun///mj27NlRt27dzOJY3ldkRET4Igu8RefqiZrzHf5GXghZIfZ9bzFatmyZNbhkC9IOOmPbWgQkXjMOb/fXmvczd4d/AcUq6byIYdBK0cA1ihzA1jMe/64HwG8IZOKY5GJfL7AefPBBGyXlwVXnvVGa7mwdiQxAoSLA4zmAkR07dlhqYriWSV0M3cKwzmu/XgDPkhOFhr8Bb7RYrpPhmttvv91e43ovN6VzLQ4KJUViA4TgN5X5tBRXjOL5rxNfffWV++abb8wwLGdJdHBdvQBZRIzhsy4ow+v9+/d31113nbWBTHOke6nrQRgdaZA4BSUBDODxYgbCOyCO1QMkA14sJXNMYF+RkVbZxVBWAwCULUjpMF0OZqsF8QuFypdzCaXL5Nz/AA0hxrHph+mEAAAAAElFTkSuQmCC";
+    },
+    "9daf": function (t, e, n) {
+      var r = n("4a48");
+      ("string" === typeof r && (r = [[t.i, r, ""]]), r.locals && (t.exports = r.locals));
+      var a = n("499e").default;
+      a("ccedd888", r, !0, { sourceMap: !1, shadowMode: !1 });
+    },
+    a326: function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAYAAADJ7fe0AAAAd0lEQVQokWNUqP5xhIGBwZoBE/xlYGDoYmBgqMIiBwf3W9gZWKAGxGKR52JgYAhjYGBoYmBgqMNnEBMeuW8MDAxrGRgYrBgYGP7jwoo1Pw+z4LOBgYHhMwMDwwIoxgUW43MJ0WDUkFFDiAGgFHsUlOrINoGB4SgAJCgYSbkigfkAAAAASUVORK5CYII=";
+    },
+    a434: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        a = n("23cb"),
+        i = n("a691"),
+        o = n("50c4"),
+        s = n("7b0b"),
+        c = n("65f0"),
+        u = n("8418"),
+        l = n("1dde"),
+        d = Math.max,
+        h = Math.min,
+        f = 9007199254740991,
+        p = "Maximum allowed length exceeded";
+      r(
+        { target: "Array", proto: !0, forced: !l("splice") },
+        {
+          splice: function (t, e) {
+            var n,
+              r,
+              l,
+              b,
+              g,
+              m,
+              v = s(this),
+              S = o(v.length),
+              k = a(t, S),
+              y = arguments.length;
+            if ((0 === y ? (n = r = 0) : 1 === y ? ((n = 0), (r = S - k)) : ((n = y - 2), (r = h(d(i(e), 0), S - k))), S + n - r > f)) throw TypeError(p);
+            for (l = c(v, r), b = 0; b < r; b++) ((g = k + b), g in v && u(l, b, v[g]));
+            if (((l.length = r), n < r)) {
+              for (b = k; b < S - r; b++) ((g = b + r), (m = b + n), g in v ? (v[m] = v[g]) : delete v[m]);
+              for (b = S; b > S - r + n; b--) delete v[b - 1];
+            } else if (n > r) for (b = S - r; b > k; b--) ((g = b + r - 1), (m = b + n - 1), g in v ? (v[m] = v[g]) : delete v[m]);
+            for (b = 0; b < n; b++) v[b + k] = arguments[b + 2];
+            return ((v.length = S - r + n), l);
+          },
+        },
+      );
+    },
+    a4d3: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        a = n("da84"),
+        i = n("c430"),
+        o = n("83ab"),
+        s = n("4930"),
+        c = n("d039"),
+        u = n("5135"),
+        l = n("e8b5"),
+        d = n("861d"),
+        h = n("825a"),
+        f = n("7b0b"),
+        p = n("fc6a"),
+        b = n("c04e"),
+        g = n("5c6c"),
+        m = n("7c73"),
+        v = n("df75"),
+        S = n("241c"),
+        k = n("057f"),
+        y = n("7418"),
+        A = n("06cf"),
+        w = n("9bf2"),
+        x = n("d1e7"),
+        O = n("9112"),
+        C = n("6eeb"),
+        j = n("5692"),
+        T = n("f772"),
+        I = n("d012"),
+        R = n("90e3"),
+        F = n("b622"),
+        B = n("c032"),
+        N = n("746f"),
+        E = n("d44e"),
+        D = n("69f3"),
+        _ = n("b727").forEach,
+        U = T("hidden"),
+        z = "Symbol",
+        G = "prototype",
+        P = F("toPrimitive"),
+        Y = D.set,
+        M = D.getterFor(z),
+        Q = Object[G],
+        L = a.Symbol,
+        K = a.JSON,
+        V = K && K.stringify,
+        q = A.f,
+        X = w.f,
+        J = k.f,
+        H = x.f,
+        W = j("symbols"),
+        Z = j("op-symbols"),
+        $ = j("string-to-symbol-registry"),
+        tt = j("symbol-to-string-registry"),
+        et = j("wks"),
+        nt = a.QObject,
+        rt = !nt || !nt[G] || !nt[G].findChild,
+        at =
+          o &&
+          c(function () {
+            return (
+              7 !=
+              m(
+                X({}, "a", {
+                  get: function () {
+                    return X(this, "a", { value: 7 }).a;
+                  },
+                }),
+              ).a
+            );
+          })
+            ? function (t, e, n) {
+                var r = q(Q, e);
+                (r && delete Q[e], X(t, e, n), r && t !== Q && X(Q, e, r));
+              }
+            : X,
+        it = function (t, e) {
+          var n = (W[t] = m(L[G]));
+          return (Y(n, { type: z, tag: t, description: e }), o || (n.description = e), n);
+        },
+        ot =
+          s && "symbol" == typeof L.iterator
+            ? function (t) {
+                return "symbol" == typeof t;
+              }
+            : function (t) {
+                return Object(t) instanceof L;
+              },
+        st = function (t, e, n) {
+          (t === Q && st(Z, e, n), h(t));
+          var r = b(e, !0);
+          return (
+            h(n),
+            u(W, r)
+              ? (n.enumerable ? (u(t, U) && t[U][r] && (t[U][r] = !1), (n = m(n, { enumerable: g(0, !1) }))) : (u(t, U) || X(t, U, g(1, {})), (t[U][r] = !0)),
+                at(t, r, n))
+              : X(t, r, n)
+          );
+        },
+        ct = function (t, e) {
+          h(t);
+          var n = p(e),
+            r = v(n).concat(ft(n));
+          return (
+            _(r, function (e) {
+              (o && !lt.call(n, e)) || st(t, e, n[e]);
+            }),
+            t
+          );
+        },
+        ut = function (t, e) {
+          return void 0 === e ? m(t) : ct(m(t), e);
+        },
+        lt = function (t) {
+          var e = b(t, !0),
+            n = H.call(this, e);
+          return !(this === Q && u(W, e) && !u(Z, e)) && (!(n || !u(this, e) || !u(W, e) || (u(this, U) && this[U][e])) || n);
+        },
+        dt = function (t, e) {
+          var n = p(t),
+            r = b(e, !0);
+          if (n !== Q || !u(W, r) || u(Z, r)) {
+            var a = q(n, r);
+            return (!a || !u(W, r) || (u(n, U) && n[U][r]) || (a.enumerable = !0), a);
+          }
+        },
+        ht = function (t) {
+          var e = J(p(t)),
+            n = [];
+          return (
+            _(e, function (t) {
+              u(W, t) || u(I, t) || n.push(t);
+            }),
+            n
+          );
+        },
+        ft = function (t) {
+          var e = t === Q,
+            n = J(e ? Z : p(t)),
+            r = [];
+          return (
+            _(n, function (t) {
+              !u(W, t) || (e && !u(Q, t)) || r.push(W[t]);
+            }),
+            r
+          );
+        };
+      (s ||
+        ((L = function () {
+          if (this instanceof L) throw TypeError("Symbol is not a constructor");
+          var t = arguments.length && void 0 !== arguments[0] ? String(arguments[0]) : void 0,
+            e = R(t),
+            n = function (t) {
+              (this === Q && n.call(Z, t), u(this, U) && u(this[U], e) && (this[U][e] = !1), at(this, e, g(1, t)));
+            };
+          return (o && rt && at(Q, e, { configurable: !0, set: n }), it(e, t));
+        }),
+        C(L[G], "toString", function () {
+          return M(this).tag;
+        }),
+        (x.f = lt),
+        (w.f = st),
+        (A.f = dt),
+        (S.f = k.f = ht),
+        (y.f = ft),
+        o &&
+          (X(L[G], "description", {
+            configurable: !0,
+            get: function () {
+              return M(this).description;
+            },
+          }),
+          i || C(Q, "propertyIsEnumerable", lt, { unsafe: !0 })),
+        (B.f = function (t) {
+          return it(F(t), t);
+        })),
+        r({ global: !0, wrap: !0, forced: !s, sham: !s }, { Symbol: L }),
+        _(v(et), function (t) {
+          N(t);
+        }),
+        r(
+          { target: z, stat: !0, forced: !s },
+          {
+            for: function (t) {
+              var e = String(t);
+              if (u($, e)) return $[e];
+              var n = L(e);
+              return (($[e] = n), (tt[n] = e), n);
+            },
+            keyFor: function (t) {
+              if (!ot(t)) throw TypeError(t + " is not a symbol");
+              if (u(tt, t)) return tt[t];
+            },
+            useSetter: function () {
+              rt = !0;
+            },
+            useSimple: function () {
+              rt = !1;
+            },
+          },
+        ),
+        r({ target: "Object", stat: !0, forced: !s, sham: !o }, { create: ut, defineProperty: st, defineProperties: ct, getOwnPropertyDescriptor: dt }),
+        r({ target: "Object", stat: !0, forced: !s }, { getOwnPropertyNames: ht, getOwnPropertySymbols: ft }),
+        r(
+          {
+            target: "Object",
+            stat: !0,
+            forced: c(function () {
+              y.f(1);
+            }),
+          },
+          {
+            getOwnPropertySymbols: function (t) {
+              return y.f(f(t));
+            },
+          },
+        ),
+        K &&
+          r(
+            {
+              target: "JSON",
+              stat: !0,
+              forced:
+                !s ||
+                c(function () {
+                  var t = L();
+                  return "[null]" != V([t]) || "{}" != V({ a: t }) || "{}" != V(Object(t));
+                }),
+            },
+            {
+              stringify: function (t) {
+                var e,
+                  n,
+                  r = [t],
+                  a = 1;
+                while (arguments.length > a) r.push(arguments[a++]);
+                if (((n = e = r[1]), (d(e) || void 0 !== t) && !ot(t)))
+                  return (
+                    l(e) ||
+                      (e = function (t, e) {
+                        if (("function" == typeof n && (e = n.call(this, t, e)), !ot(e))) return e;
+                      }),
+                    (r[1] = e),
+                    V.apply(K, r)
+                  );
+              },
+            },
+          ),
+        L[G][P] || O(L[G], P, L[G].valueOf),
+        E(L, z),
+        (I[U] = !0));
+    },
+    b872: function (t, e, n) {
+      "use strict";
+      var r = n("9daf"),
+        a = n.n(r);
+      a.a;
+    },
+    c032: function (t, e, n) {
+      e.f = n("b622");
+    },
+    c6ba: function (t, e, n) {
+      "use strict";
+      (n("99af"), n("96cf"));
+      var r = n("89ba"),
+        a = n("9f12"),
+        i = n("53fe"),
+        o = n("8b83"),
+        s = n("c65a"),
+        c = n("c03e"),
+        u = n("59b9"),
+        l = n("482f"),
+        d = n("a0f7"),
+        h = (function (t) {
+          function e() {
+            return (Object(a["a"])(this, e), Object(o["a"])(this, Object(s["a"])(e).apply(this, arguments)));
+          }
+          return (
+            Object(c["a"])(e, t),
+            Object(i["a"])(e, [
+              {
+                key: "addOrUpdateTaskReport",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              return (
+                                (t.next = 2),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/AddOrUpdateTaskReport"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "POST",
+                                  data: e,
+                                })
+                              );
+                            case 2:
+                              return ((n = t.sent), t.abrupt("return", n));
+                            case 4:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskReport",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (!("undefined" === typeof e || e.length < 32)) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/GetTaskReport/").concat(e),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                })
+                              );
+                            case 4:
+                              return ((n = t.sent), t.abrupt("return", n));
+                            case 6:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskReportWithRecord",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (!("undefined" === typeof e || e.length < 32)) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/GetReportWithRcordByReportId/").concat(e),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                })
+                              );
+                            case 4:
+                              return ((n = t.sent), t.abrupt("return", n));
+                            case 6:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskReportByUserIdAndTaskId",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (!("undefined" === typeof e || e.length < 32)) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              if (!("undefined" === typeof n || n.length < 1)) {
+                                t.next = 4;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 4:
+                              return (
+                                (t.next = 6),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/GetTaskReportByUserIdAndTaskId"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { taskId: e, userId: n },
+                                })
+                              );
+                            case 6:
+                              return ((r = t.sent), t.abrupt("return", r));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getTaskReportIdByUserIdAndTaskId",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e, n) {
+                      var r;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (!("undefined" === typeof e || e.length < 32)) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              if (!("undefined" === typeof n || n.length < 1)) {
+                                t.next = 4;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 4:
+                              return (
+                                (t.next = 6),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/GetTaskReportIdByUserIdAndTaskId"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { taskId: e, userId: n },
+                                })
+                              );
+                            case 6:
+                              return ((r = t.sent), t.abrupt("return", r));
+                            case 8:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e, n) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+              {
+                key: "getRcordWithReportByTaskId",
+                value: (function () {
+                  var t = Object(r["a"])(
+                    regeneratorRuntime.mark(function t(e) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (t) {
+                        while (1)
+                          switch ((t.prev = t.next)) {
+                            case 0:
+                              if (e && !(e.length < 32)) {
+                                t.next = 2;
+                                break;
+                              }
+                              return t.abrupt("return", null);
+                            case 2:
+                              return (
+                                (t.next = 4),
+                                Object(u["a"])({
+                                  url: "".concat(l["a"].web_host, "/api/TaskReport/GetRcordWithReportByTaskId"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                  params: { taskId: e },
+                                })
+                              );
+                            case 4:
+                              return ((n = t.sent), t.abrupt("return", n));
+                            case 6:
+                            case "end":
+                              return t.stop();
+                          }
+                      }, t);
+                    }),
+                  );
+                  function e(e) {
+                    return t.apply(this, arguments);
+                  }
+                  return e;
+                })(),
+              },
+            ]),
+            e
+          );
+        })(d["e"]);
+      e["a"] = new h();
+    },
+    d28b: function (t, e, n) {
+      var r = n("746f");
+      r("iterator");
+    },
+    d407: function (t, e) {
+      t.exports =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABwklEQVQ4jZWTsWuTQRjGnySlUNSGZgscp4c9SCHLObp1qYNODk5mcTBw0f4P2W75pkKWUjqUjp38F9QppdzS4RBio7n6oWiOE1NLScrBpU1L8rV94IY73ud3z3vcW8BsFQGsAPgH4H9G3VTlGGPvkiQZJUlyVCqVZhbmp5wtUEpr9Xp9gxAyBPAz86bre0rpUynlR8YY0jTtKqUeWmtvB6CUlqWUNpqhlHpkrT3KSjBu4T6l9KWU8ls0O6VU7ibzGBBi16SUe4yxQpqmp0opkRX7SgvlcrnYaDT6nPNx7Fw0PwHQj3UewBmAAYCTK4Bms9mvVCrFW113qQDzvV7vMB8/zF01B2AJwGLo/42Ucis+3kgptWat3Y/AeQD3JuAPojko/OJ8wTl3bIxJOeerhJCCEKKmtd723v8C4AD8mVgpgOO4egC+B8pf59xnY8wh5/wVISQnhHivtf7kvf8KYJjV3sUwxSSbnPP1CHmttbbee50FmZzGE+ecN8Z84Jy/JYRACPFCa/3De38AYHQTIGjonLPGmN2YBNVq9Xm73d4ZDAa/pwGmTSO63e6XVqu13Ol0xkfh0e6sMGiPATyb6QRwDhdAxcf8lXYhAAAAAElFTkSuQmCC";
+    },
+    e01a: function (t, e, n) {
+      "use strict";
+      var r = n("23e7"),
+        a = n("83ab"),
+        i = n("da84"),
+        o = n("5135"),
+        s = n("861d"),
+        c = n("9bf2").f,
+        u = n("e893"),
+        l = i.Symbol;
+      if (a && "function" == typeof l && (!("description" in l.prototype) || void 0 !== l().description)) {
+        var d = {},
+          h = function () {
+            var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : String(arguments[0]),
+              e = this instanceof h ? new l(t) : void 0 === t ? l() : l(t);
+            return ("" === t && (d[e] = !0), e);
+          };
+        u(h, l);
+        var f = (h.prototype = l.prototype);
+        f.constructor = h;
+        var p = f.toString,
+          b = "Symbol(test)" == String(l("test")),
+          g = /^Symbol\((.*)\)[^)]+$/;
+        (c(f, "description", {
+          configurable: !0,
+          get: function () {
+            var t = s(this) ? this.valueOf() : this,
+              e = p.call(t);
+            if (o(d, t)) return "";
+            var n = b ? e.slice(7, -1) : e.replace(g, "$1");
+            return "" === n ? void 0 : n;
+          },
+        }),
+          r({ global: !0, forced: !0 }, { Symbol: h }));
+      }
+    },
+    ec1e: function (t, e, n) {
+      "use strict";
+      n.r(e);
+      var r,
+        a = function () {
+          var t = this,
+            e = t.$createElement,
+            r = t._self._c || e;
+          return r(
+            "div",
+            { directives: [{ name: "loading", rawName: "v-loading", value: t.sending, expression: "sending" }], staticClass: "index-main" },
+            [
+              t.refreshMenu
+                ? r("div", { staticClass: "sections no-select" }, [
+                    r(
+                      "div",
+                      { staticClass: "nav", class: { active: t.showNav } },
+                      [
+                        r(
+                          "el-menu",
+                          {
+                            ref: "menu",
+                            attrs: {
+                              "default-active": t.activedMenuId,
+                              "background-color": "#3c3c42",
+                              "text-color": "rgba(255,255,255,0.6)",
+                              "default-openeds": t.opendSecId,
+                              "active-text-color": "#ff7b53",
+                            },
+                            on: { open: t.openSec, close: t.closeSec },
+                          },
+                          t._l(t.template.sections, function (e) {
+                            return r(
+                              "el-submenu",
+                              { key: e.id, attrs: { index: e.id } },
+                              [
+                                r("template", { slot: "title" }, [
+                                  r("div", { staticClass: "sec-p" }, [
+                                    r("div", { staticStyle: { position: "relative" } }, [
+                                      r("img", {
+                                        directives: [
+                                          {
+                                            name: "show",
+                                            rawName: "v-show",
+                                            value: t.opendSecId.every(function (t) {
+                                              return t != e.id;
+                                            }),
+                                            expression: "opendSecId.every((d) => d != sec.id)",
+                                          },
+                                        ],
+                                        staticStyle: { width: "17px", height: "14px" },
+                                        attrs: { src: n("a326") },
+                                      }),
+                                      r("img", {
+                                        directives: [
+                                          {
+                                            name: "show",
+                                            rawName: "v-show",
+                                            value: t.opendSecId.some(function (t) {
+                                              return t == e.id;
+                                            }),
+                                            expression: "opendSecId.some((d) => d == sec.id)",
+                                          },
+                                        ],
+                                        staticStyle: { width: "17px", height: "14px" },
+                                        attrs: { src: n("2b5c") },
+                                      }),
+                                      r("span", { staticClass: "single-line", staticStyle: { margin: "0 15px", width: "220px" } }, [t._v(t._s(e.sectionName))]),
+                                      r(
+                                        "div",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "show",
+                                              rawName: "v-show",
+                                              value: e.children.every(function (t) {
+                                                return t.isFinished;
+                                              }),
+                                              expression: "sec.children.every((s) => s.isFinished)",
+                                            },
+                                          ],
+                                          staticStyle: { position: "absolute", right: "10px", top: "0" },
+                                        },
+                                        [r("img", { attrs: { src: n("14ac") } })],
+                                      ),
+                                    ]),
+                                  ]),
+                                ]),
+                                t._l(e.children, function (e) {
+                                  return r(
+                                    "el-menu-item",
+                                    {
+                                      key: e.id,
+                                      attrs: { data: e, index: e.id },
+                                      on: {
+                                        click: function (n) {
+                                          return t.sectionChange(e);
+                                        },
+                                      },
+                                    },
+                                    [
+                                      r("div", { staticClass: "sec-c", staticStyle: { position: "relative" } }, [
+                                        r("span", { staticClass: "single-line", staticStyle: { margin: "0 15px", width: "150px" } }, [
+                                          t._v(t._s(e.sectionName)),
+                                        ]),
+                                        e.state
+                                          ? r("div", { staticStyle: { position: "absolute", right: "10px", top: "0" } }, [
+                                              r("span", { staticStyle: { "margin-right": "12px" } }, [t._v(t._s(t._f("formatTime")(e.state.duration)))]),
+                                              e.state.isFinished ? r("img", { attrs: { src: n("14ac") } }) : t._e(),
+                                            ])
+                                          : t._e(),
+                                      ]),
+                                    ],
+                                  );
+                                }),
+                              ],
+                              2,
+                            );
+                          }),
+                          1,
+                        ),
+                      ],
+                      1,
+                    ),
+                    r("div", [
+                      r("div", { staticClass: "btn-ret center", on: { click: t.goback } }, [r("img", { attrs: { src: n("d407") } })]),
+                      r("div", { staticClass: "b-sec center" }, [
+                        r(
+                          "div",
+                          {
+                            staticClass: "btn-sec center",
+                            class: { "nav-open": t.showNav },
+                            on: {
+                              click: function (e) {
+                                t.showNav = !t.showNav;
+                              },
+                            },
+                          },
+                          [r("img", { attrs: { src: n("7fe8") } }), r("p", [t._v(t._s(t.$t("lang.章节")))])],
+                        ),
+                      ]),
+                    ]),
+                  ])
+                : t._e(),
+              r("div", { staticClass: "index-body" }, [
+                r("div", { staticClass: "frame-detial" }, [
+                  r("div", { staticClass: "task-title" }, [
+                    r("div", { staticClass: "title-left" }, [
+                      r("div", { staticStyle: { width: "500px" } }, [
+                        r("span", { staticClass: "single-line", staticStyle: { "margin-bottom": "-6px" } }, [
+                          t._v(" " + t._s(t.sectionNameP) + " "),
+                          r("span", { staticClass: "splice" }, [t._v("/")]),
+                          t._v(" " + t._s(t.sectionNameC) + " "),
+                          t.record.scoreDisplay >= 2
+                            ? r("i", { staticStyle: { "font-size": "6px", color: "#bbb" } }, [
+                                t._v("（" + t._s(t.sectionScoreC) + " " + t._s(t.$t("lang.分")) + "）"),
+                              ])
+                            : t._e(),
+                        ]),
+                      ]),
+                    ]),
+                    r("div", { staticClass: "title-right" }, [
+                      t.record.completed
+                        ? r("div", [
+                            r(
+                              "div",
+                              { staticClass: "opt" },
+                              [
+                                r("el-button", { staticClass: "opt-btn jump", attrs: { disabled: t.prevDisabled }, on: { click: t.prevSection } }, [
+                                  t._v(t._s(t.$t("lang.上一节"))),
+                                ]),
+                                r("el-button", { staticClass: "opt-btn jump", attrs: { disabled: t.nextDisabled }, on: { click: t.nextSection } }, [
+                                  t._v(t._s(t.$t("lang.下一节"))),
+                                ]),
+                              ],
+                              1,
+                            ),
+                          ])
+                        : t._e(),
+                      t.record.completed
+                        ? t._e()
+                        : r("div", { staticClass: "right-tools" }, [
+                            r(
+                              "div",
+                              { staticClass: "stat" },
+                              [
+                                r("div", { staticClass: "stat-info no-select" }, [
+                                  r("div", [
+                                    r("span", [t._v(t._s(t.$t("lang.任务进度")))]),
+                                    r("span", { staticClass: "progress-val" }, [t._v(t._s(t.getprogress(t.progress)) + "%")]),
+                                  ]),
+                                  t.record.limitTime
+                                    ? r("div", [
+                                        r("span", { attrs: { title: "截至时间：" + new Date(this.record.limitEndTime) } }, [t._v(t._s(t.$t("lang.剩余时间")))]),
+                                        r("span", { staticClass: "time-val" }, [t._v(" " + t._s(t._f("formatTime")(t.LimitTimeLeft)) + " ")]),
+                                      ])
+                                    : r("div", [
+                                        r("span", [t._v(t._s(t.$t("lang.剩余时间")))]),
+                                        r("span", { staticClass: "time-val" }, [t._v(t._s(t._f("formatTime")(t.template.duration - t.record.duration)))]),
+                                      ]),
+                                ]),
+                                r("el-progress", { attrs: { percentage: t.getprogress(t.progress), status: "success" } }),
+                              ],
+                              1,
+                            ),
+                            r(
+                              "div",
+                              { staticClass: "opt" },
+                              [
+                                r("el-button", { staticClass: "opt-btn jump", attrs: { disabled: t.prevDisabled }, on: { click: t.prevSection } }, [
+                                  t._v(t._s(t.$t("lang.上一节"))),
+                                ]),
+                                r("el-button", { staticClass: "opt-btn jump", attrs: { disabled: t.nextDisabled }, on: { click: t.nextSection } }, [
+                                  t._v(t._s(t.$t("lang.下一节"))),
+                                ]),
+                                r(
+                                  "el-button",
+                                  {
+                                    directives: [{ name: "show", rawName: "v-show", value: !0, expression: "true" }],
+                                    staticClass: "opt-btn sub",
+                                    staticStyle: { width: "105px" },
+                                    attrs: { type: "success" },
+                                    on: { click: t.submitSection },
+                                  },
+                                  [t._v(" " + t._s(t.canSubmitSec ? t.$t("lang.提交") : t.$t("lang.再次提交")))],
+                                ),
+                              ],
+                              1,
+                            ),
+                            r(
+                              "div",
+                              { staticClass: "opt" },
+                              [
+                                t.isSelfstudt || t.record.hideReport
+                                  ? t._e()
+                                  : r("el-button", { staticClass: "opt-btn jump last", on: { click: t.taskReport } }, [t._v(t._s(t.$t("lang.任务报告")))]),
+                                r(
+                                  "el-button",
+                                  { staticClass: "opt-btn sub last", attrs: { type: "success", disabled: !t.canSubmitTask }, on: { click: t.submitTask } },
+                                  [t._v(" " + t._s(t.$t("lang.完成任务")))],
+                                ),
+                              ],
+                              1,
+                            ),
+                          ]),
+                    ]),
+                  ]),
+                  r("div", { staticClass: "task-body" }, [r("router-view", { key: t.$route.query.id, ref: "work" })], 1),
+                ]),
+              ]),
+              r(
+                "el-dialog",
+                {
+                  attrs: { title: "任务报告", visible: t.taskReportEdit, "close-on-click-modal": !1 },
+                  on: {
+                    "update:visible": function (e) {
+                      t.taskReportEdit = e;
+                    },
+                  },
+                },
+                [
+                  r(
+                    "div",
+                    { directives: [{ name: "loading", rawName: "v-loading", value: t.loadReport, expression: "loadReport" }] },
+                    [
+                      r(
+                        "el-form",
+                        { ref: "taskReportForm", attrs: { model: t.report.content } },
+                        [
+                          r(
+                            "el-form-item",
+                            { attrs: { label: "标题", "label-width": "80px", prop: "name", rules: [{ required: !0, message: "标题不能为空" }] } },
+                            [
+                              r("el-input", {
+                                attrs: { maxlength: "50", type: "name", disabled: t.report.submit, autocomplete: "off" },
+                                model: {
+                                  value: t.report.content.name,
+                                  callback: function (e) {
+                                    t.$set(t.report.content, "name", e);
+                                  },
+                                  expression: "report.content.name",
+                                },
+                              }),
+                            ],
+                            1,
+                          ),
+                          r(
+                            "el-form-item",
+                            { attrs: { label: "内容", "label-width": "80px", prop: "content", rules: [{ required: !0, message: "内容不能为空" }] } },
+                            [
+                              r("quill-editor", {
+                                ref: "QuillEditor",
+                                staticClass: "editor",
+                                attrs: { type: "content", disabled: t.report.submit, options: t.editorOption },
+                                model: {
+                                  value: t.report.content.content,
+                                  callback: function (e) {
+                                    t.$set(t.report.content, "content", e);
+                                  },
+                                  expression: "report.content.content",
+                                },
+                              }),
+                              r("el-upload", {
+                                staticClass: "uploadFile",
+                                attrs: {
+                                  "show-upload-list": !1,
+                                  "on-success": t.handleFileSuccess,
+                                  "on-error": t.handleFileError,
+                                  type: "drag",
+                                  action: t.config.web_host + "/api/FileManager/Upload",
+                                },
+                              }),
+                            ],
+                            1,
+                          ),
+                        ],
+                        1,
+                      ),
+                      r(
+                        "div",
+                        { staticClass: "dialog-footer", attrs: { slot: "footer" }, slot: "footer" },
+                        [
+                          r("el-button", { attrs: { disabled: t.report.submit, type: "primary" }, on: { click: t.saveTaskReport } }, [t._v("保存报告")]),
+                          r("el-button", { attrs: { disabled: t.report.submit, type: "warning" }, on: { click: t.submitTaskReport } }, [t._v("提交报告")]),
+                          r(
+                            "el-button",
+                            {
+                              on: {
+                                click: function (e) {
+                                  t.taskReportEdit = !1;
+                                },
+                              },
+                            },
+                            [t._v("取 消")],
+                          ),
+                        ],
+                        1,
+                      ),
+                    ],
+                    1,
+                  ),
+                ],
+              ),
+            ],
+            1,
+          );
+        },
+        i = [],
+        o =
+          (n("99af"),
+          n("a623"),
+          n("4de4"),
+          n("7db0"),
+          n("4160"),
+          n("c975"),
+          n("a15b"),
+          n("d81d"),
+          n("fb6a"),
+          n("a434"),
+          n("0d03"),
+          n("b0c0"),
+          n("b680"),
+          n("d3b7"),
+          n("e25e"),
+          n("ac1f"),
+          n("25f0"),
+          n("466d"),
+          n("159b"),
+          n("96cf"),
+          n("89ba")),
+        s = n("9f12"),
+        c = n("53fe"),
+        u = n("8b83"),
+        l = n("c65a"),
+        d = n("9aa6"),
+        h = n("c03e"),
+        f = n("2fa7"),
+        p = n("9ab4"),
+        b = n("60a3"),
+        g = n("d82f"),
+        m = n("c6ba"),
+        v = n("4a80"),
+        S = n("03cd"),
+        k = n("52cf"),
+        y = n("73ec"),
+        A = n("535f"),
+        w = n("9157"),
+        x = n("70b0"),
+        O = n("f7b1"),
+        C = n("482f"),
+        j =
+          ((r = (function (t) {
+            function e() {
+              var t, n;
+              Object(s["a"])(this, e);
+              for (var r = arguments.length, a = new Array(r), i = 0; i < r; i++) a[i] = arguments[i];
+              return (
+                (n = Object(u["a"])(this, (t = Object(l["a"])(e)).call.apply(t, [this].concat(a)))),
+                Object(f["a"])(Object(d["a"])(n), "loadReport", !1),
+                Object(f["a"])(Object(d["a"])(n), "config", C["a"]),
+                Object(f["a"])(Object(d["a"])(n), "report", { id: "", content: { name: "", content: "" }, submit: !1 }),
+                Object(f["a"])(Object(d["a"])(n), "isSelfstudt", !1),
+                Object(f["a"])(Object(d["a"])(n), "opendSecId", []),
+                Object(f["a"])(Object(d["a"])(n), "showNav", !1),
+                Object(f["a"])(Object(d["a"])(n), "refreshMenu", !0),
+                Object(f["a"])(Object(d["a"])(n), "activedMenuId", ""),
+                Object(f["a"])(Object(d["a"])(n), "activedMenuLastId", ""),
+                Object(f["a"])(Object(d["a"])(n), "canSubmitSec", !0),
+                Object(f["a"])(Object(d["a"])(n), "canSubmitTask", !0),
+                Object(f["a"])(Object(d["a"])(n), "prevDisabled", !1),
+                Object(f["a"])(Object(d["a"])(n), "nextDisabled", !1),
+                Object(f["a"])(Object(d["a"])(n), "currentSectionState", k["a"].noState()),
+                Object(f["a"])(Object(d["a"])(n), "currentSectionType", S["a"].RichText),
+                Object(f["a"])(Object(d["a"])(n), "interval", {}),
+                Object(f["a"])(Object(d["a"])(n), "sending", !1),
+                Object(f["a"])(Object(d["a"])(n), "second", 59),
+                Object(f["a"])(Object(d["a"])(n), "taskReportEdit", !1),
+                Object(f["a"])(Object(d["a"])(n), "sectionNameP", "章节"),
+                Object(f["a"])(Object(d["a"])(n), "sectionNameC", "步骤"),
+                Object(f["a"])(Object(d["a"])(n), "sectionScoreC", null),
+                Object(f["a"])(Object(d["a"])(n), "taskStates", []),
+                Object(f["a"])(Object(d["a"])(n), "progress", 0),
+                Object(f["a"])(Object(d["a"])(n), "limitTimeConfig", { warn: !1, submit: !1, serverTime: 0, pre: 30 }),
+                Object(f["a"])(Object(d["a"])(n), "saveDurationInterval", 15),
+                Object(f["a"])(Object(d["a"])(n), "syncTimeInterval", 10),
+                Object(f["a"])(Object(d["a"])(n), "self", void 0),
+                Object(f["a"])(Object(d["a"])(n), "editorOption", {
+                  theme: "snow",
+                  placeholder: "请填写报告内容.....",
+                  modules: {
+                    toolbar: {
+                      container: [
+                        ["bold", "italic", "underline", "strike"],
+                        ["blockquote", "code-block"],
+                        [{ header: 1 }, { header: 2 }],
+                        [{ list: "ordered" }, { list: "bullet" }],
+                        [{ script: "sub" }, { script: "super" }],
+                        [{ indent: "-1" }, { indent: "+1" }],
+                        [{ size: ["small", !1, "large", "huge"] }],
+                        [{ header: [1, 2, 3, 4, 5, 6, !1] }],
+                        [{ color: [] }, { background: [] }],
+                        [{ font: [] }],
+                        [{ align: [] }],
+                        ["clean"],
+                        ["link", "image", "upload"],
+                      ],
+                      handlers: {
+                        upload: function (t) {
+                          t && document.querySelector(".uploadFile input").click();
+                        },
+                        image: function (t) {
+                          var e = 1048576,
+                            r = 3,
+                            a = n.$refs["QuillEditor"],
+                            i = a.quill,
+                            o = i.root.innerHTML,
+                            s = o.match(/<img.*?/g) ? o.match(/<img.*?/g).length : 0;
+                          if (s >= r) n.$message({ type: "warning", message: "最多添加" + r + "张图片,更多图片请使用附件上传。" });
+                          else {
+                            var c = a.$el.querySelector("input.ql-image[type=file]");
+                            (c ||
+                              ((c = document.createElement("input")),
+                              c.setAttribute("type", "file"),
+                              c.setAttribute("name", "file"),
+                              c.setAttribute("accept", "image/*"),
+                              c.classList.add("ql-image"),
+                              (c.style.display = "none"),
+                              (c.onchange = function () {
+                                var t = c.value && c.value.match(/<img.*?/g);
+                                if (t && t.length + s >= r) n.$message({ type: "warning", message: "最多添加" + r + "张图片,更多图片请使用附件上传。" });
+                                else {
+                                  var a = c.files[0],
+                                    o = a.size <= e;
+                                  if (o) {
+                                    var u = new FileReader();
+                                    (u.readAsDataURL(a),
+                                      (u.onload = function (t) {
+                                        var e = i.getSelection().index;
+                                        (i.insertEmbed(e, "image", t.target.result), i.setSelection(e + 1));
+                                      }),
+                                      (c.value = ""));
+                                  } else
+                                    n.$message({ type: "warning", message: "单张图片最大不超过" + (e / 1024 / 1024).toFixed(0) + "M,大图片请使用附件上传。" });
+                                }
+                              }),
+                              a.$el.appendChild(c)),
+                              c.click());
+                          }
+                        },
+                      },
+                    },
+                  },
+                }),
+                Object(f["a"])(Object(d["a"])(n), "allChildrenSections", []),
+                Object(f["a"])(Object(d["a"])(n), "isFromHome", !1),
+                n
+              );
+            }
+            return (
+              Object(h["a"])(e, t),
+              Object(c["a"])(e, [
+                {
+                  key: "handleFileSuccess",
+                  value: function (t, e) {
+                    var n = this.$refs.QuillEditor.quill;
+                    console.log("handleFileSuccess", t, n);
+                    var r = n.getSelection().index;
+                    (n.insertEmbed(
+                      r,
+                      "link",
+                      { href: C["a"].web_host + "/api/FileManager/Download/" + t.data.uniqueName, innerText: t.data.originalName },
+                      "api",
+                    ),
+                      n.setSelection(r + t.data.originalName.length));
+                  },
+                },
+                {
+                  key: "handleFileError",
+                  value: function (t, e, n) {
+                    console.log("handleFileError", t);
+                  },
+                },
+                {
+                  key: "getprogress",
+                  value: function (t) {
+                    var e = parseInt(t);
+                    return e ? (e < 0 ? 0 : e > 100 ? 100 : e) : 0;
+                  },
+                },
+                {
+                  key: "initData",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t(e) {
+                        var n,
+                          r = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  return ((t.next = 2), g["a"].GetTaskRecordCompleteInfo(e));
+                                case 2:
+                                  if (((n = t.sent), !n || 0 !== n.code)) {
+                                    t.next = 13;
+                                    break;
+                                  }
+                                  if (n.data) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  return (this.msg("找不到任务:" + e, "error"), this.goback(), t.abrupt("return"));
+                                case 8:
+                                  (this.$store.commit("task/setRecord", n.data.taskRecordDto),
+                                    this.$store.commit("task/setTemplate", n.data.taskTemplateDto),
+                                    (this.taskStates = []),
+                                    this.template.sections.forEach(function (t) {
+                                      t.children.forEach(function (t) {
+                                        t.state && r.taskStates.push(t.state);
+                                      });
+                                    }),
+                                    this.$store.commit("task/setState", this.taskStates));
+                                case 13:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e(e) {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "destroyed",
+                  value: function () {
+                    ((O["a"].reflesh = 60),
+                      console.log(
+                        "---------- 结束任务 "
+                          .concat(this.record.id, " ")
+                          .concat(this.record.taskNumber, " ")
+                          .concat(O["a"].Time(), "  ")
+                          .concat(this.record.name, " "),
+                      ));
+                  },
+                },
+                {
+                  key: "created",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n,
+                          r,
+                          a,
+                          i = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  return ((O["a"].reflesh = this.syncTimeInterval), (t.next = 3), O["a"].syncTime());
+                                case 3:
+                                  if (
+                                    (console.log(
+                                      "---------- 开始任务 "
+                                        .concat(this.record.id, " ")
+                                        .concat(this.record.taskNumber, " ")
+                                        .concat(O["a"].Time(), "  ")
+                                        .concat(this.record.name),
+                                    ),
+                                    (this.limitTimeConfig.serverTime = O["a"].Time().getTime()),
+                                    this.record && this.record.id)
+                                  ) {
+                                    t.next = 13;
+                                    break;
+                                  }
+                                  if (((e = Object(y["k"])("recordid")), e)) {
+                                    t.next = 11;
+                                    break;
+                                  }
+                                  return (this.msg("加载任务失败", "error"), this.goback(), t.abrupt("return"));
+                                case 11:
+                                  return ((t.next = 13), this.initData(e));
+                                case 13:
+                                  if ((Object(y["r"])("recordid", this.record.id), this.$route.query.f && (this.isFromHome = !0), this.template.sections)) {
+                                    t.next = 17;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 17:
+                                  return ((t.next = 19), v["a"].getTaskAllStateList(this.record.id, this.stuid));
+                                case 19:
+                                  if (
+                                    ((this.taskStates = t.sent),
+                                    this.$store.commit("task/setState", this.taskStates),
+                                    (this.record.duration = 0),
+                                    (this.opendSecId = this.template.sections.map(function (t) {
+                                      return t.id;
+                                    })),
+                                    this.template.sections.forEach(function (t) {
+                                      t &&
+                                        t.children &&
+                                        t.children.forEach(function (t) {
+                                          if (Array.isArray(i.taskStates)) {
+                                            var e = i.taskStates.find(function (e) {
+                                              return e.targetId === t.id;
+                                            });
+                                            (e || (e = k["a"].noState()), (t.state = e), (i.record.duration += e.duration));
+                                          }
+                                          i.allChildrenSections.push(t);
+                                        });
+                                    }),
+                                    this.record.sectionCount < 1
+                                      ? (this.progress = 0)
+                                      : (this.progress = Math.round(
+                                          (this.taskStates.filter(function (t) {
+                                            return t.isFinished;
+                                          }).length /
+                                            this.record.sectionCount) *
+                                            100,
+                                        )),
+                                    (this.isSelfstudt = "00000000-0000-0000-0000-000000000000" == this.record.taskId),
+                                    (n = this.$route.query.id),
+                                    (r = this.allChildrenSections.find(function (t) {
+                                      return t.id == n;
+                                    })),
+                                    !r)
+                                  ) {
+                                    t.next = 33;
+                                    break;
+                                  }
+                                  return ((this.activedMenuId = n), (this.activedMenuLastId = n), this.loadSectionContent(r), t.abrupt("return"));
+                                case 33:
+                                  this.template.sections &&
+                                    this.template.sections.length > 0 &&
+                                    this.template.sections[0].children &&
+                                    this.template.sections[0].children.length > 0 &&
+                                    ((a = this.template.sections[0].children[0]),
+                                    (this.activedMenuId = a.id),
+                                    (this.activedMenuLastId = a.id),
+                                    this.loadSectionContent(a));
+                                case 34:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "goback",
+                  value: function () {
+                    "老师" == this.userRole
+                      ? (this.saveSectionContent(), this.$router.push({ path: "/main/teacher/selfstudy" }))
+                      : "00000000-0000-0000-0000-000000000000" == this.record.taskId
+                        ? (this.saveSectionContent(),
+                          this.isFromHome ? this.$router.push({ path: "/main/student/home" }) : this.$router.push({ path: "/main/student/selfstudy" }))
+                        : this.record.completed
+                          ? this.$router.push({ path: "/main/student/home" })
+                          : (this.saveSectionContent(), this.$router.push({ name: "stutaskdetial", query: { id: this.record.id } }));
+                  },
+                },
+                {
+                  key: "sectionNodeClicked",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t(e, n, r) {
+                        return regeneratorRuntime.wrap(function (t) {
+                          while (1)
+                            switch ((t.prev = t.next)) {
+                              case 0:
+                              case "end":
+                                return t.stop();
+                            }
+                        }, t);
+                      }),
+                    );
+                    function e(e, n, r) {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "openSec",
+                  value: function (t) {
+                    var e = this.opendSecId.indexOf(t);
+                    -1 === e && this.opendSecId.push(t);
+                  },
+                },
+                {
+                  key: "closeSec",
+                  value: function (t) {
+                    var e = this.opendSecId.indexOf(t);
+                    -1 !== e && this.opendSecId.splice(e, 1);
+                  },
+                },
+                {
+                  key: "sectionChange",
+                  value: function (t) {
+                    this.activedMenuId !== t.id &&
+                      ((this.activedMenuId = t.id), (this.showNav = !1), (this.activedMenuLastId = this.activedMenuId), this.loadSectionContent(t));
+                  },
+                },
+                {
+                  key: "saveSectionContent",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n,
+                          r,
+                          a = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (!this.record.completed) {
+                                    t.next = 2;
+                                    break;
+                                  }
+                                  return t.abrupt("return");
+                                case 2:
+                                  return ((e = this.currentSectionState), (t.next = 5), this.$refs.work.submitSection(e));
+                                case 5:
+                                  ((n = t.sent),
+                                    (r = null),
+                                    n ? (r = e) : ((r = JSON.parse(JSON.stringify(e))), (r.content = "")),
+                                    g["a"].updateSectioDuration(r, n).then(function (t) {
+                                      if (t && 0 === t.code) {
+                                        if (((e.id = t.data.id), t.data.taskRecordCompleted))
+                                          return ((a.record.completed = !0), void a.msg(x["a"].t("lang.当前任务已完成"), "warning"));
+                                        n && a.$message({ message: x["a"].t("lang.当前修改已自动保存"), duration: 3e3 });
+                                      }
+                                    }));
+                                case 9:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "prevSection",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n,
+                          r = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (!this.allChildrenSections) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  if (
+                                    ((e = this.allChildrenSections.find(function (t) {
+                                      return t.id === r.activedMenuId;
+                                    })),
+                                    (n = this.allChildrenSections.indexOf(e)),
+                                    !(n > 0))
+                                  ) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  return ((this.activedMenuId = this.allChildrenSections[n - 1].id), (t.next = 7), this.saveSectionContent());
+                                case 7:
+                                  this.loadSectionContent(this.allChildrenSections[n - 1]);
+                                case 8:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "nextSection",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n,
+                          r = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  if (!this.allChildrenSections) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  if (
+                                    ((e = this.allChildrenSections.find(function (t) {
+                                      return t.id === r.activedMenuId;
+                                    })),
+                                    (n = this.allChildrenSections.indexOf(e)),
+                                    !(-1 !== n && n < this.allChildrenSections.length - 1))
+                                  ) {
+                                    t.next = 8;
+                                    break;
+                                  }
+                                  return ((this.activedMenuId = this.allChildrenSections[n + 1].id), (t.next = 7), this.saveSectionContent());
+                                case 7:
+                                  this.loadSectionContent(this.allChildrenSections[n + 1]);
+                                case 8:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "submitSection",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e,
+                          n = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  return ((t.next = 2), this.$refs.work.submitSection(this.currentSectionState));
+                                case 2:
+                                  ((this.sending = !0),
+                                    (e = JSON.parse(JSON.stringify(this.currentSectionState))),
+                                    (e.isFinished = !0),
+                                    g["a"]
+                                      .submitTaskSection(e)
+                                      .then(function (t) {
+                                        if (((n.sending = !1), t && 0 === t.code)) {
+                                          if (t.data.taskRecordCompleted)
+                                            return ((n.record.completed = !0), void n.msg(x["a"].t("lang.当前任务已完成,不能提交"), "warning"));
+                                          ((n.currentSectionState.isFinished = !0),
+                                            (n.currentSectionState.id = t.data.id),
+                                            (n.canSubmitSec = !1),
+                                            n.$store.commit("task/updateState", n.currentSectionState),
+                                            (n.progress = Math.round(
+                                              (n.taskStates.filter(function (t) {
+                                                return t.isFinished;
+                                              }).length /
+                                                n.record.sectionCount) *
+                                                100,
+                                            )),
+                                            n.msg(n.$t("lang.提交成功").toString(), "success"));
+                                        } else n.msg(n.$t("lang.提交失败").toString() + t.message, "error");
+                                      })
+                                      .catch(function (t) {
+                                        (n.msg(n.$t("lang.提交失败").toString() + t.message, "error"), (n.sending = !1));
+                                      }));
+                                case 6:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "taskReport",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  return (
+                                    (this.taskReportEdit = !0),
+                                    this.report.id || ((this.report.content.name = this.record.name + " - 任务报告"), (this.report.content.content = "")),
+                                    (this.loadReport = !0),
+                                    (t.next = 5),
+                                    m["a"].getTaskReportByUserIdAndTaskId(this.record.id, this.stuid)
+                                  );
+                                case 5:
+                                  ((e = t.sent), (this.loadReport = !1), 0 === e.code && (this.report = e.data));
+                                case 8:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "saveTaskReport",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  this.$refs["taskReportForm"].validate(
+                                    (function () {
+                                      var t = Object(o["a"])(
+                                        regeneratorRuntime.mark(function t(n) {
+                                          var r, a;
+                                          return regeneratorRuntime.wrap(function (t) {
+                                            while (1)
+                                              switch ((t.prev = t.next)) {
+                                                case 0:
+                                                  if (!n) {
+                                                    t.next = 14;
+                                                    break;
+                                                  }
+                                                  return (
+                                                    (e.report.submit = !1),
+                                                    (r = JSON.parse(JSON.stringify(e.report))),
+                                                    (r.userId = e.stuid),
+                                                    (r.taskId = e.record.id),
+                                                    (r.submit = !1),
+                                                    (e.loadReport = !0),
+                                                    (t.next = 9),
+                                                    m["a"].addOrUpdateTaskReport(r)
+                                                  );
+                                                case 9:
+                                                  ((a = t.sent),
+                                                    (e.loadReport = !1),
+                                                    0 === a.code
+                                                      ? ((e.report.id = a.data), (e.taskReportEdit = !1), e.msg(x["a"].t("lang.保存成功"), "success"))
+                                                      : e.msg(a.message, "error"),
+                                                    (t.next = 15));
+                                                  break;
+                                                case 14:
+                                                  return t.abrupt("return", !1);
+                                                case 15:
+                                                case "end":
+                                                  return t.stop();
+                                              }
+                                          }, t);
+                                        }),
+                                      );
+                                      return function (e) {
+                                        return t.apply(this, arguments);
+                                      };
+                                    })(),
+                                  );
+                                case 1:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "submitTaskReport",
+                  value: (function () {
+                    var t = Object(o["a"])(
+                      regeneratorRuntime.mark(function t() {
+                        var e = this;
+                        return regeneratorRuntime.wrap(
+                          function (t) {
+                            while (1)
+                              switch ((t.prev = t.next)) {
+                                case 0:
+                                  this.$refs["taskReportForm"].validate(function (t) {
+                                    if (!t) return !1;
+                                    e.$confirm("报告提交后不能修改，确定提交？")
+                                      .then(
+                                        (function () {
+                                          var t = Object(o["a"])(
+                                            regeneratorRuntime.mark(function t(n) {
+                                              var r, a;
+                                              return regeneratorRuntime.wrap(function (t) {
+                                                while (1)
+                                                  switch ((t.prev = t.next)) {
+                                                    case 0:
+                                                      return (
+                                                        (e.report.submit = !1),
+                                                        (r = JSON.parse(JSON.stringify(e.report))),
+                                                        (r.userId = e.stuid),
+                                                        (r.taskId = e.record.id),
+                                                        (r.submit = !0),
+                                                        (e.loadReport = !0),
+                                                        (t.next = 8),
+                                                        m["a"].addOrUpdateTaskReport(r)
+                                                      );
+                                                    case 8:
+                                                      ((a = t.sent),
+                                                        (e.loadReport = !1),
+                                                        0 === a.code ? ((e.report.id = a.data), (e.taskReportEdit = !1)) : e.msg(a.message, "error"));
+                                                    case 11:
+                                                    case "end":
+                                                      return t.stop();
+                                                  }
+                                              }, t);
+                                            }),
+                                          );
+                                          return function (e) {
+                                            return t.apply(this, arguments);
+                                          };
+                                        })(),
+                                      )
+                                      .catch(function (t) {});
+                                  });
+                                case 1:
+                                case "end":
+                                  return t.stop();
+                              }
+                          },
+                          t,
+                          this,
+                        );
+                      }),
+                    );
+                    function e() {
+                      return t.apply(this, arguments);
+                    }
+                    return e;
+                  })(),
+                },
+                {
+                  key: "submitTask",
+                  value: function () {
+                    var t = this;
+                    this.allChildrenSections.every(function (t) {
+                      return t.state.isFinished;
+                    })
+                      ? this.$confirm(this.$t("lang.是否确定完成任务并提交？").toString(), this.$t("lang.提示").toString(), {
+                          confirmButtonText: this.$t("lang.确定").toString(),
+                          cancelButtonText: this.$t("lang.取消").toString(),
+                          type: "success",
+                        })
+                          .then(function (e) {
+                            t.doSubmitTask();
+                          })
+                          .catch(function (t) {})
+                      : this.$confirm(this.$t("lang.有章节未提交,是否强制提交？").toString(), this.$t("lang.注意").toString(), {
+                          confirmButtonText: this.$t("lang.确定").toString(),
+                          cancelButtonText: this.$t("lang.取消").toString(),
+                          type: "warning",
+                        })
+                          .then(function (e) {
+                            t.doSubmitTask();
+                          })
+                          .catch(function (t) {});
+                  },
+                },
+                {
+                  key: "doSubmitTask",
+                  value: function () {
+                    var t = this;
+                    ((this.sending = !0),
+                      g["a"]
+                        .submitTask(this.record)
+                        .then(function (e) {
+                          (e && 0 === e.code
+                            ? ((t.canSubmitTask = !1),
+                              t.alert(x["a"].t("lang.提交成功"), x["a"].t("lang.提示"), function () {
+                                (x["b"].running && x["b"].stopRecord(), (t.record.completed = !0), t.goback(), t.$store.commit("task/clearRecord"));
+                              }))
+                            : t.msg(x["a"].t("lang.提交失败"), "error"),
+                            (t.sending = !1));
+                        })
+                        .catch(function (e) {
+                          ((t.sending = !1), t.msg(e, "error"));
+                        }));
+                  },
+                },
+                {
+                  key: "loadSectionContent",
+                  value: function (t) {
+                    var e = "";
+                    switch (t.taskType) {
+                      case S["a"].RichText:
+                        e = "documentTask";
+                        break;
+                      case S["a"].Exercise:
+                        e = "exerciseTask";
+                        break;
+                      case S["a"].AppCase:
+                        e = "appCaseTask";
+                        break;
+                      case S["a"].Video:
+                        e = "videoTask";
+                        break;
+                      case S["a"].Emulator:
+                        e = "emulatorTask";
+                        break;
+                      case S["a"].Code:
+                        e = "codeTask";
+                        break;
+                      default:
+                        break;
+                    }
+                    ((this.currentSectionType = t.taskType),
+                      (this.sectionNameP = this.template.sections.find(function (e) {
+                        return e.id == t.parentId;
+                      }).sectionName),
+                      (this.sectionNameC = t.sectionName),
+                      (this.sectionScoreC = t.score));
+                    var n = this.allChildrenSections.indexOf(t);
+                    ((this.prevDisabled = 0 === n),
+                      (this.nextDisabled = n === this.allChildrenSections.length - 1),
+                      clearInterval(this.interval),
+                      this.$router.push({ name: e, query: { id: t.id } }),
+                      this.record.completed || this.initTimer(t.id));
+                  },
+                },
+                {
+                  key: "beforeDestroy",
+                  value: function () {
+                    clearInterval(this.interval);
+                  },
+                },
+                {
+                  key: "initTimer",
+                  value: function (t) {
+                    var e = this;
+                    if (
+                      ((this.currentSectionState = k["a"].noState()),
+                      (this.currentSectionState.sectionId = t),
+                      (this.currentSectionState.taskRecordId = this.record.id),
+                      (this.currentSectionState.studentId = this.stuid),
+                      (this.currentSectionState.targetId = t),
+                      (this.currentSectionState.targetType = this.currentSectionType),
+                      this.taskStates && this.taskStates.length > 0)
+                    ) {
+                      var n = this.taskStates.find(function (e) {
+                        return e.targetId === t;
+                      });
+                      n ? (this.currentSectionState = n) : (this.currentSectionState.id = "");
+                    }
+                    (null ==
+                      this.taskStates.find(function (e) {
+                        return e.sectionId == t;
+                      }) && this.taskStates.push(this.currentSectionState),
+                      (this.allChildrenSections.find(function (e) {
+                        return e.id == t;
+                      }).state = this.currentSectionState),
+                      (this.canSubmitSec = !this.currentSectionState.isFinished),
+                      (this.second = this.saveDurationInterval),
+                      (this.currentSectionState.lastTime = O["a"].Time().getTime()),
+                      (this.currentSectionState.lastDuration = this.currentSectionState.duration),
+                      (this.interval = setInterval(
+                        (function () {
+                          var t = Object(o["a"])(
+                            regeneratorRuntime.mark(function t(n) {
+                              var r, a;
+                              return regeneratorRuntime.wrap(function (t) {
+                                while (1)
+                                  switch ((t.prev = t.next)) {
+                                    case 0:
+                                      if (!e.record.completed) {
+                                        t.next = 2;
+                                        break;
+                                      }
+                                      return t.abrupt("return");
+                                    case 2:
+                                      (e.second--,
+                                        e.currentSectionState.duration++,
+                                        (e.record.duration = 0),
+                                        e.taskStates.forEach(function (t) {
+                                          e.record.duration += t.duration;
+                                        }),
+                                        e.record.limitTime &&
+                                          ((r = new Date(e.record.limitEndTime).getTime()),
+                                          (e.limitTimeConfig.serverTime = O["a"].Time().getTime()),
+                                          e.record.autoSubmit &&
+                                            (e.limitTimeConfig.serverTime >= r - 1e3 * e.limitTimeConfig.pre && e.limitTimeConfig.serverTime <= r
+                                              ? e.limitTimeConfig.warn || ((e.limitTimeConfig.warn = !0), e.msg("提示：即将自动提交任务！", "warning"))
+                                              : e.limitTimeConfig.serverTime >= r &&
+                                                (e.limitTimeConfig.submit || ((e.limitTimeConfig.submit = !0), e.doSubmitTask())))),
+                                        e.second < 0 &&
+                                          ((e.second = e.saveDurationInterval),
+                                          (a = Math.round((O["a"].Time().getTime() - e.currentSectionState.lastTime) / 1e3)),
+                                          (e.currentSectionState.duration = e.currentSectionState.lastDuration + a),
+                                          (e.currentSectionState.lastTime = O["a"].Time().getTime()),
+                                          (e.currentSectionState.lastDuration = e.currentSectionState.duration),
+                                          e.saveSectionContent()));
+                                    case 8:
+                                    case "end":
+                                      return t.stop();
+                                  }
+                              }, t);
+                            }),
+                          );
+                          return function (e) {
+                            return t.apply(this, arguments);
+                          };
+                        })(),
+                        1e3,
+                      )));
+                  },
+                },
+                {
+                  key: "record",
+                  get: function () {
+                    return this.$store.state.task.info;
+                  },
+                },
+                {
+                  key: "template",
+                  get: function () {
+                    return this.$store.state.task.template;
+                  },
+                },
+                {
+                  key: "stuid",
+                  get: function () {
+                    return this.$store.getters["user/userId"];
+                  },
+                },
+                {
+                  key: "userRole",
+                  get: function () {
+                    return this.$store.getters["user/userRole"];
+                  },
+                },
+                {
+                  key: "LimitTimeLeft",
+                  get: function () {
+                    return this.limitTimeConfig.serverTime && this.record && this.record.limitTime
+                      ? (new Date(this.record.limitEndTime).getTime() - this.limitTimeConfig.serverTime) / 1e3
+                      : null;
+                  },
+                },
+              ]),
+              e
+            );
+          })(A["a"])),
+          r);
+      j = Object(p["a"])(
+        [
+          Object(b["a"])({
+            filters: {
+              dateFormat: function (t, e) {
+                return Object(y["f"])(e, new Date(t));
+              },
+              formatTime: function (t) {
+                return Object(y["h"])(t);
+              },
+              zeroFill: function (t) {
+                return (Array(2).join("0") + t).slice(-2);
+              },
+            },
+            beforeRouteEnter: function (t, e, n) {
+              w["b"].validRight(t.path) ? n() : (console.log("任务权限验证不通过"), n("/"));
+            },
+          }),
+        ],
+        j,
+      );
+      var T = j,
+        I = T,
+        R = (n("b872"), n("4311"), n("2877")),
+        F = Object(R["a"])(I, a, i, !1, null, "6e8482f0", null);
+      e["default"] = F.exports;
+    },
+  },
+]);

@@ -1,0 +1,1183 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["chunk-24ce1332"],
+  {
+    "03cd": function (e, t, n) {
+      "use strict";
+      var r, a, i, o, u, c, s, l, p, f, d, h, m, v;
+      (n.d(t, "a", function () {
+        return f;
+      }),
+        n.d(t, "b", function () {
+          return h;
+        }),
+        (function (e) {
+          ((e["None"] = "未供电"), (e["Abnormal"] = "供电异常"), (e["Normal"] = "供电正常"));
+        })(r || (r = {})),
+        (function (e) {
+          ((e["None"] = "未定义"),
+            (e["GND"] = "地线"),
+            (e["VS"] = "+VS"),
+            (e["Power"] = "适配器信号"),
+            (e["Signal_Digital_I"] = "数字信号输入"),
+            (e["Signal_Digital_O"] = "数字信号输出"),
+            (e["Signal_Digital_IO"] = "数字信号输入/输出"),
+            (e["Signal_Analog_P"] = "正模拟信号"),
+            (e["Signal_Analog_N"] = "负模拟信号"),
+            (e["Signal_485_P"] = "正485信号"),
+            (e["Signal_485_N"] = "负485信号"),
+            (e["Signal_232"] = "232信号"),
+            (e["Signal_RJ45"] = "网口信号"),
+            (e["Signal_USB"] = "usb信号"),
+            (e["Signal_ZigBee"] = "ZigBee信号"),
+            (e["Signal_RFID"] = "RFID频射信号"),
+            (e["Signal_NewLab"] = "NewLab八根接线柱信号"),
+            (e["Signal_232_RX"] = "RX"),
+            (e["Signal_232_TX"] = "TX"),
+            (e["Signal_Analog_DC"] = "直流模拟信号"),
+            (e["Signal_RFID_Antenna"] = "RFID天线"),
+            (e["Signal_RFID_Multiplexer"] = "RFID多路复用器"),
+            (e["Signal_RFID_Control"] = "RFID控制器"),
+            (e["Signal_RFID_Door"] = "RFID门禁"));
+        })(a || (a = {})),
+        (function (e) {
+          ((e[(e["Unknow"] = 0)] = "Unknow"), (e[(e["Root"] = 1)] = "Root"), (e[(e["Node"] = 2)] = "Node"));
+        })(i || (i = {})),
+        (function (e) {
+          ((e["Error"] = "错误"), (e["Correct"] = "正确"), (e["Abnormal"] = "异常"));
+        })(o || (o = {})),
+        (function (e) {
+          ((e["VerifyData"] = "验证数据"), (e["Screenshot"] = "截图"));
+        })(u || (u = {})),
+        (function (e) {
+          ((e["RealPhysicalDevices"] = "连接真实物理设备"), (e["AndroidPad"] = "安卓平板"));
+        })(c || (c = {})),
+        (function (e) {
+          ((e[(e["Base"] = 0)] = "Base"),
+            (e[(e["Validate"] = 1)] = "Validate"),
+            (e[(e["Upload"] = 2)] = "Upload"),
+            (e[(e["Emulate"] = 3)] = "Emulate"),
+            (e[(e["VirtualCOM"] = 4)] = "VirtualCOM"));
+        })(s || (s = {})),
+        (function (e) {
+          ((e["Wired"] = "有线传感器"),
+            (e["Wireless"] = "无线传感器"),
+            (e["Actuator"] = "继电器"),
+            (e["Gatewary"] = "网关"),
+            (e["IO"] = "I/0模块"),
+            (e["RFID_125K"] = "125K设备(LF)"),
+            (e["RFID_ISO_144443_TypeA"] = "14443设备(HF)"),
+            (e["RFID_ISO_15693"] = "15693设备(HF)"),
+            (e["RFID_ISO_18000_6C"] = "18000设备(UHF)"),
+            (e["RFID_Other"] = "其他设备"),
+            (e["Terminal"] = "终端"),
+            (e["Load"] = "负载"),
+            (e["Power"] = "电源"),
+            (e["Other"] = "其他外设"),
+            (e["NewLabSensor"] = "NewLab传感器"),
+            (e["NewLabEmbedded"] = "嵌入式"),
+            (e["NewLabRFID"] = "NewLabRFID"));
+        })(l || (l = {})),
+        (function (e) {
+          ((e[(e["None"] = -1)] = "None"),
+            (e[(e["Top"] = 0)] = "Top"),
+            (e[(e["Right"] = 1)] = "Right"),
+            (e[(e["Bottom"] = 2)] = "Bottom"),
+            (e[(e["Left"] = 3)] = "Left"));
+        })(p || (p = {})),
+        (function (e) {
+          ((e[(e["RichText"] = 0)] = "RichText"),
+            (e[(e["Exercise"] = 1)] = "Exercise"),
+            (e[(e["Video"] = 2)] = "Video"),
+            (e[(e["Emulator"] = 3)] = "Emulator"),
+            (e[(e["Code"] = 4)] = "Code"),
+            (e[(e["AppCase"] = 5)] = "AppCase"));
+        })(f || (f = {})),
+        (function (e) {
+          ((e[(e["图文"] = 0)] = "图文"),
+            (e[(e["习题"] = 1)] = "习题"),
+            (e[(e["视频"] = 2)] = "视频"),
+            (e[(e["仿真"] = 3)] = "仿真"),
+            (e[(e["编码"] = 4)] = "编码"),
+            (e[(e["案例"] = 5)] = "案例"));
+        })(d || (d = {})),
+        (function (e) {
+          ((e[(e["undone"] = 1)] = "undone"), (e[(e["done"] = 2)] = "done"), (e[(e["flag"] = 4)] = "flag"), (e[(e["current"] = 8)] = "current"));
+        })(h || (h = {})),
+        (function (e) {
+          ((e[(e["Old"] = 0)] = "Old"), (e[(e["New"] = 1)] = "New"));
+        })(m || (m = {})),
+        (function (e) {
+          ((e[(e["Channel_11"] = 11)] = "Channel_11"),
+            (e[(e["Channel_12"] = 12)] = "Channel_12"),
+            (e[(e["Channel_13"] = 13)] = "Channel_13"),
+            (e[(e["Channel_14"] = 14)] = "Channel_14"),
+            (e[(e["Channel_15"] = 15)] = "Channel_15"),
+            (e[(e["Channel_16"] = 16)] = "Channel_16"),
+            (e[(e["Channel_17"] = 17)] = "Channel_17"),
+            (e[(e["Channel_18"] = 18)] = "Channel_18"),
+            (e[(e["Channel_19"] = 19)] = "Channel_19"),
+            (e[(e["Channel_20"] = 20)] = "Channel_20"),
+            (e[(e["Channel_21"] = 21)] = "Channel_21"),
+            (e[(e["Channel_22"] = 22)] = "Channel_22"),
+            (e[(e["Channel_23"] = 23)] = "Channel_23"),
+            (e[(e["Channel_24"] = 24)] = "Channel_24"),
+            (e[(e["Channel_25"] = 25)] = "Channel_25"),
+            (e[(e["Channel_26"] = 26)] = "Channel_26"));
+        })(v || (v = {})));
+    },
+    "4a80": function (e, t, n) {
+      "use strict";
+      (n("99af"), n("4160"), n("159b"), n("96cf"));
+      var r = n("89ba"),
+        a = n("9f12"),
+        i = n("53fe"),
+        o = n("59b9"),
+        u = n("482f"),
+        c = (function () {
+          function e() {
+            Object(a["a"])(this, e);
+          }
+          return (
+            Object(i["a"])(e, [
+              {
+                key: "getSectionStateByTargetId",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", null);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(o["a"])({ url: "".concat(u["a"].web_host, "/api/SectionState/GetSectionStateByTargetId/").concat(t), method: "GET" })
+                              );
+                            case 4:
+                              return ((n = e.sent), (r = null), n && 0 === n.code && (r = n.data), e.abrupt("return", r));
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getSectionStateList",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t, n, r) {
+                      var a, i;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t && n && r) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", []);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/SectionState/GetSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: t, stuId: n, sectionId: r },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (a = e.sent),
+                                (i = []),
+                                a &&
+                                  0 === a.code &&
+                                  a.data.forEach(function (e) {
+                                    i.push(e);
+                                  }),
+                                e.abrupt("return", i)
+                              );
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t, n, r) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getTaskAllStateList",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t, n) {
+                      var r, a;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t && n) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", []);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/SectionState/GetTaskAllStateList"),
+                                  method: "GET",
+                                  params: { recordId: t, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = e.sent),
+                                (a = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (e) {
+                                    a.push(e);
+                                  }),
+                                e.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t, n) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getTaskSectionStateList",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t, n) {
+                      var r, a;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t && n) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", []);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(o["a"])({
+                                  url: "".concat(u["a"].web_host, "/api/SectionState/GetTaskSectionStateList"),
+                                  method: "GET",
+                                  params: { recordId: t, stuId: n },
+                                })
+                              );
+                            case 4:
+                              return (
+                                (r = e.sent),
+                                (a = []),
+                                r &&
+                                  0 === r.code &&
+                                  r.data.forEach(function (e) {
+                                    a.push(e);
+                                  }),
+                                e.abrupt("return", a)
+                              );
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t, n) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "getSectionState",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (((n = null), t)) {
+                                e.next = 3;
+                                break;
+                              }
+                              return e.abrupt("return", n);
+                            case 3:
+                              return (
+                                (e.next = 5),
+                                Object(o["a"])({ url: "".concat(u["a"].web_host, "/api/SectionState/GetSectionState/").concat(t), method: "GET" })
+                              );
+                            case 5:
+                              return ((r = e.sent), r && 0 === r.code && (n = r.data), e.abrupt("return", n));
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "addOrUpdateSectionState",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (t) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", null);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(o["a"])({ url: "".concat(u["a"].web_host, "/api/SectionState/AddOrUpdateSectionState"), method: "POST", data: t })
+                              );
+                            case 4:
+                              if (((n = e.sent), "undefined" === typeof n)) {
+                                e.next = 7;
+                                break;
+                              }
+                              return e.abrupt("return", n);
+                            case 7:
+                              return e.abrupt("return", null);
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+            ]),
+            e
+          );
+        })();
+      t["a"] = new c();
+    },
+    "4aea": function (e, t, n) {
+      !(function (t, n) {
+        e.exports = n();
+      })(0, function () {
+        return (function (e) {
+          function t(r) {
+            if (n[r]) return n[r].exports;
+            var a = (n[r] = { i: r, l: !1, exports: {} });
+            return (e[r].call(a.exports, a, a.exports, t), (a.l = !0), a.exports);
+          }
+          var n = {};
+          return (
+            (t.m = e),
+            (t.c = n),
+            (t.i = function (e) {
+              return e;
+            }),
+            (t.d = function (e, n, r) {
+              t.o(e, n) || Object.defineProperty(e, n, { configurable: !1, enumerable: !0, get: r });
+            }),
+            (t.n = function (e) {
+              var n =
+                e && e.__esModule
+                  ? function () {
+                      return e.default;
+                    }
+                  : function () {
+                      return e;
+                    };
+              return (t.d(n, "a", n), n);
+            }),
+            (t.o = function (e, t) {
+              return Object.prototype.hasOwnProperty.call(e, t);
+            }),
+            (t.p = "/dist/"),
+            t((t.s = 7))
+          );
+        })([
+          function (e, t) {
+            e.exports = function () {
+              var e = [];
+              return (
+                (e.toString = function () {
+                  for (var e = [], t = 0; t < this.length; t++) {
+                    var n = this[t];
+                    n[2] ? e.push("@media " + n[2] + "{" + n[1] + "}") : e.push(n[1]);
+                  }
+                  return e.join("");
+                }),
+                (e.i = function (t, n) {
+                  "string" == typeof t && (t = [[null, t, ""]]);
+                  for (var r = {}, a = 0; a < this.length; a++) {
+                    var i = this[a][0];
+                    "number" == typeof i && (r[i] = !0);
+                  }
+                  for (a = 0; a < t.length; a++) {
+                    var o = t[a];
+                    ("number" == typeof o[0] && r[o[0]]) || (n && !o[2] ? (o[2] = n) : n && (o[2] = "(" + o[2] + ") and (" + n + ")"), e.push(o));
+                  }
+                }),
+                e
+              );
+            };
+          },
+          function (e, t) {
+            e.exports = function (e, t, n, r) {
+              var a,
+                i = (e = e || {}),
+                o = typeof e.default;
+              ("object" !== o && "function" !== o) || ((a = e), (i = e.default));
+              var u = "function" == typeof i ? i.options : i;
+              if ((t && ((u.render = t.render), (u.staticRenderFns = t.staticRenderFns)), n && (u._scopeId = n), r)) {
+                var c = Object.create(u.computed || null);
+                (Object.keys(r).forEach(function (e) {
+                  var t = r[e];
+                  c[e] = function () {
+                    return t;
+                  };
+                }),
+                  (u.computed = c));
+              }
+              return { esModule: a, exports: i, options: u };
+            };
+          },
+          function (e, t, n) {
+            function r(e) {
+              for (var t = 0; t < e.length; t++) {
+                var n = e[t],
+                  r = l[n.id];
+                if (r) {
+                  r.refs++;
+                  for (var a = 0; a < r.parts.length; a++) r.parts[a](n.parts[a]);
+                  for (; a < n.parts.length; a++) r.parts.push(i(n.parts[a]));
+                  r.parts.length > n.parts.length && (r.parts.length = n.parts.length);
+                } else {
+                  var o = [];
+                  for (a = 0; a < n.parts.length; a++) o.push(i(n.parts[a]));
+                  l[n.id] = { id: n.id, refs: 1, parts: o };
+                }
+              }
+            }
+            function a() {
+              var e = document.createElement("style");
+              return ((e.type = "text/css"), p.appendChild(e), e);
+            }
+            function i(e) {
+              var t,
+                n,
+                r = document.querySelector('style[data-vue-ssr-id~="' + e.id + '"]');
+              if (r) {
+                if (h) return m;
+                r.parentNode.removeChild(r);
+              }
+              if (v) {
+                var i = d++;
+                ((r = f || (f = a())), (t = o.bind(null, r, i, !1)), (n = o.bind(null, r, i, !0)));
+              } else
+                ((r = a()),
+                  (t = u.bind(null, r)),
+                  (n = function () {
+                    r.parentNode.removeChild(r);
+                  }));
+              return (
+                t(e),
+                function (r) {
+                  if (r) {
+                    if (r.css === e.css && r.media === e.media && r.sourceMap === e.sourceMap) return;
+                    t((e = r));
+                  } else n();
+                }
+              );
+            }
+            function o(e, t, n, r) {
+              var a = n ? "" : r.css;
+              if (e.styleSheet) e.styleSheet.cssText = b(t, a);
+              else {
+                var i = document.createTextNode(a),
+                  o = e.childNodes;
+                (o[t] && e.removeChild(o[t]), o.length ? e.insertBefore(i, o[t]) : e.appendChild(i));
+              }
+            }
+            function u(e, t) {
+              var n = t.css,
+                r = t.media,
+                a = t.sourceMap;
+              if (
+                (r && e.setAttribute("media", r),
+                a &&
+                  ((n += "\n/*# sourceURL=" + a.sources[0] + " */"),
+                  (n += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(a)))) + " */")),
+                e.styleSheet)
+              )
+                e.styleSheet.cssText = n;
+              else {
+                for (; e.firstChild;) e.removeChild(e.firstChild);
+                e.appendChild(document.createTextNode(n));
+              }
+            }
+            var c = "undefined" != typeof document;
+            if ("undefined" != typeof DEBUG && DEBUG && !c)
+              throw new Error(
+                "vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.",
+              );
+            var s = n(19),
+              l = {},
+              p = c && (document.head || document.getElementsByTagName("head")[0]),
+              f = null,
+              d = 0,
+              h = !1,
+              m = function () {},
+              v = "undefined" != typeof navigator && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase());
+            e.exports = function (e, t, n) {
+              h = n;
+              var a = s(e, t);
+              return (
+                r(a),
+                function (t) {
+                  for (var n = [], i = 0; i < a.length; i++) {
+                    var o = a[i],
+                      u = l[o.id];
+                    (u.refs--, n.push(u));
+                  }
+                  t ? ((a = s(e, t)), r(a)) : (a = []);
+                  for (i = 0; i < n.length; i++) {
+                    u = n[i];
+                    if (0 === u.refs) {
+                      for (var c = 0; c < u.parts.length; c++) u.parts[c]();
+                      delete l[u.id];
+                    }
+                  }
+                }
+              );
+            };
+            var b = (function () {
+              var e = [];
+              return function (t, n) {
+                return ((e[t] = n), e.filter(Boolean).join("\n"));
+              };
+            })();
+          },
+          function (e, t, n) {
+            n(17);
+            var r = n(1)(n(4), n(14), null, null);
+            e.exports = r.exports;
+          },
+          function (e, t, n) {
+            "use strict";
+            function r(e) {
+              return e && e.__esModule ? e : { default: e };
+            }
+            Object.defineProperty(t, "__esModule", { value: !0 });
+            var a = n(12),
+              i = r(a),
+              o = n(11),
+              u = r(o);
+            t.default = {
+              name: "splitPane",
+              components: { Resizer: i.default, Pane: u.default },
+              props: {
+                minPercent: { type: Number, default: 10 },
+                defaultPercent: { type: Number, default: 50 },
+                split: {
+                  validator: function (e) {
+                    return ["vertical", "horizontal"].indexOf(e) >= 0;
+                  },
+                  required: !0,
+                },
+                className: String,
+              },
+              computed: {
+                userSelect: function () {
+                  return this.active ? "none" : "";
+                },
+                cursor: function () {
+                  return this.active ? ("vertical" === this.split ? "col-resize" : "row-resize") : "";
+                },
+              },
+              watch: {
+                defaultPercent: function (e, t) {
+                  this.percent = e;
+                },
+              },
+              data: function () {
+                return {
+                  active: !1,
+                  hasMoved: !1,
+                  height: null,
+                  percent: this.defaultPercent,
+                  type: "vertical" === this.split ? "width" : "height",
+                  resizeType: "vertical" === this.split ? "left" : "top",
+                };
+              },
+              methods: {
+                onClick: function () {
+                  this.hasMoved || ((this.percent = 50), this.$emit("resize", this.percent));
+                },
+                onMouseDown: function () {
+                  ((this.active = !0), (this.hasMoved = !1));
+                },
+                onMouseUp: function () {
+                  this.active = !1;
+                },
+                onMouseMove: function (e) {
+                  if (((0 !== e.buttons && 0 !== e.which) || (this.active = !1), this.active)) {
+                    var t = 0,
+                      n = e.currentTarget;
+                    if ("vertical" === this.split) for (; n;) ((t += n.offsetLeft), (n = n.offsetParent));
+                    else for (; n;) ((t += n.offsetTop), (n = n.offsetParent));
+                    var r = "vertical" === this.split ? e.pageX : e.pageY,
+                      a = "vertical" === this.split ? e.currentTarget.offsetWidth : e.currentTarget.offsetHeight,
+                      i = Math.floor(((r - t) / a) * 1e4) / 100;
+                    (i > this.minPercent && i < 100 - this.minPercent && (this.percent = i), this.$emit("resize", this.percent), (this.hasMoved = !0));
+                  }
+                },
+              },
+            };
+          },
+          function (e, t, n) {},
+          function (e, t, n) {},
+          function (e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", { value: !0 });
+            var r = n(3),
+              a = (function (e) {
+                return e && e.__esModule ? e : { default: e };
+              })(r);
+            ((t.default = a.default), "undefined" != typeof window && window.Vue && window.Vue.component("split-pane", a.default));
+          },
+          function (e, t, n) {
+            ((t = e.exports = n(0)()),
+              t.push([
+                e.i,
+                ".vertical .splitter-pane.area1{position:absolute;left:0;height:100%}.vertical .splitter-pane.area2{position:absolute;right:0;height:100%}.horizontal .splitter-pane.area1{position:absolute;top:0;width:100%}.horizontal .splitter-pane.area2{position:absolute;bottom:0;width:100%}",
+                "",
+              ]));
+          },
+          function (e, t, n) {
+            ((t = e.exports = n(0)()),
+              t.push([
+                e.i,
+                ".vue-splitter-container{height:100%;position:relative}.vue-splitter-container-mask{z-index:9999;width:100%;height:100%;position:absolute;top:0;left:0}",
+                "",
+              ]));
+          },
+          function (e, t, n) {
+            ((t = e.exports = n(0)()),
+              t.push([
+                e.i,
+                '.splitter-pane-resizer{position:absolute;opacity:.2;z-index:1;background:#999}.horizontal>.splitter-pane-resizer{height:1px;width:100%;cursor:row-resize}.horizontal>.splitter-pane-resizer:after{position:absolute;content:"";height:10px;top:-5px;width:100%}.vertical>.splitter-pane-resizer{width:1px;height:100%;cursor:col-resize}.vertical>.splitter-pane-resizer:after{position:absolute;content:"";width:10px;left:-5px;height:100%}',
+                "",
+              ]));
+          },
+          function (e, t, n) {
+            n(16);
+            var r = n(1)(n(5), n(13), null, null);
+            e.exports = r.exports;
+          },
+          function (e, t, n) {
+            n(18);
+            var r = n(1)(n(6), n(15), null, null);
+            e.exports = r.exports;
+          },
+          function (e, t) {
+            e.exports = {
+              render: function () {
+                var e = this,
+                  t = e.$createElement;
+                return (e._self._c || t)("div", [e._t("default")], 2);
+              },
+              staticRenderFns: [],
+            };
+          },
+          function (e, t) {
+            e.exports = {
+              render: function () {
+                var e,
+                  t,
+                  n,
+                  r = this,
+                  a = r.$createElement,
+                  i = r._self._c || a;
+                return i(
+                  "div",
+                  {
+                    staticClass: "vue-splitter-container",
+                    class: r.split,
+                    style: { cursor: r.cursor, userSelect: r.userSelect },
+                    on: { mouseup: r.onMouseUp, mousemove: r.onMouseMove },
+                  },
+                  [
+                    i("pane", { staticClass: "splitter-pane area1", style: ((e = {}), (e[r.type] = r.percent + "%"), e) }, [r._t("area1")], 2),
+                    r._v(" "),
+                    i("resizer", {
+                      style: ((t = {}), (t[r.resizeType] = r.percent + "%"), t),
+                      nativeOn: {
+                        mousedown: function (e) {
+                          return r.onMouseDown(e);
+                        },
+                        click: function (e) {
+                          return r.onClick(e);
+                        },
+                      },
+                    }),
+                    r._v(" "),
+                    i("pane", { staticClass: "splitter-pane area2", style: ((n = {}), (n[r.type] = 100 - r.percent + "%"), n) }, [r._t("area2")], 2),
+                    r._v(" "),
+                    r.active ? i("div", { staticClass: "vue-splitter-container-mask" }) : r._e(),
+                  ],
+                  1,
+                );
+              },
+              staticRenderFns: [],
+            };
+          },
+          function (e, t) {
+            e.exports = {
+              render: function () {
+                var e = this,
+                  t = e.$createElement;
+                return (e._self._c || t)("div", { staticClass: "splitter-pane-resizer" });
+              },
+              staticRenderFns: [],
+            };
+          },
+          function (e, t, n) {
+            var r = n(8);
+            ("string" == typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals), n(2)("f23d9a42", r, !0));
+          },
+          function (e, t, n) {
+            var r = n(9);
+            ("string" == typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals), n(2)("1b6bc703", r, !0));
+          },
+          function (e, t, n) {
+            var r = n(10);
+            ("string" == typeof r && (r = [[e.i, r, ""]]), r.locals && (e.exports = r.locals), n(2)("6652e9ee", r, !0));
+          },
+          function (e, t) {
+            e.exports = function (e, t) {
+              for (var n = [], r = {}, a = 0; a < t.length; a++) {
+                var i = t[a],
+                  o = i[0],
+                  u = i[1],
+                  c = i[2],
+                  s = i[3],
+                  l = { id: e + ":" + a, css: u, media: c, sourceMap: s };
+                r[o] ? r[o].parts.push(l) : n.push((r[o] = { id: o, parts: [l] }));
+              }
+              return n;
+            };
+          },
+        ]);
+      });
+    },
+    aa5a: function (e, t, n) {
+      "use strict";
+      n.d(t, "a", function () {
+        return h;
+      });
+      (n("99af"), n("4160"), n("159b"), n("96cf"));
+      var r = n("89ba"),
+        a = n("53fe"),
+        i = n("8b83"),
+        o = n("c65a"),
+        u = n("9aa6"),
+        c = n("c03e"),
+        s = n("9f12"),
+        l = n("2fa7"),
+        p = n("59b9"),
+        f = n("482f"),
+        d = n("a0f7"),
+        h = function e() {
+          (Object(s["a"])(this, e),
+            Object(l["a"])(this, "id", ""),
+            Object(l["a"])(this, "sectionId", ""),
+            Object(l["a"])(this, "packageXml", ""),
+            Object(l["a"])(this, "packageXmlName", ""),
+            Object(l["a"])(this, "packageXmlAnsewer", ""),
+            Object(l["a"])(this, "packageXmlAnsewerName", ""),
+            Object(l["a"])(this, "remark", ""),
+            Object(l["a"])(this, "thumb", ""),
+            Object(l["a"])(this, "emulatorId", ""));
+        },
+        m = (function (e) {
+          function t() {
+            var e, n;
+            Object(s["a"])(this, t);
+            for (var r = arguments.length, a = new Array(r), c = 0; c < r; c++) a[c] = arguments[c];
+            return (
+              (n = Object(i["a"])(this, (e = Object(o["a"])(t)).call.apply(e, [this].concat(a)))),
+              Object(l["a"])(Object(u["a"])(n), "pageSize", 10),
+              Object(l["a"])(Object(u["a"])(n), "itemsCount", 10),
+              n
+            );
+          }
+          return (
+            Object(c["a"])(t, e),
+            Object(a["a"])(t, [
+              {
+                key: "AddOrUpdate",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return ((e.next = 2), this.WebPost("/api/EmulatorPractice/AddOrUpdateEmulatorPractice", t));
+                              case 2:
+                                return (
+                                  (n = e.sent),
+                                  (r = new d["d"]()),
+                                  0 == n.code ? ((r.status = !0), (r.data = n.data)) : ((r.status = !1), (r.msg = n.msg)),
+                                  e.abrupt("return", r)
+                                );
+                              case 6:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetEentity",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return ((e.next = 2), this.WebGet("/api/EmulatorPractice/GetEmulatorPractice/".concat(t), {}));
+                              case 2:
+                                return (
+                                  (n = e.sent),
+                                  (r = new d["d"]()),
+                                  0 == n.code ? ((r.status = !0), (r.data = n.data)) : ((r.status = !1), (r.msg = n.msg)),
+                                  e.abrupt("return", r)
+                                );
+                              case 6:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetByGetEmulatorPracticeBySectionId",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return ((e.next = 2), this.WebGet("/api/EmulatorPractice/GetEmulatorPracticeBySectionId/".concat(t), {}));
+                              case 2:
+                                return (
+                                  (n = e.sent),
+                                  (r = new d["d"]()),
+                                  0 == n.code ? ((r.status = !0), (r.data = n.data)) : ((r.status = !1), (r.msg = n.msg)),
+                                  e.abrupt("return", r)
+                                );
+                              case 6:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "EmulatorXmlToObj",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n, r;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return ((e.next = 2), this.WebPost("/api/EmulatorPractice/EmulatorXmlToObj", { xml: t }));
+                              case 2:
+                                return (
+                                  (n = e.sent),
+                                  console.log("response", n),
+                                  (r = new d["d"]()),
+                                  0 == n.code ? ((r.status = !0), (r.data = n.data)) : ((r.status = !1), (r.msg = n.msg)),
+                                  e.abrupt("return", r)
+                                );
+                              case 7:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetItemsCount",
+                value: function () {
+                  return this.itemsCount;
+                },
+              },
+              {
+                key: "GetPageFromStorage",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e() {
+                      var t,
+                        n,
+                        r,
+                        a,
+                        i,
+                        o = arguments;
+                      return regeneratorRuntime.wrap(
+                        function (e) {
+                          while (1)
+                            switch ((e.prev = e.next)) {
+                              case 0:
+                                return (
+                                  (t = o.length > 0 && void 0 !== o[0] ? o[0] : 1),
+                                  (n = o.length > 1 && void 0 !== o[1] ? o[1] : 10),
+                                  (r = o.length > 2 ? o[2] : void 0),
+                                  (e.next = 5),
+                                  Object(p["a"])({
+                                    url: "".concat(f["a"].web_host, "/api/EmulatorPractice/GetPageFromStorage"),
+                                    method: "GET",
+                                    params: { pageIndex: t, size: n, key: r },
+                                  })
+                                );
+                              case 5:
+                                return (
+                                  (a = e.sent),
+                                  (i = []),
+                                  "undefined" !== typeof a &&
+                                    0 === a.code &&
+                                    ((this.itemsCount = a.data.records),
+                                    a.data.rows.forEach(function (e) {
+                                      i.push(e);
+                                    })),
+                                  e.abrupt("return", i)
+                                );
+                              case 9:
+                              case "end":
+                                return e.stop();
+                            }
+                        },
+                        e,
+                        this,
+                      );
+                    }),
+                  );
+                  function t() {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "AddOrUpdateEmulatorPractice",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                Object(p["a"])({
+                                  url: "".concat(f["a"].web_host, "/api/EmulatorPractice/AddOrUpdateEmulatorPractice"),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "POST",
+                                  data: t,
+                                })
+                              );
+                            case 2:
+                              return ((n = e.sent), e.abrupt("return", n));
+                            case 4:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "deleteEmulatorPractice",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!("undefined" === typeof t || t.length < 32)) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", null);
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(p["a"])({
+                                  url: "".concat(f["a"].web_host, "/api/EmulatorPractice/DeleteEmulatorPractice/").concat(t),
+                                  headers: { "Content-Type": "application/json" },
+                                  method: "GET",
+                                })
+                              );
+                            case 4:
+                              return ((n = e.sent), e.abrupt("return", n));
+                            case 6:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+              {
+                key: "GetFileNamesBySectionId",
+                value: (function () {
+                  var e = Object(r["a"])(
+                    regeneratorRuntime.mark(function e(t) {
+                      var n;
+                      return regeneratorRuntime.wrap(function (e) {
+                        while (1)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              if (!("undefined" === typeof t || t.length < 32)) {
+                                e.next = 2;
+                                break;
+                              }
+                              return e.abrupt("return", "");
+                            case 2:
+                              return (
+                                (e.next = 4),
+                                Object(p["a"])({ url: "".concat(f["a"].web_host, "/api/EmulatorPractice/GetFileNamesBySectionId/").concat(t), method: "GET" })
+                              );
+                            case 4:
+                              if (((n = e.sent), 0 != n.code)) {
+                                e.next = 7;
+                                break;
+                              }
+                              return e.abrupt("return", n.data);
+                            case 7:
+                              return e.abrupt("return", []);
+                            case 8:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    }),
+                  );
+                  function t(t) {
+                    return e.apply(this, arguments);
+                  }
+                  return t;
+                })(),
+              },
+            ]),
+            t
+          );
+        })(d["e"]);
+      t["b"] = new m();
+    },
+  },
+]);
