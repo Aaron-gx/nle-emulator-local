@@ -80,6 +80,67 @@ const CONFIG_ROUTES = {
 
 let BOUND_PORT = PORT;
 
+// ---------------------------------------------------------- auth bridging ---
+// The three apps persist the token under three different keys upstream:
+//   account   localStorage.auth              (plain string)
+//   training  localStorage["cloud-token"]    (JSON-encoded string)
+//   emulator  cookie "cloud-token"           (read via a cookie helper)
+// Upstream ties them together because the account portal also sets the cookie.
+// This deployment skips that step, so the emulator's router guard sees no
+// token and bounces every /main/* visit to /account/login. Bridge the keys in
+// the page itself, leaving the mirrored bundles untouched.
+const AUTH_BRIDGE = `
+(function () {
+  var KEY = 'cloud-token';
+
+  function readLocalToken() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) {
+        try { return JSON.parse(raw); } catch (e) { return raw; }
+      }
+      var auth = localStorage.getItem('auth');
+      if (auth) return auth;
+    } catch (e) {}
+    return '';
+  }
+
+  // Mirror every known key onto the cookie the emulator reads, so all three
+  // apps agree on "who is logged in" no matter which one signed in first.
+  // Skip when the origin already handed us ?token= — that path writes the
+  // cookie itself, and writing twice leaves a duplicate cookie pair.
+  function hasTokenParam() {
+    return /[?&]token=/.test(location.search);
+  }
+
+  function sync() {
+    if (hasTokenParam()) return;
+    var t = readLocalToken();
+    if (!t) return;
+    var current = (document.cookie.split('; ').find(function (c) { return c.indexOf(KEY + '=') === 0; }) || '').slice(KEY.length + 1);
+    if (current && decodeURIComponent(current) === t) return;
+    if (current) {
+      // Replace rather than append, so repeated logins cannot stack cookies.
+      document.cookie = KEY + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
+    document.cookie = KEY + '=' + encodeURIComponent(t) + '; path=/';
+  }
+
+  sync();
+  // The SPAs assign localStorage while running; keep the cookie in step.
+  var setItem = Storage.prototype.setItem;
+  Storage.prototype.setItem = function (k, v) {
+    var r = setItem.apply(this, arguments);
+    if (this === localStorage && (k === KEY || k === 'auth')) sync();
+    return r;
+  };
+
+  // The emulator writes the token back through a cookie helper on refresh;
+  // accept either encoding when reading it back out.
+  window.__nleToken = readLocalToken;
+})();
+`;
+
 function serveLocalizedConfig(res, urlPath) {
   if (!LOCALIZE) return false;
   const appKey = CONFIG_ROUTES[urlPath];
@@ -88,6 +149,19 @@ function serveLocalizedConfig(res, urlPath) {
   if (body === null) return false;
   res.writeHead(200, { 'Content-Type': MIME['.js'], 'Cache-Control': 'no-cache' });
   res.end(body);
+  return true;
+}
+
+// Serve an SPA document with the auth bridge prepended. Returning HTML rather
+// than editing the mirrored index.html keeps the mirror byte-identical.
+function serveSpaIndex(res, indexPath) {
+  let html;
+  try { html = fs.readFileSync(indexPath, 'utf8'); } catch { return false; }
+  const tag = '<script>' + AUTH_BRIDGE + '</script>';
+  const at = html.search(/<script\s+src=/i);
+  html = at === -1 ? html.replace(/<\/head>/i, tag + '</head>') : html.slice(0, at) + tag + html.slice(at);
+  res.writeHead(200, { 'Content-Type': MIME['.html'], 'Cache-Control': 'no-cache' });
+  res.end(html);
   return true;
 }
 
@@ -111,6 +185,14 @@ function serveStatic(req, res, urlPath) {
   for (const c of candidates) {
     if (fs.existsSync(c) && fs.statSync(c).isFile()) {
       const ext = path.extname(c).toLowerCase();
+      // SPA documents get the auth bridge; every other asset is served as-is
+      // so the mirrored bytes stay untouched.
+      if (ext === '.html' && LOCALIZE) {
+        const abs = path.resolve(c);
+        if (SPA_ROOTS.some(r => abs.startsWith(path.resolve(ROOT, r.slice(1)) + path.sep))) {
+          if (serveSpaIndex(res, c)) return true;
+        }
+      }
       res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
       fs.createReadStream(c).pipe(res);
       return true;
@@ -182,6 +264,7 @@ const server = http.createServer((req, res) => {
       if (fs.existsSync(idx)) {
         // Match the static handler's cache policy: a cached SPA shell here
         // would strand deep links on a stale document.
+        if (LOCALIZE && serveSpaIndex(res, idx)) return;
         res.writeHead(200, { 'Content-Type': MIME['.html'], 'Cache-Control': 'no-cache' });
         fs.createReadStream(idx).pipe(res);
         return;

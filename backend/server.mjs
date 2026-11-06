@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { openDb } from './db.mjs';
 import { issueToken, resolveToken, revokeToken, bearerFrom, shapeUser, upmsOk, upmsErr } from './auth.mjs';
+import { decryptN2V, encryptN2V } from './n2v.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DB_FILE = process.env.B_DB || path.join(HERE, 'data', 'platform.db');
@@ -621,35 +622,31 @@ const api = {
     return ok(obj);
   },
 
-  'POST /api/Common/XmlToN2V': async ({ body }) => ok(String(body.xml || body.content || '')),
+  'POST /api/Common/XmlToN2V': async ({ body }) => {
+    const xml = String(body.xml || body.content || '');
+    if (!xml) return fail('缺少 xml 参数');
+    // The client posts form data and reads back the blob it will save as .N2V.
+    return ok(encryptN2V(xml).toString('base64'));
+  },
   'POST /api/Common/N2VToXml': async ({ body }) => {
-    // Upstream decrypts .N2V with a session key we do not have. Instead we
-    // replay previously captured plaintext: each entry in data/n2v is a
-    // {name, cipherSize, xml} record, matched against the uploaded byte size.
-    // Capture instructions live in OFFLINE.md.
-    const store = path.join(HERE, 'data', 'n2v');
-    if (!fs.existsSync(store)) return fail('本地未配置 .N2V 明文库', 404);
-
-    let uploadedSize = 0;
+    // Decrypt the uploaded package with the key the front-end ships. This is a
+    // real decrypt, not a lookup: any .N2V the emulator can open round-trips.
     const f = body.file;
-    if (Buffer.isBuffer(f)) uploadedSize = f.length;
-    else if (f && typeof f === 'object' && f._file) uploadedSize = f.size || 0;
-    else if (typeof body.size === 'number') uploadedSize = body.size;
-
-    const entries = fs.readdirSync(store).filter((n) => n.toLowerCase().endsWith('.json'));
-    if (!entries.length) return fail('本地 .N2V 明文库为空，请先按 OFFLINE.md 抓取一次', 404);
-
-    const records = entries.map((n) => {
-      try { return JSON.parse(fs.readFileSync(path.join(store, n), 'utf8')); } catch { return null; }
-    }).filter(Boolean);
-
-    // Exact size match wins; otherwise pick the nearest known project.
-    let hit = records.find((r) => r.cipherSize === uploadedSize);
-    if (!hit && records.length) {
-      hit = records.slice().sort((a, b) => Math.abs(a.cipherSize - uploadedSize) - Math.abs(b.cipherSize - uploadedSize))[0];
+    let buf = null;
+    if (Buffer.isBuffer(f)) buf = f;
+    else if (f && typeof f === 'object' && f._file && Buffer.isBuffer(f.bytes)) buf = f.bytes;
+    else if (typeof body.size === 'number') {
+      // Bare size (no bytes) can no longer be served — say so plainly rather
+      // than handing back some other project's canvas.
+      return fail('缺少文件内容，无法解密该 .N2V 包', 400);
     }
-    if (!hit) return fail('未找到匹配的 .N2V 明文', 404);
-    return ok(hit.xml);
+    if (!buf || !buf.length) return fail('未收到 .N2V 文件内容', 400);
+
+    try {
+      return ok(decryptN2V(buf));
+    } catch (e) {
+      return fail('解密仿真包出错: ' + e.message, -1);
+    }
   },
 
   'GET /api/RfidExperimentRecording/GetRfidExperimentRecordingPage': async ({ p, user }) => {

@@ -39,7 +39,11 @@ export function bearerFrom(req) {
 // The SPA dereferences these fields directly during bootstrap
 // (`t.name`, `t.roles.map(...)`), so always hand back a complete shape —
 // including a `roles` array — rather than null.
-export function shapeUser(u) {
+// The account portal reads `data.rights` unconditionally right after login
+// (`if (t.data.rights.length > 0) ...`), and that call sits between the token
+// being saved and the redirect back to `?backUrl`. Without the field the
+// exception aborts the redirect, stranding the user on the login page.
+export function shapeUser(u, rights = []) {
   if (!u) {
     return {
       id: null, userId: null, name: '', userName: '', userNname: '',
@@ -49,6 +53,7 @@ export function shapeUser(u) {
       classId: null, className: null, collegeId: null, collegeName: null,
       collegeKind: null, studentNumber: null, stuNo: null,
       roles: [],
+      rights: [],
     };
   }
   return {
@@ -75,6 +80,7 @@ export function shapeUser(u) {
     studentNumber: u.studentNumber,
     stuNo: u.studentNumber,
     roles: [{ id: u.roleId, roleName: u.roleName }],
+    rights,
   };
 }
 
