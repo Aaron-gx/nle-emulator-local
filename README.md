@@ -41,6 +41,21 @@ Copy-Item .env.example .env
 
 端口被占用时会自动顺延；换端口用 `.\start.ps1 -Port 9000`。
 
+### 默认账号
+
+| 场景 | 账号 | 密码 |
+|---|---|---|
+| 发布包首次启动（包内没有 `.env`） | `local-admin` | `local-admin` |
+| 源码方式、已配置 `.env` | `NLE_USER` 的值 | `NLE_PASS` 的值 |
+
+- 一套账号三个应用通用（教学平台 / 仿真平台 / 通行证），角色是**管理员（老师）**
+- 改密码：编辑 `.env` 的 `NLE_PASS` 后执行 `cd backend; node import.mjs`，
+  会同步更新管理员密码（改完重启服务生效）
+- 密码在 `backend/data/platform.db` 的 users 表中**明文存储**，本包只面向
+  本机/局域网使用，不要直接暴露到公网
+- 内置的 6 个学生账号未配置手机号，而登录按手机号查库，因此**默认无法登录**；
+  需要学生视角时，给 `users` 表对应记录补上 `phone` 字段即可（密码为 `student`）
+
 ---
 
 ## 能做什么
@@ -127,7 +142,7 @@ start.ps1            一键启动（源码方式）
 
 | 变量 | 说明 |
 |---|---|
-| `NLE_USER` / `NLE_PASS` | 本地登录账号与密码 |
+| `NLE_USER` / `NLE_PASS` | 本地登录账号与密码（不配置时建库默认 `local-admin` / `local-admin`，见「默认账号」） |
 | `S_PORT` / `B_PORT` | 前端 / 后端端口 |
 | `NLE_LOCAL` / `NLE_BACKEND` | 前端访问地址 / 后端地址 |
 
