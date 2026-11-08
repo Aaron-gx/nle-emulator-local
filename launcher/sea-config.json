@@ -1,0 +1,5 @@
+{
+  "main": "launcher/supervisor.cjs",
+  "output": "launcher/dist/sea-blob.blob",
+  "disableExperimentalSEAWarning": true
+}

@@ -71,3 +71,8 @@ Desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# 一键启动器构建产物与发布包
+launcher/dist/
+/*.zip
+/物联网仿真平台.exe
